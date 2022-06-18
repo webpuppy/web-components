@@ -1,0 +1,49 @@
+{
+  "name": "cb-web-components",
+  "version": "0.1.0",
+  "description": "contentbuddy web components",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
+    "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint:lit-analyzer": "lit-analyzer",
+    "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
+    "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
+    "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
+    "serve": "wds --watch",
+    "serve:prod": "MODE=prod npm run serve",
+    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+  },
+  "keywords": [
+    "contentbuddy-ui",
+    "web-components",
+    "lit-element",
+    "typescript",
+    "lit"
+  ],
+  "author": "abschill",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^2.2.4"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@custom-elements-manifest/analyzer": "^0.5.7",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "@web/dev-server": "^0.1.31",
+    "@web/dev-server-legacy": "^1.0.0",
+    "@webcomponents/webcomponentsjs": "^2.6.0",
+    "eslint": "^8.15.0",
+    "lit-analyzer": "^1.2.1",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "typescript": "~4.6.4"
+  },
+  "customElements": "custom-elements.json"
+}
