@@ -1,8 +1,9 @@
 {
-  "name": "cb-web-components",
+  "name": "wp-web-components",
   "version": "0.1.0",
   "description": "contentbuddy web components",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
