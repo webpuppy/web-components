@@ -11,7 +11,7 @@ import {
 import { CBButtonType } from './defs';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'btn')
-export class MyBtn extends LitElement {
+export class WPBtn extends LitElement {
 	@property({ attribute: true, type: Boolean })
 	use_icon = false;
 
@@ -53,8 +53,4 @@ export class MyBtn extends LitElement {
 	}
 }
 
-declare global {
-	interface HTMLElementTagNameMap {
-		'my-btn': MyBtn;
-	}
-}
+

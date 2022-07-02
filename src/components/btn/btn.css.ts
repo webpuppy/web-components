@@ -12,7 +12,7 @@ export default css`
 	:host {
 		--shadow-color: rgba(0, 0, 0, 0.1);
 		display: inline-block;
-		width: fit-content;
+		min-width: fit-content;
 	}
 
 	button {
@@ -24,7 +24,7 @@ export default css`
 		cursor: pointer;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 			Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		padding: 1em;
+		padding: 1em 1.5em;
 		transition: all 150ms ease-in-out;
 	}
 
