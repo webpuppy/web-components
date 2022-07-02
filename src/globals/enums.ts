@@ -1,3 +1,3 @@
 export default {
-	COMPONENT_PREFIX: 'cb-'
-}
+	COMPONENT_PREFIX: 'cb-',
+};

@@ -1,1 +1,6 @@
-export type CBButtonType = 'base' | 'primary' | 'secondary' | 'confirm' | 'danger';
+export type CBButtonType =
+	| 'base'
+	| 'primary'
+	| 'secondary'
+	| 'confirm'
+	| 'danger';
