@@ -10,9 +10,35 @@ export default css `
 	margin-block-start: 1.25em;
 	margin-block-end: 1.25em;
 }
-p {
+
+* {
+	color: #3d3a3a;
+}
+
+p, header {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
+
+.wp-txt-xs {
+	font-size: 12px;
+}
+
+.wp-txt-sm {
+	font-size: 14px;
+}
+
+.wp-txt-md {
+
+}
+
+.wp-txt-lg {
+	font-size: 1.5em;
+}
+
+.wp-txt-xl {
+	font-size: 2em;
+}
+
 
 `;
