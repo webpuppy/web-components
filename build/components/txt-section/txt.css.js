@@ -20,6 +20,26 @@ p, header {
 	margin-block-end: 0;
 }
 
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
 .wp-txt-xs {
 	font-size: 12px;
 }
