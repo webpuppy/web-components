@@ -10,11 +10,8 @@ import {
 } from '../../globals/exports';
 import { TxtSectionBaseSize } from './defs';
 
-@customElement(Enums.default.COMPONENT_PREFIX + 'btn')
+@customElement(Enums.default.COMPONENT_PREFIX + 'text-content')
 export class WPTxt extends LitElement {
-
-	@property({ attribute: true, type: Boolean })
-	use_icon = false;
 
 	static override styles = [txtCSS];
 

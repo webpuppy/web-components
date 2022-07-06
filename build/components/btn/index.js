@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import btnCss from './btn.css';
 import { customElement, LitElement, Enums, html, property, classMap, when, } from '../../globals/exports';
-let MyBtn = class MyBtn extends LitElement {
+let WPBtn = class WPBtn extends LitElement {
     constructor() {
         super(...arguments);
         this.use_icon = false;
@@ -38,17 +38,17 @@ let MyBtn = class MyBtn extends LitElement {
 		`;
     }
 };
-MyBtn.styles = [btnCss];
+WPBtn.styles = [btnCss];
 __decorate([
     property({ attribute: true, type: Boolean })
-], MyBtn.prototype, "use_icon", void 0);
+], WPBtn.prototype, "use_icon", void 0);
 __decorate([
     property({ attribute: true })
-], MyBtn.prototype, "type", void 0);
+], WPBtn.prototype, "type", void 0);
 __decorate([
     property({ attribute: true })
-], MyBtn.prototype, "text", void 0);
-MyBtn = __decorate([
+], WPBtn.prototype, "text", void 0);
+WPBtn = __decorate([
     customElement(Enums.default.COMPONENT_PREFIX + 'btn')
-], MyBtn);
-export { MyBtn };
+], WPBtn);
+export { WPBtn };

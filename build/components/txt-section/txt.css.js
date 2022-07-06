@@ -1,6 +1,5 @@
 import { css } from '../../globals/exports';
-
-export default css`
+export default css `
 :host {
 	display: block;
 	font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
