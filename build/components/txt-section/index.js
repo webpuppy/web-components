@@ -4,7 +4,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import txtCSS from './txt.css';
+import txtCSS, { TAG_STYLES, BASE_COLORS } from './txt.css';
 import { customElement, LitElement, Enums, html, property, } from '../../globals/exports';
 let WPTxt = class WPTxt extends LitElement {
     constructor() {
@@ -19,7 +19,7 @@ let WPTxt = class WPTxt extends LitElement {
 		`;
     }
 };
-WPTxt.styles = [txtCSS];
+WPTxt.styles = [BASE_COLORS, txtCSS];
 __decorate([
     property()
 ], WPTxt.prototype, "size", void 0);
@@ -36,8 +36,29 @@ let WPHdr = class WPHdr extends LitElement {
 		`;
     }
 };
-WPHdr.styles = [txtCSS];
+WPHdr.styles = [BASE_COLORS, txtCSS];
 WPHdr = __decorate([
     customElement(Enums.default.COMPONENT_PREFIX + 'hdr')
 ], WPHdr);
 export { WPHdr };
+let WPTag = class WPTag extends LitElement {
+    constructor() {
+        super(...arguments);
+        this.size = 'md';
+    }
+    render() {
+        return html `
+			<span class="wp-tag-${this.size}">
+				<slot></slot>
+			</span>
+		`;
+    }
+};
+WPTag.styles = [TAG_STYLES, txtCSS];
+__decorate([
+    property()
+], WPTag.prototype, "size", void 0);
+WPTag = __decorate([
+    customElement(Enums.default.COMPONENT_PREFIX + 'tag')
+], WPTag);
+export { WPTag };
