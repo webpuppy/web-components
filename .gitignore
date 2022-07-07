@@ -1,3 +1,4 @@
 node_modules
 es
 .DS_STORE
+build
