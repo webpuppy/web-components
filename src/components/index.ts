@@ -1,7 +1,10 @@
 export * from './btn';
 export * from './txt-section';
+export * from './layout';
+export * from './link';
 
 import { WPBtn } from './btn';
+import { WPLink } from './link';
 import {
 	WPHdr,
 	WPTag,
@@ -16,5 +19,6 @@ declare global {
 		'wp-txt': WPTxt;
 		'wp-hdr': WPHdr;
 		'wp-tag': WPTag;
+		'wp-link': WPLink;
 	}
 }

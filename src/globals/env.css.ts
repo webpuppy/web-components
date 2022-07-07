@@ -18,4 +18,7 @@ export const CSS_VARS = css`
 	--wp-btn-confirm: ${BTN_CONFIRM_COLOR};
 	--wp-btn-danger: ${BTN_DANGER_COLOR};
 }
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 `;

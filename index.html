@@ -4,9 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <title>WP Web Components</title>
+	<script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="./node_modules/lit/polyfill-support.js"></script>
+	<script type="module" src="./bundle/index.js"></script>
   </head>
   <body>
-	<a href="/dev/text.html">Text Content</a>
-    <a href="/dev/buttons.html">Buttons</a>
+	<wp-link text="Text Content" href="/dev/text.html"></wp-link>
+    <wp-link text="Buttons" href="/dev/buttons.html"></wp-link>
   </body>
 </html>
