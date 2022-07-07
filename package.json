@@ -8,6 +8,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
+    "minify:watch": "node ./tools/rollup-watch.cjs",
     "format:check": "prettier --check ./src",
     "format": "prettier --write ./src",
     "lint:lit-analyzer": "lit-analyzer",
@@ -50,7 +51,9 @@
     "rollup-plugin-minify-html-literals": "^1.2.6",
     "rollup-plugin-summary": "^1.4.3",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "~4.6.4"
+    "rollup-stream": "^1.24.1",
+    "typescript": "~4.6.4",
+    "vinyl-source-stream": "^2.0.0"
   },
   "customElements": "custom-elements.json"
 }
