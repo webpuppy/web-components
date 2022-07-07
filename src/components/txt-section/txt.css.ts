@@ -21,8 +21,6 @@ export const BASE_COLORS = css`
 `;
 
 export default css`
-
-
 p, header {
 	margin-block-start: 0;
 	margin-block-end: 0;
