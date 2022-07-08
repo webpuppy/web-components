@@ -25,7 +25,7 @@
     "lit"
   ],
   "author": "abschill",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "lit": "^2.2.4"
   },
