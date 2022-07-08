@@ -1,9 +1,8 @@
 {
-  "name": "wp-web-components",
+  "name": "@webpuppy/web-components",
   "version": "0.1.0",
-  "description": "contentbuddy web components",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "description": "webpuppy web components with lit html",
+  "main": "bundle/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
