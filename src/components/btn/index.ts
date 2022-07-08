@@ -9,7 +9,7 @@ import {
 	when,
 } from '../../globals/exports';
 import { CBButtonType } from './defs';
-
+import { CSS_RESETS } from '../../globals/env.css';
 @customElement(Enums.default.COMPONENT_PREFIX + 'btn')
 export class WPBtn extends LitElement {
 	@property({ attribute: true, type: Boolean })
@@ -21,7 +21,7 @@ export class WPBtn extends LitElement {
 	@property({ attribute: true })
 	text = '';
 
-	static override styles = [btnCss];
+	static override styles = [CSS_RESETS, btnCss];
 
 	get_icon() {
 		switch (this.type) {
@@ -35,10 +35,10 @@ export class WPBtn extends LitElement {
 	}
 	override render() {
 		const classes = {
-			primary: this.type === 'primary',
-			base: this.type === 'base',
-			danger: this.type === 'danger',
-			confirm: this.type === 'confirm',
+			'wp primary': this.type === 'primary',
+			'wp base': this.type === 'base',
+			'wp danger': this.type === 'danger',
+			'wp confirm': this.type === 'confirm',
 		};
 		return html`
 			<button class=${classMap(classes)} part="button">

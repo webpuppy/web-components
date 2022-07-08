@@ -1,5 +1,5 @@
 import { css } from '../../globals/exports';
-export { CSS_VARS } from '../../globals/env.css';
+export { CSS_RESETS } from '../../globals/env.css';
 
 export const LINK_STYLES = css`
 :host {
