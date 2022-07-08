@@ -13,7 +13,7 @@ import { LayoutType } from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'layout')
 export class WPLayout extends LitElement {
     @property()
-    type: LayoutType = 'sidebar-0';
+    type: LayoutType = 'topbar-0';
 
     static override styles = DEFAULT_LAYOUT_STYLES;
 

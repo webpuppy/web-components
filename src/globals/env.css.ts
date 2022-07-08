@@ -10,9 +10,9 @@ export const BTN_DANGER_COLOR = css`#da2a2a`;
 export const CSS_RESETS = css`
     :host {
         --wp-base-black: #3d3a3a;
-        --wp-btn-primary: #b913b9;
+        --wp-btn-primary: #EF4565;
         --wp-btn-base: #4a4ad5;
-        --wp-btn-txt-00: #ffffff;
+        --wp-btn-txt-00: #F3F3F3;
         --wp-btn-txt-01: #f2f1f1;
         --wp-btn-confirm: #42c062;
         --wp-btn-danger: #da2a2a;

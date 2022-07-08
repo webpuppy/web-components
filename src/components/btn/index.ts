@@ -39,6 +39,7 @@ export class WPBtn extends LitElement {
             'wp base': this.type === 'base',
             'wp danger': this.type === 'danger',
             'wp confirm': this.type === 'confirm',
+			'wp secondary': this.type === 'secondary'
         };
         return html`
             <button class=${classMap(classes)} part="button">
