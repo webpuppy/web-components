@@ -55,7 +55,10 @@ export const CSS_RESETS = css`
         line-height: 1.8em;
         margin-block-start: 0;
         margin-block-end: 0;
-        margin-block-start: 1.25em;
-        margin-block-end: 1.25em;
     }
+
+	p {
+		margin-block-start: 1.25em;
+        margin-block-end: 1.25em;
+	}
 `;

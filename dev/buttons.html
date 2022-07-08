@@ -2,18 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>CB Buttons</title>
+    <title>WP Buttons</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../bundle/index.js"></script>
+	<style>
+		body {
+			margin: 0;
+		}
+		main {
+			margin-top: 2.5rem;
+		}
+	</style>
   </head>
   <body>
-	<wp-layout type="topbar-0">
-		<div>
-			<wp-link href="/" text="Back"></wp-link>
-			<hr>
-		</div>
-		<div>
+	<wp-layout>
+		<wp-nav slot="nav" icon_url="http://localhost:8000/logo.svg">
+			<wp-link text="Text Content" href="/dev/text.html"></wp-link>
+			<wp-link text="Buttons" href="/dev/buttons.html"></wp-link>
+		</wp-nav>
+		<main slot="main">
 			<wp-hdr>
 				<h1>Normal Text</h1>
 			</wp-hdr>
@@ -27,7 +35,7 @@
 			</wp-hdr>
 			<wp-btn type="confirm" use_icon></wp-btn>
 			<wp-btn type="danger"  use_icon></wp-btn>
-		</div>
+		</main>
 	</wp-layout>
   </body>
 </html>

@@ -6,14 +6,19 @@
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../bundle/index.js"></script>
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
   </head>
   <body>
-	<wp-layout type="topbar-0">
-		<div>
-			<wp-link href="/" text="Back"></wp-link>
-			<hr>
-		</div>
-		<div>
+	<wp-layout>
+		<wp-nav slot="nav" icon_url="http://localhost:8000/logo.svg">
+			<wp-link text="Text Content" href="/dev/text.html"></wp-link>
+			<wp-link text="Buttons" href="/dev/buttons.html"></wp-link>
+		</wp-nav>
+		<div slot="main">
 			<wp-hdr>
 				<h1>Heading 1</h1>
 			</wp-hdr>

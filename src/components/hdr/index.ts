@@ -20,6 +20,9 @@ export class WPNav extends LitElement {
 	type: TopNavType = 'flexed-burger';
 
 	@property()
+	title: string = 'WebPuppy';
+
+	@property()
 	prefix_href?: string = null;
 
 	@property()
@@ -35,6 +38,9 @@ export class WPNav extends LitElement {
 					alt="hdr icon"
 					height="64"
 					width="64">
+					<span>
+						${this.title}
+					</span>
 				</a>
 			</div>
 			<div class="wp-nav-list">

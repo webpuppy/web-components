@@ -12,10 +12,11 @@ import { LayoutType } from './defs';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'layout')
 export class WPLayout extends LitElement {
+
+	static override styles = DEFAULT_LAYOUT_STYLES;
+
     @property()
     type: LayoutType = 'topbar-0';
-
-    static override styles = DEFAULT_LAYOUT_STYLES;
 
     private _convertTypeToClass() {
         switch (this.type) {
@@ -37,12 +38,8 @@ export class WPLayout extends LitElement {
     render() {
         return html`
             <div class="${this._convertTypeToClass()}">
-                <header class="wp-layout__hdr">
-                    <slot></slot>
-                </header>
-                <main class="wp-layout__main">
-                    <slot></slot>
-                </main>
+				<slot name="nav"></slot>
+				<slot name="main"></slot>
             </div>
         `;
     }
