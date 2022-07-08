@@ -118,7 +118,11 @@ function*St(t,e){if(void 0!==t){let s=0;for(const i of t)yield e(i,s++)}}
         cursor: pointer;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        padding: 1.45em 1.95em;
+		font-size: 15px;
+		letter-spacing: 1px;
+		min-height: 50px;
+		min-width: 100px;
+		padding: 1em 3.25em;
         position: relative;
         transition: all 150ms ease-in-out;
         z-index: 2;
@@ -130,6 +134,10 @@ function*St(t,e){if(void 0!==t){let s=0;for(const i of t)yield e(i,s++)}}
 
     .primary {
         background-color: var(--wp-btn-primary);
+		color: #fff;
+
+		font-weight: 300;
+		text-transform: uppercase;
 	}
 
 	.primary,
@@ -159,7 +167,7 @@ function*St(t,e){if(void 0!==t){let s=0;for(const i of t)yield e(i,s++)}}
     }
 
     .base {
-        background-color: var(--wp-btn-base);
+        background-color: var(--wp-navy);
     }
 
     .danger {
@@ -170,6 +178,7 @@ function*St(t,e){if(void 0!==t){let s=0;for(const i of t)yield e(i,s++)}}
         --wp-base-black: #3d3a3a;
         --wp-btn-primary: #EF4565;
         --wp-btn-base: #4a4ad5;
+		--wp-navy: #094067;
         --wp-btn-txt-00: #F3F3F3;
         --wp-btn-txt-01: #f2f1f1;
         --wp-btn-confirm: #42c062;

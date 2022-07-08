@@ -12,6 +12,7 @@ export const CSS_RESETS = css`
         --wp-base-black: #3d3a3a;
         --wp-btn-primary: #EF4565;
         --wp-btn-base: #4a4ad5;
+		--wp-navy: #094067;
         --wp-btn-txt-00: #F3F3F3;
         --wp-btn-txt-01: #f2f1f1;
         --wp-btn-confirm: #42c062;

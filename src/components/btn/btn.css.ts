@@ -14,7 +14,11 @@ export default css`
         cursor: pointer;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        padding: 1.45em 1.95em;
+		font-size: 15px;
+		letter-spacing: 1px;
+		min-height: 50px;
+		min-width: 100px;
+		padding: 1em 3.25em;
         position: relative;
         transition: all 150ms ease-in-out;
         z-index: 2;
@@ -26,6 +30,10 @@ export default css`
 
     .primary {
         background-color: var(--wp-btn-primary);
+		color: #fff;
+
+		font-weight: 300;
+		text-transform: uppercase;
 	}
 
 	.primary,
@@ -55,7 +63,7 @@ export default css`
     }
 
     .base {
-        background-color: var(--wp-btn-base);
+        background-color: var(--wp-navy);
     }
 
     .danger {
