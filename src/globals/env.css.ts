@@ -18,11 +18,13 @@ export const CSS_RESETS = css`
         --wp-btn-confirm: #42c062;
         --wp-btn-danger: #da2a2a;
         --shadow-color: rgba(0, 0, 0, 0.1);
+		--wp-fontstack: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+            'Noto Color Emoji';
     }
     * {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-            sans-serif;
+        font-family: var(--wp-fontstack);
     }
     h1 {
         font-size: 2.25rem;
@@ -48,10 +50,6 @@ export const CSS_RESETS = css`
     header {
         /* color: #3d3a3a; */
         display: block;
-        font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
-            'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
-            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-            'Noto Color Emoji';
         line-height: 1.8em;
         margin-block-start: 0;
         margin-block-end: 0;
