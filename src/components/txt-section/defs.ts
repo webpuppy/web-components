@@ -1,7 +1,1 @@
-export type TxtSectionBaseSize =
-| 'xs'
-| 'sm'
-| 'md'
-| 'lg'
-| 'xl';
-
+export type TxtSectionBaseSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

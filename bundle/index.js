@@ -104,201 +104,201 @@ function*St(t,e){if(void 0!==t){let s=0;for(const i of t)yield e(i,s++)}}
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */const Zt=dt(class extends Bt{constructor(){super(...arguments),this._$CG=new Xt(this),this._$CK=new Wt}render(t,e){return k}update(t,[e,s]){if(this.isConnected||this.disconnected(),e===this._$CX)return;this._$CX=e;let i=0;const{_$CG:n,_$CK:r}=this;return(async(t,e)=>{for await(const s of t)if(!1===await e(s))return})(e,(async t=>{for(;r.get();)await r.get();const o=n.deref();if(void 0!==o){if(o._$CX!==e)return!1;void 0!==s&&(t=s(t,i)),o.commitValue(t,i),i++}return!0})),k}commitValue(t,e){this.setValue(t)}disconnected(){this._$CG.disconnect(),this._$CK.pause()}reconnected(){this._$CG.reconnect(this),this._$CK.resume()}});var Qt={COMPONENT_PREFIX:"wp-"},Jt=Object.freeze({__proto__:null,default:Qt}),te=n`
-	:host {
-		cursor: pointer;
-		display: inline-block;
-		min-width: fit-content;
-		pointer-events: all;
-	}
+    :host {
+        cursor: pointer;
+        display: inline-block;
+        min-width: fit-content;
+        pointer-events: all;
+    }
 
-	button.wp {
-		border-width: 2px;
-		border-color: transparent;
-		border-style: solid;
-		border-radius: 1.35rem;
-		color: var(--wp-btn-txt-01);
-		cursor: pointer;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-			Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		padding: 1em 1.5em;
-		position: relative;
-		transition: all 150ms ease-in-out;
-		z-index: 2;
-	}
+    button.wp {
+        border-width: 2px;
+        border-color: transparent;
+        border-style: solid;
+        border-radius: 1.35rem;
+        color: var(--wp-btn-txt-01);
+        cursor: pointer;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 1em 1.5em;
+        position: relative;
+        transition: all 150ms ease-in-out;
+        z-index: 2;
+    }
 
-	button.wp:hover {
-		border-color: var(--shadow-color);
-		box-shadow: inset 0 0 4px var(--shadow-color);
-		color: var(--wp-btn-txt-00);
-	}
+    button.wp:hover {
+        border-color: var(--shadow-color);
+        box-shadow: inset 0 0 4px var(--shadow-color);
+        color: var(--wp-btn-txt-00);
+    }
 
-	.primary {
-		background-color: var(--wp-btn-primary);
-	}
+    .primary {
+        background-color: var(--wp-btn-primary);
+    }
 
-	.confirm {
-		background-color: var(--wp-btn-confirm);
-	}
+    .confirm {
+        background-color: var(--wp-btn-confirm);
+    }
 
-	.base {
-		background-color: var(--wp-btn-base);
-	}
+    .base {
+        background-color: var(--wp-btn-base);
+    }
 
-	.danger {
-		background-color: var(--wp-btn-danger);
-	}
+    .danger {
+        background-color: var(--wp-btn-danger);
+    }
 `;n`#b913b9`,n`#4a4ad5`,n`#ffffff`,n`#f2f1f1`,n`#42c062`,n`#da2a2a`;const ee=n`
-:host {
-	--wp-base-black: #3d3a3a;
-	--wp-btn-primary: #b913b9;
-	--wp-btn-base: #4a4ad5;
-	--wp-btn-txt-00: #ffffff;
-	--wp-btn-txt-01: #f2f1f1;
-	--wp-btn-confirm: #42c062;
-	--wp-btn-danger: #da2a2a;
-	--shadow-color: rgba(0, 0, 0, 0.1);
-}
-* {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-h1 {
-	font-size: 2.25rem;
-}
+    :host {
+        --wp-base-black: #3d3a3a;
+        --wp-btn-primary: #b913b9;
+        --wp-btn-base: #4a4ad5;
+        --wp-btn-txt-00: #ffffff;
+        --wp-btn-txt-01: #f2f1f1;
+        --wp-btn-confirm: #42c062;
+        --wp-btn-danger: #da2a2a;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+    }
+    * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+            sans-serif;
+    }
+    h1 {
+        font-size: 2.25rem;
+    }
 
-h2 {
-	font-size: 2rem;
-}
+    h2 {
+        font-size: 2rem;
+    }
 
-h3 {
-	font-size: 1.8rem;
-}
+    h3 {
+        font-size: 1.8rem;
+    }
 
-h4 {
-	font-size: 1.5rem;
-}
+    h4 {
+        font-size: 1.5rem;
+    }
 
-h5 {
-	font-size: 1.25rem;
-}
+    h5 {
+        font-size: 1.25rem;
+    }
 
-p, header {
-	/* color: #3d3a3a; */
-	display: block;
-	font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
-		'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
-		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-		'Noto Color Emoji';
-	line-height: 1.8em;
-	margin-block-start: 0;
-	margin-block-end: 0;
-	margin-block-start: 1.25em;
-	margin-block-end: 1.25em;
-}
+    p,
+    header {
+        /* color: #3d3a3a; */
+        display: block;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+            'Noto Color Emoji';
+        line-height: 1.8em;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-block-start: 1.25em;
+        margin-block-end: 1.25em;
+    }
 `;var se=function(t,e,s,i){var n,r=arguments.length,o=r<3?e:null===i?i=Object.getOwnPropertyDescriptor(e,s):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(t,e,s,i);else for(var l=t.length-1;l>=0;l--)(n=t[l])&&(o=(r<3?n(o):r>3?n(e,s,o):n(e,s))||o);return r>3&&o&&Object.defineProperty(e,s,o),o};let ie=class extends J{constructor(){super(...arguments),this.use_icon=!1,this.type="base",this.text=""}get_icon(){switch(this.type){case"confirm":return"✓";case"danger":return"x";default:return""}}render(){const t={"wp primary":"primary"===this.type,"wp base":"base"===this.type,"wp danger":"danger"===this.type,"wp confirm":"confirm"===this.type};return N`
-			<button class=${pt(t)} part="button">
-				${this.text}
-				${ot(!this.use_icon,(()=>null),(()=>this.get_icon()))}
-			</button>
-		`}};ie.styles=[ee,te],se([it({attribute:!0,type:Boolean})],ie.prototype,"use_icon",void 0),se([it({attribute:!0})],ie.prototype,"type",void 0),se([it({attribute:!0})],ie.prototype,"text",void 0),ie=se([et(Qt.COMPONENT_PREFIX+"btn")],ie);const ne=n`
-:host {
-	background-color: #3d3a3a;
-	color: #fff;
-	border-radius: 1rem;
-	display: inline-block;
-	padding: .35em;
-	width: fit-content;
-}
+            <button class=${pt(t)} part="button">
+                ${this.text}
+                ${ot(!this.use_icon,(()=>null),(()=>this.get_icon()))}
+            </button>
+        `}};ie.styles=[ee,te],se([it({attribute:!0,type:Boolean})],ie.prototype,"use_icon",void 0),se([it({attribute:!0})],ie.prototype,"type",void 0),se([it({attribute:!0})],ie.prototype,"text",void 0),ie=se([et(Qt.COMPONENT_PREFIX+"btn")],ie);const ne=n`
+    :host {
+        background-color: #3d3a3a;
+        color: #fff;
+        border-radius: 1rem;
+        display: inline-block;
+        padding: 0.35em;
+        width: fit-content;
+    }
 
-a {
-	color: inherit;
-	display: inline-block;
-	text-decoration: none;
-	position: relative;
-	z-index: 2;
-}
+    a {
+        color: inherit;
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        z-index: 2;
+    }
 `;var re=n`
-.wp-txt-xs,
-.wp-tag-xs {
-	font-size: 12px;
-}
+    .wp-txt-xs,
+    .wp-tag-xs {
+        font-size: 12px;
+    }
 
-.wp-tag-sm,
-.wp-txt-sm {
-	font-size: 14px;
-}
+    .wp-tag-sm,
+    .wp-txt-sm {
+        font-size: 14px;
+    }
 
-.wp-tag-lg,
-.wp-txt-lg {
-	font-size: 1.5em;
-}
+    .wp-tag-lg,
+    .wp-txt-lg {
+        font-size: 1.5em;
+    }
 
-.wp-tag-xl,
-.wp-txt-xl {
-	font-size: 2em;
-}
-
+    .wp-tag-xl,
+    .wp-txt-xl {
+        font-size: 2em;
+    }
 `,oe=function(t,e,s,i){var n,r=arguments.length,o=r<3?e:null===i?i=Object.getOwnPropertyDescriptor(e,s):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(t,e,s,i);else for(var l=t.length-1;l>=0;l--)(n=t[l])&&(o=(r<3?n(o):r>3?n(e,s,o):n(e,s))||o);return r>3&&o&&Object.defineProperty(e,s,o),o};let le=class extends J{constructor(){super(...arguments),this.size="md"}render(){return N`
-			<p class="wp-txt-${this.size}">
-				<slot></slot>
-			</p>
-		`}};le.styles=[ee,re],oe([it()],le.prototype,"size",void 0),le=oe([et(Qt.COMPONENT_PREFIX+"txt")],le);let ae=class extends J{render(){return N`
-			<header class="wp-hdr">
-				<slot></slot>
-			</header>
-		`}};ae.styles=[ee,re],ae=oe([et(Qt.COMPONENT_PREFIX+"hdr")],ae);let he=class extends J{constructor(){super(...arguments),this.size="md"}render(){return this.href?N`
-			<a href="wp-tag-${this.size}">
-				<slot></slot>
-			</a>
-			`:N`
-			<span class="wp-tag-${this.size}">
-				<slot></slot>
-			</span>
-		`}};he.styles=[ee,ne,re],oe([it()],he.prototype,"size",void 0),oe([it()],he.prototype,"href",void 0),he=oe([et(Qt.COMPONENT_PREFIX+"tag")],he);const ce=n`
-:host {
-	display: grid;
-}
+            <p class="wp-txt-${this.size}">
+                <slot></slot>
+            </p>
+        `}};le.styles=[ee,re],oe([it()],le.prototype,"size",void 0),le=oe([et(Qt.COMPONENT_PREFIX+"txt")],le);let ae=class extends J{render(){return N`
+            <header class="wp-hdr">
+                <slot></slot>
+            </header>
+        `}};ae.styles=[ee,re],ae=oe([et(Qt.COMPONENT_PREFIX+"hdr")],ae);let he=class extends J{constructor(){super(...arguments),this.size="md"}render(){return this.href?N`
+                <a href="wp-tag-${this.size}">
+                    <slot></slot>
+                </a>
+            `:N`
+            <span class="wp-tag-${this.size}">
+                <slot></slot>
+            </span>
+        `}};he.styles=[ee,ne,re],oe([it()],he.prototype,"size",void 0),oe([it()],he.prototype,"href",void 0),he=oe([et(Qt.COMPONENT_PREFIX+"tag")],he);const ce=n`
+    :host {
+        display: grid;
+    }
 
-.wp-layout-tbr-0 {
-	display: grid;
-	grid-template-rows: 10% 90%;
-}
-.wp-layout-tbr-0 {
-	display: grid;
-	grid-template-rows: 10% 90%;
-}
-.wp-layout-sbr-0 {
-	display: grid;
-	grid-template-columns: 10% 90%;
-}
+    .wp-layout-tbr-0 {
+        display: grid;
+        grid-template-rows: 10% 90%;
+    }
+    .wp-layout-tbr-0 {
+        display: grid;
+        grid-template-rows: 10% 90%;
+    }
+    .wp-layout-sbr-0 {
+        display: grid;
+        grid-template-columns: 10% 90%;
+    }
 
-.wp-layout-sbr-1 {
-	display: grid;
-	grid-template-columns: 15% 85%;
-}
+    .wp-layout-sbr-1 {
+        display: grid;
+        grid-template-columns: 15% 85%;
+    }
 `;var de=function(t,e,s,i){var n,r=arguments.length,o=r<3?e:null===i?i=Object.getOwnPropertyDescriptor(e,s):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(t,e,s,i);else for(var l=t.length-1;l>=0;l--)(n=t[l])&&(o=(r<3?n(o):r>3?n(e,s,o):n(e,s))||o);return r>3&&o&&Object.defineProperty(e,s,o),o};let ue=class extends J{constructor(){super(...arguments),this.type="sidebar-0"}_convertTypeToClass(){switch(this.type){case"topbar-0":return"wp-layout-tbr-0";case"topbar-1":return"wp-layout-tbr-1";case"sidebar-1":return"wp-layout-sbr-1";default:return"wp-layout-sbr-0"}}render(){return N`
-		<div class="${this._convertTypeToClass()}">
-			<header class="wp-layout__hdr">
-				<slot></slot>
-			</header>
-			<main class="wp-layout__main">
-				<slot></slot>
-			</main>
-		</div>
-		`}};ue.styles=ce,de([it()],ue.prototype,"type",void 0),ue=de([et(Qt.COMPONENT_PREFIX+"layout")],ue);const pe=n`
-:host {
-	display: inline-block;
-	min-width: fit-content;
-}
+            <div class="${this._convertTypeToClass()}">
+                <header class="wp-layout__hdr">
+                    <slot></slot>
+                </header>
+                <main class="wp-layout__main">
+                    <slot></slot>
+                </main>
+            </div>
+        `}};ue.styles=ce,de([it()],ue.prototype,"type",void 0),ue=de([et(Qt.COMPONENT_PREFIX+"layout")],ue);const pe=n`
+    :host {
+        display: inline-block;
+        min-width: fit-content;
+    }
 
-a {
-	color: inherit;
-	text-decoration: none;
-	transition: all 380ms ease-in-out;
-}
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 380ms ease-in-out;
+    }
 
-a:hover {
-	text-decoration: underline;
-}
-`;var fe=function(t,e,s,i){var n,r=arguments.length,o=r<3?e:null===i?i=Object.getOwnPropertyDescriptor(e,s):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(t,e,s,i);else for(var l=t.length-1;l>=0;l--)(n=t[l])&&(o=(r<3?n(o):r>3?n(e,s,o):n(e,s))||o);return r>3&&o&&Object.defineProperty(e,s,o),o};let ve=class extends J{constructor(){super(...arguments),this.href="#",this.text=""}render(){return N`
-		<a href="${this.href}">${this.text}</a>
-		`}};ve.styles=[ee,pe],fe([it({attribute:!0,type:String})],ve.prototype,"href",void 0),fe([it({attribute:!0,type:String})],ve.prototype,"text",void 0),ve=fe([et(Qt.COMPONENT_PREFIX+"link")],ve);export{i as CSSResult,Jt as Enums,J as LitElement,ie as WPBtn,ae as WPHdr,ue as WPLayout,ve as WPLink,he as WPTag,le as WPTxt,Zt as asyncReplace,kt as cache,rt as choose,pt as classMap,n as css,et as customElement,Nt as guard,N as html,Pt as ifDefined,Ot as keyed,Ut as live,St as map,it as property,Dt as ref,xt as repeat,ft as styleMap,Ft as unsafeHTML,Gt as unsafeSVG,Yt as until,ot as when};
+    a:hover {
+        text-decoration: underline;
+    }
+`;var fe=function(t,e,s,i){var n,r=arguments.length,o=r<3?e:null===i?i=Object.getOwnPropertyDescriptor(e,s):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(t,e,s,i);else for(var l=t.length-1;l>=0;l--)(n=t[l])&&(o=(r<3?n(o):r>3?n(e,s,o):n(e,s))||o);return r>3&&o&&Object.defineProperty(e,s,o),o};let ve=class extends J{constructor(){super(...arguments),this.href="#",this.text=""}render(){return N` <a href="${this.href}">${this.text}</a> `}};ve.styles=[ee,pe],fe([it({attribute:!0,type:String})],ve.prototype,"href",void 0),fe([it({attribute:!0,type:String})],ve.prototype,"text",void 0),ve=fe([et(Qt.COMPONENT_PREFIX+"link")],ve);export{i as CSSResult,Jt as Enums,J as LitElement,ie as WPBtn,ae as WPHdr,ue as WPLayout,ve as WPLink,he as WPTag,le as WPTxt,Zt as asyncReplace,kt as cache,rt as choose,pt as classMap,n as css,et as customElement,Nt as guard,N as html,Pt as ifDefined,Ot as keyed,Ut as live,St as map,it as property,Dt as ref,xt as repeat,ft as styleMap,Ft as unsafeHTML,Gt as unsafeSVG,Yt as until,ot as when};

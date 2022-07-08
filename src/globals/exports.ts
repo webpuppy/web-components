@@ -1,14 +1,5 @@
-export {
-	LitElement,
-	html,
-	css,
-	CSSResult,
-	CSSResultArray
-} from 'lit';
-export {
-	customElement,
-	property
-} from 'lit/decorators.js';
+export { LitElement, html, css, CSSResult, CSSResultArray } from 'lit';
+export { customElement, property } from 'lit/decorators.js';
 export { choose } from 'lit/directives/choose.js';
 export { when } from 'lit/directives/when.js';
 export { classMap } from 'lit/directives/class-map.js';

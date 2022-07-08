@@ -1,3 +1,3 @@
 export default {
-	COMPONENT_PREFIX: 'wp-',
+    COMPONENT_PREFIX: 'wp-',
 };
