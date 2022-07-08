@@ -57,27 +57,34 @@ h5 {
 .wp-txt-xs,
 .wp-tag-xs {
 	font-size: 12px;
+	text-decoration: none;
 }
 
 .wp-tag-sm,
 .wp-txt-sm {
 	font-size: 14px;
+
 }
 
 .wp-tag-md,
 .wp-txt-md {
-
+	text-decoration: none;
 }
 
 .wp-tag-lg,
 .wp-txt-lg {
 	font-size: 1.5em;
+	text-decoration: none;
 }
 
 .wp-tag-xl,
 .wp-txt-xl {
 	font-size: 2em;
+	text-decoration: none;
 }
 
+a:-webkit-any-link {
+	text-decoration: none;
+}
 
 `;

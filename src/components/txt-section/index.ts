@@ -47,9 +47,16 @@ export class WPTag extends LitElement {
 
 	static override styles = [TAG_STYLES, txtCSS];
 	@property() size: TxtSectionBaseSize = 'md';
+	@property() href?: string;
 
 	override render() {
-
+		if(this.href) {
+			return html`
+			<a href="wp-tag-${this.size}">
+				<slot></slot>
+			</a>
+			`;
+		}
 		return html`
 			<span class="wp-tag-${this.size}">
 				<slot></slot>

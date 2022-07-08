@@ -6,36 +6,47 @@
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../bundle/index.js"></script>
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
   </head>
   <body>
-	<a href="/">Back</a>
-	<hr>
-	<wp-hdr>
-		<h1>Heading 1</h1>
-	</wp-hdr>
-	<wp-hdr>
-		<h2>Heading 2</h2>
-	</wp-hdr>
-	<wp-hdr>
-		<h3>Heading 3</h3>
-	</wp-hdr>
-	<wp-hdr>
-		<h4>Heading 4</h4>
-	</wp-hdr>
-	<wp-txt size="xs">
-		<wp-tag size="xs">txt xs: </wp-tag> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolorum non, veniam fuga corrupti officia saepe quis explicabo! Neque facilis consequuntur eum eveniet cupiditate ipsam. Eius harum voluptas repellendus facere?
-	</wp-txt>
-	<wp-txt size="sm">
-		<wp-tag size="sm">txt sm:</wp-tag> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus minus cupiditate voluptatum perspiciatis incidunt nisi delectus non nostrum consequatur esse, ullam id, eos hic. Modi perferendis quas suscipit consequatur voluptatibus.
-	</wp-txt>
-    <wp-txt>
-		<wp-tag>txt md:</wp-tag> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus pariatur quis culpa facilis autem repellendus numquam corporis, eveniet nesciunt iste, inventore tempore fugiat omnis ullam magnam velit quia rem? Cupiditate.
-	</wp-txt>
-	<wp-txt size="lg">
-		<wp-tag size="lg">txt lg:</wp-tag> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae debitis laborum eveniet perferendis maiores, itaque consectetur, blanditiis, fuga praesentium temporibus? Voluptas consectetur obcaecati officia ab quod ratione vitae amet?
-	</wp-txt>
-	<wp-txt size="xl">
-		<wp-tag size="xl">txt xl:</wp-tag> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus eius voluptates, molestiae molestias voluptas atque dolorem nihil, culpa ipsa incidunt praesentium. Iure fuga rem, eos enim id placeat perferendis quasi?
-	</wp-txt>
+	<wp-layout type="topbar-0">
+		<div>
+			<a href="/">Back</a>
+			<hr>
+		</div>
+		<div>
+			<wp-hdr>
+				<h1>Heading 1</h1>
+			</wp-hdr>
+			<wp-hdr>
+				<h2>Heading 2</h2>
+			</wp-hdr>
+			<wp-hdr>
+				<h3>Heading 3</h3>
+			</wp-hdr>
+			<wp-hdr>
+				<h4>Heading 4</h4>
+			</wp-hdr>
+			<wp-txt size="xs">
+				<wp-tag size="xs" href="/">txt xs: </wp-tag> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolorum non, veniam fuga corrupti officia saepe quis explicabo! Neque facilis consequuntur eum eveniet cupiditate ipsam. Eius harum voluptas repellendus facere?
+			</wp-txt>
+			<wp-txt size="sm">
+				<wp-tag size="sm">txt sm:</wp-tag> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus minus cupiditate voluptatum perspiciatis incidunt nisi delectus non nostrum consequatur esse, ullam id, eos hic. Modi perferendis quas suscipit consequatur voluptatibus.
+			</wp-txt>
+			<wp-txt>
+				<wp-tag>txt md:</wp-tag> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus pariatur quis culpa facilis autem repellendus numquam corporis, eveniet nesciunt iste, inventore tempore fugiat omnis ullam magnam velit quia rem? Cupiditate.
+			</wp-txt>
+			<wp-txt size="lg">
+				<wp-tag size="lg">txt lg:</wp-tag> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae debitis laborum eveniet perferendis maiores, itaque consectetur, blanditiis, fuga praesentium temporibus? Voluptas consectetur obcaecati officia ab quod ratione vitae amet?
+			</wp-txt>
+			<wp-txt size="xl">
+				<wp-tag size="xl">txt xl:</wp-tag> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus eius voluptates, molestiae molestias voluptas atque dolorem nihil, culpa ipsa incidunt praesentium. Iure fuga rem, eos enim id placeat perferendis quasi?
+			</wp-txt>
+		</div>
+	</wp-layout>
   </body>
 </html>

@@ -1,27 +1,25 @@
-import { css, CSSResult } from '../../globals/exports';
-import { LayoutType } from './defs';
+import { css } from '../../globals/exports';
 
 export const DEFAULT_LAYOUT_STYLES = css`
-
-`;
-
-export const SIDEBAR_0_STYLES = css`
-
-`;
-
-export const SIDEBAR_1_STYLES = css`
-
-`;
-
-export const LAYOUT_STYLES = (
-	type: LayoutType
-): CSSResult[] => {
-	switch(type) {
-		case 'sidebar-0':
-			return [DEFAULT_LAYOUT_STYLES, SIDEBAR_0_STYLES];
-		case 'sidebar-1':
-			return [DEFAULT_LAYOUT_STYLES, SIDEBAR_1_STYLES];
-		default:
-			return [DEFAULT_LAYOUT_STYLES];
-	}
+:host {
+	display: grid;
 }
+
+.wp-layout-tbr-0 {
+	display: grid;
+	grid-template-rows: 10% 90%;
+}
+.wp-layout-tbr-0 {
+	display: grid;
+	grid-template-rows: 10% 90%;
+}
+.wp-layout-sbr-0 {
+	display: grid;
+	grid-template-columns: 10% 90%;
+}
+
+.wp-layout-sbr-1 {
+	display: grid;
+	grid-template-columns: 15% 85%;
+}
+`;

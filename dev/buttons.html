@@ -6,17 +6,28 @@
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../build/components/index.js"></script>
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
   </head>
   <body>
-	<a href="/">Back</a>
-	<hr>
-	<h1>Normal Text</h1>
-    <wp-btn text="Base"></wp-btn>
-	<wp-btn type="primary" text="Primary"></wp-btn>
-	<wp-btn type="confirm" text="Submit"></wp-btn>
-	<wp-btn type="danger" text="Cancel"></wp-btn>
-	<h1>Icons</h1>
-	<wp-btn type="confirm" use_icon></wp-btn>
-	<wp-btn type="danger"  use_icon></wp-btn>
+	<wp-layout type="topbar-0">
+		<div>
+			<a href="/">Back</a>
+			<hr>
+		</div>
+		<div>
+			<h1>Normal Text</h1>
+			<wp-btn text="Base"></wp-btn>
+			<wp-btn type="primary" text="Primary"></wp-btn>
+			<wp-btn type="confirm" text="Submit"></wp-btn>
+			<wp-btn type="danger" text="Cancel"></wp-btn>
+			<h1>Icons</h1>
+			<wp-btn type="confirm" use_icon></wp-btn>
+			<wp-btn type="danger"  use_icon></wp-btn>
+		</div>
+	</wp-layout>
   </body>
 </html>
