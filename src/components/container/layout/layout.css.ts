@@ -1,4 +1,4 @@
-import { css } from '../../globals/exports';
+import { css } from '../../../globals/exports';
 
 export const DEFAULT_LAYOUT_STYLES = css`
     :host {

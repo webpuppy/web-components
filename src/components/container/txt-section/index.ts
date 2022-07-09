@@ -7,8 +7,8 @@ import {
     property,
     classMap,
     when,
-} from '../../globals/exports';
-import { CSS_RESETS } from '../../globals/env.css';
+} from '../../../globals/exports';
+import { CSS_RESETS } from '../../../globals/env.css';
 import { TxtSectionBaseSize } from './defs';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'txt')

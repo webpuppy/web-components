@@ -6,8 +6,8 @@ import {
     property,
     classMap,
     when,
-} from '../../globals/exports';
-import { CSS_RESETS } from '../link/link.css';
+} from '../../../globals/exports';
+import { CSS_RESETS } from '../../link/link.css';
 import { DEFAULT_HDR_STYLES } from './hdr.css';
 import { TopNavType } from './defs';
 

@@ -1,4 +1,4 @@
-import { css } from '../../globals/exports';
+import { css } from '../../../globals/exports';
 
 export const DEFAULT_HDR_STYLES = css`
 :host {
