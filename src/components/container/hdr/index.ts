@@ -10,6 +10,7 @@ import {
 import { CSS_RESETS } from '../../link/link.css';
 import { DEFAULT_HDR_STYLES } from './hdr.css';
 import { TopNavType } from './defs';
+import { state } from 'lit/decorators';
 
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'nav')
@@ -26,7 +27,22 @@ export class WPNav extends LitElement {
 	prefix_href?: string = null;
 
 	@property()
-	icon_url: 'http://localhost:8000/logo.svg';
+	icon_url: '/logo.svg';
+
+	connectedCallback(): void {
+		super.connectedCallback();
+		window.addEventListener('DOMContentLoaded', () => {
+			window.addEventListener('resize', () => {
+				const mql = window.matchMedia('(max-width: 720px);');
+				mql.addEventListener('change', e => {
+					console.log(e);
+				});
+				// console.log(mql.matches);
+			});
+		});
+	}
+	// @state()
+	// nav_burger_open: false;
 
 	render() {
 		return html`
