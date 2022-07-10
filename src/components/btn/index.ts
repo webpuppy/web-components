@@ -12,6 +12,10 @@ import { CBButtonType } from './defs';
 import { CSS_RESETS } from '../../globals/env.css';
 @customElement(Enums.default.COMPONENT_PREFIX + 'btn')
 export class WPBtn extends LitElement {
+
+	@property({ attribute: true, type: Boolean })
+	focusring = false;
+
     @property({ attribute: true, type: Boolean })
     use_icon = false;
 
@@ -34,13 +38,13 @@ export class WPBtn extends LitElement {
         }
     }
     override render() {
-        const classes = {
-            'wp primary': this.type === 'primary',
-            'wp base': this.type === 'base',
-            'wp danger': this.type === 'danger',
-            'wp confirm': this.type === 'confirm',
-			'wp secondary': this.type === 'secondary'
-        };
+		const ring = this.focusring ? ' focusring' : '';
+		const classes = {};
+		classes[`wp primary${ring}`] = this.type === 'primary';
+		classes[`wp base${ring}`] = this.type === 'base';
+		classes[`wp danger${ring}`] = this.type === 'danger';
+		classes[`wp confirm${ring}`] = this.type === 'confirm';
+		classes[`wp secondary${ring}`] = this.type === 'secondary';
         return html`
             <button class=${classMap(classes)} part="button">
                 ${this.text}

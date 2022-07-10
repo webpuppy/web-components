@@ -68,4 +68,8 @@ export default css`
     .danger {
         background-color: var(--wp-btn-danger);
     }
+
+	.focusring {
+		border-color: var(--wp-navy);
+	}
 `;
