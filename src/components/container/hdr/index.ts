@@ -10,9 +10,6 @@ import {
 import { CSS_RESETS } from '../../link/link.css';
 import { DEFAULT_HDR_STYLES } from './hdr.css';
 import { TopNavType } from './defs';
-import { state } from 'lit/decorators';
-
-
 @customElement(Enums.default.COMPONENT_PREFIX + 'nav')
 export class WPNav extends LitElement {
 
