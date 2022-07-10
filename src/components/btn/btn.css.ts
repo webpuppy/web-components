@@ -39,7 +39,8 @@ export default css`
 	.primary,
 	.confirm,
 	.base,
-	.danger {
+	.danger,
+	.secondary {
 		border-color: transparent;
 		color: var(--wp-btn-txt-01);
 	}
@@ -53,9 +54,7 @@ export default css`
 	}
 
 	.secondary {
-		background-color: #fff;
-		border-color: var(--wp-btn-primary);
-		color: var(--wp-base-black);
+		background-color: var(--wp-ocean);
 	}
 
     .confirm {
