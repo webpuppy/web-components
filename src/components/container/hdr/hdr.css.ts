@@ -25,14 +25,18 @@ export const DEFAULT_HDR_STYLES = css`
 	padding: .35em;
 }
 
+.wp-nav-logo a {
+	display: flex;
+}
+
 .wp-nav-logo a,
 .wp-nav-logo span {
 	align-items: center;
-	display: flex;
 	place-content: center;
 }
 
 .wp-nav-logo span {
+	display: none;
 	font-size: 22px;
 	line-height: 1.25em;
 }
@@ -44,8 +48,33 @@ export const DEFAULT_HDR_STYLES = css`
 }
 
 .wp-nav-list {
-	align-items: center;
-	display: flex;
-	justify-content: space-evenly;
+	display: none;
+}
+
+.wp-nav-burger {
+	display: grid;
+	justify-content: end;
+	padding-right: 2rem;
+}
+
+.wp-nav-burger::after {
+	content: "☰";
+	font-size: 28px;
+}
+
+@media(min-width: 720px) {
+	.wp-nav-list {
+		align-items: center;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.wp-nav-burger {
+		display: none;
+	}
+
+	.wp-nav-logo span {
+		display: flex;
+	}
 }
 `;

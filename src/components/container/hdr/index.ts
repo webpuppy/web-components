@@ -46,6 +46,7 @@ export class WPNav extends LitElement {
 			<div class="wp-nav-list">
 				<slot></slot>
 			</div>
+			<div class="wp-nav-burger"></div>
 		</header>
 		`;
 	}
