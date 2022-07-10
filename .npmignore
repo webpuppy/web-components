@@ -1,8 +1,5 @@
-node_modules
-es
-.DS_STORE
-build
-bundle
+dev
+tools
 *.nyc-output
 pkg-cache
 *.nyc-output

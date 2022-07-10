@@ -1,0 +1,9 @@
+{
+    "entryPoints": [
+        "./src/components/index.ts"
+    ],
+    "darkHighlightTheme": "dark-plus",
+    "out": "docs/typedoc",
+    "includeVersion": true,
+	"excludeInternal": true
+}
