@@ -16,7 +16,9 @@
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
     "serve": "wds --watch",
     "serve:prod": "MODE=prod npm run serve",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
+    "build:sass": "sass ./src/sass/style.scss:./static/style.css",
+    "watch:sass": "sass -w ./src/sass/style.scss:./static/style.css"
   },
   "keywords": [
     "contentbuddy-ui",
@@ -47,6 +49,7 @@
     "eslint": "^8.19.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
+    "gulp-sass": "^5.1.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "lit-analyzer": "^1.2.1",
     "merge2": "^1.4.1",
@@ -57,6 +60,7 @@
     "rollup-plugin-minify-html-literals": "^1.2.6",
     "rollup-plugin-summary": "^1.4.3",
     "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.53.0",
     "typescript": "~4.6.4"
   },
   "customElements": "custom-elements.json"
