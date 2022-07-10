@@ -1,8 +1,11 @@
 {
   "name": "@webpuppy/web-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "webpuppy web components with lit html",
   "main": "build/index.js",
+  "files": [
+	"build/**/*"
+  ],
   "type": "module",
   "scripts": {
     "build": "tsc",
