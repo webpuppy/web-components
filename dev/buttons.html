@@ -14,7 +14,7 @@
 			margin: 0;
 		}
 		main {
-			margin-top: 2.5rem;
+			padding: 1rem;
 		}
 	</style>
   </head>
@@ -25,19 +25,21 @@
 			<wp-link text="Buttons" href="/dev/buttons.html"></wp-link>
 		</wp-nav>
 		<main slot="main">
-			<wp-hdr>
-				<h1>Normal Text</h1>
-			</wp-hdr>
-			<wp-btn text="Base"></wp-btn>
-			<wp-btn type="primary" text="Primary"></wp-btn>
-			<wp-btn type="secondary" text="Secondary"></wp-btn>
-			<wp-btn type="confirm" text="Submit"></wp-btn>
-			<wp-btn type="danger" text="Cancel"></wp-btn>
-			<wp-hdr>
-				<h1>Icons</h1>
-			</wp-hdr>
-			<wp-btn type="confirm" use_icon></wp-btn>
-			<wp-btn type="danger"  use_icon></wp-btn>
+			<section>
+				<wp-hdr>
+					<h1>Normal Text</h1>
+				</wp-hdr>
+				<wp-btn text="Base"></wp-btn>
+				<wp-btn type="primary" text="Primary"></wp-btn>
+				<wp-btn type="secondary" text="Secondary"></wp-btn>
+				<wp-btn type="confirm" text="Submit"></wp-btn>
+				<wp-btn type="danger" text="Cancel"></wp-btn>
+				<wp-hdr>
+					<h1>Icons</h1>
+				</wp-hdr>
+				<wp-btn type="confirm" use_icon></wp-btn>
+				<wp-btn type="danger"  use_icon></wp-btn>
+			</section>
 		</main>
 	</wp-layout>
   </body>
