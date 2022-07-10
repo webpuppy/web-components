@@ -1,8 +1,8 @@
 {
   "name": "@webpuppy/web-components",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "webpuppy web components with lit html",
-  "main": "bundle/index.js",
+  "main": "build/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -21,13 +21,29 @@
     "watch:sass": "sass -w ./src/sass/style.scss:./static/style.css"
   },
   "keywords": [
-    "contentbuddy-ui",
+    "webpuppy",
+    "wp-web-components",
+    "webpuppy-ui",
     "web-components",
+    "lit",
+    "lit-html",
     "lit-element",
     "typescript",
-    "lit"
+    "es6",
+    "es2020"
   ],
   "author": "abschill",
+  "contributors": [
+    {
+      "name": "abschill",
+      "email": "dev3141592@gmail.com",
+      "url": "https://blog.abschill.com"
+    },
+    {
+      "name": "kylegriffith",
+      "email": "kylegriffithmail@gmail.com"
+    }
+  ],
   "license": "BSD-3-Clause",
   "dependencies": {
     "lit": "^2.2.4"
