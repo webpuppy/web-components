@@ -38,6 +38,7 @@ export const DEFAULT_HDR_STYLES = css`
 .wp-nav-logo span {
 	display: none;
 	font-size: 22px;
+	font-weight: 500;
 	line-height: 1.25em;
 }
 

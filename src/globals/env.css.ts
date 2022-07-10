@@ -18,7 +18,7 @@ export const CSS_RESETS = css`
         --wp-btn-confirm: #42c062;
         --wp-btn-danger: #da2a2a;
         --shadow-color: rgba(0, 0, 0, 0.1);
-		--wp-fontstack: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto,
+		--wp-fontstack: 'Inter', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto,
             'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';

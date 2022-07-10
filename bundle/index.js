@@ -184,7 +184,7 @@ function*St(t,e){if(void 0!==t){let s=0;for(const i of t)yield e(i,s++)}}
         --wp-btn-confirm: #42c062;
         --wp-btn-danger: #da2a2a;
         --shadow-color: rgba(0, 0, 0, 0.1);
-		--wp-fontstack: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto,
+		--wp-fontstack: 'Inter', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto,
             'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';
@@ -283,6 +283,7 @@ function*St(t,e){if(void 0!==t){let s=0;for(const i of t)yield e(i,s++)}}
 .wp-nav-logo span {
 	display: none;
 	font-size: 22px;
+	font-weight: 500;
 	line-height: 1.25em;
 }
 
