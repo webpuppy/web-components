@@ -74,8 +74,17 @@ export const DEFAULT_HDR_STYLES = css`
 		display: none;
 	}
 
-	.wp-nav-logo span {
-		display: flex;
+	@supports not(display: flex) {
+
+		.wp-nav-logo span {
+			display: grid;
+		}
+
+		.wp-nav-list {
+			display: grid;
+		}
 	}
+
+
 }
 `;

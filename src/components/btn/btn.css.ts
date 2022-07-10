@@ -14,24 +14,21 @@ export default css`
         cursor: pointer;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-kerning: normal;
 		font-size: 15px;
 		letter-spacing: 1px;
 		min-height: 50px;
 		min-width: 100px;
 		padding: 1em 3.25em;
         position: relative;
-        transition: all 150ms ease-in-out;
+		text-align: justify;
+		text-rendering: optimizeLegibility;
         z-index: 2;
-    }
-
-    button.wp:hover {
-        box-shadow: inset 0 0 4px var(--shadow-color);
     }
 
     .primary {
         background-color: var(--wp-btn-primary);
 		color: #fff;
-
 		font-weight: 300;
 		text-transform: uppercase;
 	}
@@ -71,5 +68,16 @@ export default css`
 
 	.focusring {
 		border-color: var(--wp-navy);
+	}
+
+	@media(prefers-reduced-motion: no-preference) {
+		button.wp {
+			backface-visibility: hidden;
+			transition: border, color, box-shadow 150ms ease-in-out;
+		}
+
+		button.wp:hover {
+			box-shadow: inset 0 0 4px var(--shadow-color);
+		}
 	}
 `;
