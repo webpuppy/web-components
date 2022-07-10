@@ -1,4 +1,5 @@
-import btnCss from './btn.css';
+import btnCss, { PRIMARY_BTN_CSS, CSS_RESETS } from './btn.css';
+import { BtnType, BtnString } from './defs';
 import {
     customElement,
     LitElement,
@@ -8,8 +9,7 @@ import {
     classMap,
     when,
 } from '../../globals/exports';
-import { CBButtonType } from './defs';
-import { CSS_RESETS } from '../../globals/env.css';
+
 @customElement(Enums.default.COMPONENT_PREFIX + 'btn')
 export class WPBtn extends LitElement {
 
@@ -19,13 +19,16 @@ export class WPBtn extends LitElement {
     @property({ attribute: true, type: Boolean })
     use_icon = false;
 
+	@property({ attribute: true, type: Number })
+	sensitivity = 0;
+
     @property({ attribute: true })
-    type: CBButtonType = 'base';
+    type: BtnType = 'base';
 
     @property({ attribute: true })
     text = '';
 
-    static override styles = [CSS_RESETS, btnCss];
+    static override styles = [CSS_RESETS, btnCss, PRIMARY_BTN_CSS];
 
     get_icon() {
         switch (this.type) {
@@ -38,15 +41,18 @@ export class WPBtn extends LitElement {
         }
     }
     override render() {
+		const sns = ` hov-${this.sensitivity}`; // the sensitivity for :active / :hover shadow / color shift
 		const ring = this.focusring ? ' focusring' : '';
 		const classes = {};
-		classes[`wp primary${ring}`] = this.type === 'primary';
-		classes[`wp base${ring}`] = this.type === 'base';
-		classes[`wp danger${ring}`] = this.type === 'danger';
-		classes[`wp confirm${ring}`] = this.type === 'confirm';
-		classes[`wp secondary${ring}`] = this.type === 'secondary';
+		classes[`wp btn primary${ring}${sns}`] = this.type === 'primary';
+		classes[`wp btn${ring}${sns}`] = this.type === 'base';
+		classes[`wp btn danger${ring}${sns}`] = this.type === 'danger';
+		classes[`wp btn confirm${ring}${sns}`] = this.type === 'confirm';
+		classes[`wp btn secondary${ring}${sns}`] = this.type === 'secondary';
         return html`
-            <button class=${classMap(classes)} part="button">
+            <button
+			class=${classMap(classes)}
+			part=${BtnString}>
                 ${this.text}
                 ${when(
                     !this.use_icon,
