@@ -16,6 +16,7 @@ export default css`
         display: inline-block;
         min-width: fit-content;
         pointer-events: all;
+
     }
 
     button.wp {
@@ -37,8 +38,17 @@ export default css`
         position: relative;
 		text-align: justify;
 		text-rendering: optimizeLegibility;
+		width: var(--wp-btn-size);
         z-index: 2;
     }
+
+	button.wp #content {
+		display: flex;
+		place-content: center;
+		place-items: center;
+		position: relative;
+		text-align: center;
+	}
 
 	.btn {
 		border-color: transparent;
@@ -75,8 +85,13 @@ export default css`
 			transition: border .25s, color .75s, box-shadow 550ms ease-in-out;
 		}
 
+		button.wp #content {
+			transition:letter-spacing 400ms ease-in-out;
+		}
+
 		button.wp:hover {
 			box-shadow: inset 0 0 4px var(--shadow-color);
+			letter-spacing: 0.1em;
 		}
 	}
 `;

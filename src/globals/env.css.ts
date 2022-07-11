@@ -23,6 +23,7 @@ export const CSS_RESETS = css`
             'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';
+		--wp-btn-size: 180px;
     }
     * {
         font-family: var(--wp-fontstack);

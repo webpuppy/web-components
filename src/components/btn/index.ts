@@ -53,12 +53,14 @@ export class WPBtn extends LitElement {
             <button
 			class=${classMap(classes)}
 			part=${BtnString}>
-                ${this.text}
-                ${when(
-                    !this.use_icon,
-                    () => null,
-                    () => this.get_icon()
-                )}
+				<span id="content">
+					${this.text}
+					${when(
+						!this.use_icon,
+						() => null,
+						() => this.get_icon()
+					)}
+				</span>
             </button>
         `;
     }

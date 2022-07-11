@@ -18,6 +18,7 @@
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
     "serve": "wds --watch",
+	"dev": "yarn serve",
     "serve:prod": "MODE=prod npm run serve",
     "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
     "build:sass": "sass ./src/sass/style.scss:./static/style.css",
