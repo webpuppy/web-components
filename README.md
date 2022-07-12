@@ -3,6 +3,15 @@
 
 ## Installation (public coming soon)
 
-![](static/install-labrador.png)
+```
+yarn add @webpuppy/web-components
+```
+
+or with npm
+
+```
+npm i @webpuppy/web-components
+```
+
 
 work in progress
