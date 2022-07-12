@@ -4,7 +4,6 @@ import {
     Enums,
     html,
     property,
-    classMap,
     when,
 } from '../../../globals/exports';
 import { CSS_RESETS } from '../../link/link.css';
@@ -14,6 +13,10 @@ import { TopNavType } from './defs';
 export class WPNav extends LitElement {
 
 	static override styles = [CSS_RESETS, DEFAULT_HDR_STYLES];
+
+	@property({ attribute: true, type: Boolean })
+	full_row: Boolean = false;
+
 	@property()
 	type: TopNavType = 'flexed-burger';
 
@@ -34,16 +37,14 @@ export class WPNav extends LitElement {
 				mql.addEventListener('change', e => {
 					console.log(e);
 				});
-				// console.log(mql.matches);
 			});
 		});
 	}
-	// @state()
-	// nav_burger_open: false;
 
 	render() {
+		const classes = this.full_row ? 'wp-nav wp-nav--full' : 'wp-nav';
 		return html`
-		<header class="wp-nav">
+		<header class=${classes}>
 			<div class="wp-nav-logo">
 				<a href=${this.prefix_href ?? '/'}>
 					<img

@@ -19,6 +19,10 @@ export const DEFAULT_HDR_STYLES = css`
 	top: 0;
 }
 
+.wp-nav--full {
+	width: 100vw;
+}
+
 .wp-nav-logo {
 	display: flex;
 	place-content: center;

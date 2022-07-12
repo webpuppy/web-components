@@ -1,4 +1,4 @@
 // export * from './section';
-export * from './hdr';
+export * from './nav';
 export * from './txt-section';
-export * from './hdr';
+export * from './nav';

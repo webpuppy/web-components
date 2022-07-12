@@ -2,7 +2,7 @@ export * from './btn';
 export * from './link';
 export * from './container';
 import { WPBtn } from './btn';
-import { WPNav } from './container/hdr';
+import { WPNav } from './container/nav';
 import { WPLink } from './link';
 import { WPHdr, WPTag, WPTxt } from './container/txt-section';
 
