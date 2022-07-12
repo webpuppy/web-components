@@ -1,0 +1,2 @@
+#! /bin/bash
+npm -v && npm i -g yarn && yarn && yarn build
