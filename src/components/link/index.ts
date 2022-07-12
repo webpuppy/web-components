@@ -13,6 +13,9 @@ import { LinkTarget } from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'link')
 export class WPLink extends LitElement {
 
+	@property({ attribute: true, type: Boolean })
+	hov_underline = false;
+
 	@property({ attribute: true, type: String })
 	target: LinkTarget = '_self';
 
@@ -23,7 +26,20 @@ export class WPLink extends LitElement {
 	text: string = '';
 
     static override styles = [CSS_RESETS, LINK_STYLES];
+
     render() {
-        return html` <a href="${this.href}" target=${this.target}>${this.text}</a> `;
+		if(this.hov_underline) {
+			return html`<a
+				href=${this.href}
+				target=${this.target}
+				class="wp-link wp-link--hov-underline"
+			>${this.text}</a> `;
+		}
+
+    	return html`<a
+			class="wp-link"
+			href=${this.href}
+			target=${this.target}
+		>${this.text}</a> `;
     }
 }

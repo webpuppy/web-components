@@ -16,7 +16,7 @@ export const CSS_RESETS = css`
 		--wp-navy: #094067;
         --wp-btn-txt-00: #F3F3F3;
         --wp-btn-txt-01: #f2f1f1;
-        --wp-btn-confirm: #42c062;
+        --wp-btn-confirm: #13D480;
         --wp-btn-danger: #da2a2a;
         --shadow-color: rgba(0, 0, 0, 0.1);
 		--wp-fontstack: 'Inter', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto,
@@ -24,6 +24,8 @@ export const CSS_RESETS = css`
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';
 		--wp-btn-size: 180px;
+
+		--wp-txt-shadow: 1px 2px 12px rgba(19,212,128,0.47);
     }
     * {
         font-family: var(--wp-fontstack);

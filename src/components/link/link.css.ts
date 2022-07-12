@@ -7,13 +7,21 @@ export const LINK_STYLES = css`
         min-width: fit-content;
     }
 
-    a {
+    .wp-link {
         color: inherit;
         text-decoration: none;
         transition: all 380ms ease-in-out;
     }
 
-    a:hover {
+    .wp-link--hov-underline:hover {
         text-decoration: underline;
     }
+
+	@media(prefers-reduced-motion: no-preference) {
+
+		.wp-link:hover {
+			color: var(--wp-btn-primary);
+			text-shadow: var(--wp-txt-shadow);
+		}
+	}
 `;

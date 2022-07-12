@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>WP Buttons</title>
+    <title>WP Links</title>
 	<link rel="stylesheet" href="/static/style.css">
 	<link rel="icon" href="http://localhost:3000/static/logo.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,20 +23,8 @@
 		</wp-nav>
 		<main slot="main">
 			<section>
-				<wp-hdr>
-					<h1>Buttons</h1>
-				</wp-hdr>
-				<wp-btn text="Base"></wp-btn>
-				<wp-btn type="primary" text="Primary"></wp-btn>
-				<wp-btn type="secondary" text="Secondary" sensitivity="2"></wp-btn>
-				<wp-btn type="secondary" text="Secondary(focus ring)" focusring></wp-btn>
-				<wp-btn type="confirm" text="Submit"></wp-btn>
-				<wp-btn type="danger" text="Cancel"></wp-btn>
-				<wp-hdr>
-					<h1>Buttons with Icons</h1>
-				</wp-hdr>
-				<wp-btn type="confirm" use_icon></wp-btn>
-				<wp-btn type="danger"  use_icon></wp-btn>
+				<wp-link text="wp-link base"></wp-link>
+				<wp-link text="wp-link underline" hov_underline></wp-link>
 			</section>
 		</main>
 	</wp-layout>
