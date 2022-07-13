@@ -9,9 +9,11 @@ import {
     classMap,
     when,
 } from '../../globals/exports';
-
 @customElement(Enums.default.COMPONENT_PREFIX + 'btn')
 export class WPBtn extends LitElement {
+
+	@property({ attribute: true, type: String })
+	href?: string = null;
 
 	@property({ attribute: true, type: Boolean })
 	focusring = false;
@@ -40,17 +42,11 @@ export class WPBtn extends LitElement {
                 return '';
         }
     }
-    override render() {
-		const sns = ` hov-${this.sensitivity}`; // the sensitivity for :active / :hover shadow / color shift
-		const ring = this.focusring ? ' focusring' : '';
-		const classes = {};
-		classes[`wp btn primary${ring}${sns}`] = this.type === 'primary';
-		classes[`wp btn${ring}${sns}`] = this.type === 'base';
-		classes[`wp btn danger${ring}${sns}`] = this.type === 'danger';
-		classes[`wp btn confirm${ring}${sns}`] = this.type === 'confirm';
-		classes[`wp btn secondary${ring}${sns}`] = this.type === 'secondary';
-        return html`
-            <button
+
+	render_btn(classes: any, url: string) {
+		if(!url) {
+			return html`
+			<button
 			class=${classMap(classes)}
 			part=${BtnString}>
 				<span id="content">
@@ -62,6 +58,33 @@ export class WPBtn extends LitElement {
 					)}
 				</span>
             </button>
-        `;
+			`;
+		}
+		return html`
+		<button
+			class=${classMap(classes)}
+			part=${BtnString}>
+				<a id="content" href=${url}>
+					${this.text}
+					${when(
+						!this.use_icon,
+						() => null,
+						() => this.get_icon()
+					)}
+				</a>
+            </button>
+		`;
+	}
+
+    override render() {
+		const sns = ` hov-${this.sensitivity}`; // the sensitivity for :active / :hover shadow / color shift
+		const ring = this.focusring ? ' focusring' : '';
+		const classes = {};
+		classes[`wp btn primary${ring}${sns}`] = this.type === 'primary';
+		classes[`wp btn${ring}${sns}`] = this.type === 'base';
+		classes[`wp btn danger${ring}${sns}`] = this.type === 'danger';
+		classes[`wp btn confirm${ring}${sns}`] = this.type === 'confirm';
+		classes[`wp btn secondary${ring}${sns}`] = this.type === 'secondary';
+		return this.render_btn(classes, this.href);
     }
 }

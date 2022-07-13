@@ -79,6 +79,11 @@ export default css`
 		border-color: var(--wp-navy);
 	}
 
+	#content {
+		color: inherit;
+		text-decoration: none;
+	}
+
 	@media(prefers-reduced-motion: no-preference) {
 		button.wp {
 			backface-visibility: hidden;
