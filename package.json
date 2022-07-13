@@ -11,7 +11,7 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "minify:watch": "node ./tools/rollup-watch.cjs",
-    "gulp": "gulp --gulpfile gulpfile.js",
+    "gulp": "yarn build && gulp --gulpfile gulpfile.js",
     "format:check": "prettier --check ./src",
     "format": "prettier --write ./src",
     "lint:lit-analyzer": "lit-analyzer",

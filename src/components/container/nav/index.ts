@@ -5,14 +5,18 @@ import {
     html,
     property,
     when,
-} from '../../../globals/exports';
-import { CSS_RESETS } from '../../../globals/env.css';
+	state,
+	CSS_RESETS,
+} from '../../../globals';
 import { DEFAULT_HDR_STYLES } from './style.css';
 import { TopNavType } from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'nav')
 export class WPNav extends LitElement {
 
 	static override styles = [CSS_RESETS, DEFAULT_HDR_STYLES];
+
+	@state()
+	is_open = false;
 
 	@property({ attribute: true, type: Boolean })
 	full_row: Boolean = false;

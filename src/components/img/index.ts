@@ -1,11 +1,11 @@
 import { DEFAULT_IMG_STYLES } from './style.css';
-import { CSS_RESETS } from '../../globals/env.css';
 import {
     customElement,
     LitElement,
     Enums,
     html,
-    property
+    property,
+	CSS_RESETS
 } from '../../globals';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'img')

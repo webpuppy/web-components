@@ -7,8 +7,15 @@
 	"declaration": true,
 	"experimentalDecorators": true,
 	"useDefineForClassFields": false,
+	"allowUmdGlobalAccess": true,
 	"resolveJsonModule": true,
+	"allowSyntheticDefaultImports": true,
 	"allowJs": true,
+	"rootDir": "./src",
+	"baseUrl": "./src",
 	"outDir": "build"
-  }
+  },
+  "files": [
+	"src/index.ts"
+  ]
 }

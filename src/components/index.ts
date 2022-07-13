@@ -7,6 +7,7 @@ import { WPNav } from './container/nav';
 import { WPLink } from './link';
 import { WPHdr, WPTag, WPTxt } from './container/txt-section';
 import { WPImg } from './img';
+import { WPFtr } from './container/ftr';
 
 /**
  * Global Map For Packaged Tags
@@ -20,5 +21,6 @@ declare global {
         'wp-tag': WPTag;
         'wp-link': WPLink;
 		'wp-img': WPImg;
+		'wp-ftr': WPFtr;
     }
 }

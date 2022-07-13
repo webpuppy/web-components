@@ -1,17 +1,18 @@
-import { DEFAULT_LAYOUT_STYLES } from './style.css';
+import { LAYOUT_STYLES } from './style.css';
 import { LayoutType } from './defs';
 import {
     customElement,
     LitElement,
     Enums,
     html,
-    property
+    property,
+	CSS_RESETS
 } from '../../../globals/exports';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'layout')
 export class WPLayout extends LitElement {
 
-	static override styles = [DEFAULT_LAYOUT_STYLES];
+	static override styles = [CSS_RESETS, LAYOUT_STYLES];
 
     @property()
     type: LayoutType = 'topbar-0';

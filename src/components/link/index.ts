@@ -6,10 +6,10 @@ import {
     property,
     classMap,
     when,
+	CSS_RESETS
 } from '../../globals';
-import { LINK_STYLES, CSS_RESETS } from './style.css';
+import { LINK_STYLES } from './style.css';
 import { LinkTarget } from './defs';
-
 @customElement(Enums.default.COMPONENT_PREFIX + 'link')
 export class WPLink extends LitElement {
 

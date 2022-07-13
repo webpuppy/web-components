@@ -1,6 +1,6 @@
 import { css } from '../../../globals/exports';
 
-export const DEFAULT_LAYOUT_STYLES = css`
+export const LAYOUT_STYLES = css`
     :host {
         display: grid;
 		margin: 0;
