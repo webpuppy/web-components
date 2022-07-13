@@ -3,11 +3,10 @@ export * from './link';
 export * from './container';
 export * from './img';
 import { WPBtn } from './btn';
-import { WPNav } from './container/nav';
 import { WPLink } from './link';
 import { WPHdr, WPTag, WPTxt } from './container/txt-section';
 import { WPImg } from './img';
-import { WPFtr } from './container/ftr';
+import { WPLayout, WPFtr, WPNav } from './container';
 
 /**
  * Global Map For Packaged Tags
@@ -22,5 +21,6 @@ declare global {
         'wp-link': WPLink;
 		'wp-img': WPImg;
 		'wp-ftr': WPFtr;
+		'wp-layout': WPLayout;
     }
 }

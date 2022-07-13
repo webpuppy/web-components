@@ -6,6 +6,8 @@ import {
     property,
     when,
 	state,
+	query,
+	queryAssignedElements,
 	CSS_RESETS,
 } from '../../../globals';
 import { DEFAULT_HDR_STYLES } from './style.css';
@@ -33,20 +35,18 @@ export class WPNav extends LitElement {
 	@property()
 	icon_url: '/logo.svg';
 
-	connectedCallback(): void {
-		super.connectedCallback();
-		window.addEventListener('DOMContentLoaded', () => {
-			window.addEventListener('resize', () => {
-				const mql = window.matchMedia('(max-width: 720px);');
-				mql.addEventListener('change', e => {
-					console.log(e);
-				});
-			});
-		});
+	@query('.wp-nav-burger')
+	burger: HTMLElement;
+
+	@queryAssignedElements()
+	nav_items: HTMLElement[];
+
+	toggle_open() {
+		this.is_open = !this.is_open;
 	}
 
-	render() {
-		const classes = this.full_row ? 'wp-nav wp-nav--full' : 'wp-nav';
+
+	render_default(classes: string) {
 		return html`
 		<header class=${classes}>
 			<div class="wp-nav-logo">
@@ -64,8 +64,36 @@ export class WPNav extends LitElement {
 			<div class="wp-nav-list">
 				<slot></slot>
 			</div>
-			<div class="wp-nav-burger"></div>
+			<div class="wp-nav-burger" @click=${this.toggle_open}></div>
 		</header>
 		`;
+	}
+
+	render_mobile_open(classes: string) {
+		return html`
+		<header class=${classes}>
+			<div class="wp-nav-logo">
+				<a href=${this.prefix_href ?? '/'}>
+					<img
+					src=${this.icon_url}
+					alt="hdr icon"
+					height="64"
+					width="64">
+					<span>
+						${this.title}
+					</span>
+				</a>
+			</div>
+			<div class="wp-nav-list--mobile-open">
+				<slot></slot>
+			</div>
+			<div class="wp-nav-burger" @click=${this.toggle_open}></div>
+		</header>
+		`;
+	}
+
+	render() {
+		const classes = this.full_row ? 'wp-nav wp-nav--full' : 'wp-nav';
+		return when(this.is_open, () => this.render_mobile_open(classes), () => this.render_default(classes));
 	}
 };

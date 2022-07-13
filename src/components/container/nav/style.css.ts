@@ -56,6 +56,15 @@ export const DEFAULT_HDR_STYLES = css`
 	display: none;
 }
 
+.wp-nav-list--mobile-open {
+	background-color: var(--wp-navy);
+	display: grid;
+	position: absolute;
+	top: 5rem;
+	padding: 1rem;
+	width: 100vw;
+}
+
 .wp-nav-burger {
 	display: grid;
 	justify-content: end;

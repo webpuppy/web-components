@@ -15,7 +15,7 @@
 	"baseUrl": "./src",
 	"outDir": "build"
   },
-  "files": [
-	"src/index.ts"
+  "include": [
+	"src/**/*"
   ]
 }

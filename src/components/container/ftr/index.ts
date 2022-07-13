@@ -18,7 +18,7 @@ export class WPFtr extends LitElement {
 		return html`
 		<footer class="wp-ftr">
 			<slot></slot>
-			&copy;2022
+			<div style="margin-top: 2em; text-align: center">&copy;2022</div>
 		</footer>
 		`;
 	}
