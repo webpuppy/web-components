@@ -1,5 +1,5 @@
 import { DEFAULT_IMG_STYLES } from './style.css';
-import { ImgBaseSize } from './defs';
+import { CSS_RESETS } from '../../globals/env.css';
 import {
     customElement,
     LitElement,
@@ -11,7 +11,7 @@ import {
 @customElement(Enums.default.COMPONENT_PREFIX + 'img')
 export class WPImg extends LitElement {
 
-	static override styles = [DEFAULT_IMG_STYLES];
+	static override styles = [CSS_RESETS, DEFAULT_IMG_STYLES];
 
 	@property({ attribute: true, type: Boolean })
 	figure? = false;
