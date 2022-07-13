@@ -4,3 +4,8 @@ tools
 pkg-cache
 *.nyc-output
 nyc_output
+*.html
+gulpfile.js
+web-dev-server.config.js
+tsconfig.json
+yarn.lock
