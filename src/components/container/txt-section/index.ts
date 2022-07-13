@@ -1,4 +1,4 @@
-import txtCSS, { TAG_STYLES } from './txt.css';
+import txtCSS, { TAG_STYLES } from './style.css';
 import {
     customElement,
     LitElement,

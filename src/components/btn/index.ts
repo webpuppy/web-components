@@ -1,4 +1,4 @@
-import btnCss, { PRIMARY_BTN_CSS, CSS_RESETS } from './btn.css';
+import btnCss, { PRIMARY_BTN_CSS, CSS_RESETS } from './style.css';
 import { BtnType, BtnString } from './defs';
 import {
     customElement,

@@ -6,8 +6,8 @@ import {
     property,
     when,
 } from '../../../globals/exports';
-import { CSS_RESETS } from '../../link/link.css';
-import { DEFAULT_HDR_STYLES } from './hdr.css';
+import { CSS_RESETS } from '../../../globals/env.css';
+import { DEFAULT_HDR_STYLES } from './style.css';
 import { TopNavType } from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'nav')
 export class WPNav extends LitElement {

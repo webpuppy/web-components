@@ -1,4 +1,4 @@
-import { DEFAULT_LAYOUT_STYLES } from './layout.css';
+import { DEFAULT_LAYOUT_STYLES } from './style.css';
 import { LayoutType } from './defs';
 import {
     customElement,

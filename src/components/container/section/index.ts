@@ -1,4 +1,4 @@
-import { DEFAULT_SECTION_STYLES } from './section.css';
+import { DEFAULT_SECTION_STYLES } from './index.css';
 import { SectionType } from './defs';
 import {
     customElement,

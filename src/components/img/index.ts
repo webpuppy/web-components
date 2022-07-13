@@ -1,4 +1,4 @@
-import { DEFAULT_IMG_STYLES } from './img.css';
+import { DEFAULT_IMG_STYLES } from './style.css';
 import { ImgBaseSize } from './defs';
 import {
     customElement,
@@ -28,6 +28,7 @@ export class WPImg extends LitElement {
 	 * todo: setup classmap for sizes
 	 */
 	render() {
+		const className = `wp-img wp-img--${this.size}`;
 		return html`
 		<img src="${this.src}" alt=${this.alt}>
 		`;

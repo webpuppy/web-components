@@ -7,7 +7,7 @@ import {
     classMap,
     when,
 } from '../../globals';
-import { LINK_STYLES, CSS_RESETS } from './link.css';
+import { LINK_STYLES, CSS_RESETS } from './style.css';
 import { LinkTarget } from './defs';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'link')
