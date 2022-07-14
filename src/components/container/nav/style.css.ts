@@ -20,6 +20,9 @@ export const DEFAULT_HDR_STYLES = css`
 }
 
 .wp-nav--full {
+	position: fixed;
+	left: 0;
+	top: 0;
 	width: 100vw;
 }
 
