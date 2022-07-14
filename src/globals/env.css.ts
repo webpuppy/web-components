@@ -26,6 +26,8 @@ export const CSS_RESETS = css`
 		--wp-btn-size: 180px;
 
 		--wp-txt-shadow: 1px 2px 12px rgba(19,212,128,0.47);
+
+		--wp-top-nav-height: 80px;
     }
     * {
         font-family: var(--wp-fontstack);
@@ -58,6 +60,11 @@ export const CSS_RESETS = css`
         margin-block-start: 0;
         margin-block-end: 0;
     }
+
+	::slotted(main) {
+		position: relative;
+		top: var(--wp-top-nav-height);
+	}
 
 	p {
 		margin-block-start: 1.25em;

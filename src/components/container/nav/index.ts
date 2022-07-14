@@ -10,18 +10,18 @@ import {
 	queryAssignedElements,
 	CSS_RESETS,
 } from '../../../globals';
-import { DEFAULT_HDR_STYLES } from './style.css';
+import { NAV_STYLES } from './style.css';
 import { TopNavType } from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'nav')
 export class WPNav extends LitElement {
 
-	static override styles = [CSS_RESETS, DEFAULT_HDR_STYLES];
+	static override styles = [CSS_RESETS, NAV_STYLES];
 
 	@state()
 	is_open = false;
 
 	@property({ attribute: true, type: Boolean })
-	full_row: Boolean = false;
+	fixed: Boolean = false;
 
 	@property()
 	type: TopNavType = 'flexed-burger';
@@ -93,7 +93,7 @@ export class WPNav extends LitElement {
 	}
 
 	render() {
-		const classes = this.full_row ? 'wp-nav wp-nav--full' : 'wp-nav';
+		const classes = this.fixed ? 'wp-nav wp-nav--fixed' : 'wp-nav';
 		return when(this.is_open, () => this.render_mobile_open(classes), () => this.render_default(classes));
 	}
 };

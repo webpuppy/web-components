@@ -1,11 +1,14 @@
 import { css } from '../../../globals/exports';
 
-export const DEFAULT_HDR_STYLES = css`
+export const NAV_STYLES = css`
 :host {
 	cursor: pointer;
 	display: block;
+	height: var(--wp-top-nav-height);
 	position: relative;
 	top: 0;
+	left: 0;
+	width: 100%;
 }
 
 .wp-nav {
@@ -15,15 +18,18 @@ export const DEFAULT_HDR_STYLES = css`
 	display: grid;
 	grid-template-columns: 25% 75%;
 	justify-content: space-between;
+	min-height: var(--wp-top-nav-height);
 	position: relative;
 	top: 0;
+	left: 0;
 }
 
-.wp-nav--full {
+.wp-nav--fixed {
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100vw;
+	width: 100%;
+	z-index: 999;
 }
 
 .wp-nav-logo {
@@ -63,7 +69,7 @@ export const DEFAULT_HDR_STYLES = css`
 	background-color: var(--wp-navy);
 	display: grid;
 	position: absolute;
-	top: 5rem;
+	top: var(--wp-top-nav-height);
 	padding: 1rem;
 	width: 100vw;
 }
@@ -100,7 +106,5 @@ export const DEFAULT_HDR_STYLES = css`
 			display: grid;
 		}
 	}
-
-
 }
 `;

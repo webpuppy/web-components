@@ -14,14 +14,14 @@
     <script type="module" src="../bundle/index.js"></script>
   </head>
   <body>
-	<wp-layout>
-		<wp-nav full_row slot="nav" icon_url="http://localhost:3000/static/logo.svg">
-			<wp-link text="Links" href="/dev/links.html"></wp-link>
-			<wp-link text="Containers" href="/dev/containers.html"></wp-link>
-			<wp-link text="Text Content" href="/dev/text.html"></wp-link>
-			<wp-link text="Buttons" href="/dev/buttons.html"></wp-link>
-		</wp-nav>
-		<main slot="main">
+	<wp-nav fixed slot="nav" icon_url="http://localhost:3000/static/logo.svg">
+		<wp-link text="Links" href="/dev/links.html"></wp-link>
+		<wp-link text="Containers" href="/dev/containers.html"></wp-link>
+		<wp-link text="Text Content" href="/dev/text.html"></wp-link>
+		<wp-link text="Buttons" href="/dev/buttons.html"></wp-link>
+	</wp-nav>
+	<main slot="main">
+		<section>
 			<wp-hdr>
 				<h1>wp-hdr h1</h1>
 			</wp-hdr>
@@ -55,7 +55,7 @@
 			<wp-txt size="xl">
 				<wp-tag size="xl">tag xl:</wp-tag> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus eius voluptates, molestiae molestias voluptas atque dolorem nihil, culpa ipsa incidunt praesentium. Iure fuga rem, eos enim id placeat perferendis quasi?
 			</wp-txt>
-		</main>
-	</wp-layout>
+		</section>
+	</main>
   </body>
 </html>

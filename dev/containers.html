@@ -14,21 +14,21 @@
     <script type="module" src="../bundle/index.js"></script>
   </head>
   <body>
-	<wp-layout fixed_box>
-		<wp-nav slot="nav" icon_url="http://localhost:3000/static/logo.svg">
-			<wp-link text="Links" href="/dev/links.html"></wp-link>
-			<wp-link text="Containers" href="/dev/containers.html"></wp-link>
-			<wp-link text="Text Content" href="/dev/text.html"></wp-link>
-			<wp-link text="Buttons" href="/dev/buttons.html"></wp-link>
-		</wp-nav>
-		<main slot="main">
+	<wp-nav fixed slot="nav" icon_url="http://localhost:3000/static/logo.svg">
+		<wp-link text="Links" href="/dev/links.html"></wp-link>
+		<wp-link text="Containers" href="/dev/containers.html"></wp-link>
+		<wp-link text="Text Content" href="/dev/text.html"></wp-link>
+		<wp-link text="Buttons" href="/dev/buttons.html"></wp-link>
+	</wp-nav>
+	<main slot="main">
+		<section>
 			<wp-img src="/static/logo.svg"></wp-img>
 			<wp-img src="/static/logo.svg" figure></wp-img>
 			<wp-img src="/static/logo.svg" caption="Captioned Image"></wp-img>
-		</main>
-		<wp-ftr slot="footer">
-			<div>Footer Container</div>
-		</wp-ftr>
-	</wp-layout>
+		</section>
+	</main>
+	<wp-ftr slot="footer">
+		<div>Footer Container</div>
+	</wp-ftr>
   </body>
 </html>
