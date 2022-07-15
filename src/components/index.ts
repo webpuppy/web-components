@@ -6,13 +6,24 @@ import { WPBtn } from './btn';
 import { WPLink } from './link';
 import { WPCode, WPHdr, WPTag, WPTxt } from './container/txt-section';
 import { WPImg } from './img';
-import { WPLayout, WPFtr, WPNav, WPCard, WPGrid, WPFlex, WPSidebar, WPSidebarItem } from './container';
+import {
+	WPLayout,
+	WPFtr,
+	WPNav,
+	WPCard,
+	WPGrid,
+	WPFlex,
+	WPSidebar,
+	WPSidebarItem,
+	WPTextInput
+} from './container';
 
 /**
  * Global Map For Packaged Tags
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-text-input': WPTextInput;
 		'wp-code-line': WPCode;
 		'wp-sidebar-item': WPSidebarItem;
 		'wp-sidebar': WPSidebar;

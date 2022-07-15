@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>WP Links</title>
+    <title>WP Containers</title>
 	<link rel="stylesheet" href="/static/style.css">
 	<link rel="icon" href="http://localhost:3000/static/logo.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     <script type="module" src="../bundle/index.js"></script>
   </head>
   <body>
-	<wp-sidebar prefix_href="/" icon_url="http://localhost:3000/static/logo.svg">
+	<wp-sidebar slot="nav" prefix_href="/" icon_url="http://localhost:3000/static/logo.svg">
 		<wp-sidebar-item text="Links" href="/dev/links.html"></wp-sidebar-item>
 		<wp-sidebar-item text="Containers" href="/dev/containers.html"></wp-sidebar-item>
 		<wp-sidebar-item text="Text Content" href="/dev/text.html"></wp-sidebar-item>
@@ -22,13 +22,12 @@
 		<wp-sidebar-item text="Forms" href="/dev/forms.html"></wp-sidebar-item>
 	</wp-sidebar>
 	<main slot="main">
+		<wp-hdr>
+			<h1>Custom Form Elements</h1>
+		</wp-hdr>
 		<section>
-			<wp-hdr>
-				<h1>Links</h1>
-			</wp-hdr>
-			<wp-link text="wp-link base"></wp-link>
-			<wp-link text="wp-link target blank" target="_blank"></wp-link>
-			<wp-link text="wp-link underline" hov_underline></wp-link>
+			<wp-text-input id="forminput0" label="Form Input no ring"></wp-text-input>
+			<wp-text-input id="forminput0" label="Form Input ring" ring></wp-text-input>
 		</section>
 	</main>
   </body>

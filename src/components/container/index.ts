@@ -7,3 +7,4 @@ export * from './card';
 export * from './flex';
 export * from './grid';
 export * from './sidebar';
+export * from './form';
