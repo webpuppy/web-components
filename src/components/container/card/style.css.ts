@@ -12,6 +12,7 @@ export default css`
 .wp-card {
 	background-color: var(--wp-navy);
 	color: var(--wp-btn-txt-00);
+	margin-bottom: 2rem;
 }
 
 figure img {
