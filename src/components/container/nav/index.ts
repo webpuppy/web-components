@@ -45,7 +45,6 @@ export class WPNav extends LitElement {
 		this.is_open = !this.is_open;
 	}
 
-
 	render_default(classes: string) {
 		return html`
 		<header class=${classes}>

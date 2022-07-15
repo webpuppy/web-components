@@ -18,13 +18,25 @@ export class WPSidebarItem extends LitElement {
 
 	static override styles?: CSSResultGroup = [CSS_RESETS, WP_SIDEBAR_ITEM];
 
-	@property()
+	@property({ attribute: true })
 	href?: string;
 
 	@property()
 	text: string = '';
 
+	@property({ attribute: false })
+	is_active: boolean = window.location.pathname === this.href;
+
+	constructor() {
+		super();
+		window.addEventListener('DOMContentLoaded', () => this.is_active = window.location.pathname === this.href);
+	}
 	render_component() {
+		if(this.is_active) {
+			return html`
+			<a class="wp-sbr-item wp-sbr-item--active" href=${this.href}>${this.text}</a>
+			`;
+		}
 		return html`
 			<a class="wp-sbr-item" href=${this.href}>${this.text}</a>
 		`;

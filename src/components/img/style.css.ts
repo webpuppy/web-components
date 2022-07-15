@@ -7,6 +7,7 @@ export const DEFAULT_IMG_STYLES = css`
 }
 
 .wp-img {
+	display: inline-block;
 	margin: 0 auto;
 }
 

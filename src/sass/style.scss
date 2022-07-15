@@ -3,6 +3,7 @@ body {
 }
 
 img, wp-img {
+	display: inline-block;
 	position: relative;
 	z-index: -1;
 }

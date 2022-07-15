@@ -46,14 +46,24 @@ export const WP_SIDEBAR_ITEM = css`
 
 .wp-sbr-item {
 	color: inherit;
+	left: 0;
+	position: relative;
 	text-decoration: none;
-	transition: color 600ms, text-shadow 300ms ease-in-out;
+	transition:
+	color 600ms,
+	text-shadow 300ms,
+	left 500ms ease-in-out;
+}
+
+.wp-sbr-item--active {
+	color: var(--wp-btn-primary);
 }
 
 @media(prefers-reduced-motion: no-preference) {
 	.wp-sbr-item:hover {
 		color: var(--wp-btn-primary);
 		text-shadow: var(--wp-txt-shadow);
+		left: .25em;
 	}
 }
 `;

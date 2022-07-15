@@ -14,6 +14,7 @@ export const CSS_RESETS = css`
         --wp-btn-primary: #EF4565;
         --wp-btn-base: #4a4ad5;
 		--wp-navy: #094067;
+		--wp-white: #fff;
         --wp-btn-txt-00: #faf8f8;
         --wp-btn-txt-01: #fefdfd;
         --wp-btn-confirm: #13D480;
@@ -69,5 +70,11 @@ export const CSS_RESETS = css`
 	p {
 		margin-block-start: 1.25em;
         margin-block-end: 1.25em;
+	}
+
+	figure {
+		margin-inline-start: 0;
+		margin-inline-end: 0;
+
 	}
 `;

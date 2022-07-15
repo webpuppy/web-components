@@ -45,12 +45,14 @@ export class WPCard extends LitElement {
 						${this.card_content()}
 					</figcaption>
 				</figure>
+				<slot></slot>
 			</div>
 			`;
 		}
 		return html`
 		<div class=${classes}>
 			${this.card_content()}
+			<slot></slot>
 		</div>
 		`;
 	}
