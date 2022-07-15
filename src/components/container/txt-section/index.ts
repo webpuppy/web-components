@@ -47,7 +47,7 @@ export class WPTag extends LitElement {
     override render() {
         if (this.href) {
             return html`
-                <a href="wp-tag-${this.size}">
+                <a href=${this.href} class="wp-tag-${this.size}">
                     <slot></slot>
                 </a>
             `;
