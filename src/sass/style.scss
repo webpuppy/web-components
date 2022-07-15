@@ -6,3 +6,9 @@ img, wp-img {
 	position: relative;
 	z-index: -1;
 }
+
+wp-sidebar + main {
+	left: 240px;
+	position: relative;
+	padding: 1rem;
+}

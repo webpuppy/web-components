@@ -14,8 +14,8 @@ export const CSS_RESETS = css`
         --wp-btn-primary: #EF4565;
         --wp-btn-base: #4a4ad5;
 		--wp-navy: #094067;
-        --wp-btn-txt-00: #F3F3F3;
-        --wp-btn-txt-01: #f2f1f1;
+        --wp-btn-txt-00: #faf8f8;
+        --wp-btn-txt-01: #fefdfd;
         --wp-btn-confirm: #13D480;
         --wp-btn-danger: #da2a2a;
         --shadow-color: rgba(0, 0, 0, 0.1);
