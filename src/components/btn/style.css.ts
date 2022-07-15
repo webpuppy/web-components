@@ -92,7 +92,8 @@ export default css`
 		}
 
 		button.wp:hover {
-			box-shadow: inset 0 0 4px var(--shadow-color);
+			/* box-shadow: inset 0 0 4px var(--shadow-color); */
+			box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.25);
 			letter-spacing: 0.1em;
 			width: var(--wp-btn-size);
 		}
