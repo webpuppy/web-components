@@ -4,7 +4,7 @@ export * from './container';
 export * from './img';
 import { WPBtn } from './btn';
 import { WPLink } from './link';
-import { WPHdr, WPTag, WPTxt } from './container/txt-section';
+import { WPCode, WPHdr, WPTag, WPTxt } from './container/txt-section';
 import { WPImg } from './img';
 import { WPLayout, WPFtr, WPNav, WPCard, WPGrid, WPFlex, WPSidebar, WPSidebarItem } from './container';
 
@@ -13,7 +13,8 @@ import { WPLayout, WPFtr, WPNav, WPCard, WPGrid, WPFlex, WPSidebar, WPSidebarIte
  */
 declare global {
     interface HTMLElementTagNameMap {
-		'wp-sidebar-item': WPSidebarItem
+		'wp-code-line': WPCode;
+		'wp-sidebar-item': WPSidebarItem;
 		'wp-sidebar': WPSidebar;
 		'wp-flex': WPFlex;
 		'wp-grid': WPGrid;

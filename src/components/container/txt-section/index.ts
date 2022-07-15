@@ -5,11 +5,34 @@ import {
     Enums,
     html,
     property,
+	state,
     classMap,
     when,
 } from '../../../globals/exports';
 import { CSS_RESETS } from '../../../globals/env.css';
 import { TxtSectionBaseSize } from './defs';
+
+@customElement(Enums.default.COMPONENT_PREFIX + 'code-line')
+export class WPCode extends LitElement {
+	static override styles = [CSS_RESETS, txtCSS];
+
+	@property()
+	text: string = '';
+
+	@state()
+	is_copied = false;
+
+	set_copied() {
+		window.navigator.clipboard.writeText(this.text);
+		this.is_copied = true;
+	}
+
+	override render() {
+		return html`
+		<code @click=${() => this.set_copied()}>${this.text} ${this.is_copied ? html`&#9989;` : html`&#128203;`}</code>
+		`;
+	}
+}
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'txt')
 export class WPTxt extends LitElement {

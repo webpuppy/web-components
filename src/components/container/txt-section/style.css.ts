@@ -39,4 +39,16 @@ export default css`
     .wp-txt-xl {
         font-size: 2em;
     }
+
+
+	code {
+		background-color: #363333;
+		border-radius: 1rem;
+        color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		font-family: monospace;
+		line-height: 1.8em;
+		padding: 1em;
+	}
 `;
