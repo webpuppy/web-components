@@ -15,15 +15,17 @@
   </head>
   <body>
 	<wp-sidebar prefix_href="/" icon_url="http://localhost:3000/static/logo.svg">
-		<wp-sidebar-item href="/dev/links.html" text="Links"></wp-sidebar-item>
-		<wp-sidebar-item href="/dev/buttons.html" text="Buttons"></wp-sidebar-item>
-		<wp-sidebar-item href="/dev/text.html" text="Text Content"></wp-sidebar-item>
-		<wp-sidebar-item href="/dev/containers.html" text="Containers/Images"></wp-sidebar-item>
+		<wp-sidebar-item text="Links" href="/dev/links.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Containers" href="/dev/containers.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Text Content" href="/dev/text.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Buttons" href="/dev/buttons.html"></wp-sidebar-item>
 	</wp-sidebar>
 	<main slot="main">
 		<section>
 			<wp-link text="wp-link base"></wp-link>
+			<wp-link text="wp-link target blank" target="_blank"></wp-link>
 			<wp-link text="wp-link underline" hov_underline></wp-link>
+
 		</section>
 	</main>
   </body>

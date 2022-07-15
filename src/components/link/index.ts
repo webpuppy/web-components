@@ -27,19 +27,26 @@ export class WPLink extends LitElement {
 
     static override styles = [CSS_RESETS, LINK_STYLES];
 
-    render() {
-		if(this.hov_underline) {
+	render_component(classes: string) {
+		if(this.target === '_blank') {
 			return html`<a
-				href=${this.href}
-				target=${this.target}
-				class="wp-link wp-link--hov-underline"
-			>${this.text}</a> `;
-		}
-
-    	return html`<a
-			class="wp-link"
+			class=${classes}
 			href=${this.href}
 			target=${this.target}
+			>${this.text}&#x2197;</a> `;
+		}
+		return html`<a
+		class=${classes}
+		href=${this.href}
+		target=${this.target}
 		>${this.text}</a> `;
+	}
+
+    render() {
+		if(this.hov_underline) {
+			return this.render_component('wp-link wp-link--underline');
+		}
+
+    	return this.render_component('wp-link')
     }
 }
