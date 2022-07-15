@@ -11,7 +11,29 @@ import {
 	queryAssignedElements,
 	CSS_RESETS,
 } from '../../../globals';
-import css from './style.css';
+import css, { WP_SIDEBAR_ITEM } from './style.css';
+
+@customElement(Enums.default.COMPONENT_PREFIX + 'sidebar-item')
+export class WPSidebarItem extends LitElement {
+
+	static override styles?: CSSResultGroup = [CSS_RESETS, WP_SIDEBAR_ITEM];
+
+	@property()
+	href?: string;
+
+	@property()
+	text: string = '';
+
+	render_component() {
+		return html`
+			<a class="wp-sbr-item" href=${this.href}>${this.text}</a>
+		`;
+	}
+
+	render() {
+		return this.render_component();
+	}
+}
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'sidebar')
 export class WPSidebar extends LitElement {

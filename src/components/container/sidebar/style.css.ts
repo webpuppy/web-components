@@ -31,3 +31,29 @@ export default css`
 	}
 }
 `;
+
+export const WP_SIDEBAR_ITEM = css`
+
+:host {
+	display: block;
+	font-size: 15px;
+	line-height: 1.8em;
+	max-height: 50px;
+	padding-left: 1.25em;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: auto;
+}
+
+.wp-sbr-item {
+	color: inherit;
+	text-decoration: none;
+	transition: color 600ms, text-shadow 300ms ease-in-out;
+}
+
+@media(prefers-reduced-motion: no-preference) {
+	.wp-sbr-item:hover {
+		color: var(--wp-btn-primary);
+		text-shadow: var(--wp-txt-shadow);
+	}
+}
+`;
