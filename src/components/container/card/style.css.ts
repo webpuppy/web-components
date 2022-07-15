@@ -10,7 +10,7 @@ export default css`
 }
 
 .wp-card {
-	background-color: var(--wp-ocean);
+	background-color: var(--wp-navy);
 	color: var(--wp-btn-txt-00);
 }
 
@@ -27,15 +27,14 @@ figure img {
 	text-align: center;
 }
 
-::slotted(p),
-::slotted(wp-text) {
+.wp-card-slot {
 	background-color: var(--wp-white);
-	border-color: var(--wp-ocean);
-	border-style: solid;
-	border-width: .15em;
+	border-radius: 2rem;
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 	color: var(--wp-base-black);
-	margin-block: 0;
-	padding: 1rem;
+	padding: 1.5rem;
+	position: relative;
+	top: 2rem;
 }
 
 @media(prefers-reduced-motion: no-preference) {

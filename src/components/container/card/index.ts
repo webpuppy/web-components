@@ -7,7 +7,9 @@ import {
     property,
     classMap,
     when,
-	CSS_RESETS
+	queryAssignedElements,
+	CSS_RESETS,
+	queryAll
 } from '../../../globals/exports';
 
 const a_bool = { attribute: true, type: Boolean };
@@ -28,6 +30,13 @@ export class WPCard extends LitElement {
 	@property()
 	hdr?: string;
 
+	@queryAll('.wp-card-slot')
+	_children: HTMLElement[];
+
+	constructor() {
+		super();
+	}
+
 	card_content() {
 		return html`
 		<div class="wp-card-title">${this.hdr}</div>
@@ -44,14 +53,18 @@ export class WPCard extends LitElement {
 						${this.card_content()}
 					</figcaption>
 				</figure>
-				<slot></slot>
+				<div class="wp-card-slot">
+					<slot></slot>
+				</div>
 			</div>
 			`;
 		}
 		return html`
 		<div class=${classes}>
 			${this.card_content()}
-			<slot></slot>
+			<div class="wp-card-slot">
+				<slot></slot>
+			</div>
 		</div>
 		`;
 	}
