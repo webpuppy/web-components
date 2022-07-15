@@ -1,4 +1,4 @@
-import btnCss, { PRIMARY_BTN_CSS, CSS_RESETS } from './style.css';
+import btnCss, { PRIMARY_BTN_CSS } from './style.css';
 import { BtnType, BtnString } from './defs';
 import {
     customElement,
@@ -8,17 +8,20 @@ import {
     property,
     classMap,
     when,
+	CSS_RESETS
 } from '../../globals/exports';
+
+const a_bool = { attribute: true, type: Boolean };
 @customElement(Enums.default.COMPONENT_PREFIX + 'btn')
 export class WPBtn extends LitElement {
 
 	@property({ attribute: true, type: String })
 	href?: string = null;
 
-	@property({ attribute: true, type: Boolean })
+	@property(a_bool)
 	focusring = false;
 
-    @property({ attribute: true, type: Boolean })
+    @property(a_bool)
     use_icon = false;
 
 	@property({ attribute: true, type: Number })

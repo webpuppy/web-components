@@ -12,9 +12,8 @@ export const BtnSensitivityOptions = [
 	0,
 	1,
 	2
-] as const;
+];
 
 export type BtnSensitivity = typeof BtnSensitivityOptions[number];
-
 
 export const BtnString = 'button';

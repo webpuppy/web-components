@@ -3,8 +3,6 @@ export { CSS_RESETS } from '../../globals/env.css';
 export const PRIMARY_BTN_CSS = css`
 	.btn.primary {
         background-color: var(--wp-btn-primary);
-		font-weight: 300;
-		text-transform: uppercase;
 		border-color: transparent;
 		color: var(--wp-btn-txt-01);
 	}
@@ -16,7 +14,6 @@ export default css`
         display: inline-block;
         min-width: fit-content;
         pointer-events: all;
-
     }
 
     button.wp {
@@ -29,15 +26,15 @@ export default css`
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		font-kerning: normal;
-		font-size: 15px;
+		font-size: 14px;
+		font-weight: 500;
 		letter-spacing: 1px;
 		margin: .15em .05em .2em;
-		min-height: 50px;
-		min-width: 100px;
-		padding: 1em 3.25em;
+		min-height: 48px;
         position: relative;
-		text-align: justify;
+		text-align: center;
 		text-rendering: optimizeLegibility;
+		text-size-adjust: auto;
 		width: var(--wp-btn-size);
         z-index: 2;
     }
@@ -91,12 +88,13 @@ export default css`
 		}
 
 		button.wp #content {
-			transition:letter-spacing 400ms ease-in-out;
+			transition: letter-spacing 400ms ease-in-out;
 		}
 
 		button.wp:hover {
 			box-shadow: inset 0 0 4px var(--shadow-color);
 			letter-spacing: 0.1em;
+			width: var(--wp-btn-size);
 		}
 	}
 `;
