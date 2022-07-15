@@ -10,5 +10,5 @@ img, wp-img {
 wp-sidebar + main {
 	left: 240px;
 	position: relative;
-	padding: 1rem;
+	width: calc(100% - 240px);
 }
