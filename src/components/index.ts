@@ -6,13 +6,16 @@ import { WPBtn } from './btn';
 import { WPLink } from './link';
 import { WPHdr, WPTag, WPTxt } from './container/txt-section';
 import { WPImg } from './img';
-import { WPLayout, WPFtr, WPNav } from './container';
+import { WPLayout, WPFtr, WPNav, WPCard, WPGrid, WPFlex } from './container';
 
 /**
  * Global Map For Packaged Tags
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-flex': WPFlex;
+		'wp-grid': WPGrid;
+		'wp-card': WPCard;
 		'wp-nav': WPNav;
         'wp-btn': WPBtn;
         'wp-txt': WPTxt;
