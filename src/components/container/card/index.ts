@@ -31,7 +31,6 @@ export class WPCard extends LitElement {
 	card_content() {
 		return html`
 		<div class="wp-card-title">${this.hdr}</div>
-		<slot></slot>
 		`;
 	}
 
