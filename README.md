@@ -15,3 +15,6 @@ npm i @webpuppy/web-components
 
 
 work in progress
+
+
+[wiki](https://github.com/webpuppy/web-components/wiki)
