@@ -44,7 +44,7 @@ export class WPLink extends LitElement {
 
     render() {
 		if(this.hov_underline) {
-			return this.render_component('wp-link wp-link--underline');
+			return this.render_component('wp-link wp-link--hov-underline');
 		}
 
     	return this.render_component('wp-link')

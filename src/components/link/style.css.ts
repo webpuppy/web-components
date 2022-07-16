@@ -17,7 +17,6 @@ export const LINK_STYLES = css`
     }
 
 	@media(prefers-reduced-motion: no-preference) {
-
 		.wp-link:hover {
 			color: var(--wp-btn-primary);
 			text-shadow: var(--wp-txt-shadow);
