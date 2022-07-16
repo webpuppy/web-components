@@ -4,8 +4,6 @@ import {
     Enums,
     html,
     property,
-    classMap,
-    when,
 	CSS_RESETS
 } from '../../globals';
 import loadingCSS from './style.css';
