@@ -68,8 +68,12 @@ export class WPSidebar extends LitElement {
 	icon_url: '/logo.svg';
 
 	@property()
-	title: string = 'WebPuppy';
+	title: string = '';
 
+	render_title() {
+		if(!this.title) return html``;
+		return html`<h4>${this.title}</h4>`;
+	}
 	render_component() {
 		if(!this.prefix_href) {
 			return html`
@@ -77,7 +81,7 @@ export class WPSidebar extends LitElement {
 				<header class="wp-sbr-hdr">
 					<img height="64"
 						width="64" src=${this.icon_url}>
-					<h4>${this.title}</h4>
+					${this.render_title()}
 				</header>
 				<slot></slot>
 			</aside>
@@ -89,7 +93,7 @@ export class WPSidebar extends LitElement {
 					<a href=${this.prefix_href}>
 						<img height="64"
 							width="64" src=${this.icon_url}>
-						<h4>${this.title}</h4>
+						${this.render_title()}
 					</a>
 				</header>
 				<slot></slot>
