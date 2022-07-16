@@ -23,6 +23,9 @@ export class WPFlex extends LitElement {
 	@property({ type: Boolean, attribute: true })
 	justify_center?: boolean = false;
 
+	@property({ type: Boolean, attribute: true })
+	align_center?: boolean = false;
+
 	render_justify_even() {
 		return html`
 		<style>
@@ -34,24 +37,45 @@ export class WPFlex extends LitElement {
 		`;
 	}
 
-	render_justify_center() {
-		return html`
-		<style>
-			:host {
-				justify-content: center;
-			}
-		</style>
-		<slot></slot>
-		`;
+	render_justify() {
+		if(this.justify_center) {
+			return html`
+			<style>
+				:host {
+					justify-content: center;
+				}
+			</style>
+			`;
+		}
+		if(this.justify_evenly) {
+			return html`
+			<style>
+				:host {
+					justify-content: space-evenly;
+				}
+			</style>
+			`;
+		}
+		return html``;
+	}
+
+	render_align() {
+		if(this.align_center) {
+			return html`
+			<style>
+				:host {
+					align-items: center;
+				}
+			</style>
+			`;
+		}
+		return html``;
 	}
 
 	render() {
-		if(this.justify_evenly)
-			return this.render_justify_even();
-		if(this.justify_center)
-			return this.render_justify_center();
-
 		return html`
+		${this.render_justify()}
+		${this.render_align()}
 		<slot></slot>
 		`;
 	}
