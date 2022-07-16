@@ -82,12 +82,13 @@ export class WPBtn extends LitElement {
     override render() {
 		const sns = ` hov-${this.sensitivity}`; // the sensitivity for :active / :hover shadow / color shift
 		const ring = this.focusring ? ' focusring' : '';
+		const btn_base = this.use_icon ? 'wp btn btn--icon' : 'wp btn btn--text';
 		const classes = {};
-		classes[`wp btn primary${ring}${sns}`] = this.type === 'primary';
-		classes[`wp btn${ring}${sns}`] = this.type === 'base';
-		classes[`wp btn danger${ring}${sns}`] = this.type === 'danger';
-		classes[`wp btn confirm${ring}${sns}`] = this.type === 'confirm';
-		classes[`wp btn secondary${ring}${sns}`] = this.type === 'secondary';
+		classes[`${btn_base} primary${ring}${sns}`] = this.type === 'primary';
+		classes[`${btn_base}${ring}${sns}`] = this.type === 'base';
+		classes[`${btn_base} danger${ring}${sns}`] = this.type === 'danger';
+		classes[`${btn_base} confirm${ring}${sns}`] = this.type === 'confirm';
+		classes[`${btn_base} secondary${ring}${sns}`] = this.type === 'secondary';
 		return this.render_btn(classes, this.href);
     }
 }

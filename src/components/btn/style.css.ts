@@ -3,7 +3,6 @@ export { CSS_RESETS } from '../../globals/env.css';
 export const PRIMARY_BTN_CSS = css`
 	.btn.primary {
         background-color: var(--wp-btn-primary);
-		border-color: transparent;
 		color: var(--wp-btn-txt-01);
 	}
 `;
@@ -30,14 +29,22 @@ export default css`
 		font-weight: 500;
 		letter-spacing: 1px;
 		margin: .15em .05em .2em;
-		min-height: 48px;
         position: relative;
 		text-align: center;
 		text-rendering: optimizeLegibility;
 		text-size-adjust: auto;
-		width: var(--wp-btn-size);
         z-index: 2;
     }
+
+	button.btn--text {
+		min-height: 48px;
+		width: var(--wp-btn-size);
+	}
+
+	button.btn--icon {
+		height: 36px;
+		width: calc(var(--wp-btn-size) / 3);
+	}
 
 	button.wp #content {
 		display: flex;
@@ -87,15 +94,13 @@ export default css`
 			transition: border .25s, color .75s, box-shadow 550ms ease-in-out;
 		}
 
-		button.wp #content {
+		button.btn--text #content {
 			transition: letter-spacing 400ms ease-in-out;
 		}
 
-		button.wp:hover {
-			/* box-shadow: inset 0 0 4px var(--shadow-color); */
+		button.btn:hover {
 			box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.25);
 			letter-spacing: 0.1em;
-			width: var(--wp-btn-size);
 		}
 	}
 `;
