@@ -11,8 +11,8 @@ import {
 	CSS_RESETS
 } from '../../../../globals';
 
-@customElement(Enums.default.COMPONENT_PREFIX + 'text-input')
-export class WPTextInput extends LitElement {
+@customElement(Enums.default.COMPONENT_PREFIX + 'date-input')
+export class WPDateInput extends LitElement {
 
 	static styles = [CSS_RESETS, input_css];
 
@@ -28,9 +28,9 @@ export class WPTextInput extends LitElement {
 
 	render_component(classes?: string) {
 		if(!classes) {
-			return html`${this.render_label()}<input id=${this.id} name=${this.id} type="text" placeholder=${this.label} class="wp-input">`;
+			return html`${this.render_label()}<input id=${this.id} name=${this.id} type="date" class="wp-input">`;
 		}
-		return html`${this.render_label()}<input id=${this.id} name=${this.id} placeholder=${this.label} type="text" class=${classes}>`;
+		return html`${this.render_label()}<input id=${this.id} name=${this.id} type="date" class=${classes}>`;
 	}
 
 	render() {

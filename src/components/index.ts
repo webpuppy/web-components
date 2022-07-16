@@ -15,7 +15,8 @@ import {
 	WPFlex,
 	WPSidebar,
 	WPSidebarItem,
-	WPTextInput
+	WPTextInput,
+	WPDateInput
 } from './container';
 
 /**
@@ -23,6 +24,7 @@ import {
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-date-input': WPDateInput;
 		'wp-text-input': WPTextInput;
 		'wp-code-line': WPCode;
 		'wp-sidebar-item': WPSidebarItem;
