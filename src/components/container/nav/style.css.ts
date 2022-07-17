@@ -13,8 +13,8 @@ export const NAV_STYLES = css`
 
 .wp-nav {
 	align-items: center;
-	background-color: var(--wp-navy);
-	color: #fff;
+	background-color: var(--wp-navy-blue);
+	color: var(--wp-white);
 	display: grid;
 	grid-template-columns: 25% 75%;
 	justify-content: space-between;
@@ -22,6 +22,13 @@ export const NAV_STYLES = css`
 	position: relative;
 	top: 0;
 	left: 0;
+}
+
+@media(prefers-color-scheme: dark) {
+	.wp-nav {
+		background-color: var(--wp-white);
+		color: var(--wp-navy-blue);
+	}
 }
 
 .wp-nav--fixed {
