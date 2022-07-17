@@ -42,6 +42,9 @@ export class WPCard extends LitElement {
 	}
 
 	card_content() {
+		if(!this.hdr) {
+			return html``;
+		}
 		return html`
 		<div class="wp-card-title">${this.hdr}</div>
 		`;
@@ -51,7 +54,7 @@ export class WPCard extends LitElement {
 		if(this.img_url) {
 			return html`
 			<figure>
-				<img src=${this.img_url} alt=${this.img_alt}>
+				<img height="144" width="144" src=${this.img_url} alt=${this.img_alt}>
 				<figcaption>
 					${this.card_content()}
 				</figcaption>
