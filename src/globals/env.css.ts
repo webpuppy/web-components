@@ -9,16 +9,21 @@ export const BTN_DANGER_COLOR = css`#da2a2a`;
 
 export const CSS_RESETS = css`
     :host {
+		--wp-light-blue: #90B4CE;
+		--wp-ocean-blue: #3DA9FC;
+		--wp-navy-blue: #094067;
+		--wp-red: #EF4565;
+		--wp-danger-red: #da2a2a;
+		--wp-green: #13D480;
+		--wp-white: #F3F3F3;
 		--wp-ocean: #3DA9FC;
         --wp-base-black: #3d3a3a;
-        --wp-btn-primary: #EF4565;
+        --wp-btn-primary: var(--wp-red);
         --wp-btn-base: #4a4ad5;
-		--wp-navy: #094067;
-		--wp-white: #fff;
         --wp-btn-txt-00: #faf8f8;
         --wp-btn-txt-01: #fefdfd;
-        --wp-btn-confirm: #13D480;
-        --wp-btn-danger: #da2a2a;
+        --wp-btn-confirm: var(--wp-green);
+        --wp-btn-danger: var(--wp-danger-red);
         --shadow-color: rgba(0, 0, 0, 0.1);
 		--wp-fontstack: 'Inter', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto,
             'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
@@ -55,7 +60,6 @@ export const CSS_RESETS = css`
 
     p,
     header {
-        /* color: #3d3a3a; */
         display: block;
         line-height: 1.8em;
         margin-block-start: 0;

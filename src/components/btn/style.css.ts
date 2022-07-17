@@ -16,7 +16,7 @@ export default css`
     }
 
     button.wp {
-		background-color: var(--wp-navy);
+		background-color: var(--wp-navy-blue);
         border-width: 2px;
         border-style: solid;
         border-radius: 86.5169px;

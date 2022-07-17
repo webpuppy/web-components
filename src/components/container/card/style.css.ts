@@ -11,6 +11,7 @@ export default css`
 
 .wp-card {
 	background-color: var(--wp-navy);
+	box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
 	color: var(--wp-btn-txt-00);
 	margin-bottom: 2rem;
 }
