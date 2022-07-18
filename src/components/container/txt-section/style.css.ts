@@ -2,9 +2,10 @@ import { css } from '../../../globals/exports';
 
 export const TAG_STYLES = css`
     :host {
-        background-color: #3d3a3a;
-        color: #fff;
-        border-radius: 1rem;
+        background-color: var(--wp-navy-blue);
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        color: var(--wp-btn-txt-00);
+        border-radius: calc(var(--wp-border-radius) * 1.25);
         display: inline-block;
         padding: 0.35em;
         width: fit-content;
@@ -42,9 +43,10 @@ export default css`
 
 
 	code {
-		background-color: #363333;
-		border-radius: 1rem;
-        color: #fff;
+		background-color: var(--wp-navy-blue);
+		border-radius: var(--wp-border-radius);
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        color: var(--wp-btn-txt-00);
 		cursor: pointer;
 		display: inline-block;
 		font-family: monospace;

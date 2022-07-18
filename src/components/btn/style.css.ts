@@ -19,7 +19,7 @@ export default css`
 		background-color: var(--wp-navy-blue);
         border-width: 2px;
         border-style: solid;
-        border-radius: 86.5169px;
+        border-radius: var(--wp-border-radius);
 		color: var(--wp-btn-txt-00);
         cursor: pointer;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -48,11 +48,14 @@ export default css`
 
 	button.wp #content,
 	::slotted(*) {
+		align-items: center;
 		display: flex;
+		margin: 0 auto;
 		place-content: center;
 		place-items: center;
 		position: relative;
 		text-align: center;
+		vertical-align: center;
 	}
 
 	.btn {

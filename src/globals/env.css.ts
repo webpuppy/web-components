@@ -23,7 +23,7 @@ export const CSS_RESETS = css`
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';
 		--wp-btn-size: 180px;
-
+		--wp-border-radius: 8px;
 		--wp-txt-shadow: 1px 2px 12px rgba(19,212,128,0.47);
 
 		--wp-top-nav-height: 80px;
@@ -63,8 +63,6 @@ export const CSS_RESETS = css`
 		position: relative;
 		top: var(--wp-top-nav-height);
 	}
-
-
 
 	p {
 		margin-block-start: 1.25em;
