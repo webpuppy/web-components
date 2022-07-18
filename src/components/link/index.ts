@@ -39,7 +39,7 @@ export class WPLink extends LitElement {
 		class=${classes}
 		href=${this.href}
 		target=${this.target}
-		>${this.text}</a> `;
+		>${this.text}<slot></slot></a> `;
 	}
 
     render() {
