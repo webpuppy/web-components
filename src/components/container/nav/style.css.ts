@@ -73,7 +73,7 @@ export const NAV_STYLES = css`
 }
 
 .wp-nav-list--mobile-open {
-	background-color: var(--wp-navy);
+	background-color: var(--wp-navy-blue);
 	display: grid;
 	position: absolute;
 	top: var(--wp-top-nav-height);

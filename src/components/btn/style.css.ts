@@ -46,7 +46,8 @@ export default css`
 		width: calc(var(--wp-btn-size) / 3);
 	}
 
-	button.wp #content {
+	button.wp #content,
+	::slotted(*) {
 		display: flex;
 		place-content: center;
 		place-items: center;
@@ -80,7 +81,7 @@ export default css`
     }
 
 	.btn.focusring {
-		border-color: var(--wp-navy);
+		border-color: var(--wp-navy-blue);
 	}
 
 	#content {
@@ -94,7 +95,8 @@ export default css`
 			transition: border .25s, color .75s, box-shadow 550ms ease-in-out;
 		}
 
-		button.btn--text #content {
+		button.btn--text #content,
+		::slotted(*) {
 			transition: letter-spacing 400ms ease-in-out;
 		}
 

@@ -60,6 +60,7 @@ export class WPBtn extends LitElement {
 						() => this.get_icon()
 					)}
 				</span>
+				<slot></slot>
             </button>
 			`;
 		}
@@ -74,6 +75,7 @@ export class WPBtn extends LitElement {
 						() => null,
 						() => this.get_icon()
 					)}
+					<slot></slot>
 				</a>
             </button>
 		`;
