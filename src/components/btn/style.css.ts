@@ -26,7 +26,6 @@ export default css`
 		font-kerning: normal;
 		font-size: 14px;
 		font-weight: 500;
-		letter-spacing: 1px;
 		margin: .15em .05em .2em;
         position: relative;
 		text-align: center;
@@ -75,7 +74,7 @@ export default css`
 	}
 
     .btn.confirm {
-        background-color: var(--wp-btn-confirm);
+        background-color: var(--wp-success);
     }
 
     .btn.danger {
@@ -103,8 +102,8 @@ export default css`
 		}
 
 		button.btn:hover {
-			box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.25);
-			letter-spacing: 0.1em;
+			box-shadow: var(--shadow-sticky);
+			letter-spacing: 0.035em;
 		}
 	}
 `;
