@@ -2,7 +2,7 @@ import { css } from '../../../globals/exports';
 
 export const TAG_STYLES = css`
     :host {
-        background-color: var(--wp-navy-blue);
+        background-color: var(--wp-primary);
 		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         color: var(--wp-btn-txt-00);
         border-radius: calc(var(--wp-border-radius) * 1.25);
@@ -41,16 +41,15 @@ export default css`
         font-size: 2em;
     }
 
-
 	code {
-		background-color: var(--wp-navy-blue);
+		background-color: var(--wp-primary);
 		border-radius: var(--wp-border-radius);
 		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         color: var(--wp-btn-txt-00);
 		cursor: pointer;
 		display: inline-block;
 		font-family: monospace;
-		line-height: 1.8em;
+		line-height: var(--wp-content-line);
 		padding: 1em;
 	}
 `;

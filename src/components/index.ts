@@ -18,7 +18,8 @@ import {
 	WPSidebar,
 	WPSidebarItem,
 	WPTextInput,
-	WPDateInput
+	WPDateInput,
+	WPSection
 } from './container';
 import { WPLoading } from './loading';
 
@@ -33,6 +34,7 @@ declare global {
 		'wp-code-line': WPCode;
 		'wp-sidebar-item': WPSidebarItem;
 		'wp-sidebar': WPSidebar;
+		'wp-section': WPSection
 		'wp-flex': WPFlex;
 		'wp-grid': WPGrid;
 		'wp-card': WPCard;

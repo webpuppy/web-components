@@ -16,14 +16,13 @@ export default css`
     }
 
     button.wp {
-		background-color: var(--wp-navy-blue);
+		background-color: var(--wp-primary);
         border-width: 2px;
         border-style: solid;
         border-radius: var(--wp-border-radius);
 		color: var(--wp-btn-txt-00);
         cursor: pointer;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: var(--wp-fontstack);
 		font-kerning: normal;
 		font-size: 14px;
 		font-weight: 500;
