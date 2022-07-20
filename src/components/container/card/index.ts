@@ -31,9 +31,6 @@ export class WPCard extends LitElement {
 	@property()
 	type: CardType = 'image-slot';
 
-	@property()
-	hdr?: string;
-
 	@queryAll('.wp-card-slot')
 	_children: HTMLElement[];
 
@@ -41,30 +38,22 @@ export class WPCard extends LitElement {
 		super();
 	}
 
-	card_content() {
-		if(!this.hdr) {
+	card_image_content() {
+		if(!this.img_url) {
 			return html``;
 		}
 		return html`
-		<div class="wp-card-title">${this.hdr}</div>
-		`;
-	}
-
-	card_image_content() {
-		if(this.img_url) {
-			return html`
 			<figure>
 				<img height="144" width="144" src=${this.img_url} alt=${this.img_alt}>
 				<figcaption>
-					${this.card_content()}
+					<slot name="caption"></slot>
 				</figcaption>
 			</figure>
 			`;
-		}
-		return this.card_content();
 	}
 
 	render_card_default(classes: string) {
+
 		return html`
 			<div class=${classes}>
 				${this.card_image_content()}
@@ -74,7 +63,14 @@ export class WPCard extends LitElement {
 			</div>
 			`;
 	}
+
+	render_card() {
+		switch(this.type) {
+			default:
+				return this.rounded ? this.render_card_default("wp-card wp-card--rounded") : this.render_card_default("wp-card");
+		}
+	}
 	render() {
-		return this.rounded ? this.render_card_default("wp-card wp-card--rounded") : this.render_card_default("wp-card");
+		return this.render_card();
 	}
 };
