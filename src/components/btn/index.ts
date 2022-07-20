@@ -8,7 +8,9 @@ import {
     property,
     classMap,
     when,
-	CSS_RESETS
+	CSS_RESETS,
+	ifDefined,
+	state
 } from '../../globals/exports';
 
 const a_bool = { attribute: true, type: Boolean };
@@ -33,6 +35,9 @@ export class WPBtn extends LitElement {
     @property({ attribute: true })
     text = '';
 
+	@property(a_bool)
+	disabled = false;
+
     static override styles = [CSS_RESETS, btnCss, PRIMARY_BTN_CSS];
 
     get_icon() {
@@ -50,6 +55,7 @@ export class WPBtn extends LitElement {
 		if(!url) {
 			return html`
 			<button
+			?disabled=${this.disabled}
 			class=${classMap(classes)}
 			part=${BtnString}>
 				<span id="content">
@@ -66,6 +72,7 @@ export class WPBtn extends LitElement {
 		}
 		return html`
 		<button
+			?disabled=${this.disabled}
 			class=${classMap(classes)}
 			part=${BtnString}>
 				<a id="content" href=${url}>
