@@ -1,13 +1,15 @@
 import btnCss from './style.css';
 import { BtnType, BtnString } from './defs';
 import {
-    customElement,
+	customElement,
     LitElement,
-    Enums,
     html,
     property,
     classMap,
-    when,
+    when
+} from 'lit-exports';
+import {
+	Enums,
 	CSS_RESETS
 } from '../../globals/exports';
 

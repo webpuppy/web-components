@@ -4871,6 +4871,13 @@ lit-element@^3.2.0:
     "@lit/reactive-element" "^1.3.0"
     lit-html "^2.2.0"
 
+lit-exports@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/lit-exports/-/lit-exports-0.1.2.tgz#8a75bbdeb4b71df8d59f1ffa7153b2f843bc6814"
+  integrity sha512-QK0g6fG6EkWc/R0s0KmFz7d+jTSdjYGWf4O4oK7EUwMsDXqpNydL/7Y3JFv/mga5bVlhWfhB4J284GuIoWb5ew==
+  dependencies:
+    lit "^2.2.7"
+
 lit-html@^2.2.0:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-2.2.6.tgz#e70679605420a34c4f3cbd0c483b2fb1fff781df"
@@ -4878,10 +4885,10 @@ lit-html@^2.2.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^2.2.4:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/lit/-/lit-2.2.6.tgz#4ef223e88517c000b0c01baf2e3535e61a75a5b5"
-  integrity sha512-K2vkeGABfSJSfkhqHy86ujchJs3NR9nW1bEEiV+bXDkbiQ60Tv5GUausYN2mXigZn8lC1qXuc46ArQRKYmumZw==
+lit@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/lit/-/lit-2.2.7.tgz#a563e8851db1f131912f510129dcc9a42324e838"
+  integrity sha512-WXYujlKFwme5ZqXOZoWuRVZQAwy7scbcVT3wCbAOHefOxyscqjywWGlF2e6nnC9E64yP9l2ZQlN8wZcRlrjUMQ==
   dependencies:
     "@lit/reactive-element" "^1.3.0"
     lit-element "^3.2.0"
