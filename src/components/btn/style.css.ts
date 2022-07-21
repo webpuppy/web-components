@@ -1,12 +1,5 @@
 import { css } from '../../globals/exports';
 export { CSS_RESETS } from '../../globals/env.css';
-export const PRIMARY_BTN_CSS = css`
-	.btn.primary {
-        background-color: var(--wp-btn-primary);
-		color: var(--wp-btn-txt-01);
-	}
-`;
-
 export default css`
     :host {
         cursor: pointer;
@@ -15,8 +8,8 @@ export default css`
         pointer-events: all;
     }
 
-    button.wp {
-		background-color: var(--wp-primary);
+    .wp-btn {
+		background-color: var(--wp-tertiary);
         border-width: 2px;
         border-style: solid;
         border-radius: var(--wp-border-radius);
@@ -34,17 +27,17 @@ export default css`
         z-index: 2;
     }
 
-	button.btn--text {
+	.wp-btn--text {
 		min-height: 48px;
 		width: var(--wp-btn-size);
 	}
 
-	button.btn--icon {
+	.wp-btn--icon {
 		height: 36px;
 		width: calc(var(--wp-btn-size) / 3);
 	}
 
-	button.wp #content,
+	.wp-btn #content,
 	::slotted(*) {
 		align-items: center;
 		display: flex;
@@ -56,32 +49,28 @@ export default css`
 		vertical-align: center;
 	}
 
-	.btn {
+	.wp-btn {
 		border-color: transparent;
 		color: var(--wp-btn-txt-01);
 	}
 
-	.primary:hover,
-	.confirm:hover,
-	.base:hover,
-	.danger:hover {
-		border-color: var(--shadow-color);
-		color: var(--wp-btn-txt-00);
+	.primary {
+		background-color :var(--wp-primary);
 	}
 
-	.btn.secondary {
-		background-color: var(--wp-ocean);
+	.secondary {
+		background-color: var(--wp-secondary);
 	}
 
-    .btn.confirm {
+    .confirm {
         background-color: var(--wp-success);
     }
 
-    .btn.danger {
+    .danger {
         background-color: var(--wp-btn-danger);
     }
 
-	.btn.focusring {
+	.focusring {
 		border-color: var(--wp-navy-blue);
 	}
 
@@ -91,19 +80,26 @@ export default css`
 	}
 
 	@media(prefers-reduced-motion: no-preference) {
-		button.wp {
+		.wp-btn {
 			backface-visibility: hidden;
-			transition: border .25s, color .75s, box-shadow 550ms ease-in-out;
+			transition: border .25s, color .75s, box-shadow 550ms, border-color .65s ease-in-out;
 		}
 
-		button.btn--text #content,
+		.wp-btn--text #content,
 		::slotted(*) {
 			transition: letter-spacing 400ms ease-in-out;
 		}
 
-		button.btn:hover {
+		.wp-btn:hover {
 			box-shadow: var(--shadow-sticky);
 			letter-spacing: 0.035em;
+		}
+
+		.primary:hover,
+		.confirm:hover,
+		.base:hover,
+		.danger:hover {
+			color: var(--wp-btn-txt-00);
 		}
 	}
 `;

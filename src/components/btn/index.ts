@@ -1,4 +1,4 @@
-import btnCss, { PRIMARY_BTN_CSS } from './style.css';
+import btnCss from './style.css';
 import { BtnType, BtnString } from './defs';
 import {
     customElement,
@@ -8,9 +8,7 @@ import {
     property,
     classMap,
     when,
-	CSS_RESETS,
-	ifDefined,
-	state
+	CSS_RESETS
 } from '../../globals/exports';
 
 const a_bool = { attribute: true, type: Boolean };
@@ -38,7 +36,7 @@ export class WPBtn extends LitElement {
 	@property(a_bool)
 	disabled = false;
 
-    static override styles = [CSS_RESETS, btnCss, PRIMARY_BTN_CSS];
+    static override styles = [CSS_RESETS, btnCss];
 
     get_icon() {
         switch (this.type) {
@@ -91,7 +89,7 @@ export class WPBtn extends LitElement {
     override render() {
 		const sns = ` hov-${this.sensitivity}`; // the sensitivity for :active / :hover shadow / color shift
 		const ring = this.focusring ? ' focusring' : '';
-		const btn_base = this.use_icon ? 'wp btn btn--icon' : 'wp btn btn--text';
+		const btn_base = this.use_icon ? 'wp-btn wp-btn--icon' : 'wp-btn wp-btn--text';
 		const classes = {};
 		classes[`${btn_base} primary${ring}${sns}`] = this.type === 'primary';
 		classes[`${btn_base}${ring}${sns}`] = this.type === 'base';
