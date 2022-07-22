@@ -16,6 +16,9 @@ export class WPLink extends LitElement {
 	@property({ attribute: true, type: Boolean })
 	hov_underline = false;
 
+	@property({ attribute: true, type: Boolean })
+	no_icon = false;
+
 	@property({ attribute: true, type: String })
 	target: LinkTarget = '_self';
 
@@ -28,12 +31,12 @@ export class WPLink extends LitElement {
     static override styles = [CSS_RESETS, LINK_STYLES];
 
 	render_component(classes: string) {
-		if(this.target === '_blank') {
+		if(this.target === '_blank' && !this.no_icon) {
 			return html`<a
 			class=${classes}
 			href=${this.href}
 			target=${this.target}
-			>${this.text}&#x2197;</a> `;
+			>${this.text}<slot></slot> &#x2197;</a> `;
 		}
 		return html`<a
 		class=${classes}

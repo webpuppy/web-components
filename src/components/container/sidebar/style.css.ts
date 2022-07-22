@@ -11,7 +11,7 @@ export default css`
 	left: 0;
 	position: fixed;
 	top: 0;
-	transition: box-shadow 500ms ease-in-out;
+	transition: box-shadow 500ms, background-color 400ms ease-in-out;
 }
 
 .wp-sbr-hdr, .wp-sbr-hdr a {
@@ -44,10 +44,11 @@ export const WP_SIDEBAR_ITEM = css`
 	text-rendering: optimizeLegibility;
 	text-size-adjust: auto;
 	transition:
+	background-color 500ms,
 	color 600ms,
 	box-shadow 500ms,
 	text-shadow 300ms,
-	left 500ms ease-in-out;
+	left 500ms, all 350ms ease-in-out;
 }
 
 .wp-sbr-item {
@@ -57,10 +58,11 @@ export const WP_SIDEBAR_ITEM = css`
 	position: relative;
 	text-decoration: none;
 	transition:
+	background-color 500ms,
 	color 600ms,
 	box-shadow 500ms,
 	text-shadow 300ms,
-	left 500ms ease-in-out;
+	left 500ms, all 350ms ease-in-out;
 	padding: .375em;
 }
 
