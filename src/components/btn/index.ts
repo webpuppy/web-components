@@ -30,7 +30,7 @@ export class WPBtn extends WPSizeable {
 	sensitivity = 0;
 
     @property({ attribute: true })
-    type: BtnType = 'base';
+    type: BtnType = 'tertiary';
 
     @property({ attribute: true })
     text = '';
@@ -94,10 +94,10 @@ export class WPBtn extends WPSizeable {
 		const btn_base = this.use_icon ? 'wp-btn wp-btn--icon' : 'wp-btn wp-btn--text';
 		const classes = {};
 		classes[`${btn_base} primary${ring}${sns}`] = this.type === 'primary';
-		classes[`${btn_base}${ring}${sns}`] = this.type === 'base';
 		classes[`${btn_base} danger${ring}${sns}`] = this.type === 'danger';
 		classes[`${btn_base} confirm${ring}${sns}`] = this.type === 'confirm';
 		classes[`${btn_base} secondary${ring}${sns}`] = this.type === 'secondary';
+		classes[`${btn_base} tertiary${ring}${sns}`] = this.type === 'tertiary';
 		return this.render_btn(classes, this.href);
     }
 }

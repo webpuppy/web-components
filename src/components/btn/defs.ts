@@ -1,7 +1,7 @@
 export const BtnTypes = [
-	'base',
 	'primary',
 	'secondary',
+	'tertiary',
 	'confirm',
 	'danger'
 ] as const;
