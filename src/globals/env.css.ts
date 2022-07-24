@@ -126,4 +126,67 @@ export const CSS_RESETS = css`
 		margin-inline-end: 0;
 
 	}
+	.wp-txt-xs,
+    .wp-tag-xs {
+        font-size: 12px;
+    }
+
+    .wp-tag-sm,
+    .wp-txt-sm {
+        font-size: 14px;
+    }
+
+    .wp-tag-lg,
+    .wp-txt-lg {
+        font-size: 1.5em;
+    }
+
+    .wp-tag-xl,
+    .wp-txt-xl {
+        font-size: 2em;
+    }
+
+	code {
+		background-color: var(--wp-primary);
+		border-radius: var(--wp-border-radius);
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        color: var(--wp-btn-txt-00);
+		cursor: pointer;
+		display: inline-block;
+		font-family: monospace;
+		line-height: var(--wp-content-line);
+		padding: 1em;
+	}
+	.wp-loading {
+		animation-name: spinner;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		max-height: 72px;
+		max-width: 72px;
+	}
+
+	.wp-loading-reverse {
+		animation-name: spinner-reverse;
+	}
+
+	.wp-loading--fast {
+		animation-duration: 535ms;
+	}
+
+	.wp-loading--normal {
+		animation-duration: 835ms;
+	}
+
+
+
+	@keyframes spinner {
+		0% {
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes spinner-reverse {
+		0% {
+			transform: rotate(-360deg);
+		}
+	}
 `;
