@@ -1,13 +1,13 @@
 import {
-    customElement,
-    LitElement,
     Enums,
-    html,
-    property,
-    classMap,
-    when,
 	CSS_RESETS
-} from '../../globals';
+} from '../../globals/exports';
+import {
+	customElement,
+    LitElement,
+	html,
+    property
+} from 'lit-exports';
 import { LINK_STYLES } from './style.css';
 import { LinkTarget } from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'link')

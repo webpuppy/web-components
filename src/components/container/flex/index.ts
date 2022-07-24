@@ -1,16 +1,14 @@
 import FLEX_CSS from './style.css';
 import {
-    customElement,
+	customElement,
     LitElement,
-    Enums,
-    html,
+	html,
     property,
-    classMap,
-    when,
-	CSS_RESETS,
-	css
+} from 'lit-exports';
+import {
+    Enums,
+	CSS_RESETS
 } from '../../../globals/exports';
-
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'flex')
 export class WPFlex extends LitElement {

@@ -106,4 +106,10 @@ export default css`
 			color: var(--wp-btn-txt-00);
 		}
 	}
+
+	@media(max-width: 720px) {
+		.wp-btn {
+			margin: 0 auto;
+		}
+	}
 `;

@@ -9,16 +9,15 @@ import {
 	query,
 	queryAssignedElements,
 	CSS_RESETS,
-} from '../../../globals';
+	WPOpenable
+} from '../../globals/exports';
+
 import { NAV_STYLES } from './style.css';
 import { TopNavType } from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'nav')
-export class WPNav extends LitElement {
+export class WPNav extends WPOpenable {
 
 	static override styles = [CSS_RESETS, NAV_STYLES];
-
-	@state()
-	is_open = false;
 
 	@property({ attribute: true, type: Boolean })
 	fixed: Boolean = false;

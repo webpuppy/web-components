@@ -1,16 +1,18 @@
 import { CSSResultGroup } from 'lit';
 import {
-    customElement,
-    LitElement,
     Enums,
-    html,
-    property,
     when,
 	state,
 	query,
 	queryAssignedElements,
 	CSS_RESETS,
-} from '../../../globals';
+} from '../../globals/exports';
+import {
+	customElement,
+    LitElement,
+    html,
+    property,
+} from 'lit-exports';
 import css, { WP_SIDEBAR_ITEM } from './style.css';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'sidebar-item')

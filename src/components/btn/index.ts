@@ -2,7 +2,6 @@ import btnCss from './style.css';
 import { BtnType, BtnString } from './defs';
 import {
 	customElement,
-    LitElement,
     html,
     property,
     classMap,
@@ -10,12 +9,13 @@ import {
 } from 'lit-exports';
 import {
 	Enums,
-	CSS_RESETS
+	CSS_RESETS,
+	WPSizeable
 } from '../../globals/exports';
 
 const a_bool = { attribute: true, type: Boolean };
 @customElement(Enums.default.COMPONENT_PREFIX + 'btn')
-export class WPBtn extends LitElement {
+export class WPBtn extends WPSizeable {
 
 	@property({ attribute: true, type: String })
 	href?: string = null;

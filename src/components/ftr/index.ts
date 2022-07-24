@@ -1,13 +1,14 @@
 import FTR_STYLES from './style.css';
 import {
-    customElement,
-    LitElement,
     Enums,
+	CSS_RESETS
+} from '../../globals/exports';
+import {
+	customElement,
+    LitElement,
     html,
     property,
-	CSS_RESETS
-} from '../../../globals';
-
+} from 'lit-exports';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'ftr')
 export class WPFtr extends LitElement {

@@ -1,13 +1,15 @@
 import {
-    customElement,
-    LitElement,
     Enums,
-    html,
-    property,
 	CSS_RESETS
-} from '../../globals';
+} from '../../globals/exports';
+import {
+	customElement,
+    LitElement,
+    html,
+	state,
+    property,
+} from 'lit-exports';
 import loadingCSS from './style.css';
-
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'loading')
 export class WPLoading extends LitElement {

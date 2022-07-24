@@ -1,12 +1,14 @@
 import { DEFAULT_IMG_STYLES } from './style.css';
 import {
-    customElement,
+	customElement,
     LitElement,
-    Enums,
     html,
     property,
+} from 'lit-exports';
+import {
+    Enums,
 	CSS_RESETS
-} from '../../globals';
+} from '../../globals/exports';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'img')
 export class WPImg extends LitElement {

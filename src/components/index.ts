@@ -3,26 +3,38 @@ export * from './link';
 export * from './container';
 export * from './img';
 export * from './loading';
+export * from './nav';
+export * from './form';
+export * from './sidebar';
+export * from './ftr';
+export * from './tag';
 
 import { WPBtn } from './btn';
 import { WPLink } from './link';
-import { WPCode, WPHdr, WPTag, WPTxt } from './container/txt-section';
 import { WPImg } from './img';
+import { WPNav } from './nav';
+import { WPLoading } from './loading';
+import { WPFtr } from './ftr';
+
 import {
 	WPLayout,
-	WPFtr,
-	WPNav,
 	WPCard,
 	WPGrid,
 	WPFlex,
-	WPSidebar,
-	WPSidebarItem,
-	WPTextInput,
-	WPDateInput,
 	WPSection
 } from './container';
-import { WPLoading } from './loading';
-
+import {
+	WPSidebar,
+	WPSidebarItem,
+} from './sidebar';
+import {
+	WPCode,
+	WPTag,
+} from './tag';
+import {
+	WPTextInput,
+	WPDateInput
+} from './form';
 /**
  * Global Map For Packaged Tags
  */
@@ -40,8 +52,6 @@ declare global {
 		'wp-card': WPCard;
 		'wp-nav': WPNav;
         'wp-btn': WPBtn;
-        'wp-txt': WPTxt;
-        'wp-hdr': WPHdr;
         'wp-tag': WPTag;
         'wp-link': WPLink;
 		'wp-img': WPImg;

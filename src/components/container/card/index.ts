@@ -5,9 +5,6 @@ import {
     Enums,
     html,
     property,
-    classMap,
-    when,
-	queryAssignedElements,
 	CSS_RESETS,
 	queryAll
 } from '../../../globals/exports';
@@ -33,10 +30,6 @@ export class WPCard extends LitElement {
 
 	@queryAll('.wp-card-slot')
 	_children: HTMLElement[];
-
-	constructor() {
-		super();
-	}
 
 	card_image_content() {
 		if(!this.img_url) {
