@@ -1,90 +1,90 @@
 {
-  "name": "@webpuppy/web-components",
-  "version": "0.0.24",
-  "description": "webpuppy web components with lit html",
-  "main": "build/index.js",
-  "files": [
-    "build/**/*"
-  ],
-  "type": "module",
-  "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "minify:watch": "node ./tools/rollup-watch.cjs",
-    "gulp": "yarn build && gulp --gulpfile gulpfile.js",
-    "format:check": "prettier --check ./src",
-    "format": "prettier --write ./src",
-    "lint:lit-analyzer": "lit-analyzer",
-    "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
-    "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
-    "serve": "wds --watch",
-    "dev": "yarn serve",
-    "serve:prod": "MODE=prod npm run serve",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
-    "build:sass": "sass ./src/sass/style.scss:./static/style.css",
-    "watch:sass": "sass -w ./src/sass/style.scss:./static/style.css"
-  },
-  "keywords": [
-    "webpuppy",
-    "wp-web-components",
-    "webpuppy-ui",
-    "web-components",
-    "lit",
-    "lit-html",
-    "lit-element",
-    "typescript",
-    "es6",
-    "es2020"
-  ],
-  "author": "abschill",
-  "contributors": [
-    {
-      "name": "abschill",
-      "email": "dev3141592@gmail.com",
-      "url": "https://blog.abschill.com"
-    },
-    {
-      "name": "kylegriffith",
-      "email": "kylegriffithmail@gmail.com"
-    }
-  ],
-  "license": "BSD-3-Clause",
-  "dependencies": {
-    "lit": "^2.2.7",
-    "lit-exports": "^0.1.2"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
-    "@custom-elements-manifest/analyzer": "^0.5.7",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@types/gulp": "^4.0.9",
-    "@types/merge2": "^1.3.1",
-    "@typescript-eslint/eslint-plugin": "^5.30.3",
-    "@typescript-eslint/parser": "^5.30.3",
-    "@web/dev-server": "^0.1.31",
-    "@web/dev-server-legacy": "^1.0.0",
-    "@web/rollup-plugin-copy": "^0.3.0",
-    "@web/rollup-plugin-html": "^1.10.3",
-    "@webcomponents/webcomponentsjs": "^2.6.0",
-    "eslint": "^8.19.0",
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.3.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "lit-analyzer": "^1.2.1",
-    "merge2": "^1.4.1",
-    "prettier": "^2.7.1",
-    "prettier-eslint": "^15.0.1",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.75.7",
-    "rollup-plugin-minify-html-literals": "^1.2.6",
-    "rollup-plugin-summary": "^1.4.3",
-    "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.53.0",
-    "typedoc": "^0.23.7",
-    "typedoc-plugin-markdown": "^3.13.3",
-    "typescript": "~4.6.4"
-  },
-  "customElements": "custom-elements.json"
+	"name": "@webpuppy/web-components",
+	"version": "0.0.24",
+	"description": "webpuppy web components with lit html",
+	"main": "build/index.js",
+	"files": [
+		"build/**/*"
+	],
+  	"type": "module",
+  	"scripts": {
+		"build": "tsc",
+		"build:watch": "tsc --watch",
+		"minify:watch": "node ./tools/rollup-watch.cjs",
+		"gulp": "yarn build && gulp --gulpfile gulpfile.js",
+		"format:check": "prettier --check ./src",
+		"format": "prettier --write ./src",
+		"lint:lit-analyzer": "lit-analyzer",
+		"analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
+		"analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
+		"serve": "wds --watch",
+		"dev": "yarn serve",
+		"serve:prod": "MODE=prod npm run serve",
+		"checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
+		"build:sass": "sass ./src/sass/style.scss:./static/style.css",
+		"watch:sass": "sass -w ./src/sass/style.scss:./static/style.css"
+  	},
+	"keywords": [
+		"webpuppy",
+		"wp-web-components",
+		"webpuppy-ui",
+		"web-components",
+		"lit",
+		"lit-html",
+		"lit-element",
+		"typescript",
+		"es6",
+		"es2020"
+	],
+	"author": "abschill",
+	"contributors": [
+		{
+		"name": "abschill",
+		"email": "dev3141592@gmail.com",
+		"url": "https://blog.abschill.com"
+		},
+		{
+		"name": "kylegriffith",
+		"email": "kylegriffithmail@gmail.com"
+		}
+	],
+	"license": "BSD-3-Clause",
+	"dependencies": {
+		"lit": "^2.2.7",
+		"lit-exports": "^0.1.2"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^1.0.1",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+		"@custom-elements-manifest/analyzer": "^0.5.7",
+		"@rollup/plugin-node-resolve": "^13.3.0",
+		"@types/gulp": "^4.0.9",
+		"@types/merge2": "^1.3.1",
+		"@typescript-eslint/eslint-plugin": "^5.30.3",
+		"@typescript-eslint/parser": "^5.30.3",
+		"@web/dev-server": "^0.1.31",
+		"@web/dev-server-legacy": "^1.0.0",
+		"@web/rollup-plugin-copy": "^0.3.0",
+		"@web/rollup-plugin-html": "^1.10.3",
+		"@webcomponents/webcomponentsjs": "^2.6.0",
+		"eslint": "^8.19.0",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.3.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"lit-analyzer": "^1.2.1",
+		"merge2": "^1.4.1",
+		"prettier": "^2.7.1",
+		"prettier-eslint": "^15.0.1",
+		"rimraf": "^3.0.2",
+		"rollup": "^2.75.7",
+		"rollup-plugin-minify-html-literals": "^1.2.6",
+		"rollup-plugin-summary": "^1.4.3",
+		"rollup-plugin-terser": "^7.0.2",
+		"sass": "^1.53.0",
+		"typedoc": "^0.23.7",
+		"typedoc-plugin-markdown": "^3.13.3",
+		"typescript": "~4.6.4"
+	},
+	"customElements": "custom-elements.json"
 }
