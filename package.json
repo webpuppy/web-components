@@ -1,6 +1,6 @@
 {
 	"name": "@webpuppy/web-components",
-	"version": "0.0.25",
+	"version": "0.0.26",
 	"description": "webpuppy web components with lit html",
 	"main": "build/index.js",
 	"files": [
@@ -18,7 +18,7 @@
 		"analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
 		"analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
 		"serve": "wds --watch",
-		"dev": "yarn serve",
+		"dev": "npm-run-all -p serve gulp",
 		"serve:prod": "MODE=prod npm run serve",
 		"checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
 		"build:sass": "sass ./src/sass/style.scss:./static/style.css",
@@ -37,7 +37,7 @@
 		"es2020"
 	],
 	"author": "abschill",
-  	"contributors": [
+	"contributors": [
 		{
 			"name": "abschill",
 			"email": "dev3141592@gmail.com",
@@ -47,8 +47,8 @@
 			"name": "kylegriffith",
 			"email": "kylegriffithmail@gmail.com"
 		}
-  	],
-  	"license": "BSD-3-Clause",
+	],
+	"license": "BSD-3-Clause",
 	"dependencies": {
 		"lit": "^2.2.7",
 		"lit-exports": "^0.1.2"
@@ -74,6 +74,7 @@
 		"gulp-typescript": "^6.0.0-alpha.1",
 		"lit-analyzer": "^1.2.1",
 		"merge2": "^1.4.1",
+		"npm-run-all": "^4.1.5",
 		"prettier": "^2.7.1",
 		"prettier-eslint": "^15.0.1",
 		"rimraf": "^3.0.2",
