@@ -16,5 +16,16 @@ npm i @webpuppy/web-components
 
 work in progress
 
+## Setting up Local Environment
+
+```
+git clone https://github.com/webpuppy/web-components
+cd web-components
+yarn
+yarn dev
+```
+
+open browser to port 3000
+
 
 [wiki](https://github.com/webpuppy/web-components/wiki)
