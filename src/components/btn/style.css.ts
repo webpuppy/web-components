@@ -29,6 +29,8 @@ export default css`
 
 	button[disabled] {
 		background: var(--wp-neutral-78);
+		cursor: default;
+		pointer-events: none;
 	}
 
 	.wp-btn--text {
