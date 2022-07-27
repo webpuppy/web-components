@@ -8,6 +8,7 @@ export * from './form';
 export * from './sidebar';
 export * from './ftr';
 export * from './tag';
+export * from './toast';
 
 import { WPBtn } from './btn';
 import { WPLink } from './link';
@@ -15,6 +16,10 @@ import { WPImg } from './img';
 import { WPNav } from './nav';
 import { WPLoading } from './loading';
 import { WPFtr } from './ftr';
+import {
+	WPToaster,
+	WPToast
+} from './toast';
 
 import {
 	WPLayout,
@@ -40,6 +45,8 @@ import {
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-toast': WPToast;
+		'wp-toaster': WPToaster;
 		'wp-loading': WPLoading;
 		'wp-date-input': WPDateInput;
 		'wp-text-input': WPTextInput;
