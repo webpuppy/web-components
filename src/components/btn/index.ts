@@ -65,8 +65,8 @@ export class WPBtn extends WPSizeable {
 						() => null,
 						() => this.get_icon()
 					)}
+					<slot></slot>
 				</span>
-				<slot></slot>
             </button>
 			`;
 		}
