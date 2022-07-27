@@ -57,10 +57,7 @@ export const CSS_RESETS = css`
 		--wp-success-75: rgba(var(--wp-success-rgb), 0.75);
 		--wp-success-54: rgba(var(--wp-success-rgb), 0.54);
 		--wp-success-29: rgba(var(--wp-success-rgb), 0.29);
-
 		--wp-white: #F8F8F8;
-
-
 		/**
 			default light mode
 		**/
@@ -73,9 +70,7 @@ export const CSS_RESETS = css`
 		--shadow-large: 0 30px 60px rgba(0,0,0,.12);
 		--shadow-hover: 0 30px 60px rgba(0,0,0,.12);
 		--shadow-sticky: 0 12px 10px -10px rgba(0,0,0,.12);
-
 		--wp-content-line: 1.8em;
-
 		--wp-shadow-xl: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
 
@@ -145,6 +140,13 @@ export const CSS_RESETS = css`
     .wp-txt-xl {
         font-size: 2em;
     }
+
+	picture,
+	video,
+	img {
+		margin: 0 auto;
+		vertical-align: center;
+	}
 
 	code {
 		background-color: var(--wp-primary);
