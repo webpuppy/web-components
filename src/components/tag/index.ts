@@ -11,9 +11,17 @@ import {
 	state,
     property,
 } from 'lit-exports';
+import {
+	TagType,
+	CodeType
+} from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'code-line')
 export class WPCode extends LitElement {
+
 	static override styles = [CSS_RESETS];
+
+	@property()
+	type: CodeType = 'default';
 
 	@property()
 	text: string = '';
@@ -36,6 +44,9 @@ export class WPCode extends LitElement {
 @customElement(Enums.default.COMPONENT_PREFIX + 'tag')
 export class WPTag extends WPSizeable {
 
+	@property()
+	type: TagType = 'default';
+
 	static override styles = [CSS_RESETS, css`
 	:host {
         background-color: var(--wp-primary);
@@ -46,26 +57,19 @@ export class WPTag extends WPSizeable {
         padding: 0.35em;
         width: fit-content;
     }
-    a {
-        color: inherit;
-        display: inline-block;
-        text-decoration: none;
-        position: relative;
-        z-index: 2;
-    }
 	`];
     @property() href?: string;
 
     override render() {
         if (this.href) {
             return html`
-                <a href=${this.href} class="wp-tag-${this.size}">
+                <a href=${this.href} class="wp-tag wp-tag-${this.size}">
                     <slot></slot>
                 </a>
             `;
         }
         return html`
-            <span class="wp-tag-${this.size}">
+            <span class="wp-tag wp-tag-${this.size}">
                 <slot></slot>
             </span>
         `;

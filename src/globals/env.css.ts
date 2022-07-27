@@ -177,7 +177,13 @@ export const CSS_RESETS = css`
 		animation-duration: 835ms;
 	}
 
-
+	a {
+        color: inherit;
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        z-index: 2;
+    }
 
 	@keyframes spinner {
 		0% {
