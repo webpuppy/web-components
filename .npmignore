@@ -9,3 +9,4 @@ gulpfile.js
 web-dev-server.config.js
 tsconfig.json
 yarn.lock
+static
