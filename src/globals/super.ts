@@ -9,7 +9,10 @@ export class WPComponentBase extends LitElement {
 	 */
 	@property()
 	override_style: string;
-	static override styles = [CSS_RESETS]
+	static override styles = [CSS_RESETS];
+
+	@property()
+	material_symbol?: string = null;
 }
 
 export class WPOpenable extends WPComponentBase {
