@@ -9,6 +9,9 @@ export * from './sidebar';
 export * from './ftr';
 export * from './tag';
 export * from './toast';
+export * from './portal';
+export * from './dropdown';
+export * from './video';
 
 import { WPBtn } from './btn';
 import { WPLink } from './link';
@@ -40,11 +43,18 @@ import {
 	WPTextInput,
 	WPDateInput
 } from './form';
+import { WPPortal } from './portal';
+import { WPDropdown, WPDropdownItem } from './dropdown';
+import { WPVideo } from './video';
 /**
  * Global Map For Packaged Tags
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-portal': WPPortal;
+		'wp-video': WPVideo;
+		'wp-dropdown': WPDropdown;
+		'wp-dropdown-item': WPDropdownItem;
 		'wp-toast': WPToast;
 		'wp-toaster': WPToaster;
 		'wp-loading': WPLoading;
