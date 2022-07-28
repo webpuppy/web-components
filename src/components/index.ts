@@ -4,7 +4,7 @@ export * from './container';
 export * from './img';
 export * from './loading';
 export * from './nav';
-export * from './form';
+export * from './input';
 export * from './sidebar';
 export * from './ftr';
 export * from './tag';
@@ -42,7 +42,7 @@ import {
 import {
 	WPTextInput,
 	WPDateInput
-} from './form';
+} from './input';
 import { WPPortal } from './portal';
 import { WPDropdown, WPDropdownItem } from './dropdown';
 import { WPVideo } from './video';

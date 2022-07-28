@@ -2,7 +2,7 @@ import input_css from './style.css';
 import {
     Enums,
 	CSS_RESETS
-} from '../../../globals/exports';
+} from '../../globals/exports';
 import {
 	customElement,
     LitElement,
@@ -17,7 +17,7 @@ export class WPDateInput extends LitElement {
 	static styles = [CSS_RESETS, input_css];
 
 	@property()
-	label: string = '';
+	label = '';
 
 	@property({ attribute: true, type: Boolean })
 	ring = false;

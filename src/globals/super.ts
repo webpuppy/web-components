@@ -28,7 +28,7 @@ export class WPSizeable extends WPComponentBase {
 	 * sizeable type
 	 */
 	@property({ type: String })
-	size?: WPSizeableOption;
+	size?: WPSizeableOption = 'md';
 }
 
 export class WPEditable extends WPComponentBase {

@@ -5,6 +5,8 @@ export type WPInputChangeEventDetail = {
 	new_text?: string;
 }
 
+export type WPSelectChangeEventSignature = 'wp-dropdown-change';
+
 export type WPSelectChangeEventDetail = {
 	old_val?: string; //no old val means the old one was default
 	new_val?: string; //no new val means it was deselected

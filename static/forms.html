@@ -26,10 +26,34 @@
 			<h1>Custom Form Elements</h1>
 		</wp-hdr>
 		<section>
+			<h2>Custom Text Inputs</h2>
 			<wp-text-input id="forminput0" label="Text Input no ring"></wp-text-input>
 			<wp-text-input id="forminput1" label="Text Input ring" ring></wp-text-input>
 			<wp-date-input id="forminput2" label="Date Input no ring"></wp-date-input>
 			<wp-date-input id="forminput3" label="Date Input ring" ring></wp-date-input>
+		</section>
+		<section>
+			<h2>Custom Selects</h2>
+			<wp-dropdown size="xs" default_value="Extra Small">
+				<wp-dropdown-item value="item0"></wp-dropdown-item>
+				<wp-dropdown-item value="item1"></wp-dropdown-item>
+			</wp-dropdown><br/>
+			<wp-dropdown size="sm" default_value="Small">
+				<wp-dropdown-item value="item0"></wp-dropdown-item>
+				<wp-dropdown-item value="item1"></wp-dropdown-item>
+			</wp-dropdown><br/>
+			<wp-dropdown default_value="Default">
+				<wp-dropdown-item value="item0"></wp-dropdown-item>
+				<wp-dropdown-item value="item1"></wp-dropdown-item>
+			</wp-dropdown><br/>
+			<wp-dropdown size="lg" default_value="Large">
+				<wp-dropdown-item value="item0"></wp-dropdown-item>
+				<wp-dropdown-item value="item1"></wp-dropdown-item>
+			</wp-dropdown><br/>
+			<wp-dropdown size="xl" default_value="X-Large">
+				<wp-dropdown-item value="item0"></wp-dropdown-item>
+				<wp-dropdown-item value="item1"></wp-dropdown-item>
+			</wp-dropdown>
 		</section>
 	</main>
   </body>

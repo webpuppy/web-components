@@ -3,7 +3,7 @@ import {
     Enums,
 	CSS_RESETS,
 	WPEditable
-} from '../../../globals/exports';
+} from '../../globals/exports';
 import {
 	customElement,
     html,
@@ -16,7 +16,7 @@ export class WPTextInput extends WPEditable {
 	static styles = [CSS_RESETS, input_css];
 
 	@property()
-	label: string = '';
+	label = '';
 
 	@property({ attribute: true, type: Boolean })
 	ring = false;
