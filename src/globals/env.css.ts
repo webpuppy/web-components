@@ -78,32 +78,11 @@ export const CSS_RESETS = css`
         font-family: var(--wp-fontstack);
     }
 
-	h1 {
-        font-size: 40pt;
-    }
-
-    h2 {
-        font-size: 35pt;
-    }
-
-    h3 {
-        font-size: 30pt;
-    }
-
-    h4 {
-        font-size: 22pt;
-    }
-
-    h5 {
-        font-size: 16pt;
-    }
-
-    p,
-    header {
+    p {
         display: block;
-        line-height: 1.8em;
-        margin-block-start: 0;
-        margin-block-end: 0;
+        line-height: var(--wp-content-line);
+        margin-block-start: var(--wp-content-line);
+        margin-block-end: var(--wp-content-line);
     }
 
 	::slotted(main) {
@@ -111,16 +90,11 @@ export const CSS_RESETS = css`
 		top: var(--wp-top-nav-height);
 	}
 
-	p {
-		margin-block-start: 1.25em;
-        margin-block-end: 1.25em;
-	}
-
 	figure {
 		margin-inline-start: 0;
 		margin-inline-end: 0;
-
 	}
+
 	.wp-txt-xs,
     .wp-tag-xs {
         font-size: 12px;
@@ -147,49 +121,6 @@ export const CSS_RESETS = css`
 		margin: 0 auto;
 		vertical-align: center;
 	}
-	iframe {
-		border-color: transparent;
-		border-radius: var(--wp-border-radius);
-		box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-		margin: 0 auto;
-
-		body {
-			display: grid;
-			place-content: center;
-			overflow: none;
-			max-width: 400px;
-			max-height: 400px;
-		}
-	}
-	form {
-		button[type="submit"] {
-			backface-visibility: hidden;
-			background-color: var(--wp-tertiary);
-			border-color: transparent;
-			border-width: 2px;
-			border-style: solid;
-			border-radius: var(--wp-border-radius);
-			color: var(--wp-white);
-			cursor: pointer;
-			font-family: var(--wp-fontstack);
-			font-kerning: normal;
-			padding: 1rem;
-			font-size: 14px;
-			font-weight: 500;
-			margin: .15em .05em .2em;
-			position: relative;
-			text-align: center;
-			text-rendering: optimizeLegibility;
-			text-size-adjust: auto;
-			transition: border .25s, color .75s, box-shadow 550ms, border-color .65s ease-in-out;
-		}
-	}
-
-	button[disabled] {
-		background: var(--wp-neutral-78);
-		cursor: default;
-		pointer-events: none;
-	}
 
 	code {
 		background-color: var(--wp-primary);
@@ -202,25 +133,6 @@ export const CSS_RESETS = css`
 		line-height: var(--wp-content-line);
 		padding: 1em;
 	}
-	.wp-loading {
-		animation-name: spinner;
-		animation-timing-function: ease-in-out;
-		animation-iteration-count: infinite;
-		max-height: 72px;
-		max-width: 72px;
-	}
-
-	.wp-loading-reverse {
-		animation-name: spinner-reverse;
-	}
-
-	.wp-loading--fast {
-		animation-duration: 535ms;
-	}
-
-	.wp-loading--normal {
-		animation-duration: 835ms;
-	}
 
 	a {
         color: inherit;
@@ -230,14 +142,4 @@ export const CSS_RESETS = css`
         z-index: 2;
     }
 
-	@keyframes spinner {
-		0% {
-			transform: rotate(360deg);
-		}
-	}
-	@keyframes spinner-reverse {
-		0% {
-			transform: rotate(-360deg);
-		}
-	}
 `;

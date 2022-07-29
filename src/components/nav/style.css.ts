@@ -4,6 +4,7 @@ export const NAV_STYLES = css`
 :host {
 	cursor: pointer;
 	display: block;
+	line-height: var(--wp-content-line);
 	height: var(--wp-top-nav-height);
 	position: relative;
 	top: 0;

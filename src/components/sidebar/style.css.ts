@@ -38,9 +38,8 @@ export const WP_SIDEBAR_ITEM = css`
 :host {
 	display: block;
 	font-size: 15px;
-	line-height: 1.8em;
+	line-height: var(--wp-content-line);
 	max-height: 50px;
-	padding-left: 1.25em;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: auto;
 	transition:
@@ -52,9 +51,11 @@ export const WP_SIDEBAR_ITEM = css`
 }
 
 .wp-sbr-item {
-	border-radius: .25rem;
+	border-radius: var(--wp-border-radius);
 	color: inherit;
+	display: block;
 	left: 0;
+	margin: 1em;
 	position: relative;
 	text-decoration: none;
 	transition:
@@ -74,7 +75,6 @@ export const WP_SIDEBAR_ITEM = css`
 	background-color: rgba(120,120,120,0.15);
 	color: var(--wp-btn-primary);
 	text-shadow: var(--wp-txt-shadow);
-	left: .25em;
 }
 
 @media(prefers-reduced-motion: no-preference) {
@@ -82,7 +82,6 @@ export const WP_SIDEBAR_ITEM = css`
 		background-color: rgba(120,120,120,0.15);
 		color: var(--wp-btn-primary);
 		text-shadow: var(--wp-txt-shadow);
-		left: .25em;
 	}
 }
 `;

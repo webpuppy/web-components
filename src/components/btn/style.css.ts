@@ -8,22 +8,34 @@ export default css`
         pointer-events: all;
     }
 
-    .wp-btn {
-		background-color: var(--wp-tertiary);
-        border-width: 2px;
-        border-style: solid;
-        border-radius: var(--wp-border-radius);
-		color: var(--wp-btn-txt-00);
-        cursor: pointer;
-        font-family: var(--wp-fontstack);
-		font-kerning: normal;
+	button {
+		backface-visibility: hidden;
+		border-color: transparent;
+		border-width: 2px;
+		border-style: solid;
+		border-radius: var(--wp-border-radius);
+		cursor: pointer;
+		font-family: var(--wp-fontstack);
 		font-size: 14px;
 		font-weight: 500;
-		margin: .15em .05em .2em;
-        position: relative;
-		text-align: center;
+		font-kerning: normal;
 		text-rendering: optimizeLegibility;
 		text-size-adjust: auto;
+		transition: border .25s, color .75s, box-shadow 550ms, border-color .65s ease-in-out;
+		position: relative;
+	}
+
+	button[disabled] {
+		background: var(--wp-neutral-78);
+		cursor: default;
+		pointer-events: none;
+	}
+
+    .wp-btn {
+		background-color: var(--wp-tertiary);
+		color: var(--wp-btn-txt-00);
+		margin: .15em .05em .2em;
+		text-align: center;
         z-index: 2;
     }
 
