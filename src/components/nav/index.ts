@@ -26,7 +26,7 @@ export class WPNav extends WPOpenable {
 	type: TopNavType = 'flexed-burger';
 
 	@property()
-	title: string = 'WebPuppy';
+	title = 'WebPuppy';
 
 	@property()
 	prefix_href?: string = null;
@@ -46,7 +46,7 @@ export class WPNav extends WPOpenable {
 
 	render_default(classes: string) {
 		return html`
-		<header class=${classes}>
+		<header role="navigation" class=${classes}>
 			<div class="wp-nav-logo">
 				<a href=${this.prefix_href ?? '/'}>
 					<img
@@ -59,7 +59,7 @@ export class WPNav extends WPOpenable {
 					</span>
 				</a>
 			</div>
-			<div class="wp-nav-list">
+			<div role="list"  class="wp-nav-list">
 				<slot></slot>
 			</div>
 			<div class="wp-nav-burger" @click=${this.toggle_open}></div>
@@ -69,7 +69,7 @@ export class WPNav extends WPOpenable {
 
 	render_mobile_open(classes: string) {
 		return html`
-		<header class=${classes}>
+		<header role="navigation" class=${classes}>
 			<div class="wp-nav-logo">
 				<a href=${this.prefix_href ?? '/'}>
 					<img
@@ -82,7 +82,7 @@ export class WPNav extends WPOpenable {
 					</span>
 				</a>
 			</div>
-			<div class="wp-nav-list--mobile-open">
+			<div role="list" class="wp-nav-list--mobile-open">
 				<slot></slot>
 			</div>
 			<div class="wp-nav-burger" @click=${this.toggle_open}></div>

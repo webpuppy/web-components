@@ -24,7 +24,7 @@ export class WPSidebarItem extends LitElement {
 	href?: string;
 
 	@property()
-	text: string = '';
+	text = '';
 
 	@property({ attribute: false })
 	is_active: boolean = window.location.pathname === this.href;
@@ -70,7 +70,7 @@ export class WPSidebar extends LitElement {
 	icon_url: '/logo.svg';
 
 	@property()
-	title: string = '';
+	title = '';
 
 	render_title() {
 		if(!this.title) return html``;
@@ -79,7 +79,7 @@ export class WPSidebar extends LitElement {
 	render_component() {
 		if(!this.prefix_href) {
 			return html`
-			<aside class="wp-sbr">
+			<aside role="navigation" class="wp-sbr">
 				<header class="wp-sbr-hdr">
 					<img height="64"
 						width="64" src=${this.icon_url}>
@@ -90,7 +90,7 @@ export class WPSidebar extends LitElement {
 			`;
 		}
 		return html`
-			<aside class="wp-sbr">
+			<aside role="navigation" class="wp-sbr">
 				<header class="wp-sbr-hdr">
 					<a href=${this.prefix_href}>
 						<img height="64"

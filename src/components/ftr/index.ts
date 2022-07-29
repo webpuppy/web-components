@@ -17,7 +17,7 @@ export class WPFtr extends LitElement {
 
 	render() {
 		return html`
-		<footer class="wp-ftr">
+		<footer role="navigation" class="wp-ftr">
 			<slot></slot>
 			<div style="margin-top: 2em; text-align: center">&copy;2022</div>
 		</footer>

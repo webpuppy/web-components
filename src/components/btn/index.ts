@@ -55,6 +55,7 @@ export class WPBtn extends WPSizeable {
 		if(!url) {
 			return html`
 			<button
+			role="button"
 			?disabled=${this.disabled}
 			class=${classMap(classes)}
 			part=${BtnString}>
@@ -72,6 +73,7 @@ export class WPBtn extends WPSizeable {
 		}
 		return html`
 		<button
+			role="button"
 			?disabled=${this.disabled}
 			class=${classMap(classes)}
 			part=${BtnString}>

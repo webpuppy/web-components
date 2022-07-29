@@ -8,34 +8,66 @@ import {
     html,
     property,
 } from 'lit-exports';
+import {
+	WPPortalXSmallHeight,
+	WPPortalXSmallWidth,
+	WPPortalSmallHeight,
+	WPPortalSmallWidth,
+	WPPortalHeight,
+	WPPortalWidth,
+	WPPortalXLargeHeight,
+	WPPortalXLargeWidth
+} from './defs';
 import portalCSS from './style.css';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'portal')
 export class WPPortal extends WPSizeable {
 
 	@property()
-	src: string;
+	src = '/';
+
+	@property()
+	name = 'Portal';
 
 	static override styles = [CSS_RESETS, portalCSS];
 
 	render() {
 		if(this.size === 'xs') {
 			return html`
-			<iframe width="180" height="360" src=${this.src}></iframe>
+			<iframe
+			aria-label=${this.name}
+			name=${this.name}
+			width=${WPPortalXSmallWidth}
+			height=${WPPortalXSmallHeight}
+			src=${this.src}></iframe>
 		`;
 		}
 		if(this.size === 'sm') {
 			return html`
-			<iframe width="360" height="360" src=${this.src}></iframe>
+			<iframe
+			aria-label=${this.name}
+			name=${this.name}
+			width=${WPPortalSmallWidth}
+			height=${WPPortalSmallHeight}
+			src=${this.src}></iframe>
 		`;
 		}
 		if(this.size === 'xl') {
 			return html`
-			<iframe width="1920" height="1080" src=${this.src}></iframe>
+			<iframe aria-label=${this.name}
+			name=${this.name}
+			width=${WPPortalXLargeWidth}
+			height=${WPPortalXLargeHeight}
+			src=${this.src}></iframe>
 		`;
 		}
 		return html`
-			<iframe width="720" height="540" src=${this.src}></iframe>
+			<iframe
+			aria-label=${this.name}
+			name=${this.name}
+			width=${WPPortalWidth}
+			height=${WPPortalHeight}
+			src=${this.src}></iframe>
 		`;
 	}
 }

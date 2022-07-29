@@ -27,12 +27,6 @@ export default css`
         z-index: 2;
     }
 
-	button[disabled] {
-		background: var(--wp-neutral-78);
-		cursor: default;
-		pointer-events: none;
-	}
-
 	.wp-btn--text {
 		min-height: 48px;
 		width: var(--wp-btn-size);

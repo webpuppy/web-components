@@ -27,7 +27,6 @@ export class WPToaster extends LitElement {
 		width: 180px;
 		z-index: 999;
 	}
-
 	`];
 
 	render() {

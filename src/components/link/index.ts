@@ -23,22 +23,24 @@ export class WPLink extends LitElement {
 	target: LinkTarget = '_self';
 
     @property({ attribute: true, type: String })
-	href: string = '#';
+	href = '#';
 
     @property({ attribute: true, type: String })
-	text: string = '';
+	text = '';
 
     static override styles = [CSS_RESETS, LINK_STYLES];
 
 	render_component(classes: string) {
 		if(this.target === '_blank' && !this.no_icon) {
 			return html`<a
+			role="link"
 			class=${classes}
 			href=${this.href}
 			target=${this.target}
 			>${this.text}<slot></slot> &#x2197;</a> `;
 		}
 		return html`<a
+		role="link"
 		class=${classes}
 		href=${this.href}
 		target=${this.target}
@@ -49,7 +51,6 @@ export class WPLink extends LitElement {
 		if(this.hov_underline) {
 			return this.render_component('wp-link wp-link--hov-underline');
 		}
-
-    	return this.render_component('wp-link')
+		return this.render_component('wp-link');
     }
 }

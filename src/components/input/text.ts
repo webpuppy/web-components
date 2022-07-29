@@ -27,9 +27,9 @@ export class WPTextInput extends WPEditable {
 
 	render_component(classes?: string) {
 		if(!classes) {
-			return html`${this.render_label()}<input value=${this.initial} id=${this.id} name=${this.id} type="text" placeholder=${this.label} @change=${this.handle_nested_change} class="wp-input">`;
+			return html`${this.render_label()}<input contenteditable="true" role="textbox" aria-label=${this.label} value=${this.initial} id=${this.id} name=${this.id} type="text" placeholder=${this.label} @change=${this.handle_nested_change} class="wp-input">`;
 		}
-		return html`${this.render_label()}<input value=${this.initial} @change=${this.handle_nested_change} id=${this.id} name=${this.id} placeholder=${this.label} type="text" class=${classes}>`;
+		return html`${this.render_label()}<input contenteditable="true" role="textbox" aria-label=${this.label} value=${this.initial} @change=${this.handle_nested_change} id=${this.id} name=${this.id} placeholder=${this.label} type="text" class=${classes}>`;
 	}
 
 	handle_nested_change(e: Event) {
