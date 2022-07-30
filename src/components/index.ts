@@ -13,7 +13,17 @@ export * from './portal';
 export * from './dropdown';
 export * from './video';
 export * from './modal';
+export * from './editable-list';
+export * from './carousel';
 
+import {
+	WPCarousel,
+	WPCarouselItem
+} from './carousel';
+import {
+	WPEditableList,
+	WPEditableListItem
+} from './editable-list';
 import { WPBtn } from './btn';
 import { WPLink } from './link';
 import { WPImg } from './img';
@@ -52,6 +62,10 @@ import { WPVideo } from './video';
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-carousel-item': WPCarouselItem;
+		'wp-carousel': WPCarousel;
+		'wp-editable-list-item': WPEditableListItem;
+		'wp-editable-list': WPEditableList;
 		'wp-modal': WPModal;
 		'wp-portal': WPPortal;
 		'wp-video': WPVideo;
