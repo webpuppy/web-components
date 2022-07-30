@@ -24,6 +24,9 @@ export class WPCarousel extends WPSizeable {
 	@query('.wp-carousel')
 	container: HTMLDivElement;
 
+	@query('.wp-carousel-slide')
+	slide: HTMLDivElement;
+
 	@queryAssignedElements({ selector: 'wp-carousel-item' })
 	carousel_items: WPCarouselItem[];
 
@@ -36,9 +39,7 @@ export class WPCarousel extends WPSizeable {
 	connectedCallback() {
 		super.connectedCallback();
 		document.addEventListener('DOMContentLoaded', () => {
-			if(this.carousel_items.length > 0) {
-				this.__trigger();
-			}
+			if(this.carousel_items.length > 0) this.__trigger();
 		});
 	}
 
@@ -67,6 +68,8 @@ export class WPCarousel extends WPSizeable {
 
 	__trigger() {
 		this.selected = [...this.carousel_items][this.selectedIndex];
+		this.slide.classList.add('wp-carousel-slide--active');
+		setTimeout(() => this.slide.classList.remove('wp-carousel-slide--active'), 350);
 	}
 
 	render() {
