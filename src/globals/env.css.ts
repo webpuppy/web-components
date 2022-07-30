@@ -22,7 +22,12 @@ export const CSS_RESETS = css`
             'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';
-		--wp-btn-size: 180px;
+
+		--wp-btn-xs-width: 24px;
+		--wp-btn-sm-width: 80px;
+		--wp-btn-md-width: 180px;
+		--wp-btn-lg-width: 240px;
+
 		--wp-border-radius: 8px;
 		--wp-txt-shadow: 1px 2px 12px rgba(19,212,128,0.47);
 

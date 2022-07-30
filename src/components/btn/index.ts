@@ -93,7 +93,7 @@ export class WPBtn extends WPSizeable {
     override render() {
 		const sns = ` hov-${this.sensitivity}`; // the sensitivity for :active / :hover shadow / color shift
 		const ring = this.focusring ? ' focusring' : '';
-		const btn_base = this.use_icon ? 'wp-btn wp-btn--icon' : 'wp-btn wp-btn--text';
+		const btn_base = this.use_icon ? `wp-btn wp-btn--${this.size} wp-btn--icon` : `wp-btn wp-btn--${this.size} wp-btn--text`;
 		const classes = {};
 		classes[`${btn_base} primary${ring}${sns}`] = this.type === 'primary';
 		classes[`${btn_base} danger${ring}${sns}`] = this.type === 'danger';

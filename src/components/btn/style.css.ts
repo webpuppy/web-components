@@ -32,21 +32,31 @@ export default css`
 	}
 
     .wp-btn {
+		align-items: center;
 		background-color: var(--wp-tertiary);
 		color: var(--wp-btn-txt-00);
+		display: grid;
+		place-content: center;
 		margin: .15em .05em .2em;
+		padding: .85em 2em;
 		text-align: center;
         z-index: 2;
     }
 
-	.wp-btn--text {
-		min-height: 48px;
-		width: var(--wp-btn-size);
+	.wp-btn--xs {
+		width: var(--wp-btn-xs-width);
 	}
 
-	.wp-btn--icon {
-		height: 36px;
-		width: calc(var(--wp-btn-size) / 3);
+	.wp-btn--sm {
+		width: var(--wp-btn-sm-width);
+	}
+
+	.wp-btn--md {
+		width: var(--wp-btn-md-width);
+	}
+
+	.wp-btn--lg {
+		width: var(--wp-btn-lg-width);
 	}
 
 	.wp-btn #content,
@@ -103,8 +113,8 @@ export default css`
 		}
 
 		.wp-btn:hover {
+			border-color: var(--shadow-color);
 			box-shadow: var(--shadow-sticky);
-			letter-spacing: 0.035em;
 		}
 
 		.primary:hover,
