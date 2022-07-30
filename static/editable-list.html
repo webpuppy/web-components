@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>WP Buttons</title>
+    <title>WP Containers</title>
 	<link rel="stylesheet" href="/static/style.css">
 	<link rel="icon" href="http://localhost:3000/static/logo.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,8 @@
 	<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 	<script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../bundle/index.js"></script>
-  </head>
-  <body>
+</head>
+<body>
 	<wp-sidebar prefix_href="/"  slot="nav" icon_url="/static/logo.svg">
 		<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
 		<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
@@ -24,26 +24,17 @@
 		<wp-sidebar-item text="Editable Lists" href="/static/editable-list.html"></wp-sidebar-item>
 	</wp-sidebar>
 	<main slot="main">
-		<wp-hdr>
-			<h1>Buttons</h1>
-		</wp-hdr>
-		<section>
-			<wp-btn text="Base"></wp-btn>
-			<wp-btn text="Base" focusring></wp-btn>
-			<wp-btn disabled text="Disabled"></wp-btn>
-			<wp-btn type="primary" text="Primary"></wp-btn>
-			<wp-btn type="primary" text="Primary" focusring></wp-btn>
-			<wp-btn type="secondary" text="Secondary" sensitivity="2" href="/static/links.html"></wp-btn>
-			<wp-btn type="secondary" text="Secondary" focusring></wp-btn>
-			<wp-btn type="tertiary" text="Tertiary"></wp-btn>
-			<wp-btn type="tertiary" text="Tertiary" focusring></wp-btn>
-			<wp-btn type="confirm" text="Confirm?"></wp-btn>
-			<wp-btn type="confirm" focusring><span>Confirm?</span></wp-btn>
-			<wp-btn type="danger" text="Danger"></wp-btn>
-			<wp-btn type="danger" text="Danger" focusring></wp-btn>
-			<wp-btn size="xs" type="confirm" use_icon></wp-btn>
-			<wp-btn size="xs" type="danger"  use_icon></wp-btn>
-		</section>
+		<wp-editable-list>
+			<wp-editable-list-item><span>Item 1</span></wp-editable-list-item>
+			<wp-editable-list-item><span>Item 2</span></wp-editable-list-item>
+			<wp-editable-list-item><span>Item 3</span></wp-editable-list-item>
+			<wp-editable-list-item><span>Item 4</span></wp-editable-list-item>
+		</wp-editable-list>
+		<wp-editable-list type="grid">
+			<wp-editable-list-item><span>Item 1</span></wp-editable-list-item>
+			<wp-editable-list-item><span>Item 2</span></wp-editable-list-item>
+			<wp-editable-list-item><span>Item 3</span></wp-editable-list-item>
+			<wp-editable-list-item><span>Item 4</span></wp-editable-list-item>
+		</wp-editable-list>
 	</main>
-  </body>
-</html>
+</body>
