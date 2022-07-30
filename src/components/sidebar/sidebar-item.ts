@@ -28,7 +28,7 @@ export class WPSidebarItem extends LitElement {
 	text = '';
 
 	@property({ attribute: false })
-	is_active: boolean = window.location.pathname === this.href;
+	is_active: boolean = this.href && window.location.pathname === this.href;
 
 	constructor() {
 		super();

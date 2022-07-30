@@ -37,6 +37,9 @@ export class WPSidebar extends LitElement {
 	@property()
 	title = '';
 
+	@property()
+	icon_size = '64';
+
 	render_title() {
 		if(!this.title) return html``;
 		return html`<h4>${this.title}</h4>`;
@@ -46,8 +49,8 @@ export class WPSidebar extends LitElement {
 			return html`
 			<aside role="navigation" class="wp-sbr">
 				<header class="wp-sbr-hdr">
-					<img height="64"
-						width="64" src=${this.icon_url}>
+					<img height=${this.icon_size}
+						width=${this.icon_size} src=${this.icon_url}>
 					${this.render_title()}
 				</header>
 				<slot></slot>
@@ -58,8 +61,8 @@ export class WPSidebar extends LitElement {
 			<aside role="navigation" class="wp-sbr">
 				<header class="wp-sbr-hdr">
 					<a href=${this.prefix_href}>
-						<img height="64"
-							width="64" src=${this.icon_url}>
+						<img height=${this.icon_size}
+							width=${this.icon_size} src=${this.icon_url}>
 						${this.render_title()}
 					</a>
 				</header>

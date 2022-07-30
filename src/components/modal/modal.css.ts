@@ -44,10 +44,25 @@ button:hover {
 	border-radius: var(--wp-border-radius);
 	opacity: 1;
 	margin: 0 auto;
-	min-height: 480px;
 	transform: translateY(0);
-	width: 720px;
 	z-index: 999;
+}
+
+.wp-modal--xs
+.wp-modal--sm {
+	min-height: 480px;
+	width: 480px;
+}
+
+.wp-modal--md {
+	min-height: 480px;
+	width: 720px;
+}
+
+.wp-modal--lg,
+.wp-modal--xl {
+	min-height: 720px;
+	width: 1080px;
 }
 
 @keyframes modal-fade-in {

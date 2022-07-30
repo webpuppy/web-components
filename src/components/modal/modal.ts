@@ -5,9 +5,7 @@ import {
 } from '../../globals/exports';
 import {
 	customElement,
-    LitElement,
     html,
-	state,
     property,
 } from 'lit-exports';
 import style from './modal.css';
@@ -23,7 +21,7 @@ export class WPModal extends WPSizeable {
 	render() {
 		return html`
 		<div id="modal-bg">
-			<div class="wp-modal">
+			<div role="alert" aria-label=${this.name} class="wp-modal wp-modal--${this.size}">
 				<button @click=${this.remove}>x</button>
 				<h4>${this.name}</h4>
 				<slot></slot>
