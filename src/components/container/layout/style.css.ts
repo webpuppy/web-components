@@ -7,30 +7,31 @@ export const LAYOUT_STYLES = css`
 		position: fixed;
 		left: 0;
 		top: 0;
+		width: 100%;
     }
 
     .wp-layout-tbr-1 {
         display: grid;
-        grid-template-rows: 10% 90%;
+        grid-template-rows: 180px auto;
     }
 	.wp-fixed-layout-tbr-1 {
 		display: grid;
-        grid-template-rows: 10vh 90vh;
+        grid-template-rows: 180px auto;
 	}
 
 	.wp-layout-tbr-0 {
 		display: grid;
-        grid-template-rows: 10% auto 10%;
+        grid-template-rows: 180px auto 10%;
 	}
 
 	.wp-fixed-layout-tbr-1 {
 		display: grid;
-        grid-template-rows: 10vh auto 10vh;
+        grid-template-rows: 240px auto 10vh;
 	}
 
     .wp-layout-sbr-0 {
         display: grid;
-        grid-template-columns: 10% 90%;
+        grid-template-columns: 180px auto;
     }
 
 	.wp-fixed-layout-sbr-0 {
@@ -39,7 +40,7 @@ export const LAYOUT_STYLES = css`
 
     .wp-layout-sbr-1 {
         display: grid;
-        grid-template-columns: 15% 85%;
+        grid-template-columns: 240px auto;
     }
 
 	.wp-fixed-layout-sbr-1 {

@@ -14,6 +14,7 @@ export const ddlItemStyles = css`
 	display: block;
 	line-height: var(--wp-content-line);
 	position: relative;
+	transition: all 450ms ease;
 	z-index: 3;
 }
 `;

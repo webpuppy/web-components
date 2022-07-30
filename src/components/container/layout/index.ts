@@ -36,10 +36,9 @@ export class WPLayout extends LitElement {
 
     render() {
         return html`
-            <div class="${this._convertTypeToClass()}">
+            <div class=${this._convertTypeToClass()}>
 				<slot name="nav"></slot>
 				<slot name="main"></slot>
-				<slot name="footer"></slot>
             </div>
         `;
     }
