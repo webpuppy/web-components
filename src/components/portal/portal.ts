@@ -16,7 +16,10 @@ import {
 	WPPortalHeight,
 	WPPortalWidth,
 	WPPortalXLargeHeight,
-	WPPortalXLargeWidth
+	WPPortalXLargeWidth,
+	WPPortalFetchPriority,
+	WPPortalLoadingOption,
+	WPPortalRefererPolicy
 } from './defs';
 import portalCSS from './style.css';
 
@@ -29,6 +32,15 @@ export class WPPortal extends WPSizeable {
 	@property()
 	name = 'Portal';
 
+	@property()
+	fetchPriority: WPPortalFetchPriority = 'auto';
+
+	@property()
+	loading: WPPortalLoadingOption = 'eager';
+
+	@property()
+	refererPolicy: WPPortalRefererPolicy = 'no-referer-when-downgrade';
+
 	static override styles = [CSS_RESETS, portalCSS];
 
 	render() {
@@ -36,6 +48,8 @@ export class WPPortal extends WPSizeable {
 			return html`
 			<iframe
 			aria-label=${this.name}
+			loading=${this.loading}
+			fetchpriority=${this.fetchPriority}
 			name=${this.name}
 			width=${WPPortalXSmallWidth}
 			height=${WPPortalXSmallHeight}
@@ -46,6 +60,8 @@ export class WPPortal extends WPSizeable {
 			return html`
 			<iframe
 			aria-label=${this.name}
+			loading=${this.loading}
+			fetchpriority=${this.fetchPriority}
 			name=${this.name}
 			width=${WPPortalSmallWidth}
 			height=${WPPortalSmallHeight}
@@ -54,7 +70,10 @@ export class WPPortal extends WPSizeable {
 		}
 		if(this.size === 'xl') {
 			return html`
-			<iframe aria-label=${this.name}
+			<iframe
+			aria-label=${this.name}
+			loading=${this.loading}
+			fetchpriority=${this.fetchPriority}
 			name=${this.name}
 			width=${WPPortalXLargeWidth}
 			height=${WPPortalXLargeHeight}
@@ -64,6 +83,8 @@ export class WPPortal extends WPSizeable {
 		return html`
 			<iframe
 			aria-label=${this.name}
+			loading=${this.loading}
+			fetchpriority=${this.fetchPriority}
 			name=${this.name}
 			width=${WPPortalWidth}
 			height=${WPPortalHeight}
