@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import ts from 'gulp-typescript';
 import tsconfig from './tsconfig.json' assert { type: 'json' };
 import 'merge2';
-import { watchRollup } from './tools/rollup-watch.cjs';
+import { watchRollup } from './scripts/rollup-watch.cjs';
 import gulpSass from 'gulp-sass';
 import dartSass from 'sass';
 const sass = gulpSass(dartSass);
