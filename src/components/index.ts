@@ -12,6 +12,7 @@ export * from './toast';
 export * from './portal';
 export * from './dropdown';
 export * from './video';
+export * from './modal';
 
 import { WPBtn } from './btn';
 import { WPLink } from './link';
@@ -23,7 +24,7 @@ import {
 	WPToaster,
 	WPToast
 } from './toast';
-
+import { WPModal } from './modal';
 import {
 	WPLayout,
 	WPCard,
@@ -51,6 +52,7 @@ import { WPVideo } from './video';
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-modal': WPModal;
 		'wp-portal': WPPortal;
 		'wp-video': WPVideo;
 		'wp-dropdown': WPDropdown;

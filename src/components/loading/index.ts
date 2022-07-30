@@ -20,7 +20,7 @@ export class WPLoading extends LitElement {
 	icon_url: string;
 
 	@property({ type: Boolean })
-	reverse: boolean = false;
+	reverse = false;
 
 	@property()
 	speed: 'normal' | 'slow' = 'normal';
