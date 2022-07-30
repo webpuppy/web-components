@@ -8,5 +8,6 @@ export default css`
 .wp-carousel-item {
 	border-radius: var(--wp-border-radius);
 	line-height: var(--wp-content-line);
+	outline: 1px solid black;
 }
 `;

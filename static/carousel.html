@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>WP Containers</title>
+    <title>WP Buttons</title>
 	<link rel="stylesheet" href="/static/style.css">
 	<link rel="icon" href="http://localhost:3000/static/logo.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 	<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 	<script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../bundle/index.js"></script>
-</head>
+  </head>
 <body>
 	<wp-sidebar prefix_href="/"  slot="nav" icon_url="/static/logo.svg">
 		<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
@@ -25,6 +25,11 @@
 		<wp-sidebar-item text="Carousels" href="/static/carousel.html"></wp-sidebar-item>
 	</wp-sidebar>
 	<main slot="main">
-		<wp-modal></wp-modal>
+		<wp-carousel>
+			<wp-carousel-item><span>Item 0</span></wp-carousel-item>
+			<wp-carousel-item><span>Item 1</span></wp-carousel-item>
+			<wp-carousel-item><span>Item 2</span></wp-carousel-item>
+		</wp-carousel>
 	</main>
 </body>
+</html>
