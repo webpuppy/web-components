@@ -27,16 +27,28 @@ export class WPSidebarMenu extends LitElement {
 	@property()
 	section_href = '/';
 
+	@property({ type: Boolean })
+	nodropdown = false;
+
 	@state()
 	is_open = false;
 
 	render() {
+		if(this.nodropdown) {
+			return html`
+			<div class="wp-sidebar-menu">
+				<a class="wp-sidebar-menu__title" href=${this.section_href}>${this.name}</a>
+				<div class="wp-sidebar-menu__wrapper">
+					<slot></slot>
+				</div>
+			</div>
+			`;
+		}
 		return when(this.is_open, () => html`
 		<div class="wp-sidebar-menu">
 			<span>
 				<a class="wp-sidebar-menu__title" href=${this.section_href}>${this.name}</a><button @click=${() => this.is_open = !this.is_open}>&#752;</button>
 			</span>
-
 			<div class="wp-sidebar-menu__wrapper">
 				<slot></slot>
 			</div>
