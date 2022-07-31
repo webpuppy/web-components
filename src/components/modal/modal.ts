@@ -18,11 +18,17 @@ export class WPModal extends WPSizeable {
 	@property()
 	name = '';
 
+	_remove() {
+		const ev = new CustomEvent('wp-modal-close');
+		document.dispatchEvent(ev);
+		this.remove();
+	}
+
 	render() {
 		return html`
 		<div id="modal-bg">
 			<div role="alert" aria-label=${this.name} class="wp-modal wp-modal--${this.size}">
-				<button @click=${this.remove}>x</button>
+				<button @click=${this._remove}>x</button>
 				<h4>${this.name}</h4>
 				<slot></slot>
 			</div>

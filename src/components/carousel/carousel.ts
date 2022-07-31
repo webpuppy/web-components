@@ -52,6 +52,8 @@ export class WPCarousel extends WPSizeable {
 	}
 
 	decrement() {
+		const ev = new CustomEvent('wp-carousel-back');
+		document.dispatchEvent(ev);
 		if(this.selectedIndex === 0) {
 			this.selectedIndex = this.carousel_items.length - 1;
 			this.__trigger();
@@ -63,6 +65,8 @@ export class WPCarousel extends WPSizeable {
 	}
 
 	increment() {
+		const ev = new CustomEvent('wp-carousel-next');
+		document.dispatchEvent(ev);
 		if(this.selectedIndex < this.carousel_items.length-1) {
 			this.selectedIndex = this.selectedIndex+1;
 			this.__trigger();

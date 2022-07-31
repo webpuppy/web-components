@@ -11,23 +11,10 @@ import {
 	state,
     property,
 } from 'lit-exports';
-
+import style from './toaster.css';
 @customElement(Enums.default.COMPONENT_PREFIX + 'toaster')
 export class WPToaster extends LitElement {
-	static styles = [CSS_RESETS,
-	css`
-	:host {
-		background-color: var(--wp-white);
-		bottom: 2rem;
-		border-radius: var(--wp-border-radius);
-		box-shadow: var(--shadow-smallest);
-		right: 2rem;
-		position: fixed;
-		padding: 1rem .25rem;
-		width: 180px;
-		z-index: 999;
-	}
-	`];
+	static styles = [CSS_RESETS, style];
 
 	render() {
 		return html`<slot></slot>`;

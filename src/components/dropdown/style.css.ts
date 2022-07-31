@@ -3,6 +3,8 @@ import { css } from 'lit-exports';
 export const ddlItemStyles = css`
 :host {
 	background-color: var(--wp-body-bg);
+	border-radius: var(--wp-border-radius);
+	color: var(--wp-body-color);
 	display: block;
 	line-height: var(--wp-content-line);
 	padding: .325em;
@@ -13,6 +15,7 @@ export const ddlItemStyles = css`
 .wp-dropdown-item {
 	display: block;
 	line-height: var(--wp-content-line);
+	padding: .35em;
 	position: relative;
 	transition: all 450ms ease;
 	z-index: 3;
@@ -30,11 +33,13 @@ export default css`
 }
 
 .wp-dropdown {
+	background-color: inherit;
 	border-color: transparent;
 	border-style: solid;
 	border-radius: var(--wp-border-radius);
 	border-width: .05em;
 	box-shadow: var(--shadow-smallest);
+	color: currentColor;
 	padding: .65em .35em;
 	transition: all 450ms ease;
 }
@@ -89,23 +94,33 @@ export default css`
 	}
 }
 
+.wp-drodown-selected {
+
+}
+
 .wp-dropdown-menu {
-	background-color: var(--wp--body-bg);
+	background-color: var(--wp-body-bg);
+	border-radius: var(--wp-border-radius);
+	color: var(--wp-body-color);
+	line-height: var(--wp-content-line);
 	opacity: 0;
 	min-height: 80px;
 	position: absolute;
+	top: 2.65em;
 	transition: all 450ms ease;
 }
 
 .wp-dropdown-menu--active {
-	animation: fade-in 200ms ease;
+	animation: fade-down 300ms ease;
 	opacity: 1;
+	transform: translateY(0);
 	z-index: 3;
 }
 
-@keyframes fade-in {
+@keyframes fade-down {
 	0% {
 		opacity: 0;
+		transform: translateY(-.5rem);
 	}
 }
 `;

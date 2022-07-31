@@ -15,13 +15,16 @@
 	<script type="module" src="/bundle/index.js"></script>
   </head>
   <body>
-	<wp-nav fixed slot="nav" icon_url="/static/logo.svg">
-		<wp-link text="Links" href="/static/links.html"></wp-link>
-		<wp-link text="Containers" href="/static/containers.html"></wp-link>
-		<wp-link text="Text Content" href="/static/text.html"></wp-link>
-		<wp-link text="Buttons" href="/static/buttons.html"></wp-link>
-		<wp-link text="Forms" href="/static/forms.html"></wp-link>
-	</wp-nav>
+	<wp-sidebar prefix_href="/"  slot="nav" icon_url="/static/logo.svg">
+		<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Text Content" href="/static/text.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Buttons" href="/static/buttons.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Forms" href="/static/forms.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Modal" href="/static/modal.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Editable Lists" href="/static/editable-list.html"></wp-sidebar-item>
+		<wp-sidebar-item text="Carousels" href="/static/carousel.html"></wp-sidebar-item>
+	</wp-sidebar>
 	<main slot="main">
 		<wp-hdr>
 			<h1>Webpuppy Web Components</h1>
