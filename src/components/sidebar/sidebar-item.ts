@@ -14,7 +14,7 @@ import {
     property,
 	css
 } from 'lit-exports';
-import style from './sidebar-item.css'
+import style from './sidebar-item.css';
 
 @customElement(Enums.default.COMPONENT_PREFIX + 'sidebar-item')
 export class WPSidebarItem extends LitElement {

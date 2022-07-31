@@ -15,6 +15,7 @@ export * from './video';
 export * from './modal';
 export * from './editable-list';
 export * from './carousel';
+export * from './fade-up';
 
 import {
 	WPCarousel,
@@ -45,6 +46,8 @@ import {
 import {
 	WPSidebar,
 	WPSidebarItem,
+	WPSidebarMenu,
+	WPSidebarMenuItem
 } from './sidebar';
 import {
 	WPCode,
@@ -57,11 +60,13 @@ import {
 import { WPPortal } from './portal';
 import { WPDropdown, WPDropdownItem } from './dropdown';
 import { WPVideo } from './video';
+import { WPFadeUp } from './fade-up';
 /**
  * Global Map For Packaged Tags
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-fade-up': WPFadeUp;
 		'wp-carousel-item': WPCarouselItem;
 		'wp-carousel': WPCarousel;
 		'wp-editable-list-item': WPEditableListItem;
@@ -79,6 +84,8 @@ declare global {
 		'wp-code-line': WPCode;
 		'wp-sidebar-item': WPSidebarItem;
 		'wp-sidebar': WPSidebar;
+		'wp-sidebar-menu': WPSidebarMenu;
+		'wp-sidebar-menu-item': WPSidebarItem;
 		'wp-section': WPSection
 		'wp-flex': WPFlex;
 		'wp-grid': WPGrid;

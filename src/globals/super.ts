@@ -1,4 +1,4 @@
-import { LitElement, property, state, css } from './exports';
+import { LitElement, property, state, css } from 'lit-exports';
 import { CSS_RESETS } from './exports';
 export type WPSizeableOption = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 

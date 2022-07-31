@@ -24,7 +24,7 @@ export class WPCode extends LitElement {
 	type: CodeType = 'default';
 
 	@property()
-	text: string = '';
+	text = '';
 
 	@state()
 	is_copied = false;
