@@ -77,7 +77,18 @@ export const CSS_RESETS = css`
 		--shadow-sticky: 0 12px 10px -10px rgba(0,0,0,.12);
 		--wp-content-line: 1.8em;
 		--wp-shadow-xl: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+		--wp-dark-gray: #292B2F;
+		--wp-darkish-gray: #37393E;
+		--wp-gray: #292B2F;
     }
+
+	@media(prefers-color-scheme: dark) {
+		:host {
+			--wp-body-bg: var(--wp-dark-gray);
+			--wp-body-color: var(--wp-white);
+		}
+	}
 
     * {
         font-family: var(--wp-fontstack);

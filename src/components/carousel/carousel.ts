@@ -39,7 +39,15 @@ export class WPCarousel extends WPSizeable {
 	connectedCallback() {
 		super.connectedCallback();
 		document.addEventListener('DOMContentLoaded', () => {
-			if(this.carousel_items.length > 0) this.__trigger();
+			if(this.carousel_items.length > 0) {
+				this.__trigger();
+				this.carousel_items.forEach((item, idx) => {
+					item.addEventListener('click', _ => {
+						this.selectedIndex = idx;
+						this.__trigger();
+					});
+				});
+			}
 		});
 	}
 
