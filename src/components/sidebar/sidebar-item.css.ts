@@ -19,7 +19,6 @@ export default css`
 
 .wp-sbr-item {
 	border-radius: var(--wp-border-radius);
-	color: inherit;
 	display: block;
 	left: 0;
 	margin: 1em;
@@ -33,6 +32,8 @@ export default css`
 	left 500ms, all 350ms ease-in-out;
 	padding: .375em;
 }
+
+
 
 .wp-sbr-item:hover {
 	background-color: rgba(120,120,120,0.15);

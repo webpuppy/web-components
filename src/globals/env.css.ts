@@ -151,7 +151,7 @@ export const CSS_RESETS = css`
 	}
 
 	a {
-        color: inherit;
+        color: var(--wp-body-color);
         display: inline-block;
         text-decoration: none;
         position: relative;

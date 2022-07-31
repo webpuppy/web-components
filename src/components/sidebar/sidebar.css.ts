@@ -15,7 +15,7 @@ export default css`
 
 .wp-sbr-hdr, .wp-sbr-hdr a {
 	align-items: center;
-	color: inherit;
+	color: var(--wp-body-color);
 	display: flex;
 	justify-content: space-evenly;
 	text-decoration: none;
@@ -28,6 +28,12 @@ export default css`
 @media(min-width: 720px) {
 	:host, aside {
 		width: var(--wp-sidebar-width);
+	}
+}
+
+@media(prefers-color-scheme: dark) {
+	:host {
+		background-color: var(--wp-gray);
 	}
 }
 `;

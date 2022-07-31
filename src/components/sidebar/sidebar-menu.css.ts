@@ -53,6 +53,7 @@ span button {
 	background-color: transparent;
 	border-color: transparent;
 	border-radius: var(--wp-border-radius);
+	color: var(--wp-body-color);
 	cursor: pointer;
 	line-height: var(--wp-content-line);
 	padding: .25em;

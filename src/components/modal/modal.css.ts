@@ -25,7 +25,7 @@ button {
 	background-color: transparent;
 	border-color: transparent;
 	border-radius: 50%;
-	color: var(--wp-primary);
+	color: var(--wp-body-color);
 	cursor: pointer;
 	font-size: 20px;
 	float: right;
@@ -40,8 +40,9 @@ button:hover {
 
 .wp-modal {
 	animation: modal-fade-in 200ms ease-in;
-	background-color: var(--wp-white);
+	background-color: var(--wp-body-bg);
 	border-radius: var(--wp-border-radius);
+	color: var(--wp-body-color);
 	opacity: 1;
 	margin: 0 auto;
 	transform: translateY(0);
@@ -71,4 +72,5 @@ button:hover {
 		transform: translateY(1rem);
 	}
 }
+
 `;

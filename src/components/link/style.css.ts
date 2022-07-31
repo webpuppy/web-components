@@ -2,11 +2,13 @@ import { css } from '../../globals/exports';
 
 export const LINK_STYLES = css`
     :host {
+		background-color: transparent;
         display: inline-block;
         min-width: fit-content;
     }
 
     .wp-link {
+		background-color: transparent;
         color: inherit;
         text-decoration: none;
         transition: all 380ms ease-in-out;

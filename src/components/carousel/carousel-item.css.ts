@@ -2,6 +2,8 @@ import { css } from 'lit-exports';
 
 export default css`
 :host {
+	background-color: var(--wp-neutral);
+	border-radius: var(--wp-border-radius);
 	display: block;
 	line-height: var(--wp-content-line);
 }

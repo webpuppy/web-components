@@ -7,7 +7,6 @@ export default css`
 	animation-duration: 390ms;
 	animation-timing-function: ease-in-out;
 	border-radius: var(--br);
-	color: var(--wp-base-black);
 	display: block;
 	opacity: 1;
 	padding: .25em;
@@ -20,7 +19,7 @@ export default css`
 }
 
 .wp-card {
-	color: var(--wp-btn-txt-00);
+	/* color: var(--wp-btn-txt-00); */
 	box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
 	margin-bottom: 2rem;
 	max-height: 100%;
@@ -33,9 +32,9 @@ figure {
 	place-items: center;
 }
 
-figure figcaption {
+/* figure figcaption {
 	color: var(--wp-base-black);
-}
+} */
 
 figure img {
 	margin: 0 auto;
@@ -52,7 +51,7 @@ figure img {
 
 .wp-card-slot {
 	border-radius: 2rem;
-	color: var(--wp-base-black);
+	/* color: var(--wp-base-black); */
 	padding: 1em;
 	position: relative;
 }
@@ -69,6 +68,12 @@ figure img {
 		//box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 		box-shadow: var(--shadow-small);
 	}
+}
+
+@media(prefers-color-scheme: dark) {
+	/* :host {
+		color: var(--wp-white);
+	} */
 }
 
 @keyframes fade-in {
