@@ -34,12 +34,25 @@ export class WPLayout extends LitElement {
         }
     }
 
+	render_markup() {
+		return html`
+		<div class=${this._convertTypeToClass()}>
+			<slot></slot>
+        </div>
+		`;
+	}
+
     render() {
-        return html`
-            <div class=${this._convertTypeToClass()}>
-				<slot name="nav"></slot>
-				<slot name="main"></slot>
-            </div>
-        `;
+		if(this.type === 'sidebar-0') {
+			return html`
+			<style>
+				:host {
+					display: grid;
+					grid-template-columns: 180px auto;
+				}
+			</style>${this.render_markup()}
+			`;
+		}
+        return this.render_markup();
     }
 }

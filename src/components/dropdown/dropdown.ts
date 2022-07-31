@@ -14,7 +14,10 @@ import {
 } from 'lit-exports';
 import { WPDropdownItem } from './dropdown-item';
 import dropdownCSS from './style.css';
-
+import {
+	WPDropdownChangeEventDetail,
+	WPDropdownChangeEventSignature
+} from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'dropdown')
 export class WPDropdown extends WPSizeable {
 
@@ -47,7 +50,11 @@ export class WPDropdown extends WPSizeable {
 				// console.log(t.value);
 
 				this.toggle_menu();
-				const customEvent = new CustomEvent('wp-dropdown-change', { detail: { old_value: this.selected_value, new_val: t.value}})
+				const customEvent = new CustomEvent<WPDropdownChangeEventDetail>(WPDropdownChangeEventSignature, { detail: {
+					old_val: this.selected_value,
+					new_val: t.value,
+					el: this
+				}});
 				window.dispatchEvent(customEvent);
 				this.selected_value = t.value;
 				return;

@@ -14,50 +14,52 @@
     <script type="module" src="../bundle/index.js"></script>
   </head>
   <body>
-	<wp-sidebar prefix_href="/"  slot="nav" icon_url="/static/logo.svg">
-		<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Text Content" href="/static/text.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Buttons" href="/static/buttons.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Forms" href="/static/forms.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Modal" href="/static/modal.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Editable Lists" href="/static/editable-list.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Carousels" href="/static/carousel.html"></wp-sidebar-item>
-	</wp-sidebar>
-	<main slot="main">
-		<wp-hdr>
-			<h1>Custom Form Elements</h1>
-		</wp-hdr>
-		<section>
-			<h2>Custom Text Inputs</h2>
-			<wp-text-input id="forminput0" label="Text Input no ring"></wp-text-input>
-			<wp-text-input id="forminput1" label="Text Input ring" ring></wp-text-input>
-			<wp-date-input id="forminput2" label="Date Input no ring"></wp-date-input>
-			<wp-date-input id="forminput3" label="Date Input ring" ring></wp-date-input>
-		</section>
-		<section>
-			<h2>Custom Selects</h2>
-			<wp-dropdown size="xs" default_value="Extra Small">
-				<wp-dropdown-item value="item0"></wp-dropdown-item>
-				<wp-dropdown-item value="item1"></wp-dropdown-item>
-			</wp-dropdown><br/>
-			<wp-dropdown size="sm" default_value="Small">
-				<wp-dropdown-item value="item0"></wp-dropdown-item>
-				<wp-dropdown-item value="item1"></wp-dropdown-item>
-			</wp-dropdown><br/>
-			<wp-dropdown default_value="Default">
-				<wp-dropdown-item value="item0"></wp-dropdown-item>
-				<wp-dropdown-item value="item1"></wp-dropdown-item>
-			</wp-dropdown><br/>
-			<wp-dropdown size="lg" default_value="Large">
-				<wp-dropdown-item value="item0"></wp-dropdown-item>
-				<wp-dropdown-item value="item1"></wp-dropdown-item>
-			</wp-dropdown><br/>
-			<wp-dropdown size="xl" default_value="X-Large">
-				<wp-dropdown-item value="item0"></wp-dropdown-item>
-				<wp-dropdown-item value="item1"></wp-dropdown-item>
-			</wp-dropdown>
-		</section>
-	</main>
+	<wp-layout type="sidebar-0">
+		<wp-sidebar prefix_href="/" icon_url="/static/logo.svg">
+			<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Text Content" href="/static/text.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Buttons" href="/static/buttons.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Forms" href="/static/forms.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Modal" href="/static/modal.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Editable Lists" href="/static/editable-list.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Carousels" href="/static/carousel.html"></wp-sidebar-item>
+		</wp-sidebar>
+		<main>
+			<wp-hdr>
+				<h1>Custom Form Elements</h1>
+			</wp-hdr>
+			<section>
+				<h2>Custom Text Inputs</h2>
+				<wp-text-input id="forminput0" label="Text Input no ring"></wp-text-input>
+				<wp-text-input id="forminput1" label="Text Input ring" ring></wp-text-input>
+				<wp-date-input id="forminput2" label="Date Input no ring"></wp-date-input>
+				<wp-date-input id="forminput3" label="Date Input ring" ring></wp-date-input>
+			</section>
+			<section>
+				<h2>Custom Selects</h2>
+				<wp-dropdown size="xs" default_value="Extra Small">
+					<wp-dropdown-item value="item0"></wp-dropdown-item>
+					<wp-dropdown-item value="item1"></wp-dropdown-item>
+				</wp-dropdown><br/>
+				<wp-dropdown size="sm" default_value="Small">
+					<wp-dropdown-item value="item0"></wp-dropdown-item>
+					<wp-dropdown-item value="item1"></wp-dropdown-item>
+				</wp-dropdown><br/>
+				<wp-dropdown default_value="Default">
+					<wp-dropdown-item value="item0"></wp-dropdown-item>
+					<wp-dropdown-item value="item1"></wp-dropdown-item>
+				</wp-dropdown><br/>
+				<wp-dropdown size="lg" default_value="Large">
+					<wp-dropdown-item value="item0"></wp-dropdown-item>
+					<wp-dropdown-item value="item1"></wp-dropdown-item>
+				</wp-dropdown><br/>
+				<wp-dropdown size="xl" default_value="X-Large">
+					<wp-dropdown-item value="item0"></wp-dropdown-item>
+					<wp-dropdown-item value="item1"></wp-dropdown-item>
+				</wp-dropdown>
+			</section>
+		</main>
+	</wp-layout>
   </body>
 </html>

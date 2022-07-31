@@ -1,3 +1,5 @@
+import { WPDropdown } from '../components/dropdown/dropdown';
+
 export type WPInputChangeEventSignature = 'wp-input-change';
 
 export type WPInputChangeEventDetail = {
@@ -7,24 +9,9 @@ export type WPInputChangeEventDetail = {
 
 export type WPSelectChangeEventSignature = 'wp-dropdown-change';
 
-export type WPSelectChangeEventDetail = {
+export type WPDropdownChangeEventDetail = {
+	el: HTMLElement;
 	old_val?: string; //no old val means the old one was default
 	new_val?: string; //no new val means it was deselected
 }
 
-export type WPCustomEvent = CustomEvent & {
-	detail : WPInputChangeEventDetail | WPSelectChangeEventDetail ;
-}
-
-export type WPCustomEventData = {
-	name: string;
-	callback: (args: WPCustomEvent) => any;
-};
-
-export function registerCustomEvents(
-	events: WPCustomEventData[]
-) {
-	for(const ev of events) {
-		document.addEventListener(ev.name, ev.callback);
-	}
-}

@@ -2,14 +2,11 @@ import { css } from '../../globals/exports';
 
 export default css`
 :host {
-	--wp-sidebar-width: 180px;
-	background-color: var(--wp-btn-txt-00);
+	background-color: var(--wp-body-bg);
 	box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 	display: block;
 	height: 100vh;
-	left: 0;
-	position: fixed;
-	top: 0;
+	position: relative;
 	transition: box-shadow 500ms, background-color 400ms ease-in-out;
 }
 
@@ -28,12 +25,6 @@ export default css`
 @media(min-width: 720px) {
 	:host, aside {
 		width: var(--wp-sidebar-width);
-	}
-}
-
-@media(prefers-color-scheme: dark) {
-	:host {
-		background-color: var(--wp-gray);
 	}
 }
 `;

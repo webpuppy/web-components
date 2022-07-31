@@ -101,11 +101,6 @@ export const CSS_RESETS = css`
         margin-block-end: var(--wp-content-line);
     }
 
-	::slotted(main) {
-		position: relative;
-		top: var(--wp-top-nav-height);
-	}
-
 	figure {
 		margin-inline-start: 0;
 		margin-inline-end: 0;
@@ -130,6 +125,10 @@ export const CSS_RESETS = css`
     .wp-txt-xl {
         font-size: 2em;
     }
+
+	::slotted(main) {
+		padding: 1em;
+	}
 
 	picture,
 	video,

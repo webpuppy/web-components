@@ -2,23 +2,29 @@ import { css } from 'lit-exports';
 
 export const ddlItemStyles = css`
 :host {
-	background-color: var(--wp-body-bg);
+	background-color: var(--wp-gray);
 	border-radius: var(--wp-border-radius);
-	color: var(--wp-body-color);
+	color: var(--wp-white);
 	display: block;
 	line-height: var(--wp-content-line);
-	padding: .325em;
+	padding: .15em 0;
 	position: relative;
 	z-index: 3;
 }
 
 .wp-dropdown-item {
+	border-radius: var(--wp-border-radius);
+	cursor: pointer;
 	display: block;
 	line-height: var(--wp-content-line);
 	padding: .35em;
 	position: relative;
 	transition: all 450ms ease;
 	z-index: 3;
+}
+
+.wp-dropdown-item:hover {
+	background-color: rgba(120,120,120,0.15);
 }
 `;
 
@@ -30,7 +36,7 @@ export default css`
 	cursor: pointer;
 	display: inline-block;
 	line-height: var(--wp-content-line);
-	margin: .25em;
+	margin-bottom: 2em;
 	min-width: fit-content;
 	pointer-events: fill;
 	position: relative;
@@ -100,12 +106,14 @@ export default css`
 }
 
 .wp-dropdown-menu {
-	background-color: var(--wp-body-bg);
+	background-color: var(--wp-gray);
 	border-radius: var(--wp-border-radius);
-	color: var(--wp-body-color);
+	color: var(--wp-white);
+	left: 0;
 	line-height: var(--wp-content-line);
 	opacity: 0;
 	min-height: 80px;
+	padding: .65em .35em;
 	position: absolute;
 	top: 2.65em;
 	transition: all 450ms ease;

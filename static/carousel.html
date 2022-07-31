@@ -14,30 +14,32 @@
     <script type="module" src="../bundle/index.js"></script>
   </head>
 <body>
-	<wp-sidebar prefix_href="/"  slot="nav" icon_url="/static/logo.svg">
-		<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Text Content" href="/static/text.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Buttons" href="/static/buttons.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Forms" href="/static/forms.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Modal" href="/static/modal.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Editable Lists" href="/static/editable-list.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Carousels" href="/static/carousel.html"></wp-sidebar-item>
-		<wp-sidebar-menu name="Section 0">
-			<wp-sidebar-item text="Menu Item 0" href="/"></wp-sidebar-menu-item>
-			<wp-sidebar-menu-item>Menu Item 1</wp-sidebar-menu-item>
-		</wp-sidebar-menu>
-		<wp-sidebar-menu name="Section 1">
-			<wp-sidebar-item text="Menu Item 0" href="/"></wp-sidebar-menu-item>
-			<wp-sidebar-menu-item>Menu Item 1</wp-sidebar-menu-item>
-		</wp-sidebar-menu>
-	</wp-sidebar>
-	<main slot="main">
-		<wp-carousel>
-			<wp-carousel-item><span>Item 0</span></wp-carousel-item>
-			<wp-carousel-item><span>Item 1</span></wp-carousel-item>
-			<wp-carousel-item><span>Item 2</span></wp-carousel-item>
-		</wp-carousel>
-	</main>
+	<wp-layout type="sidebar-0">
+		<wp-sidebar prefix_href="/" icon_url="/static/logo.svg">
+			<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Text Content" href="/static/text.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Buttons" href="/static/buttons.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Forms" href="/static/forms.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Modal" href="/static/modal.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Editable Lists" href="/static/editable-list.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Carousels" href="/static/carousel.html"></wp-sidebar-item>
+			<wp-sidebar-menu name="Section 0">
+				<wp-sidebar-item text="Menu Item 0" href="/"></wp-sidebar-menu-item>
+				<wp-sidebar-menu-item>Menu Item 1</wp-sidebar-menu-item>
+			</wp-sidebar-menu>
+			<wp-sidebar-menu name="Section 1">
+				<wp-sidebar-item text="Menu Item 0" href="/"></wp-sidebar-menu-item>
+				<wp-sidebar-menu-item>Menu Item 1</wp-sidebar-menu-item>
+			</wp-sidebar-menu>
+		</wp-sidebar>
+		<main>
+			<wp-carousel>
+				<wp-carousel-item><span>Item 0</span></wp-carousel-item>
+				<wp-carousel-item><span>Item 1</span></wp-carousel-item>
+				<wp-carousel-item><span>Item 2</span></wp-carousel-item>
+			</wp-carousel>
+		</main>
+	</wp-layout>
 </body>
 </html>

@@ -14,39 +14,41 @@
     <script type="module" src="../bundle/index.js"></script>
   </head>
   <body>
-	<wp-sidebar prefix_href="/"  slot="nav" icon_url="/static/logo.svg">
-		<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Text Content" href="/static/text.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Buttons" href="/static/buttons.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Forms" href="/static/forms.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Modal" href="/static/modal.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Editable Lists" href="/static/editable-list.html"></wp-sidebar-item>
-		<wp-sidebar-item text="Carousels" href="/static/carousel.html"></wp-sidebar-item>
-	</wp-sidebar>
-	<main slot="main">
-		<wp-hdr>
-			<h1>Buttons</h1>
-		</wp-hdr>
-		<section>
-			<wp-fade-up>
-				<wp-btn text="Base"></wp-btn>
-			</wp-fade-up>
-			<wp-btn text="Base" focusring></wp-btn>
-			<wp-btn disabled text="Disabled"></wp-btn>
-			<wp-btn type="primary" text="Primary"></wp-btn>
-			<wp-btn type="primary" text="Primary" focusring></wp-btn>
-			<wp-btn type="secondary" text="Secondary" sensitivity="2" href="/static/links.html"></wp-btn>
-			<wp-btn type="secondary" text="Secondary" focusring></wp-btn>
-			<wp-btn type="tertiary" text="Tertiary"></wp-btn>
-			<wp-btn type="tertiary" text="Tertiary" focusring></wp-btn>
-			<wp-btn type="confirm" text="Confirm?"></wp-btn>
-			<wp-btn type="confirm" focusring><span>Confirm?</span></wp-btn>
-			<wp-btn type="danger" text="Danger"></wp-btn>
-			<wp-btn type="danger" text="Danger" focusring></wp-btn>
-			<wp-btn size="xs" type="confirm" use_icon></wp-btn>
-			<wp-btn size="xs" type="danger"  use_icon></wp-btn>
-		</section>
-	</main>
+	<wp-layout type="sidebar-0">
+		<wp-sidebar prefix_href="/" icon_url="/static/logo.svg">
+			<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Text Content" href="/static/text.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Buttons" href="/static/buttons.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Forms" href="/static/forms.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Modal" href="/static/modal.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Editable Lists" href="/static/editable-list.html"></wp-sidebar-item>
+			<wp-sidebar-item text="Carousels" href="/static/carousel.html"></wp-sidebar-item>
+		</wp-sidebar>
+		<main>
+			<wp-hdr>
+				<h1>Buttons</h1>
+			</wp-hdr>
+			<section>
+				<wp-fade-up>
+					<wp-btn text="Base"></wp-btn>
+				</wp-fade-up>
+				<wp-btn text="Base" focusring></wp-btn>
+				<wp-btn disabled text="Disabled"></wp-btn>
+				<wp-btn type="primary" text="Primary"></wp-btn>
+				<wp-btn type="primary" text="Primary" focusring></wp-btn>
+				<wp-btn type="secondary" text="Secondary" sensitivity="2" href="/static/links.html"></wp-btn>
+				<wp-btn type="secondary" text="Secondary" focusring></wp-btn>
+				<wp-btn type="tertiary" text="Tertiary"></wp-btn>
+				<wp-btn type="tertiary" text="Tertiary" focusring></wp-btn>
+				<wp-btn type="confirm" text="Confirm?"></wp-btn>
+				<wp-btn type="confirm" focusring><span>Confirm?</span></wp-btn>
+				<wp-btn type="danger" text="Danger"></wp-btn>
+				<wp-btn type="danger" text="Danger" focusring></wp-btn>
+				<wp-btn size="xs" type="confirm" use_icon></wp-btn>
+				<wp-btn size="xs" type="danger"  use_icon></wp-btn>
+			</section>
+		</main>
+	</wp-layout>
   </body>
 </html>
