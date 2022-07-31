@@ -24,8 +24,13 @@ export const ddlItemStyles = css`
 
 export default css`
 :host {
+	background-color: var(--wp-body-bg);
+	border-radius: var(--wp-border-radius);
+	color: var(--wp-body-color);
 	cursor: pointer;
 	display: inline-block;
+	line-height: var(--wp-content-line);
+	margin: .25em;
 	min-width: fit-content;
 	pointer-events: fill;
 	position: relative;
@@ -92,10 +97,6 @@ export default css`
 	@media(max-width: 720px) {
 		width: 360px;
 	}
-}
-
-.wp-drodown-selected {
-
 }
 
 .wp-dropdown-menu {
