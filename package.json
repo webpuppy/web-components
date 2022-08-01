@@ -1,11 +1,32 @@
 {
 	"name": "@webpuppy/web-components",
-	"version": "0.0.34",
+	"version": "0.0.35",
 	"description": "webpuppy web components with lit html",
 	"main": "build/index.js",
 	"files": [
 		"build/**/*"
 	],
+	"exports": {
+		".": "./build/index.js",
+		"./button": "./build/components/btn/index.js",
+		"./carousel": "./build/components/carousel/index.js",
+		"./container": "./build/components/container/index.js",
+		"./dropdown": "./build/components/dropdown/index.js",
+		"./editable-list": "./build/components/editable-list/index.js",
+		"./expando": "./build/components/expando/index.js",
+		"./footer": "./build/components/ftr/index.js",
+		"./fade-up": "./build/components/fade-up/index.js",
+		"./image": "./build/components/img/index.js",
+		"./link": "./build/components/link/index.js",
+		"./loading": "./build/components/loading/index.js",
+		"./modal": "./build/components/modal/index.js",
+		"./navbar": "./build/components/nav/index.js",
+		"./portal": "./build/components/portal/index.js",
+		"./sidebar": "./build/components/sidebar/index.js",
+		"./tag": "./build/components/tag/index.js",
+		"./toast": "./build/components/toast/index.js",
+		"./video": "./build/components/video/index.js"
+	},
 	"type": "module",
 	"scripts": {
 		"build": "tsc",
