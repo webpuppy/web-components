@@ -16,7 +16,11 @@ export * from './modal';
 export * from './editable-list';
 export * from './carousel';
 export * from './fade-up';
+export * from './expando';
 
+import {
+	WPExpando
+} from './expando';
 import {
 	WPCarousel,
 	WPCarouselItem
@@ -66,6 +70,7 @@ import { WPFadeUp } from './fade-up';
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-expando': WPExpando;
 		'wp-fade-up': WPFadeUp;
 		'wp-carousel-item': WPCarouselItem;
 		'wp-carousel': WPCarousel;
