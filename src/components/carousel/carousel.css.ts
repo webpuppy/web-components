@@ -2,6 +2,7 @@ import { css } from 'lit-exports';
 
 export default css`
 :host {
+	background-color: var(--wp-body-bg);
 	color: var(--wp-body-color);
 	display: flex;
 	line-height: var(--wp-content-line);
@@ -40,7 +41,7 @@ export default css`
 }
 
 .wp-carousel-slide {
-	color: var(--wp-white);
+	color: var(--wp-body-color);
 	display: grid;
 	line-height: var(--wp-content-line);
 	min-height: 180px;

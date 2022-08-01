@@ -19,9 +19,6 @@ export class WPNav extends WPOpenable {
 
 	static override styles = [CSS_RESETS, NAV_STYLES];
 
-	@property({ attribute: true, type: Boolean })
-	fixed: Boolean = false;
-
 	@property()
 	type: TopNavType = 'flexed-burger';
 
@@ -91,7 +88,7 @@ export class WPNav extends WPOpenable {
 	}
 
 	render() {
-		const classes = this.fixed ? 'wp-nav wp-nav--fixed' : 'wp-nav';
+		const classes = 'wp-nav';
 		return when(this.is_open, () => this.render_mobile_open(classes), () => this.render_default(classes));
 	}
 };

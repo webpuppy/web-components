@@ -7,8 +7,6 @@ export const NAV_STYLES = css`
 	line-height: var(--wp-content-line);
 	height: var(--wp-top-nav-height);
 	position: relative;
-	top: 0;
-	left: 0;
 	width: 100%;
 }
 
@@ -21,8 +19,6 @@ export const NAV_STYLES = css`
 	justify-content: space-between;
 	min-height: var(--wp-top-nav-height);
 	position: relative;
-	top: 0;
-	left: 0;
 }
 
 @media(prefers-color-scheme: dark) {
@@ -30,14 +26,6 @@ export const NAV_STYLES = css`
 		background-color: var(--wp-white);
 		color: var(--wp-navy-blue);
 	}
-}
-
-.wp-nav--fixed {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	z-index: 999;
 }
 
 .wp-nav-logo {
