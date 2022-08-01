@@ -1,26 +1,14 @@
-export * from './btn';
-export * from './link';
-export * from './container';
-export * from './img';
-export * from './loading';
-export * from './nav';
-export * from './input';
-export * from './sidebar';
-export * from './ftr';
-export * from './tag';
-export * from './toast';
-export * from './portal';
-export * from './dropdown';
-export * from './video';
-export * from './modal';
-export * from './editable-list';
-export * from './carousel';
-export * from './fade-up';
-export * from './expando';
-
-import {
-	WPExpando
-} from './expando';
+import { WPExpando } from './expando';
+import { WPBtn } from './btn';
+import { WPLink } from './link';
+import { WPImg } from './img';
+import { WPNav } from './nav';
+import { WPLoading } from './loading';
+import { WPFtr } from './ftr';
+import { WPPortal } from './portal';
+import { WPDropdown, WPDropdownItem } from './dropdown';
+import { WPVideo } from './video';
+import { WPFadeUp } from './fade-up';
 import {
 	WPCarousel,
 	WPCarouselItem
@@ -29,12 +17,6 @@ import {
 	WPEditableList,
 	WPEditableListItem
 } from './editable-list';
-import { WPBtn } from './btn';
-import { WPLink } from './link';
-import { WPImg } from './img';
-import { WPNav } from './nav';
-import { WPLoading } from './loading';
-import { WPFtr } from './ftr';
 import {
 	WPToaster,
 	WPToast
@@ -61,10 +43,6 @@ import {
 	WPTextInput,
 	WPDateInput
 } from './input';
-import { WPPortal } from './portal';
-import { WPDropdown, WPDropdownItem } from './dropdown';
-import { WPVideo } from './video';
-import { WPFadeUp } from './fade-up';
 /**
  * Global Map For Packaged Tags
  */
@@ -104,3 +82,23 @@ declare global {
 		'wp-layout': WPLayout;
     }
 }
+
+export * from './btn';
+export * from './link';
+export * from './container';
+export * from './img';
+export * from './loading';
+export * from './nav';
+export * from './input';
+export * from './sidebar';
+export * from './ftr';
+export * from './tag';
+export * from './toast';
+export * from './portal';
+export * from './dropdown';
+export * from './video';
+export * from './modal';
+export * from './editable-list';
+export * from './carousel';
+export * from './fade-up';
+export * from './expando';

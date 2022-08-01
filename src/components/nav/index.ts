@@ -1,17 +1,16 @@
 import {
-    customElement,
-    LitElement,
     Enums,
-    html,
-    property,
-    when,
-	state,
-	query,
-	queryAssignedElements,
 	CSS_RESETS,
 	WPOpenable
 } from '../../globals/exports';
-
+import {
+	customElement,
+	html,
+    property,
+    when,
+	query,
+	queryAssignedElements
+} from 'lit-exports';
 import { NAV_STYLES } from './style.css';
 import { TopNavType } from './defs';
 @customElement(Enums.default.COMPONENT_PREFIX + 'nav')
