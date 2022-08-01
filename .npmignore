@@ -10,3 +10,13 @@ web-dev-server.config.js
 tsconfig.json
 yarn.lock
 static
+scripts
+bundle
+src
+typedoc.json
+.yarnrc
+.prettierrc
+.eslintrc
+.eslintignore
+.prettierignore
+favicon.ico
