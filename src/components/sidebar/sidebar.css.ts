@@ -5,7 +5,7 @@ export default css`
 	background-color: var(--wp-body-bg);
 	box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 	display: block;
-	height: 100vh;
+	height: 100%;
 	position: relative;
 	transition: box-shadow 500ms, background-color 400ms ease-in-out;
 	width: fit-content;
@@ -15,7 +15,7 @@ export default css`
 	animation: slide-drawer 200ms ease;
 	background-color: var(--wp-body-bg);
 	color: var(--wp-body-color);
-	height: 100vh;
+	height: 100%;
 	position: fixed;
 	inset: 0;
 	transform: translateX(0);
