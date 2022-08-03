@@ -1,8 +1,8 @@
-export const WPPortalXSmallWidth = '180';
+export const WPPortalXSmallWidth = '360';
 export const WPPortalXSmallHeight = '360';
 
 export const WPPortalSmallWidth = '360';
-export const WPPortalSmallHeight = '360';
+export const WPPortalSmallHeight = 'auto';
 
 export const WPPortalWidth = '720';
 export const WPPortalHeight = '540';

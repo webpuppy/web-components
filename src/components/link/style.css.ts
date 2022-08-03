@@ -18,10 +18,15 @@ export const LINK_STYLES = css`
         text-decoration: underline;
     }
 
+
 	@media(prefers-reduced-motion: no-preference) {
 		.wp-link:hover {
 			color: var(--wp-btn-primary);
 			text-shadow: var(--wp-txt-shadow);
+		}
+
+		.wp-link:hover svg path {
+			fill: var(--wp-btn-primary);
 		}
 	}
 `;
