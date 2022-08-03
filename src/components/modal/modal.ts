@@ -24,6 +24,13 @@ export class WPModal extends WPSizeable {
 		this.remove();
 	}
 
+	connectedCallback(): void {
+		document.addEventListener('DOMContentLoaded', () => {
+			const ev = new CustomEvent('wp-modal-open');
+			document.dispatchEvent(ev);
+		});
+	}
+
 	render() {
 		return html`
 		<div id="modal-bg">
