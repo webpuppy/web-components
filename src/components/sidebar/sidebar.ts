@@ -10,7 +10,10 @@ import {
 	customElement,
     LitElement,
     html,
-    property
+	when,
+    property,
+	map,
+	unsafeHTML
 } from 'lit-exports';
 import style from './sidebar.css';
 
@@ -44,6 +47,22 @@ export class WPSidebar extends LitElement {
 		if(!this.title) return html``;
 		return html`<h4>${this.title}</h4>`;
 	}
+
+	render_drawer() {
+		return when(this.is_open, () => html`
+		<div class="drawer">
+		<img style="padding: 1rem" height=${this.icon_size}
+						width=${this.icon_size} src=${this.icon_url}>
+			<button class="close" @click=${this.toggle_drawer}>X</button>
+			${map(this.nav_items, (i) => unsafeHTML(i.outerHTML))}
+		</div>
+		`, () => html``);
+	}
+
+	toggle_drawer() {
+		this.is_open = !this.is_open;
+	}
+
 	render_component() {
 		if(!this.prefix_href) {
 			return html`
@@ -55,12 +74,14 @@ export class WPSidebar extends LitElement {
 				</header>
 				<slot></slot>
 			</aside>
+			${this.render_drawer()}
 			`;
 		}
 		return html`
 			<aside role="navigation" class="wp-sbr">
 				<header class="wp-sbr-hdr">
-					<a href=${this.prefix_href}>
+					<button @click=${this.toggle_drawer} class="wp-sbr--burger">☰</button>
+					<a class="wp-sbr--icon" href=${this.prefix_href}>
 						<img height=${this.icon_size}
 							width=${this.icon_size} src=${this.icon_url}>
 						${this.render_title()}
@@ -68,6 +89,7 @@ export class WPSidebar extends LitElement {
 				</header>
 				<slot></slot>
 			</aside>
+			${this.render_drawer()}
 		`;
 	}
 	render() {

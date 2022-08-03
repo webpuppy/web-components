@@ -19,12 +19,13 @@ export const NAV_STYLES = css`
 	justify-content: space-between;
 	min-height: var(--wp-top-nav-height);
 	position: relative;
+	z-index: 9;
 }
 
 @media(prefers-color-scheme: dark) {
 	.wp-nav {
 		background-color: var(--wp-white);
-		color: var(--wp-navy-blue);
+		color: var(--wp-primary);
 	}
 }
 
@@ -62,12 +63,12 @@ export const NAV_STYLES = css`
 }
 
 .wp-nav-list--mobile-open {
-	background-color: var(--wp-navy-blue);
+	background-color: var(--wp-primary-81);
 	display: grid;
 	position: absolute;
 	top: var(--wp-top-nav-height);
-	padding: 1rem;
-	width: 100vw;
+	padding: .5em 0 .25em 1em;
+	width: calc(100% - 1em);
 	z-index: 999;
 }
 

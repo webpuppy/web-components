@@ -46,7 +46,7 @@ export const CSS_RESETS = css`
 		--wp-secondary-31: rgba(var(--wp-secondary-rgb), 0.31);
 
 		--wp-primary: #094067;
-		--wp-primary-rgb: 9, 64, 103,
+		--wp-primary-rgb: 9, 64, 103;
 		--wp-primary-81: rgba(var(--wp-primary-rgb), 0.81);
 		--wp-primary-61: rgba(var(--wp-primary-rgb), 0.61);
 		--wp-primary-34: rgba(var(--wp-primary-rgb), 0.34);

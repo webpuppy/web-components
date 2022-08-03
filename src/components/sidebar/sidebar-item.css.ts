@@ -19,9 +19,10 @@ export default css`
 
 .wp-sbr-item {
 	border-radius: var(--wp-border-radius);
-	display: block;
+	display: inline-block;
 	left: 0;
 	margin: 1em;
+	min-width: 80%;
 	position: relative;
 	text-decoration: none;
 	transition:
@@ -50,6 +51,12 @@ export default css`
 		background-color: rgba(120,120,120,0.15);
 		color: var(--wp-btn-primary);
 		text-shadow: var(--wp-txt-shadow);
+	}
+}
+
+@media(min-width: 720px) {
+	.wp-sbr-item {
+		display: block;
 	}
 }
 `;

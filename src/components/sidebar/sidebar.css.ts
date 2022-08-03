@@ -8,14 +8,72 @@ export default css`
 	height: 100vh;
 	position: relative;
 	transition: box-shadow 500ms, background-color 400ms ease-in-out;
+	width: fit-content;
 }
 
-.wp-sbr-hdr, .wp-sbr-hdr a {
+.drawer {
+	animation: slide-drawer 200ms ease;
+	background-color: var(--wp-body-bg);
+	color: var(--wp-body-color);
+	height: 100vh;
+	position: fixed;
+	inset: 0;
+	transform: translateX(0);
+	width: 100%;
+	z-index: 999;
+}
+
+.close {
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: var(--wp-border-radius);
+	cursor: pointer;
+	color: var(--wp-danger);
+	display: block;
+	line-height: var(--wp-content-line);
+	float: right;
+	font-size: 28px;
+	padding: .25em;
+}
+
+@keyframes slide-drawer {
+	0% {
+		transform: translateX(-5rem);
+	}
+}
+
+.wp-sbr {
+	height: 100%;
+}
+
+.wp-sbr-hdr {
+	display: flex;
+}
+
+.wp-sbr--icon {
+	display: none;
+}
+
+.wp-sbr--burger {
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: var(--wp-border-radius);
+	cursor: pointer;
+	display: block;
+	font-size: 28px;
+	line-height: var(--wp-content-line);
+	padding: 1em;
+}
+
+.wp-sbr-hdr, .wp-sbr--icon {
 	align-items: center;
 	color: var(--wp-body-color);
-	display: flex;
 	justify-content: space-evenly;
 	text-decoration: none;
+}
+
+::slotted(*) {
+	display: none;
 }
 
 .wp-sbr-hdr h4 {
@@ -25,6 +83,18 @@ export default css`
 @media(min-width: 720px) {
 	:host, aside {
 		width: var(--wp-sidebar-width);
+	}
+
+	.wp-sbr--burger {
+		display: none;
+	}
+
+	.wp-sbr--icon {
+		display: flex;
+	}
+
+	::slotted(*) {
+		display: block;
 	}
 }
 `;

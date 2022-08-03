@@ -55,7 +55,7 @@ export class WPNav extends WPOpenable {
 					</span>
 				</a>
 			</div>
-			<div role="list"  class="wp-nav-list">
+			<div class="wp-nav-list">
 				<slot></slot>
 			</div>
 			<div class="wp-nav-burger" @click=${this.toggle_open}></div>
