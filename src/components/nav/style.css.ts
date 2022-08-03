@@ -68,6 +68,7 @@ export const NAV_STYLES = css`
 	top: var(--wp-top-nav-height);
 	padding: 1rem;
 	width: 100vw;
+	z-index: 999;
 }
 
 .wp-nav-burger {

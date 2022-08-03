@@ -16,6 +16,7 @@
 <body>
 	<wp-layout type="sidebar-0">
 		<wp-sidebar prefix_href="/" icon_url="/static/logo.svg">
+			<wp-sidebar-item text="Topbar 0 layout" href="/topbar-layout.html"></wp-sidebar-item>
 			<wp-sidebar-item text="Links" href="/static/links.html"></wp-sidebar-item>
 			<wp-sidebar-item text="Containers" href="/static/containers.html"></wp-sidebar-item>
 			<wp-sidebar-item text="Text Content" href="/static/text.html"></wp-sidebar-item>
@@ -27,7 +28,11 @@
 			<wp-sidebar-item text="Portals" href="/static/portal.html"></wp-sidebar-item>
 		</wp-sidebar>
 		<main>
-			<wp-portal src="/"></wp-portal>
+			<wp-portal size="xs" src="/"></wp-portal>
+			<wp-portal size="sm" src="/"></wp-portal>
+			<wp-portal size="md" src="/"></wp-portal>
+			<wp-portal size="lg" src="/"></wp-portal>
+			<wp-portal size="xl" src="/"></wp-portal>
 		</main>
 	</wp-layout>
 </body>
