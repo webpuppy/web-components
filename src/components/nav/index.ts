@@ -22,7 +22,7 @@ export class WPNav extends WPOpenable {
 	type: TopNavType = 'flexed-burger';
 
 	@property()
-	title = 'WebPuppy';
+	name = 'WebPuppy';
 
 	@property()
 	prefix_href?: string = null;
@@ -51,7 +51,7 @@ export class WPNav extends WPOpenable {
 					height="64"
 					width="64">
 					<span>
-						${this.title}
+						${this.name}
 					</span>
 				</a>
 			</div>
@@ -74,7 +74,7 @@ export class WPNav extends WPOpenable {
 					height="64"
 					width="64">
 					<span>
-						${this.title}
+						${this.name}
 					</span>
 				</a>
 			</div>

@@ -1,6 +1,6 @@
 {
 	"name": "@webpuppy/web-components",
-	"version": "0.0.35",
+	"version": "0.0.36",
 	"description": "webpuppy web components with lit html",
 	"main": "build/index.js",
 	"files": [

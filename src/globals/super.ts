@@ -35,6 +35,12 @@ export class WPEditable extends WPComponentBase {
 	@property({ attribute: true })
 	initial?: string = '';
 
+	@property()
+	slug?: string;
+
+	@property()
+	slug_key?: string;
+
 	@state()
 	latest?: string = null;
 
