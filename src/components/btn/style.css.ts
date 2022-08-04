@@ -23,6 +23,7 @@ export default css`
 		text-size-adjust: auto;
 		transition: border .25s, color .75s, box-shadow 550ms, border-color .65s ease-in-out;
 		position: relative;
+		pointer-events: all;
 	}
 
 	button[disabled] {
@@ -40,7 +41,7 @@ export default css`
 	::slotted(img) {
 		max-height: 24px;
 		max-width: 24px;
-		padding: 0 .25em;
+		margin: 0 .35em;
 	}
 
     .wp-btn {
