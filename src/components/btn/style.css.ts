@@ -31,6 +31,18 @@ export default css`
 		pointer-events: none;
 	}
 
+	slot {
+		align-items: center;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	::slotted(img) {
+		max-height: 100%;
+		max-width: 100%;
+		padding: 0 .5em;
+	}
+
     .wp-btn {
 		align-items: center;
 		background-color: var(--wp-tertiary);
@@ -57,18 +69,6 @@ export default css`
 
 	.wp-btn--lg {
 		width: var(--wp-btn-lg-width);
-	}
-
-	.wp-btn #content,
-	::slotted(*) {
-		align-items: center;
-		display: flex;
-		margin: 0 auto;
-		place-content: center;
-		place-items: center;
-		position: relative;
-		text-align: center;
-		vertical-align: center;
 	}
 
 	.wp-btn {
@@ -98,6 +98,7 @@ export default css`
 
 	#content {
 		color: inherit;
+		display: block;
 		text-decoration: none;
 	}
 

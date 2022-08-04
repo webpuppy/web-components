@@ -3,7 +3,8 @@ export const BtnTypes = [
 	'secondary',
 	'tertiary',
 	'confirm',
-	'danger'
+	'danger',
+	'back'
 ] as const;
 
 export type BtnType = typeof BtnTypes[number];
