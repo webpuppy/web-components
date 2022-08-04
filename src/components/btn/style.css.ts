@@ -81,7 +81,7 @@ export default css`
 	}
 
 	.secondary {
-		background-color: var(--wp-secondary);
+		background-color: var(--wp-btn-base);
 	}
 
     .confirm {

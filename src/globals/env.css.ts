@@ -127,7 +127,7 @@ export const CSS_RESETS = css`
     }
 
 	::slotted(main) {
-		padding: 1em;
+		padding: 1rem;
 	}
 
 	picture,

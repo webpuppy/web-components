@@ -43,7 +43,8 @@ export default css`
 }
 
 .wp-sbr {
-	height: 100%;
+	height: 100vh;
+
 }
 
 .wp-sbr-hdr {

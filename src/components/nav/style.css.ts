@@ -12,7 +12,8 @@ export const NAV_STYLES = css`
 
 .wp-nav {
 	align-items: center;
-	background-color: var(--wp-navy-blue);
+	background-color: var(--wp-btn-base);
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 	color: var(--wp-white);
 	display: grid;
 	grid-template-columns: 25% 75%;
@@ -63,7 +64,7 @@ export const NAV_STYLES = css`
 }
 
 .wp-nav-list--mobile-open {
-	background-color: var(--wp-primary-81);
+	background-color: var(--wp-btn-base);
 	display: grid;
 	position: absolute;
 	top: var(--wp-top-nav-height);
