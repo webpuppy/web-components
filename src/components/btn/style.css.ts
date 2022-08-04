@@ -38,9 +38,9 @@ export default css`
 	}
 
 	::slotted(img) {
-		max-height: 100%;
-		max-width: 100%;
-		padding: 0 .5em;
+		max-height: 24px;
+		max-width: 24px;
+		padding: 0 .25em;
 	}
 
     .wp-btn {
