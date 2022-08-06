@@ -9,6 +9,8 @@ import {
     property,
     when,
 	query,
+	map,
+	unsafeHTML,
 	queryAssignedElements
 } from 'lit-exports';
 import { NAV_STYLES } from './style.css';
@@ -37,7 +39,20 @@ export class WPNav extends WPOpenable {
 	nav_items: HTMLElement[];
 
 	toggle_open() {
+		this.toggle_drawer();
+	}
+
+	toggle_drawer() {
 		this.is_open = !this.is_open;
+	}
+	render_drawer() {
+		return when(this.is_open, () => html`
+		<div class="drawer">
+			<img width="64" height="64" style="padding: 1rem" src=${this.icon_url}>
+			<button class="close" @click=${this.toggle_drawer}>X</button>
+			${map(this.nav_items, (i) => unsafeHTML(i.outerHTML))}
+		</div>
+		`, () => html``);
 	}
 
 	render_default(classes: string) {
@@ -59,6 +74,7 @@ export class WPNav extends WPOpenable {
 				<slot></slot>
 			</div>
 			<div class="wp-nav-burger" @click=${this.toggle_open}></div>
+			${this.render_drawer()}
 		</header>
 		`;
 	}
@@ -88,6 +104,7 @@ export class WPNav extends WPOpenable {
 
 	render() {
 		const classes = 'wp-nav';
-		return when(this.is_open, () => this.render_mobile_open(classes), () => this.render_default(classes));
+		// return when(this.is_open, () => this.render_mobile_open(classes), () => this.render_default(classes));
+		return this.render_default(classes);
 	}
 };

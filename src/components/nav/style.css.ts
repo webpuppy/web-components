@@ -9,6 +9,41 @@ export const NAV_STYLES = css`
 	position: relative;
 	width: 100%;
 }
+.drawer {
+	animation: slide-drawer 200ms ease;
+	background-color: var(--wp-body-bg);
+	color: var(--wp-body-color);
+	height: 100%;
+	position: fixed;
+	inset: 0;
+	transform: translateX(0);
+	width: 100%;
+	z-index: 999;
+}
+
+.drawer wp-link {
+	display: block;
+	padding-left: 1.25em;
+}
+
+.close {
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: var(--wp-border-radius);
+	cursor: pointer;
+	color: var(--wp-danger);
+	display: block;
+	line-height: var(--wp-content-line);
+	float: right;
+	font-size: 28px;
+	padding: .25em;
+}
+
+@keyframes slide-drawer {
+	0% {
+		transform: translateX(-5rem);
+	}
+}
 
 .wp-nav {
 	align-items: center;

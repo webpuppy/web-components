@@ -28,14 +28,14 @@ export class WPImg extends LitElement {
 	width = 128;
 
 	@property()
-	src: string = '/logo.svg';
+	src = '/favicon.ico';
 
 	@property()
-	alt: string = '';
+	alt = '';
 
 	render_plain_image() {
 		return html`
-		<img class="wp-img" height=${this.height} width=${this.width} src="${this.src}" alt=${this.alt}>
+		<img class="wp-img" height=${this.height} width=${this.width} src=${this.src} alt=${this.alt}>
 		`
 	}
 
