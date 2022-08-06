@@ -24,7 +24,7 @@ export class WPDropdown extends WPSizeable {
 	static override styles = [CSS_RESETS, dropdownCSS];
 
 	@property()
-	default_value: string;
+	default_value = 'Choose an Option';
 
 	@state()
 	selected_value: string;
