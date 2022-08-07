@@ -9,6 +9,7 @@ import { WPPortal } from './portal';
 import { WPDropdown, WPDropdownItem } from './dropdown';
 import { WPVideo } from './video';
 import { WPFadeUp } from './fade-up';
+import { WPBanner } from './banner';
 import {
 	WPCarousel,
 	WPCarouselItem
@@ -48,6 +49,7 @@ import {
  */
 declare global {
     interface HTMLElementTagNameMap {
+		'wp-banner': WPBanner;
 		'wp-expando': WPExpando;
 		'wp-fade-up': WPFadeUp;
 		'wp-carousel-item': WPCarouselItem;
@@ -102,3 +104,4 @@ export * from './editable-list';
 export * from './carousel';
 export * from './fade-up';
 export * from './expando';
+export * from './banner';

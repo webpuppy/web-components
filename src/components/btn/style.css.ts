@@ -1,4 +1,4 @@
-import { css } from '../../globals/exports';
+import { css } from 'lit-exports';
 export { CSS_RESETS } from '../../globals/env.css';
 export default css`
     :host {
