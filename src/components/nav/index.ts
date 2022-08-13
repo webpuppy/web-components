@@ -32,11 +32,26 @@ export class WPNav extends WPOpenable {
 	@property()
 	icon_url: '/logo.svg';
 
+	@query('.wp-nav')
+	container: HTMLElement;
+
 	@query('.wp-nav-burger')
 	burger: HTMLElement;
 
 	@queryAssignedElements()
 	nav_items: HTMLElement[];
+
+	connectedCallback() {
+		super.connectedCallback();
+		window.addEventListener('scroll', (e) => {
+			if(window.scrollY > 0) {
+				this.container.classList.add('wp-nav--scrolled');
+				// this.nav_items.forEach(item => item.classList.add('wp-nav-item--scrolled'));
+				return;
+			}
+			this.container.classList.remove('wp-nav--scrolled');
+		});
+	}
 
 	toggle_open() {
 		this.toggle_drawer();
@@ -45,6 +60,7 @@ export class WPNav extends WPOpenable {
 	toggle_drawer() {
 		this.is_open = !this.is_open;
 	}
+
 	render_drawer() {
 		return when(this.is_open, () => html`
 		<div class="drawer">

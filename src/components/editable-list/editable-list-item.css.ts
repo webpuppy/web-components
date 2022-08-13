@@ -12,10 +12,8 @@ export default css`
 }
 
 .wp-editable-list__item {
-	background-color: var(--wp-gray);
 	border-radius: var(--wp-border-radius);
 	box-shadow: var(--shadow-smallest);
-	color: var(--wp-white);
 	line-height: var(--wp-content-line);
 	margin: .15em;
 	padding: .25em;

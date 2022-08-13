@@ -5,7 +5,8 @@ import {
     html,
     property,
     classMap,
-    when
+    when,
+	ifDefined
 } from 'lit-exports';
 import {
 	Enums,
@@ -16,6 +17,9 @@ import {
 const a_bool = { attribute: true, type: Boolean };
 @customElement(Enums.default.COMPONENT_PREFIX + 'btn')
 export class WPBtn extends WPSizeable {
+
+	@property()
+	target?: string = null;
 
 	@property({ attribute: true, type: String })
 	href?: string = null;
@@ -77,7 +81,7 @@ export class WPBtn extends WPSizeable {
 			?disabled=${this.disabled}
 			class=${classMap(classes)}
 			part=${BtnString}>
-				<a id="content" href=${url}>
+				<a id="content" target=${ifDefined(this.target)} href=${url}>
 					${this.text}
 					${when(
 						!this.use_icon,

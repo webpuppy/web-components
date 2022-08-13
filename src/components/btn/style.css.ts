@@ -27,7 +27,7 @@ export default css`
 	}
 
 	button[disabled] {
-		background: var(--wp-neutral-78);
+		background: var(--wp-slate);
 		cursor: default;
 		pointer-events: none;
 	}
@@ -46,8 +46,8 @@ export default css`
 
     .wp-btn {
 		align-items: center;
-		background-color: var(--wp-tertiary);
-		color: var(--wp-btn-txt-00);
+		background-color: var(--wp-calm-blue);
+		color: var(--wp-base-white);
 		display: grid;
 		place-content: center;
 		margin: .15em .05em .2em;
@@ -74,23 +74,23 @@ export default css`
 
 	.wp-btn {
 		border-color: transparent;
-		color: var(--wp-btn-txt-01);
+		color: var(--wp-alt-white);
 	}
 
 	.primary {
-		background-color :var(--wp-primary);
+		background-color :var(--wp-calm-blue);
 	}
 
 	.secondary {
-		background-color: var(--wp-btn-base);
+		background-color: var(--wp-deep-blue);
 	}
 
     .confirm {
-        background-color: var(--wp-success);
+        background-color: var(--wp-green);
     }
 
     .danger {
-        background-color: var(--wp-btn-danger);
+        background-color: var(--wp-red);
     }
 
 	.focusring {
@@ -123,7 +123,7 @@ export default css`
 		.confirm:hover,
 		.base:hover,
 		.danger:hover {
-			color: var(--wp-btn-txt-00);
+			color: var(--wp-base-white);
 		}
 	}
 

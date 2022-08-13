@@ -3,6 +3,7 @@ import { css } from '../../globals/exports';
 export const LINK_STYLES = css`
     :host {
 		background-color: transparent;
+		color: inherit;
         display: inline-block;
         min-width: fit-content;
     }

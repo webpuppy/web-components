@@ -3,12 +3,26 @@ import { css } from '../../globals/exports';
 export const NAV_STYLES = css`
 :host {
 	cursor: pointer;
-	display: block;
+	justify-content: center;
 	line-height: var(--wp-content-line);
+	margin: 0 auto;
 	height: var(--wp-top-nav-height);
-	position: relative;
-	width: 100%;
+	position: fixed;
+	width: 100vw;
+	z-index: 999;
 }
+
+.nav-item {
+	color: inherit;
+	text-decoration: none;
+}
+
+wp-nav wp-link {
+	color: inherit;
+	position: relative;
+	z-index: 999;
+}
+
 .drawer {
 	animation: slide-drawer 200ms ease;
 	background-color: var(--wp-body-bg);
@@ -31,7 +45,7 @@ export const NAV_STYLES = css`
 	border-color: transparent;
 	border-radius: var(--wp-border-radius);
 	cursor: pointer;
-	color: var(--wp-danger);
+	color: var(--wp-red);
 	display: block;
 	line-height: var(--wp-content-line);
 	float: right;
@@ -47,22 +61,27 @@ export const NAV_STYLES = css`
 
 .wp-nav {
 	align-items: center;
-	background-color: var(--wp-btn-base);
-	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-	color: var(--wp-white);
+	border-radius: var(--wp-border-radius);
 	display: grid;
 	grid-template-columns: 25% 75%;
 	justify-content: space-between;
 	min-height: var(--wp-top-nav-height);
-	position: relative;
+	position: fixed;
+	width: 100%;
 	z-index: 9;
 }
 
-@media(prefers-color-scheme: dark) {
-	.wp-nav {
-		background-color: var(--wp-white);
-		color: var(--wp-primary);
-	}
+.wp-nav--scrolled {
+	background-color: var(--wp-calm-blue);
+	border-radius: 0;
+	top: 0;
+	color: var(--wp-base-white);
+	transition: background-color 500ms ease;
+	z-index: 999;
+}
+
+.wp-nav-item--scrolled {
+	color: var(--wp-base-white);
 }
 
 .wp-nav-logo {
@@ -72,6 +91,7 @@ export const NAV_STYLES = css`
 }
 
 .wp-nav-logo a {
+	color: inherit;
 	display: flex;
 }
 
@@ -98,16 +118,6 @@ export const NAV_STYLES = css`
 	display: none;
 }
 
-.wp-nav-list--mobile-open {
-	background-color: var(--wp-btn-base);
-	display: grid;
-	position: absolute;
-	top: var(--wp-top-nav-height);
-	padding: .5em 0 .25em 1em;
-	width: calc(100% - 1em);
-	z-index: 999;
-}
-
 .wp-nav-burger {
 	display: grid;
 	justify-content: end;
@@ -117,6 +127,11 @@ export const NAV_STYLES = css`
 .wp-nav-burger::after {
 	content: "☰";
 	font-size: 28px;
+}
+
+::slotted(a) {
+	color: inherit;
+	text-decoration: none;
 }
 
 @media(min-width: 720px) {

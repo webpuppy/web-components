@@ -27,47 +27,9 @@ export const CSS_RESETS = css`
 		--wp-btn-sm-width: 80px;
 		--wp-btn-md-width: 180px;
 		--wp-btn-lg-width: 240px;
-
 		--wp-border-radius: 8px;
 		--wp-txt-shadow: 1px 2px 12px rgba(19,212,128,0.47);
-
 		--wp-top-nav-height: 80px;
-
-		--wp-neutral: #90b4ce;
-		--wp-neutral-rgb: 144, 180, 206;
-		--wp-neutral-30: rgba(var(--wp-neutral-rgb), 0.3);
-		--wp-neutral-59: rgba(var(--wp-neutral-rgb), 0.59);
-		--wp-neutral-78: rgba(var(--wp-neutral-rgb), 0.78);
-
-		--wp-secondary: #3da9fc;
-		--wp-secondary-rgb: 61, 169, 252;
-		--wp-secondary-76: rgba(var(--wp-secondary-rgb), 0.76);
-		--wp-secondary-55: rgba(var(--wp-secondary-rgb), 0.55);
-		--wp-secondary-31: rgba(var(--wp-secondary-rgb), 0.31);
-
-		--wp-primary: #094067;
-		--wp-primary-rgb: 9, 64, 103;
-		--wp-primary-81: rgba(var(--wp-primary-rgb), 0.81);
-		--wp-primary-61: rgba(var(--wp-primary-rgb), 0.61);
-		--wp-primary-34: rgba(var(--wp-primary-rgb), 0.34);
-
-		--wp-tertiary: #EF4565;
-		--wp-tertiary-rgb: 239, 69, 101;
-		--wp-tertiary-84: rgba(var(--wp-tertiary-rgb), 0.84);
-		--wp-tertiary-57: rgba(var(--wp-tertiary-rgb), 0.57);
-		--wp-tertiary-35: rgba(var(--wp-tertiary-rgb), 0.35);
-
-		--wp-success: #13D480;
-		--wp-success-rgb: 19, 212, 128;
-		--wp-success-75: rgba(var(--wp-success-rgb), 0.75);
-		--wp-success-54: rgba(var(--wp-success-rgb), 0.54);
-		--wp-success-29: rgba(var(--wp-success-rgb), 0.29);
-		--wp-white: #F8F8F8;
-		/**
-			default light mode
-		**/
-		--wp-body-bg: var(--wp-white);
-		--wp-body-color: var(--wp-primary);
 		--shadow-smallest: 0px 2px 4px rgba(0,0,0,.1);
 		--shadow-extra-small: 0px 4px 8px rgba(0,0,0,.12);
 		--shadow-small: 0 5px 10px rgba(0,0,0,.12);
@@ -78,15 +40,62 @@ export const CSS_RESETS = css`
 		--wp-content-line: 1.8em;
 		--wp-shadow-xl: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
-		--wp-dark-gray: #292B2F;
-		--wp-darkish-gray: #37393E;
-		--wp-gray: #292B2F;
-    }
+		/**
+		* The for real this time:tm: colors
+		**/
+		--font-primary: 'Inter', sans-serif;
+		--font-secondary: var(--wp-font-stack);
+		--font-tertiary: var(--wp-font-stack);
+		--font-heading: 'Montserrat', sans-serif;
+
+		/**
+			Group 0 - Whites
+		**/
+		--wp-base-white: #ECF0F1;
+		--wp-alt-white: #f8f8f8;
+
+		--wp-slate: #afb4ff;
+		--wp-slate-alt: #b1e1ff;
+		--wp-slate-gray: #f8f8f8;
+
+		--wp-base-black: #000;
+		--wp-alt-black: #141414;
+		--wp-lite-black: #1b1b1b;
+
+		/**
+			Group 1 - Main
+		**/
+		--wp-navy: #2C3E50;
+		--wp-red: #DB073D;
+		--wp-calm-blue: #3498D8;
+		--wp-deep-blue: #2980B9;
+		--wp-orange: #F3AE5F;
+		--wp-light-green: #13D480;
+		--wp-dark-green: #3D853D;
+		/**
+			Group 2
+		**/
+		--wp-dark-purple: #54387F;
+		--wp-light-purple: #A66CFF;
+		--wp-grayish-purple: #9C9EFE;
+		--wp-gray-purple: #AFB4FF;
+		--wp-baby-blue: #B1E1FF;
+
+		/**
+		* default light mode
+		**/
+		--wp-body-bg: var(--wp-base-white);
+		--wp-body-bg-alt: var(--wp-alt-white);
+		--wp-body-color: var(--wp-alt-black);
+		--wp-border-color: var(--wp-slate);
+	}
 
 	@media(prefers-color-scheme: dark) {
 		:host {
-			--wp-body-bg: var(--wp-dark-gray);
-			--wp-body-color: var(--wp-white);
+			--wp-body-bg: var(--wp-lite-black);
+		--wp-body-bg-alt: var(--wp-alt-black);
+		--wp-body-color: var(--wp-base-white);
+		--wp-border-color: var(--wp-slate-gray);
 		}
 	}
 
@@ -138,10 +147,10 @@ export const CSS_RESETS = css`
 	}
 
 	code {
-		background-color: var(--wp-primary);
+		background-color: var(--wp-deep-blue);
 		border-radius: var(--wp-border-radius);
 		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-        color: var(--wp-btn-txt-00);
+		color: var(--wp-alt-white);
 		cursor: pointer;
 		display: inline-block;
 		font-family: monospace;

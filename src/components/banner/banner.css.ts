@@ -12,7 +12,7 @@ export default css`
 
 #banner {
 	animation: fade-up 300ms ease;
-	background-color: var(--wp-btn-base);
+	background-color: var(--wp-deep-blue);
 	border-radius: var(--wp-border-radius);
 	color: white;
 	display: grid;

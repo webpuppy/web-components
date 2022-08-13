@@ -2,9 +2,9 @@ import { css } from 'lit-exports';
 
 export const ddlItemStyles = css`
 :host {
-	background-color: var(--wp-gray);
+	background-color: var(--wp-body-bg-alt);
 	border-radius: var(--wp-border-radius);
-	color: var(--wp-white);
+	color: var(--wp-body-color);
 	display: block;
 	line-height: var(--wp-content-line);
 	padding: .15em 0;

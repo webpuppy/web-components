@@ -32,10 +32,6 @@ figure {
 	place-items: center;
 }
 
-/* figure figcaption {
-	color: var(--wp-base-black);
-} */
-
 figure img {
 	margin: 0 auto;
 	max-width: 100%;
@@ -68,12 +64,6 @@ figure img {
 		//box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 		box-shadow: var(--shadow-small);
 	}
-}
-
-@media(prefers-color-scheme: dark) {
-	/* :host {
-		color: var(--wp-white);
-	} */
 }
 
 @keyframes fade-in {
