@@ -1,20 +1,11 @@
-import {
-    Enums,
-	CSS_RESETS
-} from '../../globals/exports';
-import {
-	customElement,
-    LitElement,
-    html,
-	state,
-    property,
-} from 'lit-exports';
+import { enums, CSS_RESETS } from '../../globals/exports';
+import { LitElement, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import loadingCSS from './style.css';
 
-@customElement(Enums.default.COMPONENT_PREFIX + 'loading')
+@customElement(enums.COMPONENT_PREFIX + 'loading')
 export class WPLoading extends LitElement {
-
-	static override styles = [CSS_RESETS, loadingCSS];
+	static styles = [CSS_RESETS, loadingCSS];
 
 	@property()
 	icon_url: string;
@@ -28,7 +19,11 @@ export class WPLoading extends LitElement {
 	render() {
 		const base_class = this.reverse ? 'wp-loading-reverse' : 'wp-loading';
 		return html`
-		<img class="${base_class} wp-loading--${this.speed}" src=${this.icon_url} alt="&#9676;">
+			<img
+				class="${base_class} wp-loading--${this.speed}"
+				src=${this.icon_url}
+				alt="&#9676;"
+			/>
 		`;
 	}
-};
+}

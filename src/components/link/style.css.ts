@@ -1,26 +1,25 @@
-import { css } from '../../globals/exports';
+import { css } from 'lit';
 
 export const LINK_STYLES = css`
-    :host {
+	:host {
 		background-color: transparent;
 		color: inherit;
-        display: inline-block;
-        min-width: fit-content;
-    }
+		display: inline-block;
+		min-width: fit-content;
+	}
 
-    .wp-link {
+	.wp-link {
 		background-color: transparent;
-        color: inherit;
-        text-decoration: none;
-        transition: all 380ms ease-in-out;
-    }
+		color: inherit;
+		text-decoration: none;
+		transition: all 380ms ease-in-out;
+	}
 
-    .wp-link--hov-underline:hover {
-        text-decoration: underline;
-    }
+	.wp-link--hov-underline:hover {
+		text-decoration: underline;
+	}
 
-
-	@media(prefers-reduced-motion: no-preference) {
+	@media (prefers-reduced-motion: no-preference) {
 		.wp-link:hover {
 			color: var(--wp-btn-primary);
 			text-shadow: var(--wp-txt-shadow);

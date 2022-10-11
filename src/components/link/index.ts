@@ -1,18 +1,14 @@
-import {
-    Enums,
-	CSS_RESETS
-} from '../../globals/exports';
-import {
-	customElement,
-    LitElement,
-	html,
-    property
-} from 'lit-exports';
+import { enums, CSS_RESETS } from '../../globals/exports';
+import { LitElement, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import { LINK_STYLES } from './style.css';
 import { LinkTarget } from './defs';
-@customElement(Enums.default.COMPONENT_PREFIX + 'link')
-export class WPLink extends LitElement {
 
+/**
+ * Anchor Tag Wrapper
+ */
+@customElement(enums.COMPONENT_PREFIX + 'link')
+export class WPLink extends LitElement {
 	@property({ attribute: true, type: Boolean })
 	hov_underline = false;
 
@@ -22,35 +18,37 @@ export class WPLink extends LitElement {
 	@property({ attribute: true, type: String })
 	target: LinkTarget = '_self';
 
-    @property({ attribute: true, type: String })
+	@property({ attribute: true, type: String })
 	href = '#';
 
-    @property({ attribute: true, type: String })
+	@property({ attribute: true, type: String })
 	text = '';
 
-    static override styles = [CSS_RESETS, LINK_STYLES];
+	static override styles = [CSS_RESETS, LINK_STYLES];
 
 	render_component(classes: string) {
-		if(this.target === '_blank' && !this.no_icon) {
+		if (this.target === '_blank' && !this.no_icon) {
 			return html`<a
+				role="link"
+				class=${classes}
+				href=${this.href}
+				target=${this.target}
+				>${this.text}<slot></slot> &#x2197;</a
+			> `;
+		}
+		return html`<a
 			role="link"
 			class=${classes}
 			href=${this.href}
 			target=${this.target}
-			>${this.text}<slot></slot> &#x2197;</a> `;
-		}
-		return html`<a
-		role="link"
-		class=${classes}
-		href=${this.href}
-		target=${this.target}
-		>${this.text}<slot></slot></a> `;
+			>${this.text}<slot></slot
+		></a> `;
 	}
 
-    render() {
-		if(this.hov_underline) {
+	render() {
+		if (this.hov_underline) {
 			return this.render_component('wp-link wp-link--hov-underline');
 		}
 		return this.render_component('wp-link');
-    }
+	}
 }

@@ -1,13 +1,13 @@
 import { DEFAULT_SECTION_STYLES } from './index.css';
 import { SectionType } from './defs';
-import { CSS_RESETS, Enums } from '../../../globals/exports';
-import {
-	html,
-    property,
-	customElement,
-    LitElement,
-} from 'lit-exports';
-@customElement(Enums.default.COMPONENT_PREFIX + 'section')
+import { CSS_RESETS, enums } from '../../../globals/exports';
+import { LitElement, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+
+/**
+ * Section Wrapper
+ */
+@customElement(enums.COMPONENT_PREFIX + 'section')
 export class WPSection extends LitElement {
 	@property()
 	type: SectionType = 'block';
@@ -16,9 +16,9 @@ export class WPSection extends LitElement {
 
 	render() {
 		return html`
-		<section class=${this.type}>
-			<slot></slot>
-		</section>
+			<section class=${this.type}>
+				<slot></slot>
+			</section>
 		`;
 	}
 }

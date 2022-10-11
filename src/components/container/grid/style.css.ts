@@ -1,8 +1,7 @@
-import { css } from '../../../globals/exports';
+import { css } from 'lit';
 
 export default css`
-:host {
-	display: grid;
-}
-
+	:host {
+		display: grid;
+	}
 `;

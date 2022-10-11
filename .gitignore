@@ -7,4 +7,6 @@ bundle
 pkg-cache
 *.nyc-output
 nyc_output
-yarn.lock
+.yarn/cache
+.yarn/install-state.gz
+lib

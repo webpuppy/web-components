@@ -1,4 +1,4 @@
-import { css } from 'lit-exports';
+import { css } from 'lit';
 
 export default css`
 	:host {
@@ -8,7 +8,7 @@ export default css`
 		box-shadow: var(--shadow-smallest);
 		right: 2rem;
 		position: fixed;
-		padding: 1rem .25rem;
+		padding: 1rem 0.25rem;
 		width: 180px;
 		z-index: 999;
 	}

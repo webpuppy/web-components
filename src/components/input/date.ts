@@ -1,19 +1,11 @@
 import input_css from './style.css';
-import {
-    Enums,
-	CSS_RESETS
-} from '../../globals/exports';
-import {
-	customElement,
-    LitElement,
-    html,
-	ifDefined,
-    property,
-} from 'lit-exports';
+import { enums, CSS_RESETS } from '../../globals/exports';
+import { LitElement, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
-@customElement(Enums.default.COMPONENT_PREFIX + 'date-input')
+@customElement(enums.COMPONENT_PREFIX + 'date-input')
 export class WPDateInput extends LitElement {
-
 	static styles = [CSS_RESETS, input_css];
 
 	@property()
@@ -27,13 +19,29 @@ export class WPDateInput extends LitElement {
 	}
 
 	render_component(classes?: string) {
-		if(!classes) {
-			return html`${this.render_label()}<input contenteditable="true" aria-label=${this.label} id=${this.id} name=${this.id} type="date" class="wp-input">`;
+		if (!classes) {
+			return html`${this.render_label()}<input
+					contenteditable="true"
+					aria-label=${this.label}
+					id=${this.id}
+					name=${this.id}
+					type="date"
+					class="wp-input"
+				/>`;
 		}
-		return html`${this.render_label()}<input contenteditable="true" aria-label=${this.label} id=${this.id} name=${this.id} type="date" class=${classes}>`;
+		return html`${this.render_label()}<input
+				contenteditable="true"
+				aria-label=${this.label}
+				id=${this.id}
+				name=${this.id}
+				type="date"
+				class=${classes}
+			/>`;
 	}
 
 	render() {
-		return this.ring ? this.render_component('wp-input wp-input--ring') : this.render_component();
+		return this.ring
+			? this.render_component('wp-input wp-input--ring')
+			: this.render_component();
 	}
 }

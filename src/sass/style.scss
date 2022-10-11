@@ -9,7 +9,8 @@ body {
 	min-height: calc(100vh - 80px);
 }
 
-img, wp-img {
+img,
+wp-img {
 	display: inline-block;
 	position: relative;
 	z-index: -1;

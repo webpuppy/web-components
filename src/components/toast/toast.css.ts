@@ -1,11 +1,11 @@
-import { css } from 'lit-exports';
+import { css } from 'lit';
 
 export default css`
 	:host {
 		animation: fade-in 550ms ease;
 		display: block;
 		opacity: 1;
-		padding: .25em;
+		padding: 0.25em;
 		pointer-events: none;
 	}
 

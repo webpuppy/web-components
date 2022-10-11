@@ -4,16 +4,12 @@ export const BtnTypes = [
 	'tertiary',
 	'confirm',
 	'danger',
-	'back'
+	'back',
 ] as const;
 
 export type BtnType = typeof BtnTypes[number];
 
-export const BtnSensitivityOptions = [
-	0,
-	1,
-	2
-];
+export const BtnSensitivityOptions = [0, 1, 2];
 
 export type BtnSensitivity = typeof BtnSensitivityOptions[number];
 

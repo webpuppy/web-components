@@ -1,12 +1,12 @@
-import { css } from 'lit-exports';
+import { css } from 'lit';
 export { CSS_RESETS } from '../../globals/env.css';
 export default css`
-    :host {
-        cursor: pointer;
-        display: inline-block;
-        min-width: fit-content;
-        pointer-events: all;
-    }
+	:host {
+		cursor: pointer;
+		display: inline-block;
+		min-width: fit-content;
+		pointer-events: all;
+	}
 
 	button {
 		backface-visibility: hidden;
@@ -21,7 +21,8 @@ export default css`
 		font-kerning: normal;
 		text-rendering: optimizeLegibility;
 		text-size-adjust: auto;
-		transition: border .25s, color .75s, box-shadow 550ms, border-color .65s ease-in-out;
+		transition: border 0.25s, color 0.75s, box-shadow 550ms,
+			border-color 0.65s ease-in-out;
 		position: relative;
 		pointer-events: all;
 	}
@@ -41,20 +42,20 @@ export default css`
 	::slotted(img) {
 		max-height: 24px;
 		max-width: 24px;
-		margin: 0 .35em;
+		margin: 0 0.35em;
 	}
 
-    .wp-btn {
+	.wp-btn {
 		align-items: center;
 		background-color: var(--wp-calm-blue);
 		color: var(--wp-base-white);
 		display: grid;
 		place-content: center;
-		margin: .15em .05em .2em;
-		padding: .85em 2em;
+		margin: 0.15em 0.05em 0.2em;
+		padding: 0.85em 2em;
 		text-align: center;
-        z-index: 2;
-    }
+		z-index: 2;
+	}
 
 	.wp-btn--xs {
 		width: var(--wp-btn-xs-width);
@@ -78,20 +79,20 @@ export default css`
 	}
 
 	.primary {
-		background-color :var(--wp-calm-blue);
+		background-color: var(--wp-calm-blue);
 	}
 
 	.secondary {
 		background-color: var(--wp-deep-blue);
 	}
 
-    .confirm {
-        background-color: var(--wp-green);
-    }
+	.confirm {
+		background-color: var(--wp-green);
+	}
 
-    .danger {
-        background-color: var(--wp-red);
-    }
+	.danger {
+		background-color: var(--wp-red);
+	}
 
 	.focusring {
 		border-color: var(--wp-navy-blue);
@@ -103,10 +104,11 @@ export default css`
 		text-decoration: none;
 	}
 
-	@media(prefers-reduced-motion: no-preference) {
+	@media (prefers-reduced-motion: no-preference) {
 		.wp-btn {
 			backface-visibility: hidden;
-			transition: border .25s, color .75s, box-shadow 550ms, border-color .65s ease-in-out;
+			transition: border 0.25s, color 0.75s, box-shadow 550ms,
+				border-color 0.65s ease-in-out;
 		}
 
 		.wp-btn--text #content,
@@ -127,7 +129,7 @@ export default css`
 		}
 	}
 
-	@media(max-width: 720px) {
+	@media (max-width: 720px) {
 		.wp-btn {
 			margin: 0 auto;
 		}

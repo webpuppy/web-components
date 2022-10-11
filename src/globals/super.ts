@@ -1,9 +1,11 @@
-import { LitElement, property, state, css } from 'lit-exports';
-import { CSS_RESETS } from './exports';
+import { LitElement, css } from 'lit';
+import { property, state } from 'lit/decorators.js';
+
+import { CSS_RESETS } from './env.css';
+
 export type WPSizeableOption = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export class WPComponentBase extends LitElement {
-
 	/**
 	 * custom style override as a string
 	 */
@@ -43,5 +45,4 @@ export class WPEditable extends WPComponentBase {
 
 	@state()
 	latest?: string = null;
-
 }

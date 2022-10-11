@@ -1,24 +1,13 @@
-import {
-    Enums,
-    when,
-	state,
-	query,
-	queryAssignedElements,
-	CSS_RESETS,
-} from '../../globals/exports';
-import {
-	customElement,
-    LitElement,
-    html,
-    property,
-} from 'lit-exports';
+import { enums, CSS_RESETS } from '../../globals/exports';
+import { LitElement, html } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
+import { when } from 'lit/directives/when.js';
 import style from './sidebar-menu.css';
 /**
  * Sidebar Menu
  */
-@customElement(Enums.default.COMPONENT_PREFIX + 'sidebar-menu')
+@customElement(enums.COMPONENT_PREFIX + 'sidebar-menu')
 export class WPSidebarMenu extends LitElement {
-
 	static override styles = [CSS_RESETS, style];
 
 	@property()
@@ -34,31 +23,45 @@ export class WPSidebarMenu extends LitElement {
 	is_open = false;
 
 	render() {
-		if(this.nodropdown) {
+		if (this.nodropdown) {
 			return html`
-			<div class="wp-sidebar-menu">
-				<a class="wp-sidebar-menu__title" href=${this.section_href}>${this.name}</a>
-				<div class="wp-sidebar-menu__wrapper">
-					<slot></slot>
+				<div class="wp-sidebar-menu">
+					<a class="wp-sidebar-menu__title" href=${this.section_href}
+						>${this.name}</a
+					>
+					<div class="wp-sidebar-menu__wrapper">
+						<slot></slot>
+					</div>
 				</div>
-			</div>
 			`;
 		}
-		return when(this.is_open, () => html`
-		<div class="wp-sidebar-menu">
-			<span>
-				<a class="wp-sidebar-menu__title" href=${this.section_href}>${this.name}</a><button @click=${() => this.is_open = !this.is_open}>&#752;</button>
-			</span>
-			<div class="wp-sidebar-menu__wrapper">
-				<slot></slot>
-			</div>
-		</div>
-		`, () => html`
-		<div class="wp-sidebar-menu">
-			<span>
-				<a class="wp-sidebar-menu__title" href=${this.section_href}>${this.name}</a><button @click=${() => this.is_open = !this.is_open}>&#709;</button>
-			</span>
-		</div>
-		`);
+		return when(
+			this.is_open,
+			() => html`
+				<div class="wp-sidebar-menu">
+					<span>
+						<a class="wp-sidebar-menu__title" href=${this.section_href}
+							>${this.name}</a
+						><button @click=${() => (this.is_open = !this.is_open)}>
+							&#752;
+						</button>
+					</span>
+					<div class="wp-sidebar-menu__wrapper">
+						<slot></slot>
+					</div>
+				</div>
+			`,
+			() => html`
+				<div class="wp-sidebar-menu">
+					<span>
+						<a class="wp-sidebar-menu__title" href=${this.section_href}
+							>${this.name}</a
+						><button @click=${() => (this.is_open = !this.is_open)}>
+							&#709;
+						</button>
+					</span>
+				</div>
+			`
+		);
 	}
 }

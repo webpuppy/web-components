@@ -10,45 +10,24 @@ import { WPDropdown, WPDropdownItem } from './dropdown';
 import { WPVideo } from './video';
 import { WPFadeUp } from './fade-up';
 import { WPBanner } from './banner';
-import {
-	WPCarousel,
-	WPCarouselItem
-} from './carousel';
-import {
-	WPEditableList,
-	WPEditableListItem
-} from './editable-list';
-import {
-	WPToaster,
-	WPToast
-} from './toast';
+import { WPCarousel, WPCarouselItem } from './carousel';
+import { WPEditableList, WPEditableListItem } from './editable-list';
+import { WPToaster, WPToast } from './toast';
 import { WPModal } from './modal';
-import {
-	WPLayout,
-	WPCard,
-	WPGrid,
-	WPFlex,
-	WPSection
-} from './container';
+import { WPLayout, WPCard, WPGrid, WPFlex, WPSection } from './container';
 import {
 	WPSidebar,
 	WPSidebarItem,
 	WPSidebarMenu,
-	WPSidebarMenuItem
+	WPSidebarMenuItem,
 } from './sidebar';
-import {
-	WPCode,
-	WPTag,
-} from './tag';
-import {
-	WPTextInput,
-	WPDateInput
-} from './input';
+import { WPCode, WPTag } from './tag';
+import { WPTextInput, WPDateInput } from './input';
 /**
  * Global Map For Packaged Tags
  */
 declare global {
-    interface HTMLElementTagNameMap {
+	interface HTMLElementTagNameMap {
 		'wp-banner': WPBanner;
 		'wp-expando': WPExpando;
 		'wp-fade-up': WPFadeUp;
@@ -71,18 +50,18 @@ declare global {
 		'wp-sidebar': WPSidebar;
 		'wp-sidebar-menu': WPSidebarMenu;
 		'wp-sidebar-menu-item': WPSidebarItem;
-		'wp-section': WPSection
+		'wp-section': WPSection;
 		'wp-flex': WPFlex;
 		'wp-grid': WPGrid;
 		'wp-card': WPCard;
 		'wp-nav': WPNav;
-        'wp-btn': WPBtn;
-        'wp-tag': WPTag;
-        'wp-link': WPLink;
+		'wp-btn': WPBtn;
+		'wp-tag': WPTag;
+		'wp-link': WPLink;
 		'wp-img': WPImg;
 		'wp-ftr': WPFtr;
 		'wp-layout': WPLayout;
-    }
+	}
 }
 
 export * from './btn';

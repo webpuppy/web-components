@@ -1,18 +1,10 @@
-import {
-    Enums,
-	CSS_RESETS,
-	WPSizeable
-} from '../../globals/exports';
-import {
-	customElement,
-    html,
-    property,
-} from 'lit-exports';
+import { enums, CSS_RESETS, WPSizeable } from '../../globals/exports';
+import { html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import style from './modal.css';
 
-@customElement(Enums.default.COMPONENT_PREFIX + 'modal')
+@customElement(enums.COMPONENT_PREFIX + 'modal')
 export class WPModal extends WPSizeable {
-
 	static override styles = [CSS_RESETS, style];
 
 	@property()
@@ -33,13 +25,17 @@ export class WPModal extends WPSizeable {
 
 	render() {
 		return html`
-		<div id="modal-bg">
-			<div role="alert" aria-label=${this.name} class="wp-modal wp-modal--${this.size}">
-				<button @click=${this._remove}>x</button>
-				<h4>${this.name}</h4>
-				<slot></slot>
+			<div id="modal-bg">
+				<div
+					role="alert"
+					aria-label=${this.name}
+					class="wp-modal wp-modal--${this.size}"
+				>
+					<button @click=${this._remove}>x</button>
+					<h4>${this.name}</h4>
+					<slot></slot>
+				</div>
 			</div>
-		</div>
 		`;
 	}
 }

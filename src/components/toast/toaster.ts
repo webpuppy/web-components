@@ -1,18 +1,9 @@
-import {
-    Enums,
-	css,
-	CSS_RESETS,
-	WPSizeable
-} from '../../globals/exports';
-import {
-	customElement,
-    LitElement,
-    html,
-	state,
-    property,
-} from 'lit-exports';
+import { enums, CSS_RESETS } from '../../globals/exports';
+import { LitElement, css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
 import style from './toaster.css';
-@customElement(Enums.default.COMPONENT_PREFIX + 'toaster')
+
+@customElement(enums.COMPONENT_PREFIX + 'toaster')
 export class WPToaster extends LitElement {
 	static styles = [CSS_RESETS, style];
 

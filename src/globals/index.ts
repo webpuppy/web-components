@@ -1,1 +1,1 @@
-export * as Enums from './enums';
+export { enums } from './enums';
