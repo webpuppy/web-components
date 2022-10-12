@@ -12,52 +12,61 @@ import {
 import { NAV_STYLES } from './style.css';
 import { TopNavType } from './defs';
 
+const NAV_CLASS = 'wp-nav';
+
 @customElement(enums.COMPONENT_PREFIX + 'nav')
 export class WPNav extends WPOpenable {
 	static override styles = [CSS_RESETS, NAV_STYLES];
 
 	@property()
-	type: TopNavType = 'flexed-burger';
+		type: TopNavType = 'flexed-burger';
 
 	@property()
-	name = 'WebPuppy';
+		name = 'WebPuppy';
 
 	@property()
-	prefix_href?: string = null;
+		prefix_href?: string = null;
 
 	@property()
-	icon_url: '/logo.svg';
+		icon: '/logo.svg';
 
-	@query('.wp-nav')
-	container: HTMLElement;
+	@property()
+		iconAlt: 'logo';
 
-	@query('.wp-nav-burger')
-	burger: HTMLElement;
+	@query(`.${NAV_CLASS}`)
+		container: HTMLElement;
+
+	@query(`.${NAV_CLASS}-burger`)
+		burger: HTMLElement;
 
 	@queryAssignedElements()
-	nav_items: HTMLElement[];
+		nav_items: HTMLElement[];
 
 	connectedCallback() {
 		super.connectedCallback();
-		window.addEventListener('scroll', e => {
+		window.addEventListener('scroll', () => {
 			if (window.scrollY > 0) {
-				this.container.classList.add('wp-nav--scrolled');
+				this.container.classList.add(NAV_CLASS + '--scrolled');
 				// this.nav_items.forEach(item => item.classList.add('wp-nav-item--scrolled'));
 				return;
 			}
-			this.container.classList.remove('wp-nav--scrolled');
+			this.container.classList.remove(NAV_CLASS + '--scrolled');
 		});
 	}
 
-	toggle_open() {
-		this.toggle_drawer();
+	toggleOpen() {
+		this.toggleDrawer();
 	}
 
-	toggle_drawer() {
+	toggleDrawer() {
 		this.is_open = !this.is_open;
 	}
 
-	render_drawer() {
+	onKeyPress(e: KeyboardEvent) {
+		console.log(e);
+	}
+
+	renderDrawer() {
 		return when(
 			this.is_open,
 			() => html`
@@ -66,9 +75,10 @@ export class WPNav extends WPOpenable {
 						width="64"
 						height="64"
 						style="padding: 1rem"
-						src=${this.icon_url}
+						src=${this.icon}
+						alt=${this.iconAlt}
 					/>
-					<button class="close" @click=${this.toggle_drawer}>X</button>
+					<button class="close" @click=${this.toggleDrawer}>X</button>
 					${map(this.nav_items, i => unsafeHTML(i.outerHTML))}
 				</div>
 			`,
@@ -76,44 +86,42 @@ export class WPNav extends WPOpenable {
 		);
 	}
 
-	render_default(classes: string) {
+	renderDefault() {
 		return html`
-			<header role="navigation" class=${classes}>
-				<div class="wp-nav-logo">
+			<header role="navigation" class=${NAV_CLASS}>
+				<div class="${NAV_CLASS}-logo">
 					<a href=${this.prefix_href ?? '/'}>
-						<img src=${this.icon_url} alt="hdr icon" height="64" width="64" />
+						<img src=${this.icon} alt="hdr icon" height="64" width="64" />
 						<span> ${this.name} </span>
 					</a>
 				</div>
-				<div class="wp-nav-list">
+				<div class="${NAV_CLASS}-list">
 					<slot></slot>
 				</div>
-				<div class="wp-nav-burger" @click=${this.toggle_open}></div>
-				${this.render_drawer()}
+				<div class="${NAV_CLASS}-burger" @keypress=${this.onKeyPress} @click=${this.toggleOpen}></div>
+				${this.renderDrawer()}
 			</header>
 		`;
 	}
 
-	render_mobile_open(classes: string) {
+	render_mobile_open() {
 		return html`
-			<header role="navigation" class=${classes}>
-				<div class="wp-nav-logo">
+			<header role="navigation" class=${NAV_CLASS}>
+				<div class="${NAV_CLASS}-logo">
 					<a href=${this.prefix_href ?? '/'}>
-						<img src=${this.icon_url} alt="hdr icon" height="64" width="64" />
+						<img src=${this.icon} alt="hdr" height="64" width="64" />
 						<span> ${this.name} </span>
 					</a>
 				</div>
-				<div role="list" class="wp-nav-list--mobile-open">
+				<div role="list" class="${NAV_CLASS}-list--mobile-open">
 					<slot></slot>
 				</div>
-				<div class="wp-nav-burger" @click=${this.toggle_open}></div>
+				<div class="${NAV_CLASS}-burger" @keypress=${this.onKeyPress} @click=${this.toggleOpen}></div>
 			</header>
 		`;
 	}
 
 	render() {
-		const classes = 'wp-nav';
-		// return when(this.is_open, () => this.render_mobile_open(classes), () => this.render_default(classes));
-		return this.render_default(classes);
+		return this.renderDefault();
 	}
 }

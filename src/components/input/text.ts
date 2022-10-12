@@ -9,10 +9,10 @@ export class WPTextInput extends WPEditable {
 	static styles = [CSS_RESETS, input_css];
 
 	@property()
-	label = '';
+		label = '';
 
 	@property({ attribute: true, type: Boolean })
-	ring = false;
+		ring = false;
 
 	render_label() {
 		return html`<label for=${ifDefined(this.id)}>${this.label}</label>`;
@@ -22,7 +22,6 @@ export class WPTextInput extends WPEditable {
 		if (!classes) {
 			return html`${this.render_label()}<input
 					contenteditable="true"
-					role="textbox"
 					aria-label=${this.label}
 					value=${this.initial}
 					id=${this.id}
@@ -35,7 +34,6 @@ export class WPTextInput extends WPEditable {
 		}
 		return html`${this.render_label()}<input
 				contenteditable="true"
-				role="textbox"
 				aria-label=${this.label}
 				value=${this.initial}
 				@change=${this.handle_nested_change}

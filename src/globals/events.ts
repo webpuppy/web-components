@@ -1,5 +1,3 @@
-import { WPDropdown } from '../components/dropdown/dropdown';
-
 export type WPInputChangeEventSignature = 'wp-input-change';
 
 export type WPInputChangeEventDetail = {

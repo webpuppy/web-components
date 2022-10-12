@@ -6,7 +6,7 @@ import { ddlItemStyles } from './style.css';
 @customElement(enums.COMPONENT_PREFIX + 'dropdown-item')
 export class WPDropdownItem extends WPComponentBase {
 	@property()
-	value: string;
+		value: string;
 
 	static override styles = [CSS_RESETS, ddlItemStyles];
 

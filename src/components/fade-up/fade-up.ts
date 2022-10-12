@@ -1,6 +1,6 @@
 import { enums, CSS_RESETS } from '../../globals/exports';
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import style from './fade-up.css';
 
 @customElement(enums.COMPONENT_PREFIX + 'fade-up')

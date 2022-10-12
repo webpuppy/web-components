@@ -20,16 +20,16 @@ export class WPDropdown extends WPSizeable {
 	static override styles = [CSS_RESETS, dropdownCSS];
 
 	@property()
-	default_value = 'Choose an Option';
+		default_value = 'Choose an Option';
 
 	@state()
-	selected_value: string;
+		selected_value: string;
 
 	@query('.wp-dropdown-menu')
-	menu_el: HTMLElement;
+		menu_el: HTMLElement;
 
 	@queryAssignedElements()
-	menu_items: WPDropdownItem[];
+		menu_items: WPDropdownItem[];
 
 	init() {
 		this.selected_value = this.default_value;

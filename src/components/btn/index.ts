@@ -3,39 +3,41 @@ import { BtnType, BtnString } from './defs';
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { enums, CSS_RESETS, WPSizeable } from '../../globals/exports';
-import { classMap } from 'lit/directives/class-map.js';
+import { ClassInfo, classMap } from 'lit/directives/class-map.js';
 import { when } from 'lit/directives/when.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 const a_bool = { attribute: true, type: Boolean };
 
+const BTN_CLASS = 'wp-btn';
+
 /**
- * Button Wrapper 
+ * Button Wrapper
  */
 @customElement(enums.COMPONENT_PREFIX + 'btn')
 export class WPBtn extends WPSizeable {
 	@property()
-	target?: string = null;
+		target?: string = null;
 
 	@property({ attribute: true, type: String })
-	href?: string = null;
+		href?: string = null;
 
 	@property(a_bool)
-	focusring = false;
+		focusring = false;
 
 	@property(a_bool)
-	use_icon = false;
+		useIcon = false;
 
 	@property({ attribute: true, type: Number })
-	sensitivity = 0;
+		sensitivity = 0;
 
 	@property({ attribute: true })
-	type: BtnType = 'tertiary';
+		type: BtnType = 'tertiary';
 
 	@property({ attribute: true })
-	text = '';
+		text = '';
 
 	@property(a_bool)
-	disabled = false;
+		disabled = false;
 
 	static override styles = [CSS_RESETS, btnCss];
 
@@ -50,22 +52,20 @@ export class WPBtn extends WPSizeable {
 		}
 	}
 
-	render_btn(classes: any, url: string) {
+	render_btn(classes: ClassInfo, url: string) {
 		if (!url) {
 			return html`
 				<button
-					role="button"
 					?disabled=${this.disabled}
 					class=${classMap(classes)}
-					part=${BtnString}
-				>
+					part=${BtnString}>
 					<span id="content">
 						${this.text}
 						${when(
-							!this.use_icon,
-							() => null,
-							() => this.get_icon()
-						)}
+		!this.useIcon,
+		() => null,
+		() => this.get_icon()
+	)}
 						<slot></slot>
 					</span>
 				</button>
@@ -73,7 +73,6 @@ export class WPBtn extends WPSizeable {
 		}
 		return html`
 			<button
-				role="button"
 				?disabled=${this.disabled}
 				class=${classMap(classes)}
 				part=${BtnString}
@@ -81,10 +80,10 @@ export class WPBtn extends WPSizeable {
 				<a id="content" target=${ifDefined(this.target)} href=${url}>
 					${this.text}
 					${when(
-						!this.use_icon,
-						() => null,
-						() => this.get_icon()
-					)}
+		!this.useIcon,
+		() => null,
+		() => this.get_icon()
+	)}
 					<slot></slot>
 				</a>
 			</button>
@@ -94,9 +93,9 @@ export class WPBtn extends WPSizeable {
 	override render() {
 		const sns = ` hov-${this.sensitivity}`; // the sensitivity for :active / :hover shadow / color shift
 		const ring = this.focusring ? ' focusring' : '';
-		const btn_base = this.use_icon
-			? `wp-btn wp-btn--${this.size} wp-btn--icon`
-			: `wp-btn wp-btn--${this.size} wp-btn--text`;
+		const btn_base = this.useIcon
+			? `${BTN_CLASS} ${BTN_CLASS}--${this.size} ${BTN_CLASS}--icon`
+			: `${BTN_CLASS} ${BTN_CLASS}--${this.size} ${BTN_CLASS}--text`;
 		const classes = {};
 		classes[`${btn_base} primary${ring}${sns}`] = this.type === 'primary';
 		classes[`${btn_base} danger${ring}${sns}`] = this.type === 'danger';

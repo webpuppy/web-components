@@ -1,5 +1,5 @@
-import { enums, CSS_RESETS, WPSizeable } from '../../globals/exports';
-import { LitElement, css, html } from 'lit';
+import { enums, CSS_RESETS } from '../../globals/exports';
+import { LitElement, html } from 'lit';
 import { when } from 'lit/directives/when.js';
 import { customElement, state, property } from 'lit/decorators.js';
 import { ToastType } from './defs';
@@ -10,13 +10,13 @@ export class WPToast extends LitElement {
 	static styles = [CSS_RESETS, style];
 
 	@property()
-	text = '';
+		text = '';
 
 	@property()
-	type: ToastType = 'info';
+		type: ToastType = 'info';
 
 	@state()
-	is_displayed = true;
+		is_displayed = true;
 
 	get_icon() {
 		if (this.type === 'success') {

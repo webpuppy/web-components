@@ -1,6 +1,14 @@
-import { enums, CSS_RESETS, WPSizeable } from '../../globals/exports';
-
-import { customElement, state, query, queryAssignedElements } from 'lit/decorators.js';
+import { 
+	enums, 
+	CSS_RESETS, 
+	WPSizeable
+} from '../../globals/exports';
+import {
+	customElement,
+	state,
+	query,
+	queryAssignedElements,
+} from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 import { html } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
@@ -15,27 +23,27 @@ export class WPCarousel extends WPSizeable {
 	static override styles = [CSS_RESETS, style];
 
 	@query('.wp-carousel')
-	container: HTMLDivElement;
+		container: HTMLDivElement;
 
 	@query('.wp-carousel-slide')
-	slide: HTMLDivElement;
+		slide: HTMLDivElement;
 
 	@queryAssignedElements({ selector: 'wp-carousel-item' })
-	carousel_items: WPCarouselItem[];
+		carouselItems: WPCarouselItem[];
 
 	@state()
-	selected: WPCarouselItem;
+		selected: WPCarouselItem;
 
 	@state()
-	selectedIndex = 0;
+		selectedIndex = 0;
 
 	connectedCallback() {
 		super.connectedCallback();
 		document.addEventListener('DOMContentLoaded', () => {
-			if (this.carousel_items.length > 0) {
+			if (this.carouselItems.length > 0) {
 				this.__trigger();
-				this.carousel_items.forEach((item, idx) => {
-					item.addEventListener('click', _ => {
+				this.carouselItems.forEach((item, idx) => {
+					item.addEventListener('click', () => {
 						this.selectedIndex = idx;
 						this.__trigger();
 					});
@@ -48,7 +56,7 @@ export class WPCarousel extends WPSizeable {
 		const ev = new CustomEvent('wp-carousel-back');
 		document.dispatchEvent(ev);
 		if (this.selectedIndex === 0) {
-			this.selectedIndex = this.carousel_items.length - 1;
+			this.selectedIndex = this.carouselItems.length - 1;
 			this.__trigger();
 			return;
 		}
@@ -60,7 +68,7 @@ export class WPCarousel extends WPSizeable {
 	increment() {
 		const ev = new CustomEvent('wp-carousel-next');
 		document.dispatchEvent(ev);
-		if (this.selectedIndex < this.carousel_items.length - 1) {
+		if (this.selectedIndex < this.carouselItems.length - 1) {
 			this.selectedIndex = this.selectedIndex + 1;
 			this.__trigger();
 			return;
@@ -72,7 +80,7 @@ export class WPCarousel extends WPSizeable {
 	}
 
 	__trigger() {
-		this.selected = [...this.carousel_items][this.selectedIndex];
+		this.selected = [...this.carouselItems][this.selectedIndex];
 		this.slide.classList.add('wp-carousel-slide--active');
 		setTimeout(
 			() => this.slide.classList.remove('wp-carousel-slide--active'),
@@ -82,23 +90,23 @@ export class WPCarousel extends WPSizeable {
 
 	render() {
 		return html`
-			<button @click=${() => this.decrement()} class="wp-slide-controls">
-				<
+			<button @click=${this.decrement} class="wp-slide-controls">
+				&lt;
 			</button>
 			<div class="wp-carousel wp-carousel--${this.size}">
 				<div class="wp-carousel-slide">
 					${when(
-						this.selected,
-						() => html`${unsafeHTML(this.selected.innerHTML)}`,
-						() => 'loading..'
-					)}
+		this.selected,
+		() => html`${unsafeHTML(this.selected.innerHTML)}`,
+		() => 'loading..'
+	)}
 				</div>
 				<div class="wp-carousel-slides">
 					<slot></slot>
 				</div>
 			</div>
-			<button @click=${() => this.increment()} class="wp-slide-controls">
-				>
+			<button @click=${this.increment} class="wp-slide-controls">
+				&gt;
 			</button>
 		`;
 	}

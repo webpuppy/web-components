@@ -11,22 +11,22 @@ export class WPImg extends LitElement {
 	static override styles = [CSS_RESETS, DEFAULT_IMG_STYLES];
 
 	@property({ attribute: true, type: Boolean })
-	figure? = false;
+		figure? = false;
 
 	@property({ attribute: true })
-	caption?: string = null;
+		caption?: string = null;
 
 	@property({ attribute: true, type: Number })
-	height = 128;
+		height = 128;
 
 	@property({ attribute: true, type: Number })
-	width = 128;
+		width = 128;
 
 	@property()
-	src = '/favicon.ico';
+		src = '/favicon.ico';
 
 	@property()
-	alt = '';
+		alt = '';
 
 	render_plain_image() {
 		return html`

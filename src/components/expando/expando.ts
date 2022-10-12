@@ -9,20 +9,24 @@ export class WPExpando extends LitElement {
 	static override styles = [CSS_RESETS, style];
 
 	@property()
-	name: string;
+		name: string;
 
 	@state()
-	is_open = false;
+		_open = false;
 
 	toggle() {
-		this.is_open = !this.is_open;
+		this._open = !this._open;
+	}
+
+	onKeyboardEvent(e: KeyboardEvent) {
+		console.log(e);
 	}
 
 	render() {
 		return when(
-			this.is_open,
+			this._open,
 			() => html`
-				<div @click=${this.toggle} class="row">
+				<div @keypress=${this.onKeyboardEvent} @click=${this.toggle} class="row">
 					<div>${this.name}</div>
 					<div style="font-size: 2rem; cursor:pointer">&#752;</div>
 				</div>
@@ -31,12 +35,11 @@ export class WPExpando extends LitElement {
 				</div>
 			`,
 			() => html`
-				<div @click=${this.toggle} class="row">
+				<div @keypress=${this.onKeyboardEvent} @click=${this.toggle} class="row">
 					<div>${this.name}</div>
 					<div style="font-size: 2rem; cursor:pointer">&#709;</div>
 				</div>
 			`
 		);
-		return html``;
 	}
 }

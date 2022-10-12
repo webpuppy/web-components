@@ -8,7 +8,7 @@ export class WPModal extends WPSizeable {
 	static override styles = [CSS_RESETS, style];
 
 	@property()
-	name = '';
+		name = '';
 
 	_remove() {
 		const ev = new CustomEvent('wp-modal-close');

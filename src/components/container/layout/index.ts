@@ -9,10 +9,10 @@ export class WPLayout extends LitElement {
 	static styles = [CSS_RESETS, LAYOUT_STYLES];
 
 	@property()
-	type: LayoutType = 'topbar-0';
+		type: LayoutType = 'topbar-0';
 
 	@property()
-	fixed_box = false;
+		fixed_box = false;
 
 	private _convertTypeToClass() {
 		const prefix_ = this.fixed_box ? 'wp-fixed-layout' : 'wp-layout-';

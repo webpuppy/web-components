@@ -1,5 +1,5 @@
 import { enums, CSS_RESETS } from '../../globals/exports';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import style from './carousel-item.css';
 import { LitElement, html } from 'lit';
 /**

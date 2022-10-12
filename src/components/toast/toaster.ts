@@ -1,5 +1,5 @@
 import { enums, CSS_RESETS } from '../../globals/exports';
-import { LitElement, css, html } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import style from './toaster.css';
 

@@ -8,13 +8,13 @@ export class WPLoading extends LitElement {
 	static styles = [CSS_RESETS, loadingCSS];
 
 	@property()
-	icon_url: string;
+		icon_url: string;
 
 	@property({ type: Boolean })
-	reverse = false;
+		reverse = false;
 
 	@property()
-	speed: 'normal' | 'slow' = 'normal';
+		speed: 'normal' | 'slow' = 'normal';
 
 	render() {
 		const base_class = this.reverse ? 'wp-loading-reverse' : 'wp-loading';

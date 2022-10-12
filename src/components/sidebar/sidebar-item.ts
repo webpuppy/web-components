@@ -1,6 +1,5 @@
-import { CSSResultGroup } from 'lit';
 import { enums, CSS_RESETS } from '../../globals/exports';
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, CSSResultGroup } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 import style from './sidebar-item.css';
@@ -10,13 +9,13 @@ export class WPSidebarItem extends LitElement {
 	static styles?: CSSResultGroup = [CSS_RESETS, style];
 
 	@property({ attribute: true })
-	href?: string;
+		href?: string;
 
 	@property()
-	text = '';
+		text = '';
 
 	@property({ attribute: false })
-	is_active: boolean = this.href && window.location.pathname === this.href;
+		is_active: boolean = this.href && window.location.pathname === this.href;
 
 	constructor() {
 		super();

@@ -11,16 +11,20 @@ export class WPSidebarMenu extends LitElement {
 	static override styles = [CSS_RESETS, style];
 
 	@property()
-	name: string;
+		name: string;
 
 	@property()
-	section_href = '/';
+		section_href = '/';
 
 	@property({ type: Boolean })
-	nodropdown = false;
+		nodropdown = false;
 
 	@state()
-	is_open = false;
+		is_open = false;
+
+	toggle() {
+		this.is_open = !this.is_open;
+	}
 
 	render() {
 		if (this.nodropdown) {
@@ -42,7 +46,7 @@ export class WPSidebarMenu extends LitElement {
 					<span>
 						<a class="wp-sidebar-menu__title" href=${this.section_href}
 							>${this.name}</a
-						><button @click=${() => (this.is_open = !this.is_open)}>
+						><button @click=${this.toggle}>
 							&#752;
 						</button>
 					</span>
@@ -56,7 +60,7 @@ export class WPSidebarMenu extends LitElement {
 					<span>
 						<a class="wp-sidebar-menu__title" href=${this.section_href}
 							>${this.name}</a
-						><button @click=${() => (this.is_open = !this.is_open)}>
+						><button @click=${this.toggle}>
 							&#709;
 						</button>
 					</span>

@@ -10,19 +10,19 @@ export class WPCard extends LitElement {
 	static override styles = [CSS_RESETS, CARD_CSS];
 
 	@property(a_bool)
-	rounded?: boolean = false;
+		rounded?: boolean = false;
 
 	@property()
-	img_url?: string;
+		img_url?: string;
 
 	@property()
-	img_alt = '';
+		img_alt = '';
 
 	@property()
-	type: CardType = 'image-slot';
+		type: CardType = 'image-slot';
 
 	@queryAll('.wp-card-slot')
-	_children: HTMLElement[];
+		_children: HTMLElement[];
 
 	card_image_content() {
 		if (!this.img_url) {

@@ -4,18 +4,21 @@ import { html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 
+/**
+ * Banner Class
+ */
 @customElement(enums.COMPONENT_PREFIX + 'banner')
 export class WPBanner extends LitElement {
 	static override styles = [CSS_RESETS, bannerCss];
 
 	@property()
-	icon?: string;
+		icon?: string;
 
 	@property({ attribute: true, type: Boolean })
-	cancellable?: boolean;
+		cancellable?: boolean;
 
 	@state()
-	is_closed = false;
+		is_closed = false;
 
 	toggle(type?: string) {
 		if (type) {
@@ -24,6 +27,15 @@ export class WPBanner extends LitElement {
 		}
 		this.is_closed = !this.is_closed;
 	}
+
+	confirm() {
+		this.toggle('confirm');
+	}
+
+	cancel() {
+		this.toggle('cancel');
+	}
+
 	render() {
 		return when(
 			!this.is_closed,
@@ -31,10 +43,12 @@ export class WPBanner extends LitElement {
 				<div id="banner">
 					<slot></slot>
 					<nav id="response-row">
-						<button @click=${() => this.toggle('confirm')}>✓</button>
-						${this.cancellable
-							? html`<button @click=${() => this.toggle('cancel')}>X</button>`
-							: html``}
+						<button @click=${this.confirm}>✓</button>
+						${
+	this.cancellable
+		? html`<button @click=${this.cancel}>X</button>`
+		: html``
+}
 					</nav>
 				</div>
 			`,

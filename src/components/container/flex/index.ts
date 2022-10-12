@@ -8,16 +8,16 @@ export class WPFlex extends LitElement {
 	static override styles = [CSS_RESETS, FLEX_CSS];
 
 	@property({ type: Boolean, attribute: true })
-	justify_evenly?: boolean = false;
+		justify_evenly?: boolean = false;
 
 	@property({ type: Boolean, attribute: true })
-	justify_center?: boolean = false;
+		justify_center?: boolean = false;
 
 	@property({ type: Boolean, attribute: true })
-	align_center?: boolean = false;
+		align_center?: boolean = false;
 
 	@property({ type: Boolean, attribute: true })
-	justify_between? = false;
+		justify_between? = false;
 
 	render_justify() {
 		if (this.justify_center) {

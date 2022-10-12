@@ -8,23 +8,23 @@ export class WPCode extends LitElement {
 	static override styles = [CSS_RESETS];
 
 	@property()
-	type: CodeType = 'default';
+		type: CodeType = 'default';
 
 	@property()
-	text = '';
+		text = '';
 
 	@state()
-	is_copied = false;
+		isCopied = false;
 
-	set_copied() {
+	copy() {
 		window.navigator.clipboard.writeText(this.text);
-		this.is_copied = true;
+		this.isCopied = true;
 	}
 
 	override render() {
 		return html`
-			<code @click=${() => this.set_copied()}
-				>${this.text} ${this.is_copied ? html`&#9989;` : html`&#128203;`}</code
+			<code @keypress=${this.copy} @click=${this.copy}
+				>${this.text} ${this.isCopied ? html`&#9989;` : html`&#128203;`}</code
 			>
 		`;
 	}

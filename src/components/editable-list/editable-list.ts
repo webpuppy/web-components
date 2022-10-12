@@ -15,13 +15,13 @@ export class WPEditableList extends LitElement {
 	static override styles = [CSS_RESETS, style];
 
 	@property()
-	type: WPEditableListType = 'default';
+		type: WPEditableListType = 'default';
 
 	@queryAssignedElements({ selector: 'wp-editable-list-item' })
-	_list_items: WPEditableListItem[];
+		_list_items: WPEditableListItem[];
 
 	@state()
-	_list_state: WPEditableListState = 'initial';
+		_list_state: WPEditableListState = 'initial';
 
 	render() {
 		if (this.type === 'grid') {

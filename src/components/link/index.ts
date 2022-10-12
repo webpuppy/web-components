@@ -10,26 +10,25 @@ import { LinkTarget } from './defs';
 @customElement(enums.COMPONENT_PREFIX + 'link')
 export class WPLink extends LitElement {
 	@property({ attribute: true, type: Boolean })
-	hov_underline = false;
+		hov_underline = false;
 
 	@property({ attribute: true, type: Boolean })
-	no_icon = false;
+		no_icon = false;
 
 	@property({ attribute: true, type: String })
-	target: LinkTarget = '_self';
+		target: LinkTarget = '_self';
 
 	@property({ attribute: true, type: String })
-	href = '#';
+		href = '#';
 
 	@property({ attribute: true, type: String })
-	text = '';
+		text = '';
 
 	static override styles = [CSS_RESETS, LINK_STYLES];
 
 	render_component(classes: string) {
 		if (this.target === '_blank' && !this.no_icon) {
 			return html`<a
-				role="link"
 				class=${classes}
 				href=${this.href}
 				target=${this.target}
@@ -37,7 +36,6 @@ export class WPLink extends LitElement {
 			> `;
 		}
 		return html`<a
-			role="link"
 			class=${classes}
 			href=${this.href}
 			target=${this.target}

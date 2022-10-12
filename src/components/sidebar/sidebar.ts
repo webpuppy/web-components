@@ -1,4 +1,4 @@
-import { CSSResultGroup } from 'lit';
+import { LitElement, html, CSSResultGroup } from 'lit';
 import { enums, CSS_RESETS } from '../../globals/exports';
 import {
 	customElement,
@@ -7,36 +7,40 @@ import {
 	query,
 	queryAssignedElements,
 } from 'lit/decorators.js';
-import { LitElement, html } from 'lit';
 import { when } from 'lit/directives/when.js';
 import { map } from 'lit/directives/map.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import style from './sidebar.css';
+
+const SIDEBAR_CLASS = 'wp-sbr';
 
 @customElement(enums.COMPONENT_PREFIX + 'sidebar')
 export class WPSidebar extends LitElement {
 	static override styles?: CSSResultGroup = [CSS_RESETS, style];
 
 	@property()
-	prefix_href?: string = null;
+		prefix_href?: string = null;
 
 	@state()
-	is_open = false;
+		is_open = false;
 
-	@query('.wp-sbr-burger')
-	burger: HTMLElement;
+	@query(`.${SIDEBAR_CLASS}-burger`)
+		burger: HTMLElement;
 
 	@queryAssignedElements()
-	nav_items: HTMLElement[];
+		nav_items: HTMLElement[];
 
 	@property()
-	icon_url: '/logo.svg';
+		icon: '/logo.svg';
 
 	@property()
-	title = '';
+		title = '';
 
 	@property()
-	icon_size = '64';
+		iconSize = '64';
+
+	@property()
+		iconAlt = '';
 
 	render_title() {
 		if (!this.title) return html``;
@@ -50,9 +54,10 @@ export class WPSidebar extends LitElement {
 				<div class="drawer">
 					<img
 						style="padding: 1rem"
-						height=${this.icon_size}
-						width=${this.icon_size}
-						src=${this.icon_url}
+						height=${this.iconSize}
+						width=${this.iconSize}
+						src=${this.icon}
+						alt=${this.iconAlt}
 					/>
 					<button class="close" @click=${this.toggle_drawer}>X</button>
 					${map(this.nav_items, i => unsafeHTML(i.outerHTML))}
@@ -69,12 +74,14 @@ export class WPSidebar extends LitElement {
 	render_component() {
 		if (!this.prefix_href) {
 			return html`
-				<aside role="navigation" class="wp-sbr">
-					<header class="wp-sbr-hdr">
+				<aside role="navigation" class=${SIDEBAR_CLASS}>
+					<header class="${SIDEBAR_CLASS}-hdr">
 						<img
-							height=${this.icon_size}
-							width=${this.icon_size}
-							src=${this.icon_url}
+							height=${this.iconSize}
+							width=${this.iconSize}
+							src=${this.icon}
+							alt=${this.iconAlt}
+							loading='lazy'
 						/>
 						${this.render_title()}
 					</header>
@@ -84,14 +91,16 @@ export class WPSidebar extends LitElement {
 			`;
 		}
 		return html`
-			<aside role="navigation" class="wp-sbr">
-				<header class="wp-sbr-hdr">
-					<button @click=${this.toggle_drawer} class="wp-sbr--burger">☰</button>
-					<a class="wp-sbr--icon" href=${this.prefix_href}>
+			<aside role="navigation" class=${SIDEBAR_CLASS}>
+				<header class="${SIDEBAR_CLASS}-hdr">
+					<button @click=${this.toggle_drawer} class="${SIDEBAR_CLASS}--burger">☰</button>
+					<a class="${SIDEBAR_CLASS}--icon" href=${this.prefix_href}>
 						<img
-							height=${this.icon_size}
-							width=${this.icon_size}
-							src=${this.icon_url}
+							height=${this.iconSize}
+							width=${this.iconSize}
+							src=${this.icon}
+							alt=${this.iconAlt}
+							loading='lazy'
 						/>
 						${this.render_title()}
 					</a>

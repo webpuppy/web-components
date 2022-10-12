@@ -9,10 +9,10 @@ export class WPDateInput extends LitElement {
 	static styles = [CSS_RESETS, input_css];
 
 	@property()
-	label = '';
+		label = '';
 
 	@property({ attribute: true, type: Boolean })
-	ring = false;
+		ring = false;
 
 	render_label() {
 		return html`<label for=${ifDefined(this.id)}>${this.label}</label>`;
