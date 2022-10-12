@@ -2557,10 +2557,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@custom-elements-manifest/analyzer@npm:^0.5.7":
-  version: 0.5.7
-  resolution: "@custom-elements-manifest/analyzer@npm:0.5.7"
+"@custom-elements-manifest/analyzer@npm:^0.6.4":
+  version: 0.6.4
+  resolution: "@custom-elements-manifest/analyzer@npm:0.6.4"
   dependencies:
+    "@custom-elements-manifest/find-dependencies": ^0.0.5
     "@web/config-loader": 0.1.3
     chokidar: 3.5.2
     command-line-args: 5.1.2
@@ -2570,9 +2571,18 @@ __metadata:
     globby: 11.0.4
     typescript: ~4.3.2
   bin:
-    cem: index.js
-    custom-elements-manifest: index.js
-  checksum: d4d0d994798acf75b2b8cd034a615f2631f47926d15322abd779f322c3d1011b4de8bbf510dd466ac60f07235e8e80003f13e3d1eab36a0d33c3394e75954d52
+    cem: cem.js
+    custom-elements-manifest: cem.js
+  checksum: 19607f8407a1107b54f58b64865f0ddfa640984b1ce40fa27d5d114e036e989f60ff76d90c46aa80b39ce41b89e49433238f2b633fc94c96744c090153a49c41
+  languageName: node
+  linkType: hard
+
+"@custom-elements-manifest/find-dependencies@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@custom-elements-manifest/find-dependencies@npm:0.0.5"
+  dependencies:
+    es-module-lexer: ^0.9.3
+  checksum: b73fd7c38a62ecb24613b9ecbd8c00b43c2ad172575afd845217f3cb5ce861e7bc152cbf51a6b3e0469560fa95782f985e8c220947560c3660890f1b744fb380
   languageName: node
   linkType: hard
 
@@ -3875,7 +3885,7 @@ __metadata:
     "@babel/preset-env": ^7.19.4
     "@babel/preset-react": ^7.18.6
     "@babel/preset-typescript": ^7.18.6
-    "@custom-elements-manifest/analyzer": ^0.5.7
+    "@custom-elements-manifest/analyzer": ^0.6.4
     "@rollup/plugin-babel": ^6.0.0
     "@rollup/plugin-commonjs": ^23.0.0
     "@rollup/plugin-node-resolve": ^13.3.0
@@ -6440,7 +6450,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^0.9.0":
+"es-module-lexer@npm:^0.9.0, es-module-lexer@npm:^0.9.3":
   version: 0.9.3
   resolution: "es-module-lexer@npm:0.9.3"
   checksum: 84bbab23c396281db2c906c766af58b1ae2a1a2599844a504df10b9e8dc77ec800b3211fdaa133ff700f5703d791198807bba25d9667392d27a5e9feda344da8
