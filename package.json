@@ -43,7 +43,7 @@
 		}
   },
   "dependencies": {
-    "lit": "^2.2.7"
+    "lit": "^2.4.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",

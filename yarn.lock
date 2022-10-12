@@ -2719,6 +2719,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lit/reactive-element@npm:^1.4.0":
+  version: 1.4.1
+  resolution: "@lit/reactive-element@npm:1.4.1"
+  checksum: 27cf706217e9148e140b467185fb813165b2e2aad732fc578c26e566115fa6de73b85bdcd34137d839e004b76d7ae508940abcbd661059b69bc07d7fb6dcb754
+  languageName: node
+  linkType: hard
+
 "@microsoft/tsdoc-config@npm:0.16.2":
   version: 0.16.2
   resolution: "@microsoft/tsdoc-config@npm:0.16.2"
@@ -3902,7 +3909,7 @@ __metadata:
     gulp: ^4.0.2
     gulp-sass: ^5.1.0
     gulp-typescript: ^6.0.0-alpha.1
-    lit: ^2.2.7
+    lit: ^2.4.0
     lit-analyzer: ^1.2.1
     merge2: ^1.4.1
     npm-run-all: ^4.1.5
@@ -9404,14 +9411,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit@npm:^2.2.7":
-  version: 2.2.7
-  resolution: "lit@npm:2.2.7"
+"lit-html@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "lit-html@npm:2.4.0"
   dependencies:
-    "@lit/reactive-element": ^1.3.0
+    "@types/trusted-types": ^2.0.2
+  checksum: fb2ff513a23ce35783c231d3c184103b681f62792e2fa500b17f0bbd93b1a3168153b3fd52ccaca2c25ee5bb7f4006b657fc15ae893fa5dc733774c01eda5dce
+  languageName: node
+  linkType: hard
+
+"lit@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "lit@npm:2.4.0"
+  dependencies:
+    "@lit/reactive-element": ^1.4.0
     lit-element: ^3.2.0
-    lit-html: ^2.2.0
-  checksum: fcaa7f69135b250ccdd3216842928c9e5811b146943cb612830c4d06243090b6ea028e2822d0c894063555dc3af55ba8600bce5e182011bef6194a9222fd4fba
+    lit-html: ^2.4.0
+  checksum: ac22b1cd31331dde47a784caceed35c17d075016467af2ad88a22b626ceb93f5069be14626f4cb0acf9c83b1cd2bcfe2e0810ecb8e94f1730abbb645cfc3e0f0
   languageName: node
   linkType: hard
 
