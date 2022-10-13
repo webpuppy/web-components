@@ -25,11 +25,11 @@ export class WPDropdown extends WPSizeable {
 	@state()
 		selected_value: string;
 
-	@query('.wp-dropdown-menu')
-		menu_el: HTMLElement;
+	// @query('.wp-dropdown-menu')
+	// 	menu_el!: HTMLElement;
 
-	@queryAssignedElements()
-		menu_items: WPDropdownItem[];
+	// @queryAssignedElements()
+	// 	menu_items!: WPDropdownItem[];
 
 	init() {
 		this.selected_value = this.default_value;
@@ -44,7 +44,7 @@ export class WPDropdown extends WPSizeable {
 				const t = <WPDropdownItem>target;
 				// console.log(t.value);
 
-				this.toggle_menu();
+				// this.toggle_menu();
 				const customEvent = new CustomEvent<WPDropdownChangeEventDetail>(
 					WPDropdownChangeEventSignature,
 					{
@@ -59,18 +59,18 @@ export class WPDropdown extends WPSizeable {
 				this.selected_value = t.value;
 				return;
 			}
-			this.toggle_menu();
+			// this.toggle_menu();
 		});
 	}
 
-	toggle_menu() {
-		if (!this.menu_el.classList.contains('wp-dropdown-menu--active')) {
-			this.menu_el.classList.add('wp-dropdown-menu--active');
-			return;
-		}
-		this.menu_el.classList.remove('wp-dropdown-menu--active');
-		return;
-	}
+	// toggle_menu() {
+	// 	if (!this.menu_el.classList.contains('wp-dropdown-menu--active')) {
+	// 		this.menu_el.classList.add('wp-dropdown-menu--active');
+	// 		return;
+	// 	}
+	// 	this.menu_el.classList.remove('wp-dropdown-menu--active');
+	// 	return;
+	// }
 
 	render_state(size_class: string) {
 		return when(

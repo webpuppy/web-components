@@ -21,9 +21,6 @@ export class WPCard extends LitElement {
 	@property()
 		type: CardType = 'image-slot';
 
-	@queryAll('.wp-card-slot')
-		_children: HTMLElement[];
-
 	card_image_content() {
 		if (!this.img_url) {
 			return html``;

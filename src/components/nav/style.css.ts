@@ -2,14 +2,16 @@ import { css } from 'lit';
 
 export const NAV_STYLES = css`
 	:host {
-		cursor: pointer;
-		justify-content: center;
+		display: block;
+		font-family: 'system-ui';
 		line-height: var(--wp-content-line);
-		margin: 0 auto;
-		height: var(--wp-top-nav-height);
-		position: fixed;
-		width: 100vw;
-		z-index: 999;
+	}
+
+	.wp-nav {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 	}
 
 	.nav-item {
@@ -20,10 +22,9 @@ export const NAV_STYLES = css`
 	wp-nav wp-link {
 		color: inherit;
 		position: relative;
-		z-index: 999;
 	}
 
-	.drawer {
+	/* .drawer {
 		animation: slide-drawer 200ms ease;
 		background-color: var(--wp-body-bg);
 		color: var(--wp-body-color);
@@ -33,12 +34,7 @@ export const NAV_STYLES = css`
 		transform: translateX(0);
 		width: 100%;
 		z-index: 999;
-	}
-
-	.drawer wp-link {
-		display: block;
-		padding-left: 1.25em;
-	}
+	} */
 
 	.close {
 		background-color: transparent;
@@ -53,41 +49,23 @@ export const NAV_STYLES = css`
 		padding: 0.25em;
 	}
 
-	@keyframes slide-drawer {
+	/* @keyframes slide-drawer {
 		0% {
 			transform: translateX(-5rem);
 		}
-	}
+	} */
 
 	.wp-nav {
 		align-items: center;
 		border-radius: var(--wp-border-radius);
 		display: grid;
-		grid-template-columns: 25% 75%;
+		grid-template-columns: 30% 70%;
 		justify-content: space-between;
+		margin: 0 auto;
 		min-height: var(--wp-top-nav-height);
-		position: fixed;
+		max-width: var(--l-width);
 		width: 100%;
 		z-index: 9;
-	}
-
-	.wp-nav--scrolled {
-		background-color: var(--wp-calm-blue);
-		border-radius: 0;
-		top: 0;
-		color: var(--wp-base-white);
-		transition: background-color 500ms ease;
-		z-index: 999;
-	}
-
-	.wp-nav-item--scrolled {
-		color: var(--wp-base-white);
-	}
-
-	.wp-nav-logo {
-		display: flex;
-		place-content: center;
-		padding: 0.35em;
 	}
 
 	.wp-nav-logo a {
@@ -98,7 +76,6 @@ export const NAV_STYLES = css`
 	.wp-nav-logo a,
 	.wp-nav-logo span {
 		align-items: center;
-		place-content: center;
 	}
 
 	.wp-nav-logo span {
@@ -110,7 +87,6 @@ export const NAV_STYLES = css`
 
 	.wp-nav-logo a {
 		color: inherit;
-		padding-left: 2rem;
 		text-decoration: none;
 	}
 
@@ -138,7 +114,7 @@ export const NAV_STYLES = css`
 		.wp-nav-list {
 			align-items: center;
 			display: flex;
-			justify-content: space-evenly;
+			justify-content: space-between;
 		}
 
 		.wp-nav-burger {

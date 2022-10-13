@@ -23,7 +23,9 @@
     "serve:prod": "MODE=prod npm run serve",
     "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
     "build:sass": "sass ./src/sass/style.scss:./static/style.css",
-    "watch:sass": "sass -w ./src/sass/style.scss:./static/style.css"
+    "watch:sass": "sass -w ./src/sass/style.scss:./static/style.css",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "prettier": "@webpuppy/prettier",
   "eslintConfig": {
@@ -37,10 +39,10 @@
       "plugin:lit/recommended",
       "plugin:lit-a11y/recommended"
     ],
-		"rules": {
-			"lit/no-template-arrow": "warn",
-			"class-methods-use-this": "off"
-		}
+    "rules": {
+      "lit/no-template-arrow": "warn",
+      "class-methods-use-this": "off"
+    }
   },
   "dependencies": {
     "lit": "^2.4.0"
@@ -55,10 +57,18 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@custom-elements-manifest/analyzer": "^0.6.4",
+    "@mdx-js/react": "^1.6.22",
     "@rollup/plugin-babel": "^6.0.0",
     "@rollup/plugin-commonjs": "^23.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^9.0.1",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/web-components": "^6.5.12",
     "@types/babel__core": "^7",
     "@types/babel__preset-env": "^7",
     "@types/gulp": "^4.0.9",
@@ -75,6 +85,7 @@
     "@webpuppy/eslint-config-base": "^0.1.4",
     "@webpuppy/eslint-config-typescript": "^0.1.6",
     "@webpuppy/prettier": "^0.1.3",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.25.0",
     "eslint-plugin-lit": "^1.6.1",
     "eslint-plugin-lit-a11y": "^2.2.3",
@@ -82,6 +93,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "lit-analyzer": "^1.2.1",
+    "lit-html": "^2.4.0",
     "merge2": "^1.4.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",

@@ -17,8 +17,8 @@ export class WPEditableList extends LitElement {
 	@property()
 		type: WPEditableListType = 'default';
 
-	@queryAssignedElements({ selector: 'wp-editable-list-item' })
-		_list_items: WPEditableListItem[];
+	// @queryAssignedElements({ selector: 'wp-editable-list-item' })
+	// 	_list_items: WPEditableListItem[];
 
 	@state()
 		_list_state: WPEditableListState = 'initial';

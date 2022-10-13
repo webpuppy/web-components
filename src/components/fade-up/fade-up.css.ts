@@ -3,7 +3,7 @@ import { css } from 'lit';
 export default css`
 	:host {
 		animation: fade-up 350ms ease-in-out;
-		display: inline-block;
+		display: block;
 		opacity: 1;
 		position: relative;
 		transform: translateY(0);

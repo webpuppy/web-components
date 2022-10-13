@@ -24,11 +24,11 @@ export class WPSidebar extends LitElement {
 	@state()
 		is_open = false;
 
-	@query(`.${SIDEBAR_CLASS}-burger`)
-		burger: HTMLElement;
+	// @query(`.${SIDEBAR_CLASS}-burger`)
+	// 	burger: HTMLElement;
 
-	@queryAssignedElements()
-		nav_items: HTMLElement[];
+	// @queryAssignedElements()
+	// 	nav_items: HTMLElement[];
 
 	@property()
 		icon: '/logo.svg';
@@ -47,25 +47,25 @@ export class WPSidebar extends LitElement {
 		return html`<h4>${this.title}</h4>`;
 	}
 
-	render_drawer() {
-		return when(
-			this.is_open,
-			() => html`
-				<div class="drawer">
-					<img
-						style="padding: 1rem"
-						height=${this.iconSize}
-						width=${this.iconSize}
-						src=${this.icon}
-						alt=${this.iconAlt}
-					/>
-					<button class="close" @click=${this.toggle_drawer}>X</button>
-					${map(this.nav_items, i => unsafeHTML(i.outerHTML))}
-				</div>
-			`,
-			() => html``
-		);
-	}
+	// render_drawer() {
+	// 	return when(
+	// 		this.is_open,
+	// 		() => html`
+	// 			<div class="drawer">
+	// 				<img
+	// 					style="padding: 1rem"
+	// 					height=${this.iconSize}
+	// 					width=${this.iconSize}
+	// 					src=${this.icon}
+	// 					alt=${this.iconAlt}
+	// 				/>
+	// 				<button class="close" @click=${this.toggle_drawer}>X</button>
+	// 				${map(this.nav_items, i => unsafeHTML(i.outerHTML))}
+	// 			</div>
+	// 		`,
+	// 		() => html``
+	// 	);
+	// }
 
 	toggle_drawer() {
 		this.is_open = !this.is_open;
@@ -87,7 +87,6 @@ export class WPSidebar extends LitElement {
 					</header>
 					<slot></slot>
 				</aside>
-				${this.render_drawer()}
 			`;
 		}
 		return html`
@@ -107,7 +106,6 @@ export class WPSidebar extends LitElement {
 				</header>
 				<slot></slot>
 			</aside>
-			${this.render_drawer()}
 		`;
 	}
 	render() {

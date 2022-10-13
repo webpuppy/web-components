@@ -1,8 +1,16 @@
 /* eslint-disable max-classes-per-file */
 import { LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
-
 import { CSS_RESETS } from './env.css';
+
+export const WPColorOptions = [
+	'primary',
+	'secondary',
+	'success',
+	'error'
+] as const;
+
+export type WPColorOption = typeof WPColorOptions[number];
 
 export type WPSizeableOption = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -13,9 +21,6 @@ export class WPComponentBase extends LitElement {
 	@property()
 		override_style: string;
 	static override styles = [CSS_RESETS];
-
-	@property()
-		material_symbol?: string = null;
 }
 
 export class WPOpenable extends WPComponentBase {

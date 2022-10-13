@@ -2,19 +2,12 @@ import { css } from 'lit';
 
 export const LAYOUT_STYLES = css`
 	:host {
-		margin: 0;
-		height: 100%;
-		position: relative;
-		width: 100%;
+		display: block;
 	}
 
-	.wp-layout-tbr-0 {
-		display: grid;
-		grid-template-rows: 180px calc(100vh - 180px);
-	}
-
-	.wp-layout-sbr-0 {
-		display: grid;
-		grid-template-columns: 180px calc(100vw - 180px);
+	.container {
+		margin: 0 auto;
+		max-width: var(--l-width);
+		padding: 16px 4px;
 	}
 `;

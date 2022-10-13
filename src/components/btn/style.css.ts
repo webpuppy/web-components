@@ -47,8 +47,6 @@ export default css`
 
 	.wp-btn {
 		align-items: center;
-		background-color: var(--wp-calm-blue);
-		color: var(--wp-base-white);
 		display: grid;
 		place-content: center;
 		margin: 0.15em 0.05em 0.2em;
@@ -75,27 +73,34 @@ export default css`
 
 	.wp-btn {
 		border-color: transparent;
-		color: var(--wp-alt-white);
 	}
 
-	.primary {
+	.wp-btn--primary {
 		background-color: var(--wp-calm-blue);
+		color: var(--wp-base-white);
 	}
 
-	.secondary {
+	.wp-btn--primary:hover {
 		background-color: var(--wp-deep-blue);
 	}
 
-	.confirm {
+	.wp-btn--secondary {
+		background-color: var(--wp-light-purple);
+		color: var(--wp-base-white);
+	}
+
+	.wp-btn--secondary:hover {
+		background-color: var(--wp-dark-purple);
+	}
+
+	.wp-btn--confirm {
 		background-color: var(--wp-green);
+		color: var(--wp-base-white);
 	}
 
-	.danger {
+	.wp-btn--danger {
 		background-color: var(--wp-red);
-	}
-
-	.focusring {
-		border-color: var(--wp-navy-blue);
+		color: var(--wp-base-white);
 	}
 
 	#content {
@@ -108,7 +113,7 @@ export default css`
 		.wp-btn {
 			backface-visibility: hidden;
 			transition: border 0.25s, color 0.75s, box-shadow 550ms,
-				border-color 0.65s ease-in-out;
+				border-color 0.65s ease-in-out, background-color .45s;
 		}
 
 		.wp-btn--text #content,
@@ -119,13 +124,6 @@ export default css`
 		.wp-btn:hover {
 			border-color: var(--shadow-color);
 			box-shadow: var(--shadow-sticky);
-		}
-
-		.primary:hover,
-		.confirm:hover,
-		.base:hover,
-		.danger:hover {
-			color: var(--wp-base-white);
 		}
 	}
 
