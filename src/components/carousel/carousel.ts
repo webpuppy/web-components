@@ -1,8 +1,4 @@
-import { 
-	enums, 
-	CSS_RESETS, 
-	WPSizeable
-} from '../../globals/exports';
+import { enums, CSS_RESETS, WPSizeable } from '../../globals/exports';
 import {
 	customElement,
 	state,

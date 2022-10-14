@@ -1,8 +1,4 @@
-export const ButtonVariants = [
-	'filled',
-	'outlined',
-	'hover',
-] as const;
+export const ButtonVariants = ['filled', 'outlined', 'hover'] as const;
 
 export type ButtonVariant = typeof ButtonVariants[number];
 
@@ -19,6 +15,6 @@ export const ButtonColors = [
 	'danger',
 	'warning',
 	'inherit',
-	'none'
+	'none',
 ] as const;
 export type ButtonColor = typeof ButtonColors[number];

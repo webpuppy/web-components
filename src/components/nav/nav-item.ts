@@ -16,12 +16,11 @@ export class WPNavItem extends LitElement {
 		isCta = false;
 
 	render() {
-		if(this.isCta) {
+		if (this.isCta) {
 			return html`
 			<wp-btn href=${this.href} variant="filled"><slot></slot></wp-btn>
 			`;
-		}
-		else {
+		} else {
 			return html`
 			<wp-link href=${this.href}><slot></slot></wp-link>
 			`;

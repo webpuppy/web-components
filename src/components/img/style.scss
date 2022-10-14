@@ -1,0 +1,25 @@
+:host {
+	display: inline-block;
+	padding: 0.25rem;
+}
+
+.wp-img {
+	display: inline-block;
+	margin: 0 auto;
+
+	&--sm {
+		max-width: 128px;
+	}
+
+	&--md {
+		max-width: 256px;
+	}
+
+	&--lg {
+		max-width: 512px;
+	}
+
+	&--xl {
+		max-width: 720px;
+	}
+}

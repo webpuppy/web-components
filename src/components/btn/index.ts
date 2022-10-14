@@ -69,7 +69,7 @@ export class WPBtn extends WPSizeable {
 	}
 
 	override render() {
-		const base =`${BTN_CLASS} ${BTN_CLASS}--${this.variant} ${BTN_CLASS}--${this.color} ${BTN_CLASS}--${this.size}`;
+		const base = `${BTN_CLASS} ${BTN_CLASS}--${this.variant} ${BTN_CLASS}--${this.color} ${BTN_CLASS}--${this.size}`;
 		return this.render_btn(base, this.href);
 	}
 }

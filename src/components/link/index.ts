@@ -1,7 +1,7 @@
 import { enums, CSS_RESETS } from '../../globals/exports';
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { LINK_STYLES } from './style.css';
+import style from './style.css';
 import { LinkTarget } from './defs';
 
 /**
@@ -24,7 +24,7 @@ export class WPLink extends LitElement {
 	@property({ attribute: true, type: String })
 		text = '';
 
-	static override styles = [CSS_RESETS, LINK_STYLES];
+	static override styles = [CSS_RESETS, style];
 
 	render_component(classes: string) {
 		if (this.target === '_blank' && !this.no_icon) {

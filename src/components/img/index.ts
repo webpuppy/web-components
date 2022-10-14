@@ -1,4 +1,4 @@
-import { DEFAULT_IMG_STYLES } from './style.css';
+import styles from './style.css';
 import { enums, CSS_RESETS } from '../../globals/exports';
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
@@ -8,7 +8,7 @@ import { customElement, property } from 'lit/decorators.js';
  */
 @customElement(enums.COMPONENT_PREFIX + 'img')
 export class WPImg extends LitElement {
-	static override styles = [CSS_RESETS, DEFAULT_IMG_STYLES];
+	static override styles = [CSS_RESETS, styles];
 
 	@property({ attribute: true, type: Boolean })
 		figure? = false;

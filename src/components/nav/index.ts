@@ -9,13 +9,13 @@ import {
 	query,
 	queryAssignedElements,
 } from 'lit/decorators.js';
-import { NAV_STYLES } from './style.css';
+import styles from './style.css';
 
 const NAV_CLASS = 'wp-nav';
 
 @customElement(enums.COMPONENT_PREFIX + 'nav')
 export class WPNav extends WPOpenable {
-	static override styles = [CSS_RESETS, NAV_STYLES];
+	static override styles = [CSS_RESETS, styles];
 
 	@property()
 		name = 'WebPuppy';
@@ -82,7 +82,7 @@ export class WPNav extends WPOpenable {
 	// 	);
 	// }
 
-	//${this.renderDrawer()}
+	// ${this.renderDrawer()}
 	// render_mobile_open() {
 	// 	return html`
 	// 		<header role="navigation" class=${NAV_CLASS}>
@@ -112,7 +112,9 @@ export class WPNav extends WPOpenable {
 				<div class="${NAV_CLASS}-list">
 					<slot></slot>
 				</div>
-				<div class="${NAV_CLASS}-burger" @keypress=${this.onKeyPress} @click=${this.toggleOpen}></div>
+				<div class="${NAV_CLASS}-burger" @keypress=${this.onKeyPress} @click=${
+	this.toggleOpen
+}></div>
 			</header>
 		`;
 	}

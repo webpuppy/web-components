@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-export const NAV_STYLES = css`
+export default css`
 	:host {
 		display: block;
 		font-family: 'system-ui';
@@ -114,7 +114,7 @@ export const NAV_STYLES = css`
 		.wp-nav-list {
 			align-items: center;
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-end;
 		}
 
 		.wp-nav-burger {

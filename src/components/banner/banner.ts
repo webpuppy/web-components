@@ -44,11 +44,7 @@ export class WPBanner extends LitElement {
 					<slot></slot>
 					<nav id="response-row">
 						<button @click=${this.confirm}>✓</button>
-						${
-	this.cancellable
-		? html`<button @click=${this.cancel}>X</button>`
-		: html``
-}
+						${this.cancellable ? html`<button @click=${this.cancel}>X</button>` : html``}
 					</nav>
 				</div>
 			`,

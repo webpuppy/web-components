@@ -7,7 +7,7 @@ export const WPColorOptions = [
 	'primary',
 	'secondary',
 	'success',
-	'error'
+	'error',
 ] as const;
 
 export type WPColorOption = typeof WPColorOptions[number];
