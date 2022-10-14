@@ -2828,16 +2828,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pwrs/lit-css@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@pwrs/lit-css@npm:2.0.0"
-  dependencies:
-    string-to-template-literal: ^2.0.0
-    uglifycss: ^0.0.29
-  checksum: 2bac627ea0d8cd319ff838055fe88e920904e61785b326b13bc6cb12be2a3bd5e04dc25c8527a8b54af1e843405682dc382fa124b74627edd7b6acdaca6e96de
-  languageName: node
-  linkType: hard
-
 "@rollup/plugin-babel@npm:^6.0.0":
   version: 6.0.0
   resolution: "@rollup/plugin-babel@npm:6.0.0"
@@ -3955,6 +3945,7 @@ __metadata:
     babel-loader: ^8.2.5
     babel-plugin-transform-decorators-legacy: ^1.3.5
     babel-preset-env: ^1.7.0
+    chokidar: ^3.5.3
     eslint: ^8.25.0
     eslint-plugin-lit: ^1.6.1
     eslint-plugin-lit-a11y: ^2.2.3
@@ -3971,13 +3962,11 @@ __metadata:
     rimraf: ^3.0.2
     rollup: ^2.75.7
     rollup-plugin-dts: ^4.2.3
-    rollup-plugin-lit-css: ^4.0.0
     rollup-plugin-minify-html-literals: ^1.2.6
     rollup-plugin-peer-deps-external: ^2.2.4
     rollup-plugin-styles: ^4.0.0
     rollup-plugin-summary: ^1.4.3
     rollup-plugin-terser: ^7.0.2
-    rollup-pluginutils: ^2.8.2
     sass: ^1.55.0
     typedoc: ^0.23.7
     typedoc-plugin-markdown: ^3.13.3
@@ -13081,16 +13070,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-lit-css@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "rollup-plugin-lit-css@npm:4.0.0"
-  dependencies:
-    "@pwrs/lit-css": ^2.0.0
-    "@rollup/pluginutils": ^4.2.1
-  checksum: e8f1b01072009d99b010d6f6d4e9aa46a2fe06cf4f997e168f8da49ffd6dcef7b3887f430cf36a7ba3fa82dba2572bcf43e188aad9f9527a1d0af47b3c14ea2c
-  languageName: node
-  linkType: hard
-
 "rollup-plugin-minify-html-literals@npm:^1.2.6":
   version: 1.2.6
   resolution: "rollup-plugin-minify-html-literals@npm:1.2.6"
@@ -13964,13 +13943,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string-to-template-literal@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "string-to-template-literal@npm:2.0.0"
-  checksum: 60549a6299d7fcebeec9f9fdb80cf126566844b47f7ec174826eeb0bb6493c03e9d202b2e3105e57de5583c8bf8a550aa0cba464da7d21e6e8e3a98a5966c351
-  languageName: node
-  linkType: hard
-
 "string-width@npm:^1.0.1, string-width@npm:^1.0.2":
   version: 1.0.2
   resolution: "string-width@npm:1.0.2"
@@ -14652,15 +14624,6 @@ __metadata:
   bin:
     uglifyjs: bin/uglifyjs
   checksum: 5b62e748b7fa1d982f0949ed1876b9367dcde4782f74159f4ea0b3d130835336eb0245e090456ec057468d937eb016114677bb38a7a4fdc7f68c3d002ca760ee
-  languageName: node
-  linkType: hard
-
-"uglifycss@npm:^0.0.29":
-  version: 0.0.29
-  resolution: "uglifycss@npm:0.0.29"
-  bin:
-    uglifycss: ./uglifycss
-  checksum: 5a810cc2ca168eb9d20f71fb4fe565faa346719d1687d162047fe40f6e417868647e0f771484acaede8fbf3fa3c986ef3f54e21e1f265ce60651a281f1b5bb32
   languageName: node
   linkType: hard
 

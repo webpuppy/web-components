@@ -1,3 +1,4 @@
+/* eslint-disable security/detect-non-literal-fs-filename */
 import gulp from 'gulp';
 import ts from 'gulp-typescript';
 import tsconfig from './tsconfig.json' assert { type: 'json' };
@@ -12,14 +13,14 @@ const bundleGlob = './src/**/*.ts';
 
 function buildStyles() {
 	return gulp.src(styleGlob)
-	  .pipe(sass().on('error', sass.logError))
-	  .pipe(gulp.dest('./static'));
-  };
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('./static'));
+};
 
 function buildBundle() {
 	return gulp.src(bundleGlob)
-	.pipe(ts(tsconfig.compilerOptions))
-	.pipe(gulp.dest('build'));
+		.pipe(ts(tsconfig.compilerOptions))
+		.pipe(gulp.dest('build'));
 }
 
 export default function() {

@@ -21,3 +21,4 @@ glob('src/components/**/*.scss', function(er, files) {
 		writeFileSync(`${file.split('.scss').shift()}.css.ts`, `import { css } from 'lit'; export default css\`${compileSass(readFileSync(file, 'utf-8'), )}\``)
 	})
 });
+
