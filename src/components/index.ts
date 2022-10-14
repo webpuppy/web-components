@@ -23,6 +23,7 @@ import { WPModal } from './Modal';
 // } from './sidebar';
 import { WPCode, WPTag } from './Tag';
 import { WPNavItem } from './Nav/nav-item';
+import { WPCard } from './Card';
 // import { WPTextInput, WPDateInput } from './input';
 /**
  * Global Map For Packaged Tags
@@ -54,7 +55,7 @@ declare global {
 		// 'wp-section': WPSection;
 		// 'wp-flex': WPFlex;
 		// 'wp-grid': WPGrid;
-		// 'wp-card': WPCard;
+		'wp-card': WPCard;
 		'wp-nav': WPNav;
 		'wp-nav-item': WPNavItem;
 		'wp-button': WPButton;
@@ -73,6 +74,7 @@ export * from './Image';
 export * from './Loading';
 export * from './Nav';
 export * from './Nav/nav-item';
+export * from './Card';
 // export * from './input';
 // export * from './sidebar';
 // export * from './ftr';

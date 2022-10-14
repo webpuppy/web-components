@@ -135,4 +135,8 @@ export const CSS_RESETS = css`
 		--wp-body-color: var(--wp-alt-black);
 		--wp-border-color: var(--wp-slate);
 	}
+
+	* {
+		font-family: inherit, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
 `;

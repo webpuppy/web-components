@@ -18,7 +18,7 @@
 
 	.wp-card {
 		/* color: var(--wp-btn-txt-00); */
-		box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
+		box-shadow: var(--shadow-1);
 		margin-bottom: 2rem;
 		max-height: 100%;
 		max-width: 100%;
@@ -37,6 +37,15 @@
 			padding: 1em;
 			position: relative;
 		}
+		
+		@media (prefers-reduced-motion: no-preference) {
+			transition: box-shadow 500ms ease;
+
+			&:hover {
+				box-shadow: var(--shadow-2);
+			}
+		}
+	
 	}
 
 	figure {
@@ -57,12 +66,6 @@
 		z-index: 2;
 	}
 
-	@media (prefers-reduced-motion: no-preference) {
-		.wp-card:hover {
-			//box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-			box-shadow: var(--shadow-small);
-		}
-	}
 
 	@keyframes fade-in {
 		0% {
