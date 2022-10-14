@@ -12,7 +12,7 @@ button {
 	border-style: solid;
 	border-radius: var(--wp-border-radius);
 	cursor: pointer;
-	font-family: var(--wp-fontstack);
+	font-family: var(--wp-font-stack);
 	font-size: 14px;
 	font-weight: 500;
 	font-kerning: normal;
@@ -88,13 +88,21 @@ slot {
 	}
 
 	&--confirm {
-		background-color: var(--wp-green);
+		background-color: var(--wp-light-green);
 		color: var(--wp-base-white);
+		
+		&:hover {
+			background-color: var(--wp-dark-green);
+		}
 	}
 
 	&--danger {
 		background-color: var(--wp-red);
 		color: var(--wp-base-white);
+
+		&:hover {
+			background-color: var(--wp-red-dark);
+		}
 	}
 }
 
@@ -111,8 +119,9 @@ slot {
 			border-color 0.65s ease-in-out, background-color .45s;
 
 		&:hover {
-			border-color: var(--shadow-color);
+			// border-color: var(--shadow-color);
 			// box-shadow: var(--shadow-sticky);
+			box-shadow: var(--shadow-4);
 		}
 	}
 

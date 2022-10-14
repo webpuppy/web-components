@@ -112,6 +112,7 @@ export const CSS_RESETS = css`
 		**/
 		--wp-navy: #2c3e50;
 		--wp-red: #db073d;
+		--wp-red-dark: #b92c3f;
 		--wp-calm-blue: #3498d8;
 		--wp-deep-blue: #2980b9;
 		--wp-orange: #f3ae5f;
