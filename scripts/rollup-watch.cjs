@@ -3,7 +3,7 @@ const path = require('path');
 const rollup = require('rollup');
 
 function watchRollup() {
-	loadConfigFile(path.resolve(process.cwd(), 'rollup.bundle.mjs'), { format: 'es' }).then(
+	loadConfigFile(path.resolve(process.cwd(), 'scripts', 'rollup.bundle.mjs'), { format: 'es' }).then(
 		async ({ options, warnings }) => {
 		  console.log(`We currently have ${warnings.count} warnings`);
 		  warnings.flush();

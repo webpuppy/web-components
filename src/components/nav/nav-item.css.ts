@@ -1,1 +1,1 @@
-import { css } from 'lit'; export default css`:host{display:inline-block}@media(min-width: 720px){wp-btn{margin-left:2.5rem}}`
+import { css } from 'lit'; export default css`:host{display:inline-block}@media(min-width: 720px){wp-button{margin-left:2.5rem}}`
