@@ -5644,24 +5644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.30.3":
-  version: 5.30.3
-  resolution: "@typescript-eslint/parser@npm:5.30.3"
-  dependencies:
-    "@typescript-eslint/scope-manager": 5.30.3
-    "@typescript-eslint/types": 5.30.3
-    "@typescript-eslint/typescript-estree": 5.30.3
-    debug: ^4.3.4
-  peerDependencies:
-    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: d1bd40b0e97ea22fcb4c921e02dd02cfcbcf740261bfb6984fdbebf27b668e4abf0e0bf2135363f1bf7541d88f5d65206ce7e3dc30d385f03721177b61a2f5e1
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/parser@npm:^5.39.0":
+"@typescript-eslint/parser@npm:^5.39.0, @typescript-eslint/parser@npm:^5.40.0":
   version: 5.40.0
   resolution: "@typescript-eslint/parser@npm:5.40.0"
   dependencies:
@@ -6299,7 +6282,7 @@ __metadata:
     "@types/rollup-plugin-peer-deps-external": ^2
     "@types/storybook__polymer": ^5
     "@typescript-eslint/eslint-plugin": ^5.30.3
-    "@typescript-eslint/parser": ^5.30.3
+    "@typescript-eslint/parser": ^5.40.0
     "@web/dev-server": ^0.1.31
     "@web/dev-server-legacy": ^1.0.0
     "@web/rollup-plugin-copy": ^0.3.0
