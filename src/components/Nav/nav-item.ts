@@ -24,7 +24,7 @@ export class WPNavItem extends LitElement {
 	render() {
 		if (this.isCta) {
 			return html`
-			<wp-button href=${this.href} variant="filled"><slot></slot></wp-button>
+			<wp-button href=${this.href} variant="fill" color="primary"><slot></slot></wp-button>
 			`;
 		} else {
 			return html`

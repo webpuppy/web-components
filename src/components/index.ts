@@ -6,6 +6,7 @@ import { WPNav } from './Nav';
 import { WPLoading } from './Loading';
 import { WPFtr } from './Footer';
 // import { WPDropdown, WPDropdownItem } from './dropdown';
+import { WPDivider } from './Divider';
 import { WPVideo } from './Video';
 import { WPFadeUp } from './Transitions';
 import { WPBanner } from './Banner';
@@ -24,12 +25,15 @@ import { WPModal } from './Modal';
 import { WPCode, WPTag } from './Tag';
 import { WPNavItem } from './Nav/nav-item';
 import { WPCard } from './Card';
+import { WPTypography } from './Typography';
 // import { WPTextInput, WPDateInput } from './input';
 /**
  * Global Map For Packaged Tags
  */
 declare global {
 	interface HTMLElementTagNameMap {
+		'wp-divider': WPDivider;
+		'wp-typography': WPTypography;
 		'wp-banner': WPBanner;
 		'wp-expando': WPExpando;
 		'wp-fade-up': WPFadeUp;
@@ -88,3 +92,5 @@ export * from './Modal';
 export * from './Transitions';
 export * from './Expando';
 export * from './Banner';
+export * from './Divider';
+export * from './Typography';

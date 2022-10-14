@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>webpuppy web components</title>
-		<link rel="stylesheet" href="/static/style.css">
+		<link
+		href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Signika+Negative:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" />
 		<link rel="icon" href="http://localhost:3000/static/logo.svg">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +16,7 @@
     <script type="module" src="../bundle/index.js"></script>
   </head>
   <body>
+		
 		<wp-fade-up>
 			<wp-nav icon="https://avatars.githubusercontent.com/u/107771433?s=200&v=4">
 				<wp-nav-item href="#item1">Item 1</wp-nav-item>
@@ -21,15 +24,27 @@
 				<wp-nav-item is-cta href="#cta1">Call to Action 1</wp-nav-item>
 			</wp-nav>
 			<wp-container>
+				<wp-typography block>
+					<h1>Buttons</h1>
+					<wp-divider></wp-divider>
+				</wp-typography>
+				<wp-typography>Filled Colors</wp-typography>
 				<wp-button>Primary</wp-button>
 				<wp-button color="secondary">Secondary</wp-button>
 				<wp-button color="confirm">Confirm</wp-button>
 				<wp-button color="danger">Danger</wp-button>
-				<wp-card 
-					img-alt="Logo" 
-					img-url="https://avatars.githubusercontent.com/u/107771433?s=200&v=4">
-					Card Content <wp-tag>Tag</wp-tag>
-				</wp-card>
+				<wp-divider></wp-divider>
+				<wp-typography>Outlined Colors</wp-typography>
+				<wp-button variant="outline">Primary</wp-button>
+				<wp-button color="secondary" variant="outline">Secondary</wp-button>
+				<wp-button color="confirm" variant="outline">Confirm</wp-button>
+				<wp-button color="danger" variant="outline">Danger</wp-button>
+				<wp-divider></wp-divider>
+				<wp-typography>Hovertext Colors</wp-typography>
+				<wp-button variant="hover">Primary</wp-button>
+				<wp-button color="secondary" variant="hover">Secondary</wp-button>
+				<wp-button color="confirm" variant="hover">Confirm</wp-button>
+				<wp-button color="danger" variant="hover">Danger</wp-button>
 			</wp-container>
 		</wp-fade-up>
   </body>

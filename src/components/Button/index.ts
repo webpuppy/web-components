@@ -38,7 +38,7 @@ export class WPButton extends WPSizeable {
 		sensitivity = 0;
 
 	@property({ attribute: true })
-		variant: ButtonVariant = 'hover';
+		variant: ButtonVariant = 'fill';
 
 	@property({ attribute: true })
 		color: ButtonColor = 'primary';
@@ -80,7 +80,7 @@ export class WPButton extends WPSizeable {
 	}
 
 	override render() {
-		const base = `${BTN_CLASS} ${BTN_CLASS}--${this.variant} ${BTN_CLASS}--${this.color} ${BTN_CLASS}--${this.size}`;
+		const base = `${BTN_CLASS} ${this.color} ${BTN_CLASS}--${this.variant} ${BTN_CLASS}--${this.size}`;
 		return this.render_btn(base, this.href);
 	}
 }

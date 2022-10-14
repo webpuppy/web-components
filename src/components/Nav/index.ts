@@ -112,9 +112,9 @@ export class WPNav extends WPOpenable {
 		return html`
 			<header role="navigation" class=${NAV_CLASS}>
 				<div class="${NAV_CLASS}-logo">
-					<a href=${this.prefix ?? '/'}>
+					<a id="masthead" href=${this.prefix ?? '/'}>
 						<img src=${this.icon} alt="hdr icon" height="64" width="64" />&nbsp;
-						<div> ${this.name} </div>
+						${this.name && html`<div>${this.name}</div>`}
 					</a>
 				</div>
 				<div class="${NAV_CLASS}-list">

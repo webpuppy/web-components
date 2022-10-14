@@ -1,4 +1,4 @@
-export const ButtonVariants = ['filled', 'outlined', 'hover'] as const;
+export const ButtonVariants = ['fill', 'outline', 'hover'] as const;
 
 export type ButtonVariant = typeof ButtonVariants[number];
 
