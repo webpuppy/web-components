@@ -1,18 +1,26 @@
 import { enums, CSS_RESETS, WPOpenable } from '../../globals/exports';
 import { html } from 'lit';
 import { when } from 'lit/directives/when.js';
-import { map } from 'lit/directives/map.js';
-import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import {
 	customElement,
 	property,
-	query,
-	queryAssignedElements,
 } from 'lit/decorators.js';
-import styles from './style.css';
+import styles from './nav.css';
 
 const NAV_CLASS = 'wp-nav';
 
+/**
+ * @since 0.0.0
+ * 
+ * @version 0.0.1
+ * 
+ * Defines prestyled top navbar 
+ * 
+ * @param name - title of navbar to display
+ * @param prefixHref - anchor tag link for the far left logo (default /)
+ * @param icon - icon url for far left anchor
+ * @param iconAlt - alt text for icon 
+ */
 @customElement(enums.COMPONENT_PREFIX + 'nav')
 export class WPNav extends WPOpenable {
 	static override styles = [CSS_RESETS, styles];

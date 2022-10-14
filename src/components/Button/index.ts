@@ -14,6 +14,13 @@ const BTN_CLASS = 'wp-button';
  * 
  * @version 0.0.1
  * 
+ * @param target - link target
+ * @param href - link destination
+ * @param variant - button variant
+ * @param color - button color
+ * @param text - button text
+ * @param disabled - `true` disables the button
+ * 
  * webpuppy button
  */
 @customElement(enums.COMPONENT_PREFIX + 'button')

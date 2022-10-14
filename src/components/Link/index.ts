@@ -7,7 +7,16 @@ import { LinkTarget } from './defs';
 const LINK_CLASS = 'wp-link';
 
 /**
+ * @since 0.0.0
+ * 
+ * @version 0.0.1
+ * 
  * Anchor Tag Wrapper
+ * 
+ * @param underline - whether or not the link is underlined
+ * @param hov_underline - whether or not to underline on hover
+ * @param target - link `_target` attribute
+ * @param href - link destination
  */
 @customElement(enums.COMPONENT_PREFIX + 'link')
 export class WPLink extends LitElement {
