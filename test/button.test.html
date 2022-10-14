@@ -2,15 +2,35 @@
   <body>
 		<script src="../bundle/index.js" type="module"></script>
     <script type="module">
-      import { html, fixture, expect } from "@open-wc/testing";
-      import { runTests } from "@web/test-runner-mocha";
-      import "../bundle/index.js";
+      import { html, fixture, expect } from '@open-wc/testing';
+      import { runTests } from '@web/test-runner-mocha';
+      import '../bundle/index.js';
 
       runTests(async () => {
-        describe("wp-btn", () => {
-          it('has a default title "Hey there" and counter 5', async () => {
-						const el = await fixture(html` <wp-btn>Hello</wp-btn> `);
-            expect(el.textContent).to.equal('Hello');
+				const primaryBtn = await fixture(html` <wp-btn>primary</wp-btn> `);
+				const secondaryBtn = await fixture(html` <wp-btn color="secondary">secondary</wp-btn>`);
+        const dangerBtn = await fixture(html`<wp-btn color="danger">danger</wp-btn>`);
+				const confirmBtn = await fixture(html`<wp-btn color="confirm">confirm</wp-btn>`);
+				describe('wp-btn', () => {
+          
+					it('renders primary bthn', async () => {
+            expect(primaryBtn.textContent).to.equal('primary');
+						expect(primaryBtn.color).to.equal('primary');
+          });
+
+					it('renders secondary btn', async () => {
+            expect(secondaryBtn.textContent).to.equal('secondary');
+						expect(secondaryBtn.color).to.equal('secondary');
+          });
+
+					it('renders danger btn', async () => {
+            expect(dangerBtn.textContent).to.equal('danger');
+						expect(dangerBtn.color).to.equal('danger');
+          });
+
+					it('renders confirm btn', async () => {
+            expect(confirmBtn.textContent).to.equal('confirm');
+						expect(confirmBtn.color).to.equal('confirm');
           });
         });
       });

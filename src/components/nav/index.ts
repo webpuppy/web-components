@@ -18,16 +18,16 @@ export class WPNav extends WPOpenable {
 	static override styles = [CSS_RESETS, styles];
 
 	@property()
-		name = 'WebPuppy';
+		name = 'webpuppy.io';
 
 	@property({ attribute: 'prefix-href' })
 		prefixHref?: string = null;
 
 	@property()
-		icon: '/logo.svg';
+		icon = '/logo.svg';
 
-	@property()
-		iconAlt: 'logo';
+	@property({ attribute: 'icon-alt' })
+		iconAlt = 'logo';
 
 	// @query(`.${NAV_CLASS}`)
 	// 	container: HTMLElement;
