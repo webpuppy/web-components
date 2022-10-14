@@ -11,3 +11,4 @@ nyc_output
 .yarn/install-state.gz
 lib
 .DS_Store
+_site

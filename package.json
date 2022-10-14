@@ -10,6 +10,8 @@
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+		"build:story": "npx @11ty/eleventy --input=templates",
+		"watch:story": "npx @11ty/eleventy --input=templates --watch",
     "build:lib": "rimraf lib && rollup -c scripts/rollup.lib.mjs",
     "bundle": "rimraf bundle && rollup -c scripts/rollup.bundle.mjs",
     "watch:bundle": "node scripts/rollup-watch.cjs",
@@ -23,7 +25,7 @@
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
     "serve": "wds --watch",
     "watch:styles": "node scripts/watch-sass.cjs",
-    "dev": "npm-run-all -p serve watch:styles watch:bundle",
+    "dev": "npm-run-all -p serve watch:styles watch:story watch:bundle",
     "serve:prod": "MODE=prod npm run serve",
     "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
     "test": "wtr test/**/*.test.html --node-resolve"
@@ -41,8 +43,8 @@
       "plugin:lit-a11y/recommended"
     ],
     "rules": {
-      "lit/no-template-arrow": "warn",
-      "class-methods-use-this": "off"
+      "class-methods-use-this": "off",
+      "lit/no-template-arrow": "warn"
     }
   },
   "peerDependencies": {
