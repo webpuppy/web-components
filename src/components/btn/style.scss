@@ -46,7 +46,7 @@ slot {
 	margin: 0 0.35em;
 }
 
-.wp-btn {
+.wp-button {
 	align-items: center;
 	border-color: transparent;
 	display: grid;
@@ -113,7 +113,7 @@ slot {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	.wp-btn {
+	.wp-button {
 		backface-visibility: hidden;
 		transition: border 0.25s, color 0.75s, box-shadow 550ms,
 			border-color 0.65s ease-in-out, background-color .45s;
@@ -125,14 +125,14 @@ slot {
 		}
 	}
 
-	.wp-btn--text #content,
+	.wp-button--text #content,
 	::slotted(*) {
 		transition: letter-spacing 400ms ease-in-out;
 	}
 }
 
 @media (max-width: 720px) {
-	.wp-btn {
+	.wp-button {
 		margin: 0 auto;
 	}
 }

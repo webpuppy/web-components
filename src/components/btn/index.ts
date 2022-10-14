@@ -7,13 +7,17 @@ import { enums, CSS_RESETS, WPSizeable } from '../../globals/exports';
 import { ifDefined } from 'lit/directives/if-defined.js';
 const a_bool = { attribute: true, type: Boolean };
 
-const BTN_CLASS = 'wp-btn';
+const BTN_CLASS = 'wp-button';
 
 /**
- * Button Wrapper
+ * @since 0.0.0
+ * 
+ * @version 0.0.1
+ * 
+ * webpuppy button
  */
-@customElement(enums.COMPONENT_PREFIX + 'btn')
-export class WPBtn extends WPSizeable {
+@customElement(enums.COMPONENT_PREFIX + 'button')
+export class WPButton extends WPSizeable {
 	@property()
 		target?: string = null;
 

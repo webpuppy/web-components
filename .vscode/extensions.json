@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"bierner.lit-html",
+		"runem.lit-plugin",
+		"lit.lit-snippets",
+		"naumovs.color-highlight"
+	]
+}

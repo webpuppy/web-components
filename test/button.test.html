@@ -7,13 +7,13 @@
       import '../bundle/index.js';
 
       runTests(async () => {
-				const primaryBtn = await fixture(html` <wp-btn>primary</wp-btn> `);
-				const secondaryBtn = await fixture(html` <wp-btn color="secondary">secondary</wp-btn>`);
-        const dangerBtn = await fixture(html`<wp-btn color="danger">danger</wp-btn>`);
-				const confirmBtn = await fixture(html`<wp-btn color="confirm">confirm</wp-btn>`);
-				describe('wp-btn', () => {
+				const primaryBtn = await fixture(html` <wp-button>primary</wp-button> `);
+				const secondaryBtn = await fixture(html` <wp-button color="secondary">secondary</wp-button>`);
+        const dangerBtn = await fixture(html`<wp-button color="danger">danger</wp-button>`);
+				const confirmBtn = await fixture(html`<wp-button color="confirm">confirm</wp-button>`);
+				describe('wp-button', () => {
           
-					it('renders primary bthn', async () => {
+					it('renders primary btn', async () => {
             expect(primaryBtn.textContent).to.equal('primary');
 						expect(primaryBtn.color).to.equal('primary');
           });

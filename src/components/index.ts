@@ -1,5 +1,5 @@
 import { WPExpando } from './expando';
-import { WPBtn } from './btn';
+import { WPButton } from './btn';
 import { WPLink } from './link';
 import { WPImg } from './img';
 import { WPNav } from './nav';
@@ -57,7 +57,7 @@ declare global {
 		// 'wp-card': WPCard;
 		'wp-nav': WPNav;
 		'wp-nav-item': WPNavItem;
-		'wp-btn': WPBtn;
+		'wp-button': WPButton;
 		'wp-tag': WPTag;
 		'wp-link': WPLink;
 		'wp-img': WPImg;

@@ -10,7 +10,8 @@
   "module": "lib/esm/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "bundle": "rollup -c rollup.bundle.mjs",
+		"build:lib": "rimraf lib && rollup -c scripts/rollup.lib.mjs",
+    "bundle": "rimraf bundle && rollup -c scripts/rollup.bundle.mjs",
     "watch:bundle": "node scripts/rollup-watch.cjs",
     "build": "node scripts/load-sass.cjs && yarn bundle",
     "lint:fix": "eslint --fix src",
@@ -87,6 +88,7 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-preset-env": "^1.7.0",
     "chokidar": "^3.5.3",
+    "custom-elements-manifest": "^2.0.0",
     "eslint": "^8.25.0",
     "eslint-plugin-lit": "^1.6.1",
     "eslint-plugin-lit-a11y": "^2.2.3",
