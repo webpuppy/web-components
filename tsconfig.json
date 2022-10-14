@@ -11,7 +11,15 @@
 		"allowSyntheticDefaultImports": true,
 		"allowJs": true,
 		"rootDir": "./src",
-		"baseUrl": "./src"
+		"baseUrl": "./src",
+		"plugins": [
+      {
+        "name": "ts-lit-plugin"
+      },
+			{
+				"name": "typescript-lit-html-plugin"
+			}
+    ]
   },
   "include": [
 		"src/**/*"
