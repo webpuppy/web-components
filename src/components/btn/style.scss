@@ -27,6 +27,10 @@ button {
 		cursor: default;
 		pointer-events: none;
 	}
+
+	&:hover {
+		box-shadow: var(--shadow-0);
+	}
 }
 
 
@@ -108,7 +112,7 @@ slot {
 
 		&:hover {
 			border-color: var(--shadow-color);
-			box-shadow: var(--shadow-sticky);
+			// box-shadow: var(--shadow-sticky);
 		}
 	}
 

@@ -8,11 +8,14 @@
 .wp-link {
 	background-color: transparent;
 	color: var(--wp-calm-blue);
-	text-decoration: none;	
 
 	&:hover {
 		color: var(--wp-deep-blue);
 		text-shadow: var(--wp-txt-shadow);
+	}
+
+	&--underline {
+		text-decoration: underline;
 	}
 
 	&--hov-underline {

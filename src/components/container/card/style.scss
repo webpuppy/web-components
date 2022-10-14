@@ -22,6 +22,21 @@
 		margin-bottom: 2rem;
 		max-height: 100%;
 		max-width: 100%;
+
+		&-title {
+			text-align: center;
+		}
+
+		&--rounded {
+			--br: var(--wp-border-radius);
+		}
+
+		&-slot {
+			border-radius: 2rem;
+			/* color: var(--wp-base-black); */
+			padding: 1em;
+			position: relative;
+		}
 	}
 
 	figure {
@@ -33,21 +48,6 @@
 	figure img {
 		margin: 0 auto;
 		max-width: 100%;
-	}
-
-	.wp-card--rounded {
-		--br: var(--wp-border-radius);
-	}
-
-	.wp-card-title {
-		text-align: center;
-	}
-
-	.wp-card-slot {
-		border-radius: 2rem;
-		/* color: var(--wp-base-black); */
-		padding: 1em;
-		position: relative;
 	}
 
 	::slotted(img) {

@@ -4,16 +4,18 @@ import { customElement, property } from 'lit/decorators.js';
 import style from './style.css';
 import { LinkTarget } from './defs';
 
+const LINK_CLASS = 'wp-link';
+
 /**
  * Anchor Tag Wrapper
  */
 @customElement(enums.COMPONENT_PREFIX + 'link')
 export class WPLink extends LitElement {
-	@property({ attribute: true, type: Boolean })
-		hov_underline = false;
+	@property({ attribute: 'underline', type: Boolean })
+		underline = false;
 
-	@property({ attribute: true, type: Boolean })
-		no_icon = false;
+	@property({ attribute: 'hov-underline', type: Boolean })
+		hov_underline = false;
 
 	@property({ attribute: true, type: String })
 		target: LinkTarget = '_self';
@@ -21,32 +23,24 @@ export class WPLink extends LitElement {
 	@property({ attribute: true, type: String })
 		href = '#';
 
-	@property({ attribute: true, type: String })
-		text = '';
-
 	static override styles = [CSS_RESETS, style];
 
-	render_component(classes: string) {
-		if (this.target === '_blank' && !this.no_icon) {
-			return html`<a
-				class=${classes}
-				href=${this.href}
-				target=${this.target}
-				>${this.text}<slot></slot> &#x2197;</a
-			> `;
-		}
+	renderComponent(classes: string) {
 		return html`<a
 			class=${classes}
 			href=${this.href}
 			target=${this.target}
-			>${this.text}<slot></slot
+			><slot></slot
 		></a> `;
 	}
 
 	render() {
 		if (this.hov_underline) {
-			return this.render_component('wp-link wp-link--hov-underline');
+			return this.renderComponent(`${LINK_CLASS} ${LINK_CLASS}--hov-underline`);
 		}
-		return this.render_component('wp-link');
+		if(this.underline) {
+			return this.renderComponent(`${LINK_CLASS} ${LINK_CLASS}--underline`)
+		}
+		return this.renderComponent(LINK_CLASS);
 	}
 }
