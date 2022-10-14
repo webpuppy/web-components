@@ -1,0 +1,49 @@
+:host {
+	bottom: 1rem;
+	display: grid;
+	min-height: 80px;
+	place-content: center;
+	position: fixed;
+	width: 100vw;
+}
+
+#banner {
+	animation: fade-up 300ms ease;
+	background-color: var(--wp-deep-blue);
+	border-radius: var(--wp-border-radius);
+	color: white;
+	display: grid;
+	grid-template-columns: 70% 30%;
+	opacity: 1;
+	line-height: var(--wp-content-line);
+	padding: 1rem;
+	transform: translateY(0);
+}
+
+#response-row {
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+button {
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: var(--wp-border-radius);
+	color: inherit;
+	cursor: pointer;
+	line-height: var(--wp-content-line);
+}
+
+@media (min-width: 720px) {
+	#banner {
+		width: 720px;
+	}
+}
+
+@keyframes fade-up {
+	0% {
+		opacity: 0;
+		transform: translateY(2rem);
+	}
+}
