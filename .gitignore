@@ -10,3 +10,4 @@ nyc_output
 .yarn/cache
 .yarn/install-state.gz
 lib
+.DS_Store
