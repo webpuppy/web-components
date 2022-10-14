@@ -1,7 +1,7 @@
 import { enums, WPComponentBase, CSS_RESETS } from '../../globals/exports';
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { ddlItemStyles } from './style.css';
+import ddlItemStyles from './dropdown-item.css';
 
 @customElement(enums.COMPONENT_PREFIX + 'dropdown-item')
 export class WPDropdownItem extends WPComponentBase {
