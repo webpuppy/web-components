@@ -22,7 +22,7 @@ work in progress
 git clone https://github.com/webpuppy/web-components
 cd web-components
 yarn
-yarn bundle && yarn serve
+yarn bundle && yarn build:story && yarn serve
 ```
 
 open browser to port 3000

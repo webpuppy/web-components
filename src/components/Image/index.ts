@@ -2,8 +2,15 @@ import styles from './style.css';
 import { enums, CSS_RESETS } from '../../globals/exports';
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-
+import { ifDefined } from 'lit-html/directives/if-defined.js';
 /**
+ * @attribute figure - boolean if in `<figure>` container
+ * @attribute caption - caption for figure container
+ * @attribute height - height to render
+ * @attribute width - width to render
+ * @attribute src - src of the image
+ * @attribute alt - alt text if load fails
+ * @attribute lazy - bool for lazy load
  * Image Wrapper
  */
 @customElement(enums.COMPONENT_PREFIX + 'img')
@@ -23,39 +30,39 @@ export class WPImg extends LitElement {
 		width = 128;
 
 	@property()
-		src = '/favicon.ico';
+		src = '';
 
 	@property()
 		alt = '';
 
-	render_plain_image() {
+	@property({ type: Boolean })
+		lazy? = false;
+
+	renderPlain() {
 		return html`
 			<img
-				class="wp-img"
 				height=${this.height}
 				width=${this.width}
 				src=${this.src}
 				alt=${this.alt}
+				loading=${this.lazy ? 'lazy' : 'eager'}
 			/>
 		`;
 	}
 
-	render_figure() {
+	renderFigure() {
 		return html`
 			<figure>
-				${this.render_plain_image()}
+				${this.renderPlain()}
 				<figcaption>${this.caption}</figcaption>
 			</figure>
 		`;
 	}
-	/**
-	 *
-	 * todo: setup classmap for sizes
-	 */
+
 	render() {
 		if (this.caption || this.figure) {
-			return this.render_figure();
+			return this.renderFigure();
 		}
-		return this.render_plain_image();
+		return this.renderPlain();
 	}
 }

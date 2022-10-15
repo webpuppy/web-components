@@ -4,28 +4,35 @@ body
 	wp-fade-up 
 		
 		wp-container
-			wp-nav(icon='https://avatars.githubusercontent.com/u/107771433?s=200&v=4')
-				wp-nav-item(href='#item1')
-				wp-nav-item(is-cta, href='#cta0') Call to Action
+			include ./nav.pug
 			wp-divider
 			wp-typography(block)
-				h1 Buttons
+				h1 Main Story
 				wp-divider 
-				wp-typograhy Filled
+				h2 Buttons
+				wp-divider 
+				wp-typograhy(block) 
+					h3 Filled
+				wp-divider 
 				wp-button Primary
 				wp-button(color='secondary') Secondary
 				wp-button(color='danger') Danger
 				wp-button(color='confirm') Confirm
 				wp-divider 
-				wp-typography Outlined 
+				wp-typography(block)
+					h3 Outlined
+				wp-divider
 				wp-button(variant='outline') Primary
 				wp-button(variant='outline', color='secondary') Secondary
 				wp-button(variant='outline', color='danger') Danger
 				wp-button(variant='outline', color='confirm') Confirm
 				wp-divider 
-				wp-typography Hovertext
+				wp-typography(block)
+					h3 Hovertext
+				wp-divider
 				wp-button(variant='hover') Primary
 				wp-button(variant='hover', color='secondary') Secondary
 				wp-button(variant='hover', color='danger') Danger
 				wp-button(variant='hover', color='confirm') Confirm
 				wp-divider 
+				
