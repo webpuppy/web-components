@@ -10,8 +10,8 @@
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-		"build:story": "npx @11ty/eleventy --input=templates",
-		"watch:story": "npx @11ty/eleventy --input=templates --watch",
+    "build:story": "npx @11ty/eleventy --input=templates",
+    "watch:story": "npx @11ty/eleventy --input=templates --watch",
     "build:lib": "rimraf lib && rollup -c scripts/rollup.lib.mjs",
     "bundle": "rimraf bundle && rollup -c scripts/rollup.bundle.mjs",
     "watch:bundle": "node scripts/rollup-watch.cjs",

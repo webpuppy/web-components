@@ -8,6 +8,44 @@
 		{
       "tagName": "@since",
       "syntaxKind": "block"
-    }
+    },
+		{
+			"tagName": "@slot",
+			"allowMultiple": true,
+			"syntaxKind": "block"
+		},
+		{
+			"tagName": "@cssprop",
+			"allowMultiple": true,
+			"syntaxKind": "block"
+		},
+		{
+			"tagName": "@reflect",
+			"syntaxKind": "block"
+		},
+		{
+			"tagName": "@cssproperty",
+			"syntaxKind": "block",
+			"allowMultiple": true
+		},
+		{
+			"tagName": "@tag",
+			"allowMultiple": false,
+			"syntaxKind": "block"
+		},
+		{
+			"tagName": "@fires",
+			"syntaxKind": "block"
+		},
+		{
+			"tagName": "@attr",
+			"allowMultiple": true,
+			"syntaxKind": "block"
+		},
+		{
+			"tagName": "@attribute",
+			"allowMultiple": true,
+			"syntaxKind": "block"
+		}
   ]
 }
