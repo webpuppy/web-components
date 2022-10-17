@@ -12,13 +12,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-plugin-syntaxhighlight@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@11ty/eleventy-plugin-syntaxhighlight@npm:4.0.0"
+"@11ty/eleventy-plugin-syntaxhighlight@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@11ty/eleventy-plugin-syntaxhighlight@npm:4.1.0"
   dependencies:
     linkedom: ^0.13.2
     prismjs: ^1.26.0
-  checksum: 899e4d0cce7f26eec3f675e5f433c5e6568c5e166750ec364b605c0e263c4f9d6f287549869fd1d161ab65644c1fea9764d61a3d0da2ee9072b92368fe356817
+  checksum: 84b5a1e31d6b45227dae0f42b59d25ac208403bf2366b6f81119866fb88c97d40072af44161acdb41c873578a225ec4c7e58e615308b6e52f5400521c396bfbf
   languageName: node
   linkType: hard
 
@@ -4274,7 +4274,7 @@ __metadata:
   resolution: "@webpuppy/web-components@workspace:."
   dependencies:
     "@11ty/eleventy": ^1.0.1
-    "@11ty/eleventy-plugin-syntaxhighlight": ^4.0.0
+    "@11ty/eleventy-plugin-syntaxhighlight": ^4.1.0
     "@babel/core": ^7.19.3
     "@babel/plugin-proposal-class-properties": ^7.18.6
     "@babel/plugin-proposal-decorators": ^7.19.3
