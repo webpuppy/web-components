@@ -1,0 +1,15 @@
+html
+	include ./head.pug
+body
+	wp-fade-up 
+		wp-container
+			include ./nav.pug
+			wp-typography(variant='heading')
+				h1 Card Component
+			wp-card(img-url='/static/logo.svg')
+				p Card Text
+			wp-card(rounded, img-url='/static/logo.svg')
+				p Rounded Card Text
+			wp-typography(variant='heading')
+				h2 Styled Code Examples
+			wp-code(text='yarn add @webpuppy/web-components')

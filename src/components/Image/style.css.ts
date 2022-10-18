@@ -1,1 +1,1 @@
-import { css } from 'lit'; export default css`:host{display:inline-block;padding:.25rem}.wp-img{display:inline-block;margin:0 auto}.wp-img--sm{max-width:128px}.wp-img--md{max-width:256px}.wp-img--lg{max-width:512px}.wp-img--xl{max-width:720px}`
+import { css } from 'lit'; export default css`:host{display:inline-block;margin:0 auto;vertical-align:middle}`

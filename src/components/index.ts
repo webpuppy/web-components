@@ -22,7 +22,8 @@ import { WPModal } from './Modal';
 // 	WPSidebarMenu,
 // 	WPSidebarMenuItem,
 // } from './sidebar';
-import { WPCode, WPTag } from './Tag';
+import { WPTag } from './Tag';
+import { WPCode } from './Code';
 import { WPNavItem } from './Nav/nav-item';
 import { WPCard } from './Card';
 import { WPTypography } from './Typography';
@@ -32,6 +33,7 @@ import { WPTypography } from './Typography';
  */
 declare global {
 	interface HTMLElementTagNameMap {
+		'wp-code': WPCode;
 		'wp-divider': WPDivider;
 		'wp-typography': WPTypography;
 		'wp-banner': WPBanner;
@@ -83,6 +85,7 @@ export * from './Card';
 // export * from './sidebar';
 // export * from './ftr';
 export * from './Tag';
+export * from './Code';
 export * from './Toast';
 // export * from './dropdown';
 export * from './Video';

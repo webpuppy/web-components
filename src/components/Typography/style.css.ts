@@ -1,1 +1,1 @@
-import { css } from 'lit'; export default css`:host{line-height:1.8em}.body{font-family:"Signika Negative"}.block{display:block}`
+import { css } from 'lit'; export default css`:host{line-height:1.8em;font-family:"Signika Negative"}.block{display:block}::slotted(*){color:var(--wp-body-color)}`

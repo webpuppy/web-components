@@ -25,7 +25,7 @@ export class WPTypography extends LitElement {
 
 	render() {
 		return html`
-		<span class="wp-text ${this.variant} ${this.block && 'block'}">
+		<span class="wp-text ${this.variant} ${this.block ? 'block':''}">
 			<slot></slot>
 		</span>
 		`;

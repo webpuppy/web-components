@@ -1,0 +1,1 @@
+import { css } from 'lit'; export default css`:host{background-color:#433f3f;color:#fff;line-height:1.8em;padding:.25em 1rem}`
