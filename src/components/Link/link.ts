@@ -8,11 +8,11 @@ const LINK_CLASS = 'wp-link';
 
 /**
  * @since 0.0.0
- * 
+ *
  * @version 0.0.1
- * 
+ *
  * Anchor Tag Wrapper
- * 
+ *
  * @param underline - whether or not the link is underlined
  * @param hov_underline - whether or not to underline on hover
  * @param target - link `_target` attribute
@@ -35,10 +35,7 @@ export class WPLink extends LitElement {
 	static override styles = [CSS_RESETS, style];
 
 	renderComponent(classes: string) {
-		return html`<a
-			class=${classes}
-			href=${this.href}
-			target=${this.target}
+		return html`<a class=${classes} href=${this.href} target=${this.target}
 			><slot></slot
 		></a> `;
 	}
@@ -47,8 +44,8 @@ export class WPLink extends LitElement {
 		if (this.hov_underline) {
 			return this.renderComponent(`${LINK_CLASS} ${LINK_CLASS}--hov-underline`);
 		}
-		if(this.underline) {
-			return this.renderComponent(`${LINK_CLASS} ${LINK_CLASS}--underline`)
+		if (this.underline) {
+			return this.renderComponent(`${LINK_CLASS} ${LINK_CLASS}--underline`);
 		}
 		return this.renderComponent(LINK_CLASS);
 	}

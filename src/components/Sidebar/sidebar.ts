@@ -5,7 +5,7 @@ import {
 	property,
 	state,
 	query,
-	queryAssignedElements,
+	queryAssignedElements
 } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 import { map } from 'lit/directives/map.js';
@@ -81,8 +81,7 @@ export class WPSidebar extends LitElement {
 							width=${this.iconSize}
 							src=${this.icon}
 							alt=${this.iconAlt}
-							loading='lazy'
-						/>
+							loading="lazy" />
 						${this.render_title()}
 					</header>
 					<slot></slot>
@@ -99,8 +98,7 @@ export class WPSidebar extends LitElement {
 							width=${this.iconSize}
 							src=${this.icon}
 							alt=${this.iconAlt}
-							loading='lazy'
-						/>
+							loading="lazy" />
 						${this.render_title()}
 					</a>
 				</header>

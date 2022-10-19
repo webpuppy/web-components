@@ -1,3 +1,4 @@
 *.js!/sass/layout/_container.scss
 *.js
 scripts
+src/components/**/*.css.ts

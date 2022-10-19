@@ -6,7 +6,7 @@ import styles from './code.css';
 
 /**
  * @since 0.0.0
- * 
+ *
  * @version 0.0.2
  */
 @customElement(enums.COMPONENT_PREFIX + 'code')
@@ -29,8 +29,7 @@ export class WPCode extends LitElement {
 
 	override render() {
 		return html`
-		<code 
-				>${this.text} ${this.isCopied ? html`&#9989;` : html`&#128203;`}</code>
+			<code @click=${this.copy} @keypress=${this.copy}>${this.text} ${this.isCopied ? html`&#9989;` : html`&#128203;`}</code>
 		`;
 	}
 }

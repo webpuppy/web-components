@@ -58,8 +58,8 @@ slot {
 	z-index: 2;
 
 	@media (prefers-reduced-motion: no-preference) {
-			transition: border 0.25s, color 0.75s, box-shadow 550ms,
-				border-color 0.65s ease-in-out, background-color .45s;
+		transition: border 0.25s, color 0.75s, box-shadow 550ms,
+			border-color 0.65s ease-in-out, background-color 0.45s;
 	}
 
 	&.primary,
@@ -89,13 +89,13 @@ slot {
 		--dark: var(--wp-red-dark);
 	}
 
-	&--fill { 
+	&--fill {
 		background-color: var(--base);
 		box-shadow: var(--shadow-0);
 		color: var(--color);
 		&:hover {
 			background-color: var(--dark);
-			box-shadow:  var(--shadow-2);
+			box-shadow: var(--shadow-2);
 		}
 	}
 
@@ -140,4 +140,3 @@ slot {
 	display: block;
 	text-decoration: none;
 }
-

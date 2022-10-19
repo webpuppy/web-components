@@ -7,14 +7,13 @@ import { TypographyVariant } from './defs';
 
 /**
  * @since 0.0.44
- * 
+ *
  * @version 0.0.0
- * 
+ *
  * typography resets
  */
 @customElement(enums.COMPONENT_PREFIX + 'typography')
 export class WPTypography extends LitElement {
-	
 	static override styles = [CSS_RESETS, styles];
 
 	@property()
@@ -25,9 +24,9 @@ export class WPTypography extends LitElement {
 
 	render() {
 		return html`
-		<span class="wp-text ${this.variant} ${this.block ? 'block':''}">
-			<slot></slot>
-		</span>
+			<span class="wp-text ${this.variant} ${this.block ? 'block' : ''}">
+				<slot></slot>
+			</span>
 		`;
 	}
 }

@@ -11,16 +11,16 @@ const BTN_CLASS = 'wp-button';
 
 /**
  * @since 0.0.0
- * 
+ *
  * @version 0.0.1
- * 
+ *
  * @param target - link target
  * @param href - link destination
  * @param variant - button variant
  * @param color - button color
  * @param text - button text
  * @param disabled - `true` disables the button
- * 
+ *
  * webpuppy button
  */
 @customElement(enums.COMPONENT_PREFIX + 'button')
@@ -54,10 +54,7 @@ export class WPButton extends WPSizeable {
 	render_btn(classes: string, url: string) {
 		if (!url) {
 			return html`
-				<button
-					?disabled=${this.disabled}
-					class=${classes}
-					part=${BtnString}>
+				<button ?disabled=${this.disabled} class=${classes} part=${BtnString}>
 					<span id="content">
 						${this.text}
 						<slot></slot>
@@ -66,11 +63,7 @@ export class WPButton extends WPSizeable {
 			`;
 		}
 		return html`
-			<button
-				?disabled=${this.disabled}
-				class=${classes}
-				part=${BtnString}
-			>
+			<button ?disabled=${this.disabled} class=${classes} part=${BtnString}>
 				<a id="content" target=${ifDefined(this.target)} href=${url}>
 					${this.text}
 					<slot></slot>

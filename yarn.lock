@@ -4262,10 +4262,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webpuppy/prettier@npm:^0.1.3":
-  version: 0.1.3
-  resolution: "@webpuppy/prettier@npm:0.1.3"
-  checksum: 9917667eacef5c3e7c1436aacdc121d76f91c753d6e1eef7b90db9146e02465783beb5078d725d77138feae8e1201ae4a58d5c99b5118d0baaf429e7587af5de
+"@webpuppy/prettier@npm:^0.1.4":
+  version: 0.1.4
+  resolution: "@webpuppy/prettier@npm:0.1.4"
+  checksum: cc766a72e10ab2a97178dda5c5b0cd457aa82bb765447e18ef4f2ba77ae3b1a769e881c0f968ad3eeb036730e2c6938bc67bf9bac2ff26f21e0c0531eac7a682
   languageName: node
   linkType: hard
 
@@ -4306,7 +4306,7 @@ __metadata:
     "@webcomponents/webcomponentsjs": ^2.6.0
     "@webpuppy/eslint-config-base": ^0.1.4
     "@webpuppy/eslint-config-typescript": ^0.1.6
-    "@webpuppy/prettier": ^0.1.3
+    "@webpuppy/prettier": ^0.1.4
     autoprefixer: ^10.4.12
     babel-loader: ^8.2.5
     babel-plugin-transform-decorators-legacy: ^1.3.5

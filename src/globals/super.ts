@@ -3,12 +3,7 @@ import { LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { CSS_RESETS } from './env.css';
 
-export const WPColorOptions = [
-	'primary',
-	'secondary',
-	'success',
-	'error',
-] as const;
+export const WPColorOptions = ['primary', 'secondary', 'success', 'error'] as const;
 
 export type WPColorOption = typeof WPColorOptions[number];
 

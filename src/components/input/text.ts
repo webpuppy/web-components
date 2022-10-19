@@ -29,8 +29,7 @@ export class WPTextInput extends WPEditable {
 					type="text"
 					placeholder=${this.label}
 					@change=${this.handle_nested_change}
-					class="wp-input"
-				/>`;
+					class="wp-input" />`;
 		}
 		return html`${this.render_label()}<input
 				contenteditable="true"
@@ -41,8 +40,7 @@ export class WPTextInput extends WPEditable {
 				name=${this.id}
 				placeholder=${this.label}
 				type="text"
-				class=${classes}
-			/>`;
+				class=${classes} />`;
 	}
 
 	handle_nested_change(e: Event) {
@@ -51,7 +49,7 @@ export class WPTextInput extends WPEditable {
 		this.latest = new_val;
 		const event_data = { old_val: this.initial, new_val };
 		const customEventDispatch = new CustomEvent('wp-input-change', {
-			detail: event_data,
+			detail: event_data
 		});
 		this.dispatchEvent(customEventDispatch);
 	}

@@ -22,8 +22,7 @@ export class WPLoading extends LitElement {
 			<img
 				class="${base_class} wp-loading--${this.speed}"
 				src=${this.icon_url}
-				alt="&#9676;"
-			/>
+				alt="&#9676;" />
 		`;
 	}
 }

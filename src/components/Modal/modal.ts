@@ -26,11 +26,7 @@ export class WPModal extends WPSizeable {
 	render() {
 		return html`
 			<div id="modal-bg">
-				<div
-					role="alert"
-					aria-label=${this.name}
-					class="wp-modal wp-modal--${this.size}"
-				>
+				<div role="alert" aria-label=${this.name} class="wp-modal wp-modal--${this.size}">
 					<button @click=${this._remove}>x</button>
 					<h4>${this.name}</h4>
 					<slot></slot>

@@ -1,10 +1,5 @@
 import { enums, CSS_RESETS, WPSizeable } from '../../globals/exports';
-import {
-	customElement,
-	state,
-	query,
-	queryAssignedElements,
-} from 'lit/decorators.js';
+import { customElement, state, query, queryAssignedElements } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 import { html } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';

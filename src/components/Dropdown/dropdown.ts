@@ -6,14 +6,11 @@ import {
 	property,
 	state,
 	query,
-	queryAssignedElements,
+	queryAssignedElements
 } from 'lit/decorators.js';
 import { WPDropdownItem } from './dropdown-item';
 import dropdownCSS from './style.css';
-import {
-	WPDropdownChangeEventDetail,
-	WPDropdownChangeEventSignature,
-} from './defs';
+import { WPDropdownChangeEventDetail, WPDropdownChangeEventSignature } from './defs';
 
 @customElement(enums.COMPONENT_PREFIX + 'dropdown')
 export class WPDropdown extends WPSizeable {
@@ -38,7 +35,7 @@ export class WPDropdown extends WPSizeable {
 	connectedCallback() {
 		super.connectedCallback();
 		window.addEventListener('DOMContentLoaded', () => this.init());
-		this.addEventListener('click', e => {
+		this.addEventListener('click', (e) => {
 			const target = <HTMLElement>e.target;
 			if (target.nodeName === 'WP-DROPDOWN-ITEM') {
 				const t = <WPDropdownItem>target;
@@ -51,8 +48,8 @@ export class WPDropdown extends WPSizeable {
 						detail: {
 							old_val: this.selected_value,
 							new_val: t.value,
-							el: this,
-						},
+							el: this
+						}
 					}
 				);
 				window.dispatchEvent(customEvent);

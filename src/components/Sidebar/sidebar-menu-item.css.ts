@@ -8,8 +8,8 @@ export default css`
 		max-height: 50px;
 		text-rendering: optimizeLegibility;
 		text-size-adjust: auto;
-		transition: background-color 500ms, color 600ms, box-shadow 500ms,
-			text-shadow 300ms, all 350ms ease-in-out;
+		transition: background-color 500ms, color 600ms, box-shadow 500ms, text-shadow 300ms,
+			all 350ms ease-in-out;
 	}
 
 	.wp-sidebar-menu-item {
@@ -20,8 +20,8 @@ export default css`
 		margin: 1em;
 		position: relative;
 		text-decoration: none;
-		transition: background-color 500ms, color 600ms, box-shadow 500ms,
-			text-shadow 300ms, left 500ms, all 350ms ease-in-out;
+		transition: background-color 500ms, color 600ms, box-shadow 500ms, text-shadow 300ms,
+			left 500ms, all 350ms ease-in-out;
 		padding: 0.375em;
 	}
 `;

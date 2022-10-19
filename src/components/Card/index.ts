@@ -8,9 +8,9 @@ const a_bool = { attribute: true, type: Boolean };
 
 /**
  * @since 0.0.0
- * 
+ *
  * @version 0.0.0
- * 
+ *
  * Defines a card component with a prestyled shadow
  * @param rounded - defines if the card is rounded or sharp cornered
  * @param imgUrl - defines the url of the card image

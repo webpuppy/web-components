@@ -6,17 +6,15 @@ import styles from './style.css';
 
 /**
  * @since 0.0.44
- * 
+ *
  * @version 0.0.0
- * 
+ *
  * <hr /> tag restyled
  */
 @customElement(enums.COMPONENT_PREFIX + 'divider')
 export class WPDivider extends LitElement {
 	static override styles = [CSS_RESETS, styles];
 	render() {
-		return html`
-		<hr />
-		`;
+		return html` <hr /> `;
 	}
 }

@@ -26,8 +26,7 @@ export class WPDateInput extends LitElement {
 					id=${this.id}
 					name=${this.id}
 					type="date"
-					class="wp-input"
-				/>`;
+					class="wp-input" />`;
 		}
 		return html`${this.render_label()}<input
 				contenteditable="true"
@@ -35,8 +34,7 @@ export class WPDateInput extends LitElement {
 				id=${this.id}
 				name=${this.id}
 				type="date"
-				class=${classes}
-			/>`;
+				class=${classes} />`;
 	}
 
 	render() {

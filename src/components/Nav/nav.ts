@@ -1,24 +1,21 @@
 import { enums, CSS_RESETS, WPOpenable } from '../../globals/exports';
 import { html } from 'lit';
-import {
-	customElement,
-	property,
-} from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 import styles from './nav.css';
 
 const NAV_CLASS = 'wp-nav';
 
 /**
  * @since 0.0.0
- * 
+ *
  * @version 0.0.1
- * 
- * Defines prestyled top navbar 
- * 
+ *
+ * Defines prestyled top navbar
+ *
  * @param name - title of navbar to display
  * @param prefixHref - anchor tag link for the far left logo (default /)
  * @param icon - icon url for far left anchor
- * @param iconAlt - alt text for icon 
+ * @param iconAlt - alt text for icon
  */
 @customElement(enums.COMPONENT_PREFIX + 'nav')
 export class WPNav extends WPOpenable {
@@ -119,9 +116,10 @@ export class WPNav extends WPOpenable {
 				<div class="${NAV_CLASS}-list">
 					<slot></slot>
 				</div>
-				<div class="${NAV_CLASS}-burger" @keypress=${this.onKeyPress} @click=${
-	this.toggleOpen
-}></div>
+				<div
+					class="${NAV_CLASS}-burger"
+					@keypress=${this.onKeyPress}
+					@click=${this.toggleOpen}></div>
 			</header>
 		`;
 	}

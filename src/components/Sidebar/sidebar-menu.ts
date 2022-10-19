@@ -30,9 +30,7 @@ export class WPSidebarMenu extends LitElement {
 		if (this.nodropdown) {
 			return html`
 				<div class="wp-sidebar-menu">
-					<a class="wp-sidebar-menu__title" href=${this.section_href}
-						>${this.name}</a
-					>
+					<a class="wp-sidebar-menu__title" href=${this.section_href}>${this.name}</a>
 					<div class="wp-sidebar-menu__wrapper">
 						<slot></slot>
 					</div>
@@ -44,11 +42,8 @@ export class WPSidebarMenu extends LitElement {
 			() => html`
 				<div class="wp-sidebar-menu">
 					<span>
-						<a class="wp-sidebar-menu__title" href=${this.section_href}
-							>${this.name}</a
-						><button @click=${this.toggle}>
-							&#752;
-						</button>
+						<a class="wp-sidebar-menu__title" href=${this.section_href}>${this.name}</a
+						><button @click=${this.toggle}>&#752;</button>
 					</span>
 					<div class="wp-sidebar-menu__wrapper">
 						<slot></slot>
@@ -58,11 +53,8 @@ export class WPSidebarMenu extends LitElement {
 			() => html`
 				<div class="wp-sidebar-menu">
 					<span>
-						<a class="wp-sidebar-menu__title" href=${this.section_href}
-							>${this.name}</a
-						><button @click=${this.toggle}>
-							&#709;
-						</button>
+						<a class="wp-sidebar-menu__title" href=${this.section_href}>${this.name}</a
+						><button @click=${this.toggle}>&#709;</button>
 					</span>
 				</div>
 			`

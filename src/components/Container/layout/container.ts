@@ -5,9 +5,9 @@ import { customElement } from 'lit/decorators.js';
 
 /**
  * @since 0.0.0
- * 
+ *
  * @version 0.0.1
- * 
+ *
  * Defines content container bound by a max width
  * auto margin
  */
@@ -17,9 +17,9 @@ export class WPContainer extends LitElement {
 
 	render() {
 		return html`
-		<div class="container">
-			<slot></slot>
-		</div>
+			<div class="container">
+				<slot></slot>
+			</div>
 		`;
 	}
 }

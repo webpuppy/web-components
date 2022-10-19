@@ -1,3 +1,3 @@
 export const enums = {
-	COMPONENT_PREFIX: 'wp-',
+	COMPONENT_PREFIX: 'wp-'
 };

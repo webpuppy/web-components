@@ -1,74 +1,72 @@
 :host,
-	.wp-card {
-		--br: 0rem;
-		animation-name: fade-in;
-		animation-duration: 390ms;
-		animation-timing-function: ease-in-out;
-		border-radius: var(--br);
-		display: block;
-		opacity: 1;
-		padding: 0.25em;
-		place-content: center;
-		place-items: center;
+.wp-card {
+	--br: 0rem;
+	animation-name: fade-in;
+	animation-duration: 390ms;
+	animation-timing-function: ease-in-out;
+	border-radius: var(--br);
+	display: block;
+	opacity: 1;
+	padding: 0.25em;
+	place-content: center;
+	place-items: center;
+	position: relative;
+	transition: 360ms ease-in-out;
+	width: 320px;
+	z-index: 1;
+}
+
+.wp-card {
+	/* color: var(--wp-btn-txt-00); */
+	box-shadow: var(--shadow-1);
+	margin-bottom: 2rem;
+	max-height: 100%;
+	max-width: 100%;
+
+	&-title {
+		text-align: center;
+	}
+
+	&--rounded {
+		--br: var(--wp-border-radius);
+	}
+
+	&-slot {
+		border-radius: 2rem;
+		/* color: var(--wp-base-black); */
+		padding: 1em;
 		position: relative;
-		transition: 360ms ease-in-out;
-		width: 320px;
-		z-index: 1;
 	}
 
-	.wp-card {
-		/* color: var(--wp-btn-txt-00); */
-		box-shadow: var(--shadow-1);
-		margin-bottom: 2rem;
-		max-height: 100%;
-		max-width: 100%;
+	@media (prefers-reduced-motion: no-preference) {
+		transition: box-shadow 500ms ease;
 
-		&-title {
-			text-align: center;
-		}
-
-		&--rounded {
-			--br: var(--wp-border-radius);
-		}
-
-		&-slot {
-			border-radius: 2rem;
-			/* color: var(--wp-base-black); */
-			padding: 1em;
-			position: relative;
-		}
-		
-		@media (prefers-reduced-motion: no-preference) {
-			transition: box-shadow 500ms ease;
-
-			&:hover {
-				box-shadow: var(--shadow-2);
-			}
-		}
-	
-	}
-
-	figure {
-		display: grid;
-		place-content: center;
-		place-items: center;
-	}
-
-	figure img {
-		margin: 0 auto;
-		max-width: 100%;
-	}
-
-	::slotted(img) {
-		margin: 0 auto;
-		max-height: 128px;
-		max-width: 128px;
-		z-index: 2;
-	}
-
-
-	@keyframes fade-in {
-		0% {
-			opacity: 0;
+		&:hover {
+			box-shadow: var(--shadow-2);
 		}
 	}
+}
+
+figure {
+	display: grid;
+	place-content: center;
+	place-items: center;
+}
+
+figure img {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+::slotted(img) {
+	margin: 0 auto;
+	max-height: 128px;
+	max-width: 128px;
+	z-index: 2;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+}

@@ -1,6 +1,8 @@
 :host {
 	background-color: rgb(67, 63, 63);
+	border-radius: var(--wp-border-radius);
 	color: #fff;
+	cursor: pointer;
 	line-height: 1.8em;
-	padding: .25em 1rem;
+	padding: 0.25em 1rem;
 }

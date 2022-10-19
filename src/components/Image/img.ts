@@ -44,8 +44,7 @@ export class WPImg extends LitElement {
 				width=${this.width}
 				src=${this.src}
 				alt=${this.alt}
-				loading=${this.lazy ? 'lazy' : 'eager'}
-			/>
+				loading=${this.lazy ? 'lazy' : 'eager'} />
 		`;
 	}
 

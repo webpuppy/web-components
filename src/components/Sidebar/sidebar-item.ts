@@ -27,9 +27,7 @@ export class WPSidebarItem extends LitElement {
 	render_component() {
 		if (this.is_active) {
 			return html`
-				<a class="wp-sbr-item wp-sbr-item--active" href=${this.href}
-					>${this.text}</a
-				>
+				<a class="wp-sbr-item wp-sbr-item--active" href=${this.href}>${this.text}</a>
 			`;
 		}
 		return html` <a class="wp-sbr-item" href=${this.href}>${this.text}</a> `;
