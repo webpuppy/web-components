@@ -3,6 +3,20 @@
 	border-radius: var(--wp-border-radius);
 	color: #fff;
 	cursor: pointer;
+	display: inline-block;
 	line-height: 1.8em;
-	padding: 0.25em 1rem;
+	padding: 0.75rem 1rem;
+}
+
+#icon {
+	animation-name: fade-in;
+	animation-duration: 500ms;
+	animation-timing-function: ease-in-out;
+	opacity: 1;
+}
+
+@keyframes fade-in {
+	0%{ 
+		opacity: 0;
+	}
 }

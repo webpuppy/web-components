@@ -13,7 +13,7 @@ export class WPBanner extends LitElement {
 
 	@property()
 		position: BannerPosition = 'bottom';
-		
+
 	@property()
 		icon?: string;
 

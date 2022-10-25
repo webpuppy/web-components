@@ -15,6 +15,8 @@ export class WPCode extends LitElement {
 
 	@property()
 		type: CodeType = 'default';
+	@property({ attribute: 'auto-reset' })
+		autoReset = true;
 
 	@property()
 		text = '';
@@ -25,11 +27,20 @@ export class WPCode extends LitElement {
 	copy() {
 		window.navigator.clipboard.writeText(this.text);
 		this.isCopied = true;
+		if(this.autoReset) {
+			setTimeout(() => {
+				this.isCopied = false;
+			}, 5000);
+		}
 	}
 
 	override render() {
 		return html`
-			<code @click=${this.copy} @keypress=${this.copy}>${this.text} ${this.isCopied ? html`&#9989;` : html`&#128203;`}</code>
+			<code @click=${this.copy} @keypress=${this.copy}
+				>${this.text}&nbsp;${this.isCopied
+	? html`<span id="icon">&#9989;</span>`
+	: html`<span id="icon">&#128203;</span>`}</code
+			>
 		`;
 	}
 }

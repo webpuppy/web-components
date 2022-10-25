@@ -1,1 +1,1 @@
-import { css } from 'lit'; export default css`:host{background-color:#433f3f;border-radius:var(--wp-border-radius);color:#fff;cursor:pointer;line-height:1.8em;padding:.25em 1rem}`
+import { css } from 'lit'; export default css`:host{background-color:#433f3f;border-radius:var(--wp-border-radius);color:#fff;cursor:pointer;display:inline-block;line-height:1.8em;padding:.75rem 1rem}#icon{animation-name:fade-in;animation-duration:500ms;animation-timing-function:ease-in-out;opacity:1}@keyframes fade-in{0%{opacity:0}}`
